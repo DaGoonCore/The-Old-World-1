@@ -145,7 +145,7 @@
 	spawniconchange()
 
 /turf/open/floor/darkgrass/proc/spawniconchange()
-	icon_state = "dgrass[rand(0,3)]"
+	icon_state = "darkgrass[rand(0,3)]"
 
 /turf/open/floor/darkgrass/attackby(obj/item/C, mob/user, params)
 	if((C.tool_behaviour == TOOL_SHOVEL) && params)
