@@ -126,8 +126,8 @@
 /turf/open/floor/darkgrass
 	name = "grass patch"
 	desc = "You can't tell if this is real grass or just cheap plastic imitation."
-	icon_state = "dgrass0"
-	floor_tile = /obj/item/stack/tile/darkgrass
+	icon_state = "grass0"
+	floor_tile = /obj/item/stack/tile/grass
 	flags_1 = NONE
 	bullet_bounce_sound = null
 	footstep = FOOTSTEP_GRASS
@@ -146,7 +146,7 @@
 	spawniconchange()
 
 /turf/open/floor/darkgrass/proc/spawniconchange()
-	icon_state = "dgrass[rand(0,3)]"
+	icon_state = "grass[rand(0,3)]"
 
 /turf/open/floor/darkgrass/attackby(obj/item/C, mob/user, params)
 	if((C.tool_behaviour == TOOL_SHOVEL) && params)
