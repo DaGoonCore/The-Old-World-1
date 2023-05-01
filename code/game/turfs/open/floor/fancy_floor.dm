@@ -123,6 +123,40 @@
 	if(..())
 		return
 
+/turf/open/floor/darkgrass
+	name = "grass patch"
+	desc = "You can't tell if this is real grass or just cheap plastic imitation."
+	icon_state = "grass0"
+	floor_tile = /obj/item/stack/tile/grass
+	flags_1 = NONE
+	bullet_bounce_sound = null
+	footstep = FOOTSTEP_GRASS
+	barefootstep = FOOTSTEP_GRASS
+	clawfootstep = FOOTSTEP_GRASS
+	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
+	var/ore_type = /obj/item/stack/ore/glass
+	var/turfverb = "uproot"
+	tiled_dirt = FALSE
+
+/turf/open/floor/darkgrass/setup_broken_states()
+	return list("sand")
+
+/turf/open/floor/darkgrass/Initialize(mapload)
+	. = ..()
+	spawniconchange()
+
+/turf/open/floor/darkgrass/proc/spawniconchange()
+	icon_state = "grass[rand(0,3)]"
+
+/turf/open/floor/darkgrass/attackby(obj/item/C, mob/user, params)
+	if((C.tool_behaviour == TOOL_SHOVEL) && params)
+		new ore_type(src, 2)
+		user.visible_message(span_notice("[user] digs up [src]."), span_notice("You [turfverb] [src]."))
+		playsound(src, 'sound/effects/shovel_dig.ogg', 50, TRUE)
+		make_plating()
+	if(..())
+		return
+
 /turf/open/floor/grass/fairy //like grass but fae-er
 	name = "fairygrass patch"
 	desc = "Something about this grass makes you want to frolic. Or get high."
