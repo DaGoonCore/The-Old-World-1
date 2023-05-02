@@ -77,6 +77,7 @@ Grass
 //Wood
 /turf/open/floor/wood
 	desc = "Stylish dark wood."
+	icon = "old_world/icons/turf/flooring/wood.dmi"
 	icon_state = "wood"
 	floor_tile = /obj/item/stack/tile/wood
 	footstep = FOOTSTEP_WOOD
@@ -156,6 +157,13 @@ Grass
 
 /turf/open/floor/wood/large/setup_broken_states()
 	return list("wood_large-broken", "wood_large-broken2", "wood_large-broken3")
+
+/turf/open/floor/dwarfbrick
+	name = "dwarf brick floor"
+	desc = "It's a floor, made out of stone, even though we are in the age of concrete..."
+	icon = 'old_world/icons/turf/flooring/tiles.dmi'
+	icon_state = "stone"
+	base_icon_state = "stone"
 
 /*
 var/list/flooring_types
