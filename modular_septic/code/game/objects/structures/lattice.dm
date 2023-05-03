@@ -12,11 +12,11 @@
 
 /obj/structure/lattice/atom_destruction(damage_flag)
 	. = ..()
-	playsound(src, 'modular_septic/sound/effects/lattice_grind.wav', 80, FALSE)
+	playsound(src, 'oworld/sound/effects/lattice_grind.wav', 80, FALSE)
 
 /obj/structure/lattice/catwalk/efn_safezone
 	desc = "A catwalk for preventing the quick descent of creatures."
-	icon = 'modular_septic/icons/turf/floors.dmi'
+	icon = 'oworld/icons/turf/floors.dmi'
 	icon_state = "sexy-grill"
 	base_icon_state = "sexy-grill"
 	number_of_mats = 2

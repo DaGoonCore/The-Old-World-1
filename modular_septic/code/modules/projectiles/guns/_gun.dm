@@ -2,8 +2,8 @@
 	skill_melee = SKILL_IMPACT_WEAPON
 	skill_ranged = SKILL_PISTOL
 	carry_weight = 2.5 KILOGRAMS
-	pickup_sound = 'modular_septic/sound/weapons/guns/generic_draw.wav'
-	dry_fire_sound = 'modular_septic/sound/weapons/guns/empty.wav'
+	pickup_sound = 'oworld/sound/weapons/guns/generic_draw.wav'
+	dry_fire_sound = 'oworld/sound/weapons/guns/empty.wav'
 	/// Message when we dry fire (applies both to dry firing and failing to fire for other reasons)
 	var/dry_fire_message = span_danger("*click*")
 	/// Volume of dry_fire_sound
@@ -11,13 +11,13 @@
 	/// Whether to vary dry_fire_sound or not
 	var/dry_fire_sound_vary = FALSE
 	/// Sound for aiming at someone
-	var/aim_stress_sound = 'modular_septic/sound/weapons/guns/aim_stress.wav'
+	var/aim_stress_sound = 'oworld/sound/weapons/guns/aim_stress.wav'
 	/// Volume for aiming sound
 	var/aim_stress_sound_volume = 50
 	/// Whether the aiming sound should vary on not
 	var/aim_stress_sound_vary = FALSE
 	/// Sound for stopping aiming at someone
-	var/aim_spare_sound = 'modular_septic/sound/weapons/guns/aim_spare.wav'
+	var/aim_spare_sound = 'oworld/sound/weapons/guns/aim_spare.wav'
 	/// Volume for stopping aiming sound
 	var/aim_spare_sound_volume = 50
 	/// Whether the stopping aiming sound should vary on not
@@ -25,9 +25,9 @@
 	/// Flags related to gun safety
 	var/safety_flags = GUN_SAFETY_FLAGS_DEFAULT
 	/// Sound when safety is toggled on
-	var/safety_on_sound = 'modular_septic/sound/weapons/guns/safety1.ogg'
+	var/safety_on_sound = 'oworld/sound/weapons/guns/safety1.ogg'
 	/// Sound when safety is toggled off
-	var/safety_off_sound = 'modular_septic/sound/weapons/guns/safety1.ogg'
+	var/safety_off_sound = 'oworld/sound/weapons/guns/safety1.ogg'
 	/// Volume of safety toggle sounds (both on and off)
 	var/safety_sound_volume = 50
 	/// Whether to vary safety toggle sounds or not
@@ -35,7 +35,7 @@
 
 	// ~ICON VARIABLES
 	/// Mouse pointer icon when holding this gun while the safety is disabled
-	var/mouse_pointer_icon = 'modular_septic/icons/effects/mouse_pointers/weapon_pointer.dmi'
+	var/mouse_pointer_icon = 'oworld/icons/effects/mouse_pointers/weapon_pointer.dmi'
 	/// Does the gun have a unique icon_state when nothing is chambered?
 	var/empty_icon_state = FALSE
 	/// Does the gun have unique inhands when wielded?
@@ -74,11 +74,11 @@
 	/// Whether the stock is folded or not.
 	var/folded = TRUE
 	/// The sound it makes when you fold a stock
-	var/fold_open_sound = 'modular_septic/sound/weapons/guns/stock_open.wav'
+	var/fold_open_sound = 'oworld/sound/weapons/guns/stock_open.wav'
 	/// The sound it makes when you unfold a stock.
-	var/fold_close_sound = 'modular_septic/sound/weapons/guns/stock_close.wav'
+	var/fold_close_sound = 'oworld/sound/weapons/guns/stock_close.wav'
 	/// Every time you fiddle with the stock
-	var/fiddle = 'modular_septic/sound/effects/fiddle.wav'
+	var/fiddle = 'oworld/sound/effects/fiddle.wav'
 
 /obj/item/gun/Initialize(mapload)
 	. = ..()
@@ -183,7 +183,7 @@
 			to_chat(user, span_notice("I click [seclite] into place on [src]."))
 			set_gun_light(seclite)
 			update_gunlight()
-			playsound(src, 'modular_septic/sound/weapons/guns/mod_use.wav', 75, TRUE, vary = FALSE)
+			playsound(src, 'oworld/sound/weapons/guns/mod_use.wav', 75, TRUE, vary = FALSE)
 			alight = new(src)
 			if(loc == user)
 				alight.Grant(user)
@@ -195,7 +195,7 @@
 			return
 		to_chat(user, span_notice("I attach [knife] to [src]'s bayonet lug."))
 		bayonet = knife
-		playsound(src, 'modular_septic/sound/weapons/guns/mod_use.wav', 75, TRUE, vary = FALSE)
+		playsound(src, 'oworld/sound/weapons/guns/mod_use.wav', 75, TRUE, vary = FALSE)
 		update_appearance()
 	else
 		return ..()
@@ -455,7 +455,7 @@
 /obj/item/gun/proc/gunshot_animation(mob/user, burst_fire = FALSE)
 	if(suppressed && LAZYACCESS(gunshot_animation_information, "inactive_wben_silenced"))
 		return
-	var/shot_icon = gunshot_animation_information["icon"] || 'modular_septic/icons/effects/gunshot.dmi'
+	var/shot_icon = gunshot_animation_information["icon"] || 'oworld/icons/effects/gunshot.dmi'
 	var/shot_icon_state = gunshot_animation_information["icon_state"] || "gunshot"
 	var/shot_duration = gunshot_animation_information["duration"] || 2
 	var/shot_pixel_x = gunshot_animation_information["pixel_x"] || 0
@@ -544,5 +544,5 @@
 
 /datum/action/item_action/toggle_stock
 	name = "Toggle Stock"
-	icon_icon = 'modular_septic/icons/hud/quake/actions.dmi'
+	icon_icon = 'oworld/icons/hud/quake/actions.dmi'
 	button_icon_state = "stock"

@@ -1,9 +1,9 @@
 /obj/item/clothing/under/stray
 	name = "\proper sickly-purple jumpsuit"
 	desc = "A jumpsuit in a dark color of purple with light ballistic protection used for and exclusively by the DEATH SEC Unit."
-	icon = 'modular_septic/icons/obj/clothing/under/antagonist.dmi'
+	icon = 'oworld/icons/obj/clothing/under/antagonist.dmi'
 	icon_state = "stray"
-	worn_icon = 'modular_septic/icons/mob/clothing/under/antagonist.dmi'
+	worn_icon = 'oworld/icons/mob/clothing/under/antagonist.dmi'
 	worn_icon_state = "stray"
 	lefthand_file = 'icons/mob/inhands/clothing_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/clothing_righthand.dmi'
@@ -16,9 +16,9 @@
 /obj/item/clothing/under/denomination
 	name = "\proper denominators uniform"
 	desc = "A jumpsuit in a dark color of purple with light ballistic protection used for and exclusively by the DEATH SEC Unit."
-	icon = 'modular_septic/icons/obj/clothing/under/antagonist.dmi'
+	icon = 'oworld/icons/obj/clothing/under/antagonist.dmi'
 	icon_state = "deno"
-	worn_icon = 'modular_septic/icons/mob/clothing/under/antagonist.dmi'
+	worn_icon = 'oworld/icons/mob/clothing/under/antagonist.dmi'
 	worn_icon_state = "deno"
 	lefthand_file = 'icons/mob/inhands/clothing_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/clothing_righthand.dmi'
@@ -31,9 +31,9 @@
 /obj/item/clothing/under/owneroftheboner
 	name = "\proper THE OWNER OF THE BONER"
 	desc = "A clean shirt and dark-blue jeans. There's an arrow pointing to the head of the wearer with the caption, \"THE OWNER\" and another arrow pointing downwards to the crotch area with the caption, \"OF THE BONER\""
-	icon = 'modular_septic/icons/obj/clothing/under/antagonist.dmi'
+	icon = 'oworld/icons/obj/clothing/under/antagonist.dmi'
 	icon_state = "stray"
-	worn_icon = 'modular_septic/icons/mob/clothing/under/antagonist.dmi'
+	worn_icon = 'oworld/icons/mob/clothing/under/antagonist.dmi'
 	worn_icon_state = "stray"
 	lefthand_file = 'icons/mob/inhands/clothing_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/clothing_righthand.dmi'

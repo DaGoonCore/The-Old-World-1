@@ -1,6 +1,6 @@
 //fatigue shit
 /atom/movable/screen/fatigue
-	icon = 'modular_septic/icons/hud/quake/screen_quake.dmi'
+	icon = 'oworld/icons/hud/quake/screen_quake.dmi'
 	name = "fatigue"
 	icon_state = "fatigue20"
 	base_icon_state = "fatigue"

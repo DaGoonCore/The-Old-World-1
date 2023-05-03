@@ -1,6 +1,6 @@
 // Facial hair
 /datum/sprite_accessory/facial_hair/septic
-	icon = 'modular_septic/icons/mob/human/sprite_accessory/facialhair.dmi'
+	icon = 'oworld/icons/mob/human/sprite_accessory/facialhair.dmi'
 
 /datum/sprite_accessory/facial_hair/septic/sideburns
 	name = "Sideburns"

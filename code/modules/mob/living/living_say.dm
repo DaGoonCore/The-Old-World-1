@@ -363,7 +363,7 @@ GLOBAL_LIST_INIT(message_modes_stat_limits, list(
 	INVOKE_ASYNC(GLOBAL_PROC, /.proc/flick_overlay, I, speech_bubble_recipients, 30)
 	*/
 	//SEPTIC EDIT BEGIN
-	var/image/speech_bubble = image('modular_septic/icons/mob/talk.dmi', src, "[bubble_type][say_test(message)]")
+	var/image/speech_bubble = image('oworld/icons/mob/talk.dmi', src, "[bubble_type][say_test(message)]")
 	speech_bubble.plane = ABOVE_GAME_PLANE
 	speech_bubble.layer = ABOVE_MOB_LAYER
 	speech_bubble.appearance_flags = APPEARANCE_UI_IGNORE_ALPHA

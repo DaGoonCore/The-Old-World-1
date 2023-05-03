@@ -39,7 +39,7 @@
 	grab_hud?.update_appearance()
 	owner.changeNext_move(CLICK_CD_STRANGLE)
 	owner.sound_hint()
-	playsound(victim, 'modular_septic/sound/attack/twist.wav', 75, FALSE)
+	playsound(victim, 'oworld/sound/attack/twist.wav', 75, FALSE)
 	return TRUE
 
 /obj/item/grab/proc/takedown()
@@ -94,7 +94,7 @@
 	grab_hud?.update_appearance()
 	owner.changeNext_move(CLICK_CD_TAKEDOWN)
 	owner.sound_hint()
-	playsound(victim, 'modular_septic/sound/attack/twist.wav', 75, FALSE)
+	playsound(victim, 'oworld/sound/attack/twist.wav', 75, FALSE)
 	return TRUE
 
 /obj/item/grab/proc/wrench_limb()
@@ -156,7 +156,7 @@
 		victim.sound_hint()
 	owner.sound_hint()
 	owner.changeNext_move(CLICK_CD_WRENCH)
-	playsound(victim, 'modular_septic/sound/attack/twist.wav', 75, FALSE)
+	playsound(victim, 'oworld/sound/attack/twist.wav', 75, FALSE)
 	return TRUE
 
 /obj/item/grab/proc/relocate_limb()
@@ -220,7 +220,7 @@
 		victim.sound_hint()
 	owner.sound_hint()
 	owner.changeNext_move(CLICK_CD_WRENCH)
-	playsound(victim, 'modular_septic/sound/attack/twist.wav', 75, FALSE)
+	playsound(victim, 'oworld/sound/attack/twist.wav', 75, FALSE)
 	return TRUE
 
 /obj/item/grab/proc/tear_off_limb()
@@ -250,7 +250,7 @@
 		grasped_part.drop_limb(FALSE, TRUE, FALSE, FALSE, WOUND_SLASH)
 		//If nothing went bad, we should be qdeleted by now
 		owner_will_get_nulled.changeNext_move(CLICK_CD_WRENCH)
-		playsound(victim_will_get_nulled, 'modular_septic/sound/gore/tear.ogg', 100, FALSE)
+		playsound(victim_will_get_nulled, 'oworld/sound/gore/tear.ogg', 100, FALSE)
 		if(QDELETED(part_will_get_nulled))
 			return TRUE
 		owner_will_get_nulled.put_in_hands(part_will_get_nulled)

@@ -238,7 +238,7 @@
 /datum/component/gunpoint/proc/apply_target_overlay()
 	if(target_overlay)
 		target.cut_overlay(target_overlay)
-	target_overlay = mutable_appearance('modular_septic/icons/effects/aiming.dmi', "aiming")
+	target_overlay = mutable_appearance('oworld/icons/effects/aiming.dmi', "aiming")
 	target.add_overlay(target_overlay)
 
 /datum/component/gunpoint/proc/remove_target_overlay()

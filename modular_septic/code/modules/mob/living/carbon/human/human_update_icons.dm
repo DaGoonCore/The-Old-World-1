@@ -119,7 +119,7 @@
 	if(ismonkey(src))
 		fire_icon = "standing_monkey"
 	if(on_fire || HAS_TRAIT(src, TRAIT_PERMANENTLY_ONFIRE))
-		var/mutable_appearance/new_fire_overlay = mutable_appearance('modular_septic/icons/mob/human/overlays/onfire.dmi', fire_icon, -FIRE_LAYER)
+		var/mutable_appearance/new_fire_overlay = mutable_appearance('oworld/icons/mob/human/overlays/onfire.dmi', fire_icon, -FIRE_LAYER)
 		new_fire_overlay.appearance_flags = RESET_COLOR
 		overlays_standing[FIRE_LAYER] = new_fire_overlay
 
@@ -192,13 +192,13 @@
 		var/x_override
 		switch(applied_style)
 			if(STYLE_DIGITIGRADE)
-				icon_file = wear_suit.worn_icon_digi || 'modular_septic/icons/mob/clothing/suit_digi.dmi'
+				icon_file = wear_suit.worn_icon_digi || 'oworld/icons/mob/clothing/suit_digi.dmi'
 			if(STYLE_TAUR_SNAKE)
-				icon_file = wear_suit.worn_icon_taur_snake || 'modular_septic/icons/mob/clothing/suit_taur_snake.dmi'
+				icon_file = wear_suit.worn_icon_taur_snake || 'oworld/icons/mob/clothing/suit_taur_snake.dmi'
 			if(STYLE_TAUR_HOOF)
-				icon_file = wear_suit.worn_icon_taur_hoof || 'modular_septic/icons/mob/clothing/suit_taur_hoof.dmi'
+				icon_file = wear_suit.worn_icon_taur_hoof || 'oworld/icons/mob/clothing/suit_taur_hoof.dmi'
 			if(STYLE_TAUR_PAW)
-				icon_file = wear_suit.worn_icon_taur_paw || 'modular_septic/icons/mob/clothing/suit_taur_paw.dmi'
+				icon_file = wear_suit.worn_icon_taur_paw || 'oworld/icons/mob/clothing/suit_taur_paw.dmi'
 
 		if(applied_style & STYLE_TAUR_ALL)
 			x_override = 64
@@ -248,13 +248,13 @@
 		var/x_override
 		switch(applied_style)
 			if(STYLE_DIGITIGRADE)
-				icon_file = w_uniform.worn_icon_digi || 'modular_septic/icons/mob/clothing/under/uniform_digi.dmi'
+				icon_file = w_uniform.worn_icon_digi || 'oworld/icons/mob/clothing/under/uniform_digi.dmi'
 			if(STYLE_TAUR_SNAKE)
-				icon_file = w_uniform.worn_icon_taur_snake || 'modular_septic/icons/mob/clothing/under/uniform_taur_snake.dmi'
+				icon_file = w_uniform.worn_icon_taur_snake || 'oworld/icons/mob/clothing/under/uniform_taur_snake.dmi'
 			if(STYLE_TAUR_HOOF)
-				icon_file = w_uniform.worn_icon_taur_hoof || 'modular_septic/icons/mob/clothing/under/uniform_taur_hoof.dmi'
+				icon_file = w_uniform.worn_icon_taur_hoof || 'oworld/icons/mob/clothing/under/uniform_taur_hoof.dmi'
 			if(STYLE_TAUR_PAW)
-				icon_file = w_uniform.worn_icon_taur_paw || 'modular_septic/icons/mob/clothing/under/uniform_taur_paw.dmi'
+				icon_file = w_uniform.worn_icon_taur_paw || 'oworld/icons/mob/clothing/under/uniform_taur_paw.dmi'
 
 		if(applied_style & STYLE_TAUR_ALL)
 			x_override = 64
@@ -290,7 +290,7 @@
 
 	if(!(NOBLOODOVERLAY in dna.species.species_traits) && (num_hands > 0))
 		if(!gloves && blood_in_hands)
-			var/mutable_appearance/bloody_overlay = mutable_appearance('modular_septic/icons/effects/blood.dmi', "bloodyhands", -GLOVES_LAYER)
+			var/mutable_appearance/bloody_overlay = mutable_appearance('oworld/icons/effects/blood.dmi', "bloodyhands", -GLOVES_LAYER)
 			if(num_hands < 2)
 				if(has_left_hand(FALSE))
 					bloody_overlay.icon_state = "bloodyhands_left"
@@ -340,7 +340,7 @@
 		var/applied_styles = NONE
 		if((DIGITIGRADE in dna.species.species_traits) && (shoes.mutant_variants & STYLE_DIGITIGRADE))
 			applied_styles |= STYLE_DIGITIGRADE
-			icon_file = shoes.worn_icon_digi || 'modular_septic/icons/mob/clothing/feet_digi.dmi'
+			icon_file = shoes.worn_icon_digi || 'oworld/icons/mob/clothing/feet_digi.dmi'
 
 		overlays_standing[SHOES_LAYER] = shoes.build_worn_icon(default_layer = SHOES_LAYER, default_icon_file = 'icons/mob/clothing/feet.dmi', override_icon = icon_file, mutant_styles = applied_styles)
 		var/mutable_appearance/shoes_overlay = overlays_standing[SHOES_LAYER]
@@ -365,14 +365,14 @@
 		update_observer_view(s_store)
 		var/list/worn_icon_states = icon_states(s_store.worn_icon)
 		var/static/list/back_icon_states = icon_states('icons/mob/clothing/back.dmi')
-		var/static/list/also_back_icon_states = icon_states('modular_septic/icons/mob/clothing/back.dmi')
+		var/static/list/also_back_icon_states = icon_states('oworld/icons/mob/clothing/back.dmi')
 		if((s_store.worn_icon_state in worn_icon_states) || (s_store.worn_icon_state in back_icon_states) || (s_store.worn_icon_state in also_back_icon_states))
 			if(s_store.worn_icon_state in worn_icon_states)
 				overlays_standing[SUIT_STORE_LAYER] = s_store.build_worn_icon(default_layer = SUIT_STORE_LAYER, default_icon_file = 'icons/mob/clothing/back.dmi')
 			else if(s_store.worn_icon_state in back_icon_states)
 				overlays_standing[SUIT_STORE_LAYER] = s_store.build_worn_icon(default_layer = SUIT_STORE_LAYER, default_icon_file = 'icons/mob/clothing/back.dmi', override_icon = 'icons/mob/clothing/back.dmi')
 			else
-				overlays_standing[SUIT_STORE_LAYER] = s_store.build_worn_icon(default_layer = SUIT_STORE_LAYER, default_icon_file = 'modular_septic/icons/mob/clothing/back.dmi', override_icon = 'modular_septic/icons/mob/clothing/back.dmi')
+				overlays_standing[SUIT_STORE_LAYER] = s_store.build_worn_icon(default_layer = SUIT_STORE_LAYER, default_icon_file = 'oworld/icons/mob/clothing/back.dmi', override_icon = 'oworld/icons/mob/clothing/back.dmi')
 			var/mutable_appearance/s_store_overlay = overlays_standing[SUIT_STORE_LAYER]
 			if(OFFSET_S_STORE in dna.species.offset_features)
 				s_store_overlay.pixel_x += dna.species.offset_features[OFFSET_S_STORE][1]
@@ -433,30 +433,30 @@
 			for(var/obj/item/organ/eyes/eye in right_eyelid?.get_organs())
 				RE = eye
 				break
-			var/mutable_appearance/eye_overlay = mutable_appearance('modular_septic/icons/mob/human/sprite_accessory/human_face.dmi', "blank", -BODY_LAYER)
+			var/mutable_appearance/eye_overlay = mutable_appearance('oworld/icons/mob/human/sprite_accessory/human_face.dmi', "blank", -BODY_LAYER)
 			var/obscured = check_obscured_slots(TRUE) //eyes that shine in the dark shouldn't show when you have glasses
 			if(RE)
-				var/image/right_overlay = image('modular_septic/icons/mob/human/sprite_accessory/human_face.dmi', null, RE.eye_icon_state, -BODY_LAYER)
+				var/image/right_overlay = image('oworld/icons/mob/human/sprite_accessory/human_face.dmi', null, RE.eye_icon_state, -BODY_LAYER)
 				if(EYECOLOR in dna.species.species_traits)
 					right_overlay.color = sanitize_hexcolor(right_eye_color, 6, TRUE)
 				eye_overlay.add_overlay(right_overlay)
 				if(RE.overlay_ignore_lighting && !(obscured & ITEM_SLOT_EYES))
-					var/image/right_emissive = image('modular_septic/icons/mob/human/sprite_accessory/human_face.dmi', null, RE.eye_icon_state, -BODY_LAYER)
+					var/image/right_emissive = image('oworld/icons/mob/human/sprite_accessory/human_face.dmi', null, RE.eye_icon_state, -BODY_LAYER)
 					right_emissive.plane = EMISSIVE_PLANE
 					eye_overlay.add_overlay(right_emissive)
 			else
-				eye_overlay.add_overlay(image('modular_septic/icons/mob/human/sprite_accessory/human_face.dmi', null, "eye-right-missing", -BODY_LAYER))
+				eye_overlay.add_overlay(image('oworld/icons/mob/human/sprite_accessory/human_face.dmi', null, "eye-right-missing", -BODY_LAYER))
 			if(LE)
-				var/image/left_overlay = image('modular_septic/icons/mob/human/sprite_accessory/human_face.dmi', null, LE.eye_icon_state, -BODY_LAYER)
+				var/image/left_overlay = image('oworld/icons/mob/human/sprite_accessory/human_face.dmi', null, LE.eye_icon_state, -BODY_LAYER)
 				if(EYECOLOR in dna.species.species_traits)
 					left_overlay.color = sanitize_hexcolor(left_eye_color, 6, TRUE)
 				eye_overlay.add_overlay(left_overlay)
 				if(LE.overlay_ignore_lighting && !(obscured & ITEM_SLOT_EYES))
-					var/image/left_emissive = image('modular_septic/icons/mob/human/sprite_accessory/human_face.dmi', null, LE.eye_icon_state, -BODY_LAYER)
+					var/image/left_emissive = image('oworld/icons/mob/human/sprite_accessory/human_face.dmi', null, LE.eye_icon_state, -BODY_LAYER)
 					left_emissive.plane = EMISSIVE_PLANE
 					eye_overlay.add_overlay(left_emissive)
 			else
-				eye_overlay.add_overlay(image('modular_septic/icons/mob/human/sprite_accessory/human_face.dmi', null, "eye-left-missing", -BODY_LAYER))
+				eye_overlay.add_overlay(image('oworld/icons/mob/human/sprite_accessory/human_face.dmi', null, "eye-left-missing", -BODY_LAYER))
 			if(OFFSET_FACE in dna.species.offset_features)
 				eye_overlay.pixel_x += dna.species.offset_features[OFFSET_FACE][1]
 				eye_overlay.pixel_y += dna.species.offset_features[OFFSET_FACE][2]
@@ -531,9 +531,9 @@
 			SEND_SIGNAL(src, COMSIG_CLEAR_MOOD_EVENT, "smelly")
 		if(GERM_LEVEL_FILTHY to GERM_LEVEL_SMASHPLAYER)
 			SEND_SIGNAL(src, COMSIG_ADD_MOOD_EVENT, "smelly", /datum/mood_event/needshower)
-			overlays_standing[SMELL_LAYER] = mutable_appearance('modular_septic/icons/effects/smell.dmi', "smell", -SMELL_LAYER)
+			overlays_standing[SMELL_LAYER] = mutable_appearance('oworld/icons/effects/smell.dmi', "smell", -SMELL_LAYER)
 		if(GERM_LEVEL_SMASHPLAYER to INFINITY)
 			SEND_SIGNAL(src, COMSIG_ADD_MOOD_EVENT, "smelly", /datum/mood_event/reallyneedshower)
-			overlays_standing[SMELL_LAYER] = mutable_appearance('modular_septic/icons/effects/smell.dmi', "smell", -SMELL_LAYER)
+			overlays_standing[SMELL_LAYER] = mutable_appearance('oworld/icons/effects/smell.dmi', "smell", -SMELL_LAYER)
 
 	apply_overlay(SMELL_LAYER)

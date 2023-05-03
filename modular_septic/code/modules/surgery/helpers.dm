@@ -148,6 +148,6 @@
 		if(embedded_source.injury)
 			embedded_source.injury.injury_flags &= ~INJURY_RETRACTED
 	if(istype(affected_mob))
-		playsound(source, 'modular_septic/sound/gore/stuck1.ogg', 60, 0)
+		playsound(source, 'oworld/sound/gore/stuck1.ogg', 60, 0)
 		affected_mob.update_damage_overlays()
 	source.UnregisterSignal(source, COMSIG_ITEM_UNEMBEDDED)

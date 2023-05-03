@@ -2,7 +2,7 @@
 /obj/structure/drain
 	name = "drain"
 	desc = "Drainage inlet embedded in the floor to prevent flooding."
-	icon = 'modular_septic/icons/obj/structures/liquid_drain.dmi'
+	icon = 'oworld/icons/obj/structures/liquid_drain.dmi'
 	icon_state = "drain"
 	plane = FLOOR_PLANE
 	layer = GAS_SCRUBBER_LAYER

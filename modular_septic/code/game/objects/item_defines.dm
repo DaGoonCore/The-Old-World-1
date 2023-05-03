@@ -1,19 +1,19 @@
 /obj/item
-	drop_sound = 'modular_septic/sound/items/drop.wav'
+	drop_sound = 'oworld/sound/items/drop.wav'
 
 	/// Sound when missing an attack
-	var/miss_sound = 'modular_septic/sound/attack/punchmiss.ogg'
+	var/miss_sound = 'oworld/sound/attack/punchmiss.ogg'
 	/// Sound when we parry, if we are able to parry
-	var/parry_sound = list('modular_septic/sound/weapons/melee/bladeparry1.wav', 'modular_septic/sound/weapons/melee/bladeparry2.wav', 'modular_septic/sound/weapons/melee/bladeparry3.wav')
+	var/parry_sound = list('oworld/sound/weapons/melee/bladeparry1.wav', 'oworld/sound/weapons/melee/bladeparry2.wav', 'oworld/sound/weapons/melee/bladeparry3.wav')
 	/// Sound when we block, if we are able to block
-	var/block_sound = list('modular_septic/sound/weapons/melee/bladeparry1.wav', 'modular_septic/sound/weapons/melee/bladeparry2.wav', 'modular_septic/sound/weapons/melee/bladeparry3.wav')
+	var/block_sound = list('oworld/sound/weapons/melee/bladeparry1.wav', 'oworld/sound/weapons/melee/bladeparry2.wav', 'oworld/sound/weapons/melee/bladeparry3.wav')
 
 	// Mutant icon garbage
-	var/worn_icon_muzzled = 'modular_septic/icons/mob/clothing/head_muzzled.dmi'
-	var/worn_icon_digi = 'modular_septic/icons/mob/clothing/suit_digi.dmi'
-	var/worn_icon_taur_snake = 'modular_septic/icons/mob/clothing/suit_taur_snake.dmi'
-	var/worn_icon_taur_paw = 'modular_septic/icons/mob/clothing/suit_taur_paw.dmi'
-	var/worn_icon_taur_hoof = 'modular_septic/icons/mob/clothing/suit_taur_hoof.dmi'
+	var/worn_icon_muzzled = 'oworld/icons/mob/clothing/head_muzzled.dmi'
+	var/worn_icon_digi = 'oworld/icons/mob/clothing/suit_digi.dmi'
+	var/worn_icon_taur_snake = 'oworld/icons/mob/clothing/suit_taur_snake.dmi'
+	var/worn_icon_taur_paw = 'oworld/icons/mob/clothing/suit_taur_paw.dmi'
+	var/worn_icon_taur_hoof = 'oworld/icons/mob/clothing/suit_taur_hoof.dmi'
 	var/mutant_variants = NONE
 
 	// Only mattters when worn on the head

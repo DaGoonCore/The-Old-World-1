@@ -16,13 +16,13 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/lobby)
 	var/eyeball_scale_y = 0.32
 	var/eyeball_pixel_x = 80
 	var/eyeball_pixel_y = -22
-	var/static/sound/click_sound = sound('modular_septic/sound/interface/uiclick.wav', FALSE, 0, CHANNEL_CLICKITY_CLACK, 220)
-	var/static/sound/ready_sound = sound('modular_septic/sound/interface/readyclick.wav', FALSE, 0, CHANNEL_CLICKITY_CLACK, 220)
+	var/static/sound/click_sound = sound('oworld/sound/interface/uiclick.wav', FALSE, 0, CHANNEL_CLICKITY_CLACK, 220)
+	var/static/sound/ready_sound = sound('oworld/sound/interface/readyclick.wav', FALSE, 0, CHANNEL_CLICKITY_CLACK, 220)
 
 /atom/movable/screen/lobby/button/Initialize(mapload)
 	. = ..()
 	if(highlight_eyeball && !eyeball_image)
-		eyeball_image = image('modular_septic/icons/hud/lobby/eyeball.dmi', null)
+		eyeball_image = image('oworld/icons/hud/lobby/eyeball.dmi', null)
 		eyeball_image.transform = eyeball_image.transform.Scale(eyeball_scale_x, eyeball_scale_y)
 		eyeball_image.pixel_x = eyeball_pixel_x
 		eyeball_image.pixel_y = eyeball_pixel_y
@@ -58,15 +58,15 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/lobby)
 	screen_loc = null
 
 /atom/movable/screen/lobby/button/character_setup
-	icon = 'modular_septic/icons/hud/lobby/character_setup.dmi'
+	icon = 'oworld/icons/hud/lobby/character_setup.dmi'
 	screen_loc = "SOUTH:+53,CENTER:-335"
 
 /atom/movable/screen/lobby/button/settings
-	icon = 'modular_septic/icons/hud/lobby/settings.dmi'
+	icon = 'oworld/icons/hud/lobby/settings.dmi'
 	screen_loc = "SOUTH:-6,CENTER:+218"
 
 /atom/movable/screen/lobby/button/ready
-	icon = 'modular_septic/icons/hud/lobby/ready.dmi'
+	icon = 'oworld/icons/hud/lobby/ready.dmi'
 	screen_loc = "SOUTH:-6,CENTER:-335"
 
 #define FUCKING_IDIOT_MESSAGE "Please remember to properly setup your character, or they will possibly be a retarded, green haired mute!"
@@ -77,7 +77,7 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/lobby)
 		to_chat(usr, div_infobox(span_boldwarning(FUCKING_IDIOT_MESSAGE)))
 
 /atom/movable/screen/lobby/button/join
-	icon = 'modular_septic/icons/hud/lobby/join.dmi'
+	icon = 'oworld/icons/hud/lobby/join.dmi'
 	screen_loc = "SOUTH:-6,CENTER:-335"
 
 /atom/movable/screen/lobby/button/join/Click(location, control, params)
@@ -87,7 +87,7 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/lobby)
 #undef FUCKING_IDIOT_MESSAGE
 
 /atom/movable/screen/lobby/button/observe
-	icon = 'modular_septic/icons/hud/lobby/observe.dmi'
+	icon = 'oworld/icons/hud/lobby/observe.dmi'
 	screen_loc = "SOUTH+4:-6,CENTER:-54"
 
 /atom/movable/screen/lobby/button/observe/Initialize(mapload)
@@ -95,7 +95,7 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/lobby)
 	qdel(src)
 
 /atom/movable/screen/lobby/button/credits
-	icon = 'modular_septic/icons/hud/lobby/credits.dmi'
+	icon = 'oworld/icons/hud/lobby/credits.dmi'
 	icon_state = "credits"
 	base_icon_state = "credits"
 	screen_loc = "SOUTH:+54,CENTER:+218"
@@ -105,7 +105,7 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/lobby)
 	SScredits?.ui_interact(usr)
 
 /atom/movable/screen/lobby/button/crew_manifest
-	icon = 'modular_septic/icons/hud/lobby/crew_manifest_small.dmi'
+	icon = 'oworld/icons/hud/lobby/crew_manifest_small.dmi'
 	screen_loc = "SOUTH:-24,CENTER:8"
 	highlight_eyeball = FALSE
 

@@ -1,5 +1,5 @@
 /datum/sprite_accessory/neck_accessory
-	icon = 'modular_septic/icons/mob/human/sprite_accessory/neck_accessory.dmi'
+	icon = 'oworld/icons/mob/human/sprite_accessory/neck_accessory.dmi'
 	key = "neck_acc"
 	generic = "Neck Accessory"
 	body_zone = BODY_ZONE_PRECISE_NECK

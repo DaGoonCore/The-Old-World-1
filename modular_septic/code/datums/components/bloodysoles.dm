@@ -137,15 +137,15 @@
 	wielder = parent
 
 	if(!bloody_feet)
-		bloody_feet = mutable_appearance('modular_septic/icons/effects/blood.dmi', "shoeblood", SHOES_LAYER)
+		bloody_feet = mutable_appearance('oworld/icons/effects/blood.dmi', "shoeblood", SHOES_LAYER)
 	if(!shitty_feet)
-		shitty_feet = mutable_appearance('modular_septic/icons/effects/blood.dmi', "shoeshit", SHOES_LAYER)
+		shitty_feet = mutable_appearance('oworld/icons/effects/blood.dmi', "shoeshit", SHOES_LAYER)
 		shitty_feet.color = COLOR_BROWN_SHIT
 	if(!cummy_feet)
-		cummy_feet = mutable_appearance('modular_septic/icons/effects/cum.dmi', "shoecum", SHOES_LAYER)
+		cummy_feet = mutable_appearance('oworld/icons/effects/cum.dmi', "shoecum", SHOES_LAYER)
 		cummy_feet.color = COLOR_WHITE_CUM
 	if(!femcummy_feet)
-		femcummy_feet = mutable_appearance('modular_septic/icons/effects/femcum.dmi', "shoefemcum", SHOES_LAYER)
+		femcummy_feet = mutable_appearance('oworld/icons/effects/femcum.dmi', "shoefemcum", SHOES_LAYER)
 		femcummy_feet.color = COLOR_WHITE_FEMCUM
 
 	RegisterSignal(parent, COMSIG_COMPONENT_CLEAN_ACT, .proc/on_clean)

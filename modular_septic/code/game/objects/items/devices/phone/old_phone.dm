@@ -4,7 +4,7 @@
 	var/serial_number
 	desc = "An allegedly portable phone that comes with primarily communication uses, with the ability to make both public and private calls from anywhere in the world. Data service may vary If you're \
 	tightly trapped in a supernatural warehouse with only one way out."
-	icon = 'modular_septic/icons/obj/items/device.dmi'
+	icon = 'oworld/icons/obj/items/device.dmi'
 	icon_state = "phone"
 	base_icon_state = "phone"
 	inhand_icon_state = "electronic"
@@ -15,28 +15,28 @@
 	w_class = WEIGHT_CLASS_SMALL
 	slot_flags = ITEM_SLOT_ID | ITEM_SLOT_BELT
 	verb_say = "communicates"
-	pickup_sound = 'modular_septic/sound/efn/phone_pickup.ogg'
-	equip_sound = 'modular_septic/sound/efn/phone_holster.ogg'
-	var/callingSomeone = 'modular_septic/sound/efn/phone_call.ogg'
-	var/hangUp = 'modular_septic/sound/efn/phone_hangup.ogg'
-	var/answer = 'modular_septic/sound/efn/phone_answer.ogg'
-	var/phoneDead = 'modular_septic/sound/efn/phone_dead.ogg'
-	var/device_insert = 'modular_septic/sound/efn/phone_simcard_insert.ogg'
-	var/device_desert = 'modular_septic/sound/efn/phone_simcard_desert.ogg'
-	var/phone_press = list('modular_septic/sound/effects/phone_press.ogg', 'modular_septic/sound/effects/phone_press2.ogg', 'modular_septic/sound/effects/phone_press3.ogg', 'modular_septic/sound/effects/phone_press4.ogg')
-	var/phone_publicize = 'modular_septic/sound/efn/phone_publicize.ogg'
-	var/talking_noises = list('modular_septic/sound/efn/phone_talk1.ogg', 'modular_septic/sound/efn/phone_talk2.ogg', 'modular_septic/sound/efn/phone_talk3.ogg')
-	var/beginreset_noise = 'modular_septic/sound/efn/phone_beginreset.ogg'
-	var/firewall_noise = 'modular_septic/sound/efn/phone_firewall.ogg'
-	var/subtlealert_noise = 'modular_septic/sound/efn/phone_subtlealert.ogg'
-	var/reset_noise = 'modular_septic/sound/efn/phone_reset.ogg'
-	var/query_noise = 'modular_septic/sound/efn/phone_query.ogg'
-	var/defend_noise = 'modular_septic/sound/efn/phone_query_master.ogg'
-	var/self_destruct_noise = 'modular_septic/sound/efn/virus_explode_buildup.ogg'
+	pickup_sound = 'oworld/sound/efn/phone_pickup.ogg'
+	equip_sound = 'oworld/sound/efn/phone_holster.ogg'
+	var/callingSomeone = 'oworld/sound/efn/phone_call.ogg'
+	var/hangUp = 'oworld/sound/efn/phone_hangup.ogg'
+	var/answer = 'oworld/sound/efn/phone_answer.ogg'
+	var/phoneDead = 'oworld/sound/efn/phone_dead.ogg'
+	var/device_insert = 'oworld/sound/efn/phone_simcard_insert.ogg'
+	var/device_desert = 'oworld/sound/efn/phone_simcard_desert.ogg'
+	var/phone_press = list('oworld/sound/effects/phone_press.ogg', 'oworld/sound/effects/phone_press2.ogg', 'oworld/sound/effects/phone_press3.ogg', 'oworld/sound/effects/phone_press4.ogg')
+	var/phone_publicize = 'oworld/sound/efn/phone_publicize.ogg'
+	var/talking_noises = list('oworld/sound/efn/phone_talk1.ogg', 'oworld/sound/efn/phone_talk2.ogg', 'oworld/sound/efn/phone_talk3.ogg')
+	var/beginreset_noise = 'oworld/sound/efn/phone_beginreset.ogg'
+	var/firewall_noise = 'oworld/sound/efn/phone_firewall.ogg'
+	var/subtlealert_noise = 'oworld/sound/efn/phone_subtlealert.ogg'
+	var/reset_noise = 'oworld/sound/efn/phone_reset.ogg'
+	var/query_noise = 'oworld/sound/efn/phone_query.ogg'
+	var/defend_noise = 'oworld/sound/efn/phone_query_master.ogg'
+	var/self_destruct_noise = 'oworld/sound/efn/virus_explode_buildup.ogg'
 	var/flip_phone = TRUE
 	var/flipped = TRUE
-	var/flip_noise = 'modular_septic/sound/efn/phone_flip.ogg'
-	var/unflip_noise = 'modular_septic/sound/efn/phone_unflip.ogg'
+	var/flip_noise = 'oworld/sound/efn/phone_flip.ogg'
+	var/unflip_noise = 'oworld/sound/efn/phone_unflip.ogg'
 	var/calling_someone = FALSE
 	var/ringring = FALSE
 	var/resetting = FALSE
@@ -58,8 +58,8 @@
 	desc = "A darkened, vintage phone. It's design allows to easy jailbreaking and loading of bootleg apps."
 	icon_state = "hacker_phone"
 	base_icon_state = "hacker_phone"
-	flip_noise = 'modular_septic/sound/efn/hacker_phone_flip.ogg'
-	unflip_noise = 'modular_septic/sound/efn/hacker_phone_unflip.ogg'
+	flip_noise = 'oworld/sound/efn/hacker_phone_flip.ogg'
+	unflip_noise = 'oworld/sound/efn/hacker_phone_unflip.ogg'
 
 /obj/item/cellular_phone/hacker/update_overlays()
 	if(flipped)
@@ -173,7 +173,7 @@
 /obj/item/sim_card
 	name = "\improper sim card"
 	desc = "Sim, sim, I agree with your statement"
-	icon = 'modular_septic/icons/obj/items/device.dmi'
+	icon = 'oworld/icons/obj/items/device.dmi'
 	icon_state = "simcard"
 	base_icon_state = "simcard"
 	var/public_name
@@ -265,8 +265,8 @@
 	var/stage = 0
 	var/can_progress = TRUE
 	var/activated = FALSE
-	var/virus_screams = list('modular_septic/sound/efn/virus_scream.ogg', 'modular_septic/sound/efn/virus_scream2.ogg', 'modular_septic/sound/efn/virus_scream3.ogg')
-	var/virus_acute_hint = 'modular_septic/sound/efn/virus_acute.ogg'
+	var/virus_screams = list('oworld/sound/efn/virus_scream.ogg', 'oworld/sound/efn/virus_scream2.ogg', 'oworld/sound/efn/virus_scream3.ogg')
+	var/virus_acute_hint = 'oworld/sound/efn/virus_acute.ogg'
 	var/infectious = TRUE
 //	var/acute_glitches = list("zap", "fake_call")
 
@@ -484,7 +484,7 @@
 	update_appearance(UPDATE_ICON)
 
 /obj/item/cellular_phone/proc/gib_them_with_a_delay(mob/living/user)
-	playsound(src, 'modular_septic/sound/effects/ted_beeping.wav', 80, FALSE, 2)
+	playsound(src, 'oworld/sound/effects/ted_beeping.wav', 80, FALSE, 2)
 	if(user)
 		user.sound_hint()
 	else

@@ -1,12 +1,12 @@
 /obj/item/clothing/under/itobe
 	name = "\proper darkened fatigues"
 	desc = "Fatigues with light ballistic padding inside of the inside of the uniform, stitched in a way to allow freedom of movement and silence when moving."
-	icon = 'modular_septic/icons/obj/clothing/under/itobe.dmi'
+	icon = 'oworld/icons/obj/clothing/under/itobe.dmi'
 	icon_state = "soldat"
-	worn_icon = 'modular_septic/icons/mob/clothing/under/itobe.dmi'
+	worn_icon = 'oworld/icons/mob/clothing/under/itobe.dmi'
 	worn_icon_state = "soldat"
-	lefthand_file = 'modular_septic/icons/mob/inhands/clothing/clothing_lefthand.dmi'
-	righthand_file = 'modular_septic/icons/mob/inhands/clothing/clothing_righthand.dmi'
+	lefthand_file = 'oworld/icons/mob/inhands/clothing/clothing_lefthand.dmi'
+	righthand_file = 'oworld/icons/mob/inhands/clothing/clothing_righthand.dmi'
 	inhand_icon_state = "soldat"
 	armor_broken_sound = "light"
 	armor_damaged_sound = "light"

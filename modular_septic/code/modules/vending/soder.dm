@@ -1,7 +1,7 @@
 /obj/machinery/vending/soder
 	name = "\improper Mug Root Beer"
 	desc = "Mug Moment."
-	icon = 'modular_septic/icons/obj/machinery/vending.dmi'
+	icon = 'oworld/icons/obj/machinery/vending.dmi'
 	icon_state = "mug"
 	panel_type = "panel2"
 	product_slogans = "OOOOOOOOUUUUU... SO REFRESHING..."
@@ -15,7 +15,7 @@
 	default_price = PAYCHECK_ASSISTANT * 0.7
 	extra_price = PAYCHECK_MEDIUM
 	payment_department = ACCOUNT_SRV
-	var/mugvoice = 'modular_septic/sound/effects/mug.ogg'
+	var/mugvoice = 'oworld/sound/effects/mug.ogg'
 
 /obj/machinery/vending/soder/process(delta_time, volume = 70)
 	if(machine_stat & (BROKEN|NOPOWER))

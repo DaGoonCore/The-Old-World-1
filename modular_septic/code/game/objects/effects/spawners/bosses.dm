@@ -19,7 +19,7 @@
     name = "Emoney"
     outfit = /datum/outfit/job/emoney
     death = FALSE
-    icon = 'modular_septic/icons/obj/spawner.dmi'
+    icon = 'oworld/icons/obj/spawner.dmi'
     icon_state = "raginggorrilla"
 
 /obj/effect/mob_spawn/human/emoney/special(mob/living/new_spawn, name)

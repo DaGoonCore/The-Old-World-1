@@ -1,6 +1,6 @@
 /atom/movable/screen/fixeye
 	name = "fix eye"
-	icon = 'modular_septic/icons/hud/quake/screen_quake.dmi'
+	icon = 'oworld/icons/hud/quake/screen_quake.dmi'
 	icon_state = "fixeye"
 	base_icon_state = "fixeye"
 	screen_loc = ui_fixeye

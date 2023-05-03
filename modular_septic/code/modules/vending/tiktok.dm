@@ -37,7 +37,7 @@
 	slogan_delay = 600
 	icon_state = "tiktok"
 	base_icon_state = "tiktok"
-	icon = 'modular_septic/icons/obj/machinery/vending.dmi'
+	icon = 'oworld/icons/obj/machinery/vending.dmi'
 	product_slogans = "Idiot. FUCKING IDIOT!; Your birth certicificate is an APOLOGY LEGGER from the CLINIC; Shut up, retard.; The King is Coming!!; We are in the last moments of the end of days.; Prophesised to happen before the return of Jesus; The Marshmellow Time was wrong then and it; Salvation from God is a Gift.; The Ultimate sacrifice for all of our sins.; Ultimate Metaphysics: Divine Unity, or the Conjugate Whole"
 	products = list(
 		/obj/item/storage/backpack/satchel/itobe = 40,
@@ -47,10 +47,10 @@
 		/obj/item/clothing/suit/armor/vest/alt/discrete = 40,
 		/obj/item/wrench = 45,
 	)
-	var/list/tiktoklines = list('modular_septic/sound/effects/singer1.wav', 'modular_septic/sound/effects/singer2.wav')
+	var/list/tiktoklines = list('oworld/sound/effects/singer1.wav', 'oworld/sound/effects/singer2.wav')
 	var/refuse_sound_cooldown_duration = 1 SECONDS
-	var/barfsound = 'modular_septic/sound/emotes/vomit.wav'
-	var/crushersound = list('modular_septic/sound/effects/crusher1.wav', 'modular_septic/sound/effects/crusher2.wav', 'modular_septic/sound/effects/crusher3.wav')
+	var/barfsound = 'oworld/sound/emotes/vomit.wav'
+	var/crushersound = list('oworld/sound/effects/crusher1.wav', 'oworld/sound/effects/crusher2.wav', 'oworld/sound/effects/crusher3.wav')
 	COOLDOWN_DECLARE(refuse_cooldown)
 
 /obj/machinery/vending/tiktok/attackby(obj/item/I, mob/living/user, params)
@@ -58,7 +58,7 @@
 	if(!GLOB.bartering_inputs[I.type])
 		if(COOLDOWN_FINISHED(src, refuse_cooldown))
 			sound_hint()
-			playsound(src, 'modular_septic/sound/effects/clunk.wav', 60, vary = FALSE)
+			playsound(src, 'oworld/sound/effects/clunk.wav', 60, vary = FALSE)
 			COOLDOWN_START(src, refuse_cooldown, refuse_sound_cooldown_duration)
 		return
 	if(user.transferItemToLoc(I, src))
@@ -141,7 +141,7 @@
 			var/output_amount = bartering_recipe.outputs[output]
 			for(var/i in 1 to output_amount)
 				new output(loc)
-		playsound(src, 'modular_septic/sound/effects/ring.wav', 90, TRUE)
+		playsound(src, 'oworld/sound/effects/ring.wav', 90, TRUE)
 		speak("Take from me.")
 
 /obj/machinery/vending/tiktok/proc/vomit_items()

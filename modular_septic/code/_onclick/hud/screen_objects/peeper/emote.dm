@@ -1,6 +1,6 @@
 /atom/movable/screen/emote
 	name = "Emote"
-	icon = 'modular_septic/icons/hud/quake/peeper.dmi'
+	icon = 'oworld/icons/hud/quake/peeper.dmi'
 	icon_state = "emote"
 	plane = PEEPER_PLANE
 	layer = PEEPER_OBJECT_LAYER

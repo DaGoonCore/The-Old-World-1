@@ -2,7 +2,7 @@
 	name = "\improper RobinHood"
 	desc = "A terminal used to keep up to date with the ever changing capitalist universe.\n\
 			<i>Buy high, sell low!</i>"
-	icon = 'modular_septic/icons/obj//machinery/computer.dmi'
+	icon = 'oworld/icons/obj//machinery/computer.dmi'
 	icon_state = "computer_small"
 	icon_screen = "exports"
 	icon_keyboard = "exports_key"
@@ -81,7 +81,7 @@
 /obj/structure/table/exportstable
 	name = "exports table"
 	desc = "A square piece of iron for placing documents, stamps, pens, and revolvers."
-	icon = 'modular_septic/icons/obj/structures/structures.dmi'
+	icon = 'oworld/icons/obj/structures/structures.dmi'
 	icon_state = "table_small"
 	smoothing_flags = null
 	smoothing_groups = null

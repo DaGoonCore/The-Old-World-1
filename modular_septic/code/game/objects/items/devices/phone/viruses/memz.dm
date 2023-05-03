@@ -44,9 +44,9 @@
 	if(!prob(hint_chance))
 		return
 	if(stage <= 2)
-		var/scream = pick('modular_septic/sound/efn/virus_scream.ogg', 'modular_septic/sound/efn/virus_scream2.ogg', 'modular_septic/sound/efn/virus_scream3.ogg')
+		var/scream = pick('oworld/sound/efn/virus_scream.ogg', 'oworld/sound/efn/virus_scream2.ogg', 'oworld/sound/efn/virus_scream3.ogg')
 		playsound(parent.parent, scream, rand(5, 19), FALSE)
 		parent.parent.audible_message(span_danger("[icon2html(parent.parent, world)] [parent.parent] vibrate[parent.parent.p_s()] quietly."))
 	else
-		playsound(parent.parent, 'modular_septic/sound/efn/virus_acute.ogg', rand(25, 45), FALSE)
+		playsound(parent.parent, 'oworld/sound/efn/virus_acute.ogg', rand(25, 45), FALSE)
 		parent.parent.audible_message(span_danger("[icon2html(parent.parent, world)] [parent.parent] vibrate[parent.parent.p_s()] loudly, [parent.parent.p_their()] screen blinking and glitching!"))

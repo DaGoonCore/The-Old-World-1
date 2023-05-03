@@ -1,12 +1,12 @@
 /obj/item/clothing/head/welding/itobe
 	name = "engineering mask and helmet"
 	desc = "A dual-layered ballistic mask made of plasteel and titanium. Its uniquely shaped yellow visor provides engineering readouts and other useful data. Not entirely useless for ballistic protection."
-	icon = 'modular_septic/icons/obj/clothing/masks.dmi'
+	icon = 'oworld/icons/obj/clothing/masks.dmi'
 	icon_state = "engineer"
-	worn_icon = 'modular_septic/icons/mob/clothing/mask.dmi'
+	worn_icon = 'oworld/icons/mob/clothing/mask.dmi'
 	worn_icon_state = "engineer"
-	lefthand_file = 'modular_septic/icons/mob/inhands/clothing/clothing_lefthand.dmi'
-	righthand_file = 'modular_septic/icons/mob/inhands/clothing/clothing_righthand.dmi'
+	lefthand_file = 'oworld/icons/mob/inhands/clothing/clothing_lefthand.dmi'
+	righthand_file = 'oworld/icons/mob/inhands/clothing/clothing_righthand.dmi'
 	inhand_icon_state = "engineermask"
 	tint = null
 	body_parts_covered = FACE|JAW|HEAD|EYES
@@ -29,13 +29,13 @@
 /obj/item/clothing/head/helmet/kelzad
 	name = "\"Kelzad\" type V heavy tactical assault helmet"
 	desc = "A legendary helmet inspired off of the helmet used by a mentally ill mistake of nature, the wonder child of even more degenerate scientist."
-	icon = 'modular_septic/icons/obj/clothing/itobe.dmi'
+	icon = 'oworld/icons/obj/clothing/itobe.dmi'
 	base_icon_state = "khelmet0"
 	icon_state = "khelmet0"
-	worn_icon = 'modular_septic/icons/mob/clothing/head.dmi'
+	worn_icon = 'oworld/icons/mob/clothing/head.dmi'
 	worn_icon_state = "khelmet"
-	lefthand_file = 'modular_septic/icons/mob/inhands/clothing/clothing_lefthand.dmi'
-	righthand_file = 'modular_septic/icons/mob/inhands/clothing/clothing_righthand.dmi'
+	lefthand_file = 'oworld/icons/mob/inhands/clothing/clothing_lefthand.dmi'
+	righthand_file = 'oworld/icons/mob/inhands/clothing/clothing_righthand.dmi'
 	inhand_icon_state = "khelmet0"
 	var/basestate = "khhelmet"
 	var/on = TRUE

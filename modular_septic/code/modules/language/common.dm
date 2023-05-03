@@ -4,7 +4,7 @@
 			language of Great Britain and it's colonies."
 	key = "1"
 	default_priority = 100
-	icon = 'modular_septic/icons/misc/language.dmi'
+	icon = 'oworld/icons/misc/language.dmi'
 	icon_state = "english"
 	space_chance = 50
 

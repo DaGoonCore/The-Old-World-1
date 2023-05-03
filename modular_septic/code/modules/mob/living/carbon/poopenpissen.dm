@@ -31,7 +31,7 @@
 	else
 		visible_message(span_notice("<b>[src]</b> shits on [loc]."), \
 					span_notice("I take a shit on [loc]."))
-	playsound(loc, 'modular_septic/sound/effects/poo.ogg', 75)
+	playsound(loc, 'oworld/sound/effects/poo.ogg', 75)
 
 /mob/living/carbon/proc/piss(intentional = FALSE)
 	var/list/bladders = getorganslotlist(ORGAN_SLOT_BLADDER)
@@ -65,7 +65,7 @@
 			pissed.add_liquid(/datum/reagent/consumable/piss, amount)
 		visible_message(span_notice("<b>[src]</b> pisses on [pissed]."), \
 					span_notice("I take a piss on [pissed]."))
-	playsound(loc, 'modular_septic/sound/effects/pee.ogg', 75)
+	playsound(loc, 'oworld/sound/effects/pee.ogg', 75)
 
 /mob/living/carbon/proc/defecate()
 	set name = "Defecate"

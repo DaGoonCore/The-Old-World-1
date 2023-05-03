@@ -32,8 +32,8 @@
 	throw_range = 3 //bowling
 	maxdam_wound_penalty = 20 //somewhat hard to hit this cap, better of trying to hit the neck
 	dismemberment_sounds = list(
-		'modular_septic/sound/gore/newhead_explodie1.wav',
-		'modular_septic/sound/gore/newhead_explodie2.wav',
+		'oworld/sound/gore/newhead_explodie1.wav',
+		'oworld/sound/gore/newhead_explodie2.wav',
 	)
 	dismemberment_volume = 140
 
@@ -59,7 +59,7 @@
 /obj/item/bodypart/head/desc_chaser(mob/user)
 	. = list()
 	if(prob(10))
-		var/image_src = image2html('modular_septic/images/nerdemoji.gif', user, format = "png", sourceonly = TRUE)
+		var/image_src = image2html('oworld/images/nerdemoji.gif', user, format = "png", sourceonly = TRUE)
 		. += "<img src='[image_src]' width=96 height=96>"
 	. += ..()
 
@@ -239,7 +239,7 @@
 	if(jaw)
 		// lipstick
 		if(jaw.lip_style)
-			var/image/lips_overlay = image('modular_septic/icons/mob/human/sprite_accessory/human_face.dmi', "lips_[jaw.lip_style]", -BODY_LAYER, SOUTH)
+			var/image/lips_overlay = image('oworld/icons/mob/human/sprite_accessory/human_face.dmi', "lips_[jaw.lip_style]", -BODY_LAYER, SOUTH)
 			lips_overlay.color = jaw.lip_color
 			. += lips_overlay
 		// facial hair
@@ -257,16 +257,16 @@
 	var/obj/item/organ/eyes/actual_left_eye = locate(/obj/item/organ/eyes) in left_eye
 	var/obj/item/organ/eyes/actual_right_eye = locate(/obj/item/organ/eyes) in right_eye
 	if(actual_left_eye)
-		left_eye_overlay = image('modular_septic/icons/mob/human/sprite_accessory/human_face.dmi', null, actual_left_eye.eye_icon_state, -BODY_LAYER)
+		left_eye_overlay = image('oworld/icons/mob/human/sprite_accessory/human_face.dmi', null, actual_left_eye.eye_icon_state, -BODY_LAYER)
 		left_eye_overlay.color = actual_left_eye.eye_color
 	else
-		left_eye_overlay = image('modular_septic/icons/mob/human/sprite_accessory/human_face.dmi', null, "eye-left-missing", -BODY_LAYER)
+		left_eye_overlay = image('oworld/icons/mob/human/sprite_accessory/human_face.dmi', null, "eye-left-missing", -BODY_LAYER)
 
 	if(actual_right_eye)
-		right_eye_overlay = image('modular_septic/icons/mob/human/sprite_accessory/human_face.dmi', null, actual_right_eye.eye_icon_state, -BODY_LAYER)
+		right_eye_overlay = image('oworld/icons/mob/human/sprite_accessory/human_face.dmi', null, actual_right_eye.eye_icon_state, -BODY_LAYER)
 		right_eye_overlay.color = actual_right_eye.eye_color
 	else
-		right_eye_overlay = image('modular_septic/icons/mob/human/sprite_accessory/human_face.dmi', null, "eye-right-missing", -BODY_LAYER)
+		right_eye_overlay = image('oworld/icons/mob/human/sprite_accessory/human_face.dmi', null, "eye-right-missing", -BODY_LAYER)
 
 	if(ishuman(owner) && (OFFSET_HEAD in owner.dna.species.offset_features))
 		left_eye_overlay.pixel_x += owner.dna.species.offset_features[OFFSET_HEAD][1]
@@ -279,10 +279,10 @@
 
 	//face
 	if(!face)
-		. += image('modular_septic/icons/mob/human/sprite_accessory/human_face.dmi', null, "face_missing", -BODY_LAYER)
+		. += image('oworld/icons/mob/human/sprite_accessory/human_face.dmi', null, "face_missing", -BODY_LAYER)
 	//jaw
 	if(!jaw)
-		. += image('modular_septic/icons/mob/human/sprite_accessory/human_face.dmi', null, "lips_missing", -BODY_LAYER)
+		. += image('oworld/icons/mob/human/sprite_accessory/human_face.dmi', null, "lips_missing", -BODY_LAYER)
 	//tape gag
 	else if(jaw.tapered)
-		. += image('modular_septic/icons/mob/human/overlays/tapegag.dmi', null, "tapegag", -UPPER_MEDICINE_LAYER)
+		. += image('oworld/icons/mob/human/overlays/tapegag.dmi', null, "tapegag", -UPPER_MEDICINE_LAYER)

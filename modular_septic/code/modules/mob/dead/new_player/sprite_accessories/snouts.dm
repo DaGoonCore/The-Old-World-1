@@ -1,7 +1,7 @@
 /datum/sprite_accessory/snouts
 	key = "snout"
 	generic = "Snout"
-	icon = 'modular_septic/icons/mob/human/sprite_accessory/lizard_snouts.dmi'
+	icon = 'oworld/icons/mob/human/sprite_accessory/lizard_snouts.dmi'
 	recommended_species = list(SPECIES_SYNTHMAMMAL, SPECIES_MAMMAL, SPECIES_WEREWOLF, SPECIES_WERECAT, SPECIES_LIZARD, SPECIES_LIZARD_ASH, SPECIES_LIZARD_SILVER)
 	relevant_layers = list(BODY_ADJ_LAYER, BODY_FRONT_LAYER)
 	body_zone = BODY_ZONE_PRECISE_MOUTH
@@ -23,7 +23,7 @@
 	factual = FALSE
 
 /datum/sprite_accessory/snouts/mammal
-	icon = 'modular_septic/icons/mob/human/sprite_accessory/snouts.dmi'
+	icon = 'oworld/icons/mob/human/sprite_accessory/snouts.dmi'
 	color_src = USE_MATRIXED_COLORS
 	recommended_species = list(SPECIES_SYNTHMAMMAL, SPECIES_HUMANOID)
 

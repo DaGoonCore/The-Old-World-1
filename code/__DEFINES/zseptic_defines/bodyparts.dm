@@ -1,8 +1,8 @@
 // ~bodypart icons
-#define DEFAULT_BODYPART_ICON 'modular_septic/icons/mob/human/species/human/dismembered_human_parts.dmi'
-#define DEFAULT_BODYPART_ICON_ORGANIC 'modular_septic/icons/mob/human/species/human/new_human_parts.dmi'
-#define DEFAULT_BODYPART_ICON_ROBOTIC 'modular_septic/icons/mob/human/augments/augments.dmi'
-#define DEFAULT_BODYPART_ICON_ANIMAL 'modular_septic/icons/mob/carbon/animal_parts.dmi'
+#define DEFAULT_BODYPART_ICON 'oworld/icons/mob/human/species/human/dismembered_human_parts.dmi'
+#define DEFAULT_BODYPART_ICON_ORGANIC 'oworld/icons/mob/human/species/human/new_human_parts.dmi'
+#define DEFAULT_BODYPART_ICON_ROBOTIC 'oworld/icons/mob/human/augments/augments.dmi'
+#define DEFAULT_BODYPART_ICON_ANIMAL 'oworld/icons/mob/carbon/animal_parts.dmi'
 
 // ~bodypart damage messages
 #define DEFAULT_NO_BRUTE_MSG "unbruised"

@@ -84,10 +84,10 @@
 
 /datum/hud/get_action_buttons_icons()
 	. = list()
-	.["bg_icon"] = 'modular_septic/icons/hud/quake/actions.dmi'
+	.["bg_icon"] = 'oworld/icons/hud/quake/actions.dmi'
 	.["bg_state"] = "template"
 
-	.["toggle_icon"] = 'modular_septic/icons/hud/quake/actions.dmi'
+	.["toggle_icon"] = 'oworld/icons/hud/quake/actions.dmi'
 	.["toggle_hide"] = "hide"
 	.["toggle_show"] = "show"
 

@@ -5,9 +5,9 @@
 	name = "Dental Avulsion"
 	desc = "Patient's teeth have been violently ripped off due to blunt trauma."
 	occur_text = "has it's teeth sail off in an arc"
-	sound_effect = list('modular_septic/sound/gore/trauma1.ogg', \
-					'modular_septic/sound/gore/trauma2.ogg', \
-					'modular_septic/sound/gore/trauma3.ogg')
+	sound_effect = list('oworld/sound/gore/trauma1.ogg', \
+					'oworld/sound/gore/trauma2.ogg', \
+					'oworld/sound/gore/trauma3.ogg')
 
 	severity = WOUND_SEVERITY_TRIVIAL
 	viable_zones = ALL_BODYPARTS

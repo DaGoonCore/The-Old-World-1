@@ -1,7 +1,7 @@
 /area/maintenance/liminal
 	name = "Liminal Space"
 	icon_state = "liminal"
-	icon = 'modular_septic/icons/turf/areas.dmi'
+	icon = 'oworld/icons/turf/areas.dmi'
 	droning_sound = DRONING_LIMINAL
 	requires_power = FALSE
 

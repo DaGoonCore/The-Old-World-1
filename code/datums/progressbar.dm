@@ -41,7 +41,7 @@
 	bar = image('icons/effects/progessbar.dmi', bar_loc, "prog_bar_0")
 	*/
 	//SEPTIC EDIT BEGIN
-	bar = image('modular_septic/icons/effects/loadingcircle.dmi', bar_loc, "prog_bar_0")
+	bar = image('oworld/icons/effects/loadingcircle.dmi', bar_loc, "prog_bar_0")
 	bar.color = "#27c400"
 	bar.filters += filter(type = "drop_shadow", size = 1, color = "#000000", x = 1, y = -1, offset = 1)
 	//SEPTIC EDIT END

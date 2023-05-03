@@ -8,6 +8,6 @@
 
 /obj/item/trash/simcard
 	name = "\proper fried"
-	icon = 'modular_septic/icons/obj/items/phone.dmi'
+	icon = 'oworld/icons/obj/items/phone.dmi'
 	icon_state = "simcard_fried"
 	base_icon_state = "simcard_fried"

@@ -2,13 +2,13 @@
 	icon_state = "12gauge_slug"
 	base_icon_state = "12gauge_slug"
 	world_icon_state = "gshells"
-	bounce_sound = list('modular_septic/sound/weapons/guns/shotgun/12cal1.wav', 'modular_septic/sound/weapons/guns/shotgun/12cal2.wav', 'modular_septic/sound/weapons/guns/shotgun/12cal3.wav')
+	bounce_sound = list('oworld/sound/weapons/guns/shotgun/12cal1.wav', 'oworld/sound/weapons/guns/shotgun/12cal2.wav', 'oworld/sound/weapons/guns/shotgun/12cal3.wav')
 	bounce_volume = 45
 	stack_type = /obj/item/ammo_box/magazine/ammo_stack/shotgun
 
 /obj/item/ammo_casing/shotgun/Initialize(mapload)
 	if((type == /obj/item/ammo_casing/shotgun) && prob(0.1))
-		playsound(src, 'modular_septic/sound/weapons/faggot.ogg', 70, FALSE)
+		playsound(src, 'oworld/sound/weapons/faggot.ogg', 70, FALSE)
 		name = "reggie slug"
 		desc = "Hi, my name is Reggie, I like penetrating IIIA body armor."
 	return ..()

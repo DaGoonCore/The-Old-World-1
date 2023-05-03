@@ -140,7 +140,7 @@
 			var/turned_dir = turn(newdir, 180)
 			if(!(turned_dir in starting_trail.existing_dirs[trail_type]) && prob(50))
 				newdir = turned_dir
-		starting_trail.add_overlay(image('modular_septic/icons/effects/blood.dmi', trail_type, dir = newdir))
+		starting_trail.add_overlay(image('oworld/icons/effects/blood.dmi', trail_type, dir = newdir))
 	starting_trail.transfer_mob_blood_dna(src)
 	var/old_beauty = starting_trail.beauty
 	starting_trail.beauty = -50

@@ -1,2 +1,2 @@
 /obj/effect/turf_decal
-	icon = 'modular_septic/icons/turf/decals.dmi'
+	icon = 'oworld/icons/turf/decals.dmi'

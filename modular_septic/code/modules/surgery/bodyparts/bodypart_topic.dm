@@ -13,7 +13,7 @@
 			if(do_mob(usr, owner, 6 SECONDS) && current_gauze)
 				owner.visible_message(span_warning("<b>[owner]</b> rips \the [current_gauze] off of [owner.p_their()] [src.name], destroying it in the process!"),
 									span_warning("I rip \the [current_gauze] off of my [src.name], destroying it in the process!"))
-				playsound(owner, 'modular_septic/sound/effects/clothripping.ogg', 40, 0, -4)
+				playsound(owner, 'oworld/sound/effects/clothripping.ogg', 40, 0, -4)
 				remove_gauze(FALSE)
 			else
 				to_chat(owner, span_warning("I fail to rip \the [current_gauze] off of my [src.name].."))
@@ -21,7 +21,7 @@
 			if(do_mob(usr, owner, 3 SECONDS) && current_gauze)
 				usr.visible_message(span_warning("<b>[usr]</b> rips \the [current_gauze] off of <b>[owner]</b>'s [src.name], destroying it in the process!"),
 								span_warning("I rip \the [current_gauze] off of [owner]'s [src.name], destroying it in the process!"))
-				playsound(owner, 'modular_septic/sound/effects/clothripping.ogg', 40, 0, -4)
+				playsound(owner, 'oworld/sound/effects/clothripping.ogg', 40, 0, -4)
 				remove_gauze(FALSE)
 			else
 				to_chat(usr, span_warning("I fail to rip \the [current_gauze] off of <b>[owner]</b>'s [src.name].."))
@@ -38,7 +38,7 @@
 			if(do_mob(usr, owner, 6 SECONDS) && current_splint)
 				owner.visible_message(span_warning("<b>[owner]</b> rips \the [current_splint] off of [owner.p_their()] [src.name], destroying it in the process!"),
 									span_warning("I rip \the [current_splint] off of my [src.name], destroying it in the process!"))
-				playsound(owner, 'modular_septic/sound/effects/clothripping.ogg', 40, 0, -4)
+				playsound(owner, 'oworld/sound/effects/clothripping.ogg', 40, 0, -4)
 				remove_splint(FALSE)
 			else
 				to_chat(owner, span_warning("I fail to rip \the [current_splint] off of my [src.name].."))
@@ -46,7 +46,7 @@
 			if(do_mob(usr, owner, 3 SECONDS) && current_splint)
 				usr.visible_message(span_warning("<b>[usr]</b> rips \the [current_splint] off of <b>[owner]</b>'s [src.name], destroying it in the process!"),
 								span_warning("I rip \the [current_splint] off of [owner]'s [src.name], destroying it in the process!"))
-				playsound(owner, 'modular_septic/sound/effects/clothripping.ogg', 40, 0, -4)
+				playsound(owner, 'oworld/sound/effects/clothripping.ogg', 40, 0, -4)
 				remove_splint(FALSE)
 			else
 				to_chat(usr, span_warning("I fail to rip \the [current_splint] off of <b>[owner]</b>'s [src.name].."))

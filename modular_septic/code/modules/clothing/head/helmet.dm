@@ -1,9 +1,9 @@
 /obj/item/clothing/head/helmet
 	name = "type II ballistic helmet"
 	desc = "A type II armored helmet. Moderate protection against most types of damage. Does not cover the face."
-	icon = 'modular_septic/icons/obj/clothing/hats.dmi'
+	icon = 'oworld/icons/obj/clothing/hats.dmi'
 	icon_state = "helmet"
-	worn_icon = 'modular_septic/icons/mob/clothing/head.dmi'
+	worn_icon = 'oworld/icons/mob/clothing/head.dmi'
 	worn_icon_state = "helmet"
 	max_integrity = 200
 	limb_integrity = 190
@@ -29,16 +29,16 @@
 	armor_damaged_sound = "heavy_helmet"
 	armor_damaged_sound_local = "heavy_helmet"
 	carry_weight = 2.5 KILOGRAMS
-	equip_sound = 'modular_septic/sound/armor/equip/helmet_use.wav'
-	pickup_sound = 'modular_septic/sound/armor/equip/helmet_pickup.wav'
-	drop_sound = 'modular_septic/sound/armor/equip/helmet_drop.wav'
+	equip_sound = 'oworld/sound/armor/equip/helmet_use.wav'
+	pickup_sound = 'oworld/sound/armor/equip/helmet_pickup.wav'
+	drop_sound = 'oworld/sound/armor/equip/helmet_drop.wav'
 
 /obj/item/clothing/head/helmet/medium
 	name = "\"Evacuador\" type III+ ballistic helmet"
 	desc = "A type III+ ballistic helmet. Intermediate protection against most types of damage. Does not cover the face."
-	icon = 'modular_septic/icons/obj/clothing/hats.dmi'
+	icon = 'oworld/icons/obj/clothing/hats.dmi'
 	icon_state = "helmet_medium"
-	worn_icon = 'modular_septic/icons/mob/clothing/head.dmi'
+	worn_icon = 'oworld/icons/mob/clothing/head.dmi'
 	worn_icon_state = "helmet_medium"
 	max_integrity = 300
 	integrity_failure = 0.05
@@ -63,9 +63,9 @@
 /obj/item/clothing/head/helmet/heavy
 	name = "\"Touro-5\" type IV heavy ballistic helmet"
 	desc = "A type IV armored heavy helmet. Intermediate protection against most types of damage. Has a-pair of mounts on the sides for a faceshield to protect the face."
-	icon = 'modular_septic/icons/obj/clothing/hats.dmi'
+	icon = 'oworld/icons/obj/clothing/hats.dmi'
 	icon_state = "helmet_heavy"
-	worn_icon = 'modular_septic/icons/mob/clothing/head.dmi'
+	worn_icon = 'oworld/icons/mob/clothing/head.dmi'
 	worn_icon_state = "helmet_heavy"
 	max_integrity = 400
 	integrity_failure = 0.04
@@ -97,9 +97,9 @@
 	name = "\"Crackudo\" type V heavy ballistic helmet"
 	desc = "A type V armored heavy helmet. Specialized protection against ballistic threats, although vintage, incredibly heavy, and uncomfortable to wear. Often used by ITOBE privates who couldn't get their hands on actual gear \
 	Embuing it with the slang-term, \"Crackudo\", for crackhead."
-	icon = 'modular_septic/icons/obj/clothing/hats.dmi'
+	icon = 'oworld/icons/obj/clothing/hats.dmi'
 	icon_state = "helmet_heavy_face"
-	worn_icon = 'modular_septic/icons/mob/clothing/head.dmi'
+	worn_icon = 'oworld/icons/mob/clothing/head.dmi'
 	worn_icon_state = "helmet_heavy_face"
 	max_integrity = 500
 	integrity_failure = 0.04
@@ -121,7 +121,7 @@
                 WOUND = 0, \
                 ORGAN = 0)
 	carry_weight = 5 KILOGRAMS
-	equip_sound = 'modular_septic/sound/armor/equip/helmet_use_visor.wav'
+	equip_sound = 'oworld/sound/armor/equip/helmet_use_visor.wav'
 
 /obj/item/clothing/head/helmet/infiltrator
 	name = "infiltrator helmet"

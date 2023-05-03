@@ -1,19 +1,19 @@
 /obj/item/reagent_containers/syringe
 	name = "syringe"
 	desc = "A pointy needle attached to a shakey plunger - This is a professional tool for stabbing someone into the elbow and needlessly scraping into their bone multiple times before injecting the intravenous drug intramuscularly."
-	icon = 'modular_septic/icons/obj/items/syringe.dmi'
+	icon = 'oworld/icons/obj/items/syringe.dmi'
 	base_icon_state = "syringe"
-	lefthand_file = 'modular_septic/icons/obj/items/inhands/items_and_weapons_lefthand.dmi'
-	righthand_file = 'modular_septic/icons/obj/items/inhands/items_and_weapons_righthand.dmi'
+	lefthand_file = 'oworld/icons/obj/items/inhands/items_and_weapons_lefthand.dmi'
+	righthand_file = 'oworld/icons/obj/items/inhands/items_and_weapons_righthand.dmi'
 	inhand_icon_state = "syringe-0"
 	icon_state = "syringe_0"
 	worn_icon_state = "pen"
-	drop_sound = list('modular_septic/sound/effects/syringe_drop1.wav', 'modular_septic/sound/effects/syringe_drop2.wav')
+	drop_sound = list('oworld/sound/effects/syringe_drop1.wav', 'oworld/sound/effects/syringe_drop2.wav')
 
 /obj/item/reagent_containers/syringe/update_overlays()
 	. = ..()
 	if(reagents?.total_volume)
-		var/mutable_appearance/filling_overlay = mutable_appearance('modular_septic/icons/obj/reagentfillings.dmi', "syringe[get_rounded_vol()]")
+		var/mutable_appearance/filling_overlay = mutable_appearance('oworld/icons/obj/reagentfillings.dmi', "syringe[get_rounded_vol()]")
 		filling_overlay.color = mix_color_from_reagents(reagents.reagent_list)
 		. += filling_overlay
 
@@ -60,7 +60,7 @@
 			log_combat(user, living_target, "injected", src, addition="which had [contained]")
 	reagents.trans_to(target, amount_per_transfer_from_this, transfered_by = user, methods = INJECT)
 	to_chat(user, span_notice("You inject [amount_per_transfer_from_this] units of the solution. The syringe now contains [reagents.total_volume] units."))
-	playsound(src, 'modular_septic/sound/effects/syringe_success.wav',	60, FALSE)
+	playsound(src, 'oworld/sound/effects/syringe_success.wav',	60, FALSE)
 
 /obj/item/reagent_containers/syringe/afterattack_secondary(atom/target, mob/user, proximity_flag, click_parameters)
 	if (!try_syringe(target, user, proximity_flag))
@@ -85,7 +85,7 @@
 		busy = FALSE
 		if(living_target.transfer_blood_to(src, drawn_amount))
 			user.visible_message(span_notice("[user] takes a blood sample from [living_target]."))
-			playsound(src, 'modular_septic/sound/effects/syringe_extract.wav', volume, TRUE, vary = FALSE)
+			playsound(src, 'oworld/sound/effects/syringe_extract.wav', volume, TRUE, vary = FALSE)
 		else
 			to_chat(user, span_warning("You are unable to draw any blood from [living_target]!"))
 	else
@@ -100,7 +100,7 @@
 		var/trans = target.reagents.trans_to(src, amount_per_transfer_from_this, transfered_by = user) // transfer from, transfer to - who cares?
 
 		to_chat(user, span_notice("You fill [src] with [trans] units of the solution. It now contains [reagents.total_volume] units."))
-		playsound(src, 'modular_septic/sound/effects/syringe_extract.wav', 60, FALSE)
+		playsound(src, 'oworld/sound/effects/syringe_extract.wav', 60, FALSE)
 
 	return SECONDARY_ATTACK_CONTINUE_CHAIN
 

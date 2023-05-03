@@ -1,9 +1,9 @@
 /obj/item/clothing/suit/hooded/medical
 	name = "practitioner robes"
 	desc = "Sterile robes often worn by the humorists of Nevado."
-	icon = 'modular_septic/icons/obj/clothing/suits.dmi'
+	icon = 'oworld/icons/obj/clothing/suits.dmi'
 	icon_state = "medical_robes"
-	worn_icon = 'modular_septic/icons/mob/clothing/suit.dmi'
+	worn_icon = 'oworld/icons/mob/clothing/suit.dmi'
 	worn_icon_state = "medical_robes"
 	allowed = list(
 		/obj/item/analyzer,

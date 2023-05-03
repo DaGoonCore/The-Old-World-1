@@ -4,7 +4,7 @@
 	/// Description of the attribute
 	var/desc = "Alan, please add details."
 	/// Icon
-	var/icon = 'modular_septic/icons/ui_icons/attributes/attributes.dmi'
+	var/icon = 'oworld/icons/ui_icons/attributes/attributes.dmi'
 	/// Icon state
 	var/icon_state = "none"
 

@@ -693,30 +693,30 @@ generate/load female uniform sprites matching all previously decided variables
 			for(var/obj/item/organ/eyes/eye in right_eyelid?.get_organs())
 				RE = eye
 				break
-			var/mutable_appearance/eye_overlay = mutable_appearance('modular_septic/icons/mob/human/sprite_accessory/human_face.dmi', "blank", -BODY_LAYER)
+			var/mutable_appearance/eye_overlay = mutable_appearance('oworld/icons/mob/human/sprite_accessory/human_face.dmi', "blank", -BODY_LAYER)
 			var/obscured = check_obscured_slots(TRUE) //eyes that shine in the dark shouldn't show when you have glasses
 			if(RE)
-				var/image/right_overlay = image('modular_septic/icons/mob/human/sprite_accessory/human_face.dmi', null, RE.eye_icon_state, -BODY_LAYER)
+				var/image/right_overlay = image('oworld/icons/mob/human/sprite_accessory/human_face.dmi', null, RE.eye_icon_state, -BODY_LAYER)
 				if(EYECOLOR in dna.species.species_traits)
 					right_overlay.color = sanitize_hexcolor(right_eye_color, 6, TRUE)
 				eye_overlay.add_overlay(right_overlay)
 				if(RE.overlay_ignore_lighting && !(obscured & ITEM_SLOT_EYES))
-					var/image/right_emissive = image('modular_septic/icons/mob/human/sprite_accessory/human_face.dmi', null, RE.eye_icon_state, -BODY_LAYER)
+					var/image/right_emissive = image('oworld/icons/mob/human/sprite_accessory/human_face.dmi', null, RE.eye_icon_state, -BODY_LAYER)
 					right_emissive.plane = EMISSIVE_PLANE
 					eye_overlay.add_overlay(right_emissive)
 			else
-				eye_overlay.add_overlay(image('modular_septic/icons/mob/human/sprite_accessory/human_face.dmi', null, "eye-right-missing", -BODY_LAYER))
+				eye_overlay.add_overlay(image('oworld/icons/mob/human/sprite_accessory/human_face.dmi', null, "eye-right-missing", -BODY_LAYER))
 			if(LE)
-				var/image/left_overlay = image('modular_septic/icons/mob/human/sprite_accessory/human_face.dmi', null, LE.eye_icon_state, -BODY_LAYER)
+				var/image/left_overlay = image('oworld/icons/mob/human/sprite_accessory/human_face.dmi', null, LE.eye_icon_state, -BODY_LAYER)
 				if(EYECOLOR in dna.species.species_traits)
 					left_overlay.color = sanitize_hexcolor(left_eye_color, 6, TRUE)
 				eye_overlay.add_overlay(left_overlay)
 				if(LE.overlay_ignore_lighting && !(obscured & ITEM_SLOT_EYES))
-					var/image/left_emissive = image('modular_septic/icons/mob/human/sprite_accessory/human_face.dmi', null, LE.eye_icon_state, -BODY_LAYER)
+					var/image/left_emissive = image('oworld/icons/mob/human/sprite_accessory/human_face.dmi', null, LE.eye_icon_state, -BODY_LAYER)
 					left_emissive.plane = EMISSIVE_PLANE
 					eye_overlay.add_overlay(left_emissive)
 			else
-				eye_overlay.add_overlay(image('modular_septic/icons/mob/human/sprite_accessory/human_face.dmi', null, "eye-left-missing", -BODY_LAYER))
+				eye_overlay.add_overlay(image('oworld/icons/mob/human/sprite_accessory/human_face.dmi', null, "eye-left-missing", -BODY_LAYER))
 			if(OFFSET_FACE in dna.species.offset_features)
 				eye_overlay.pixel_x += dna.species.offset_features[OFFSET_FACE][1]
 				eye_overlay.pixel_y += dna.species.offset_features[OFFSET_FACE][2]

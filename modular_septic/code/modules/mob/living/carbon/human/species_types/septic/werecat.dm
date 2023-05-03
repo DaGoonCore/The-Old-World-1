@@ -40,7 +40,7 @@
 	attack_verb = "slashes"
 	attack_sharpness = SHARP_EDGED
 	bite_sharpness = SHARP_EDGED
-	limbs_icon = 'modular_septic/icons/mob/human/species/mammal/mammal_parts_greyscale.dmi'
+	limbs_icon = 'oworld/icons/mob/human/species/mammal/mammal_parts_greyscale.dmi'
 	limbs_id = "mammal"
 	examine_icon_state = "werecat"
 

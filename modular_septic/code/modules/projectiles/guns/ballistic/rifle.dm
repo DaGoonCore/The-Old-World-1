@@ -1,7 +1,7 @@
 /obj/item/gun/ballistic/automatic/remis
-	worn_icon = 'modular_septic/icons/obj/items/guns/worn/back.dmi'
-	equip_sound = 'modular_septic/sound/weapons/guns/weap_away.ogg'
-	drop_sound = 'modular_septic/sound/weapons/guns/drop_mediumgun.wav'
+	worn_icon = 'oworld/icons/obj/items/guns/worn/back.dmi'
+	equip_sound = 'oworld/sound/weapons/guns/weap_away.ogg'
+	drop_sound = 'oworld/sound/weapons/guns/drop_mediumgun.wav'
 	slot_flags = ITEM_SLOT_BACK | ITEM_SLOT_SUITSTORE
 	rack_sound_vary = FALSE
 	suppressed = SUPPRESSED_NONE
@@ -25,9 +25,9 @@
 /obj/item/gun/ballistic/automatic/remis/winter
 	name = "\improper Inverno Genocídio NK-49 Assault Rifle"
 	desc = "Inverno Genocídio, 'Winter Genocide' Assault Rifle firing in 5.56. Used by Ordin- Ordinat... ORDINATORS KILL THIS BASTARD!"
-	icon = 'modular_septic/icons/obj/items/guns/48x32.dmi'
-	lefthand_file = 'modular_septic/icons/obj/items/guns/inhands/rifle_lefthand.dmi'
-	righthand_file = 'modular_septic/icons/obj/items/guns/inhands/rifle_righthand.dmi'
+	icon = 'oworld/icons/obj/items/guns/48x32.dmi'
+	lefthand_file = 'oworld/icons/obj/items/guns/inhands/rifle_lefthand.dmi'
+	righthand_file = 'oworld/icons/obj/items/guns/inhands/rifle_righthand.dmi'
 	worn_icon_state = "inverno"
 	inhand_icon_state = "inverno"
 	icon_state = "inverno"
@@ -37,17 +37,17 @@
 	burst_size = 3
 	empty_icon_state = FALSE
 	bolt_type = BOLT_TYPE_LOCKING
-	fire_sound = 'modular_septic/sound/weapons/guns/rifle/niggakiller.wav'
-	suppressed_sound = 'modular_septic/sound/weapons/guns/rifle/niggakiller_silenced.wav'
-	load_sound = 'modular_septic/sound/weapons/guns/rifle/mmagin.wav'
-	load_empty_sound = 'modular_septic/sound/weapons/guns/rifle/mmagin.wav'
-	eject_sound = 'modular_septic/sound/weapons/guns/rifle/mmagout.wav'
-	eject_empty_sound = 'modular_septic/sound/weapons/guns/rifle/mmagout.wav'
-	safety_off_sound = 'modular_septic/sound/weapons/guns/rifle/msafety.wav'
-	safety_on_sound = 'modular_septic/sound/weapons/guns/rifle/msafety.wav'
-	rack_sound = 'modular_septic/sound/weapons/guns/rifle/mrack.wav'
-	lock_back_sound = 'modular_septic/sound/weapons/guns/rifle/mlockback.ogg'
-	bolt_drop_sound = 'modular_septic/sound/weapons/guns/rifle/mlockin.ogg'
+	fire_sound = 'oworld/sound/weapons/guns/rifle/niggakiller.wav'
+	suppressed_sound = 'oworld/sound/weapons/guns/rifle/niggakiller_silenced.wav'
+	load_sound = 'oworld/sound/weapons/guns/rifle/mmagin.wav'
+	load_empty_sound = 'oworld/sound/weapons/guns/rifle/mmagin.wav'
+	eject_sound = 'oworld/sound/weapons/guns/rifle/mmagout.wav'
+	eject_empty_sound = 'oworld/sound/weapons/guns/rifle/mmagout.wav'
+	safety_off_sound = 'oworld/sound/weapons/guns/rifle/msafety.wav'
+	safety_on_sound = 'oworld/sound/weapons/guns/rifle/msafety.wav'
+	rack_sound = 'oworld/sound/weapons/guns/rifle/mrack.wav'
+	lock_back_sound = 'oworld/sound/weapons/guns/rifle/mlockback.ogg'
+	bolt_drop_sound = 'oworld/sound/weapons/guns/rifle/mlockin.ogg'
 	force = 14
 	custom_price = 45000
 	carry_weight = 3 KILOGRAMS
@@ -75,28 +75,28 @@
 	name = "\improper AN-94 5.4539mm Abyss Armaments Assault Rifle"
 	desc = "A mysterious bolshevik rifle that was produced as a result of a need for a fully-automatic standard rifle for the red's finest. \
 		The muzzle brake seems to be compatable with noise suppressors! So good."
-	icon = 'modular_septic/icons/obj/items/guns/48x32.dmi'
-	lefthand_file = 'modular_septic/icons/obj/items/guns/inhands/rifle_lefthand.dmi'
-	righthand_file = 'modular_septic/icons/obj/items/guns/inhands/rifle_righthand.dmi'
+	icon = 'oworld/icons/obj/items/guns/48x32.dmi'
+	lefthand_file = 'oworld/icons/obj/items/guns/inhands/rifle_lefthand.dmi'
+	righthand_file = 'oworld/icons/obj/items/guns/inhands/rifle_righthand.dmi'
 	worn_icon_state = "nikonov"
 	inhand_icon_state = "nikonov"
 	icon_state = "nikonov"
 	base_icon_state = "nikonov"
 	mag_type = /obj/item/ammo_box/magazine/a545
-	fire_sound = 'modular_septic/sound/weapons/guns/rifle/ak.wav'
-	suppressed_sound = 'modular_septic/sound/weapons/guns/rifle/ak_silenced.wav'
-	load_sound = 'modular_septic/sound/weapons/guns/rifle/akmagin.wav'
-	load_empty_sound = 'modular_septic/sound/weapons/guns/rifle/akmagin.wav'
-	eject_sound = 'modular_septic/sound/weapons/guns/rifle/akmagout.wav'
-	eject_empty_sound = 'modular_septic/sound/weapons/guns/rifle/akmagout.wav'
-	safety_off_sound = 'modular_septic/sound/weapons/guns/rifle/aksafety2.wav'
-	safety_on_sound = 'modular_septic/sound/weapons/guns/rifle/aksafety1.wav'
-	rack_sound = 'modular_septic/sound/weapons/guns/rifle/akrack.wav'
-	fireselector_auto = 'modular_septic/sound/weapons/guns/rifle/aksafety2.wav'
-	fireselector_burst = 'modular_septic/sound/weapons/guns/rifle/aksafety2.wav'
-	fireselector_semi = 'modular_septic/sound/weapons/guns/rifle/aksafety1.wav'
-	fold_open_sound = 'modular_septic/sound/weapons/guns/rifle/ak_stock_open.wav'
-	fold_close_sound = 'modular_septic/sound/weapons/guns/rifle/ak_stock_close.wav'
+	fire_sound = 'oworld/sound/weapons/guns/rifle/ak.wav'
+	suppressed_sound = 'oworld/sound/weapons/guns/rifle/ak_silenced.wav'
+	load_sound = 'oworld/sound/weapons/guns/rifle/akmagin.wav'
+	load_empty_sound = 'oworld/sound/weapons/guns/rifle/akmagin.wav'
+	eject_sound = 'oworld/sound/weapons/guns/rifle/akmagout.wav'
+	eject_empty_sound = 'oworld/sound/weapons/guns/rifle/akmagout.wav'
+	safety_off_sound = 'oworld/sound/weapons/guns/rifle/aksafety2.wav'
+	safety_on_sound = 'oworld/sound/weapons/guns/rifle/aksafety1.wav'
+	rack_sound = 'oworld/sound/weapons/guns/rifle/akrack.wav'
+	fireselector_auto = 'oworld/sound/weapons/guns/rifle/aksafety2.wav'
+	fireselector_burst = 'oworld/sound/weapons/guns/rifle/aksafety2.wav'
+	fireselector_semi = 'oworld/sound/weapons/guns/rifle/aksafety1.wav'
+	fold_open_sound = 'oworld/sound/weapons/guns/rifle/ak_stock_open.wav'
+	fold_close_sound = 'oworld/sound/weapons/guns/rifle/ak_stock_close.wav'
 	force = 16
 	fire_delay = 2
 	burst_size = 2
@@ -128,8 +128,8 @@
 	inhand_icon_state = "goldonov"
 	icon_state = "goldonov"
 	base_icon_state = "goldonov"
-	fire_sound = 'modular_septic/sound/weapons/guns/rifle/goldonov.wav'
-	suppressed_sound = 'modular_septic/sound/weapons/guns/rifle/goldonov.wav'
+	fire_sound = 'oworld/sound/weapons/guns/rifle/goldonov.wav'
+	suppressed_sound = 'oworld/sound/weapons/guns/rifle/goldonov.wav'
 	can_unsuppress = FALSE
 	suppressor_x_offset = 2
 
@@ -142,24 +142,24 @@
 	name = "\improper Kh11 4.92x34mm Assault Rifle"
 	desc = "An almost sci-fi designed rifle with a complex mechanism on the inside. \
 	It was rumored in the past that the HRE was making a rifle that could be shot without casings being left behind, this chunky firearm is their sucess story."
-	icon = 'modular_septic/icons/obj/items/guns/40x32.dmi'
-	lefthand_file = 'modular_septic/icons/obj/items/guns/inhands/rifle_lefthand.dmi'
-	righthand_file = 'modular_septic/icons/obj/items/guns/inhands/rifle_righthand.dmi'
+	icon = 'oworld/icons/obj/items/guns/40x32.dmi'
+	lefthand_file = 'oworld/icons/obj/items/guns/inhands/rifle_lefthand.dmi'
+	righthand_file = 'oworld/icons/obj/items/guns/inhands/rifle_righthand.dmi'
 	inhand_icon_state = "g11"
 	icon_state = "g11"
 	base_icon_state = "g11"
 	mag_type = /obj/item/ammo_box/magazine/a49234g11
-	fire_sound = 'modular_septic/sound/weapons/guns/rifle/g11.ogg'
-	load_sound = 'modular_septic/sound/weapons/guns/rifle/g11magin.wav'
-	load_empty_sound = 'modular_septic/sound/weapons/guns/rifle/g11magin.wav'
-	eject_sound = 'modular_septic/sound/weapons/guns/rifle/g11magout.wav'
-	eject_empty_sound = 'modular_septic/sound/weapons/guns/rifle/g11magout.wav'
-	safety_off_sound = 'modular_septic/sound/weapons/guns/rifle/g11safety2.wav'
-	safety_on_sound = 'modular_septic/sound/weapons/guns/rifle/g11safety1.wav'
-	rack_sound = 'modular_septic/sound/weapons/guns/rifle/g11rack.wav'
-	fireselector_auto = 'modular_septic/sound/weapons/guns/rifle/g11safety2.wav'
-	fireselector_burst = 'modular_septic/sound/weapons/guns/rifle/g11safety2.wav'
-	fireselector_semi = 'modular_septic/sound/weapons/guns/rifle/g11safety1.wav'
+	fire_sound = 'oworld/sound/weapons/guns/rifle/g11.ogg'
+	load_sound = 'oworld/sound/weapons/guns/rifle/g11magin.wav'
+	load_empty_sound = 'oworld/sound/weapons/guns/rifle/g11magin.wav'
+	eject_sound = 'oworld/sound/weapons/guns/rifle/g11magout.wav'
+	eject_empty_sound = 'oworld/sound/weapons/guns/rifle/g11magout.wav'
+	safety_off_sound = 'oworld/sound/weapons/guns/rifle/g11safety2.wav'
+	safety_on_sound = 'oworld/sound/weapons/guns/rifle/g11safety1.wav'
+	rack_sound = 'oworld/sound/weapons/guns/rifle/g11rack.wav'
+	fireselector_auto = 'oworld/sound/weapons/guns/rifle/g11safety2.wav'
+	fireselector_burst = 'oworld/sound/weapons/guns/rifle/g11safety2.wav'
+	fireselector_semi = 'oworld/sound/weapons/guns/rifle/g11safety1.wav'
 	force = 12
 	fire_delay = 0.7
 	burst_size = 3
@@ -205,28 +205,28 @@
 	desc = "A unique firearm that practically consists of one large piece with a barrel ran through the whole gun. Fires in steel-SCF Flechettes. \
 		If you look hard enough, the entire gun seems to vibrate, and shake. It's almost like It's alive."
 	gender = FEMALE
-	icon = 'modular_septic/icons/obj/items/guns/48x32.dmi'
-	lefthand_file = 'modular_septic/icons/obj/items/guns/inhands/rifle_lefthand.dmi'
-	righthand_file = 'modular_septic/icons/obj/items/guns/inhands/rifle_righthand.dmi'
+	icon = 'oworld/icons/obj/items/guns/48x32.dmi'
+	lefthand_file = 'oworld/icons/obj/items/guns/inhands/rifle_lefthand.dmi'
+	righthand_file = 'oworld/icons/obj/items/guns/inhands/rifle_righthand.dmi'
 	worn_icon_state = "steyr"
 	inhand_icon_state = "steyr"
 	icon_state = "steyr"
 	base_icon_state = "steyr"
 	mag_type = /obj/item/ammo_box/magazine/a556steyr
-	fire_sound = 'modular_septic/sound/weapons/guns/rifle/steyr.wav'
-	suppressed_sound = 'modular_septic/sound/weapons/guns/rifle/steyr_silenced.wav'
-	load_sound = 'modular_septic/sound/weapons/guns/rifle/mmagin.wav'
-	load_empty_sound = 'modular_septic/sound/weapons/guns/rifle/mmagin.wav'
-	eject_sound = 'modular_septic/sound/weapons/guns/rifle/mmagout.wav'
-	eject_empty_sound = 'modular_septic/sound/weapons/guns/rifle/mmagout.wav'
-	safety_off_sound = 'modular_septic/sound/weapons/guns/rifle/msafety.wav'
-	safety_on_sound = 'modular_septic/sound/weapons/guns/rifle/msafety.wav'
-	rack_sound = 'modular_septic/sound/weapons/guns/rifle/mrack.wav'
-	aim_stress_sound = list('modular_septic/sound/weapons/guns/rifle/voice_steyr/canthide.wav',
-						'modular_septic/sound/weapons/guns/rifle/voice_steyr/seeyou.wav',
-						'modular_septic/sound/weapons/guns/rifle/voice_steyr/targetacquired.wav',
-						'modular_septic/sound/weapons/guns/rifle/voice_steyr/runpig.wav')
-	aim_spare_sound = 'modular_septic/sound/weapons/guns/rifle/voice_steyr/spare.wav'
+	fire_sound = 'oworld/sound/weapons/guns/rifle/steyr.wav'
+	suppressed_sound = 'oworld/sound/weapons/guns/rifle/steyr_silenced.wav'
+	load_sound = 'oworld/sound/weapons/guns/rifle/mmagin.wav'
+	load_empty_sound = 'oworld/sound/weapons/guns/rifle/mmagin.wav'
+	eject_sound = 'oworld/sound/weapons/guns/rifle/mmagout.wav'
+	eject_empty_sound = 'oworld/sound/weapons/guns/rifle/mmagout.wav'
+	safety_off_sound = 'oworld/sound/weapons/guns/rifle/msafety.wav'
+	safety_on_sound = 'oworld/sound/weapons/guns/rifle/msafety.wav'
+	rack_sound = 'oworld/sound/weapons/guns/rifle/mrack.wav'
+	aim_stress_sound = list('oworld/sound/weapons/guns/rifle/voice_steyr/canthide.wav',
+						'oworld/sound/weapons/guns/rifle/voice_steyr/seeyou.wav',
+						'oworld/sound/weapons/guns/rifle/voice_steyr/targetacquired.wav',
+						'oworld/sound/weapons/guns/rifle/voice_steyr/runpig.wav')
+	aim_spare_sound = 'oworld/sound/weapons/guns/rifle/voice_steyr/spare.wav'
 	actions_types = null
 	force = 12
 	suppressor_x_offset = 8
@@ -261,11 +261,11 @@
 	. = ..()
 	var/monologue = "FIX ME!"
 	switch(sounding)
-		if('modular_septic/sound/weapons/guns/rifle/voice_steyr/cyberpunk.wav')
+		if('oworld/sound/weapons/guns/rifle/voice_steyr/cyberpunk.wav')
 			monologue = "Cyberpunk is just a soyjack interpretation of the real world."
-		if('modular_septic/sound/weapons/guns/rifle/voice_steyr/consequences.wav')
+		if('oworld/sound/weapons/guns/rifle/voice_steyr/consequences.wav')
 			monologue = "Now you know the consequences of your actions."
-		if('modular_septic/sound/weapons/guns/rifle/voice_steyr/thefeds.wav')
+		if('oworld/sound/weapons/guns/rifle/voice_steyr/thefeds.wav')
 			monologue = "I hate the feds."
 	if(monologue)
 		say(monologue)
@@ -275,13 +275,13 @@
 /obj/item/gun/ballistic/automatic/remis/steyr/proc/aimed_sounding(datum/component/gunpoint/gunpoint, sounding)
 	var/voice_line = "FUCK!"
 	switch(sounding)
-		if('modular_septic/sound/weapons/guns/rifle/voice_steyr/canthide.wav')
+		if('oworld/sound/weapons/guns/rifle/voice_steyr/canthide.wav')
 			voice_line = "You can't hide."
-		if('modular_septic/sound/weapons/guns/rifle/voice_steyr/seeyou.wav')
+		if('oworld/sound/weapons/guns/rifle/voice_steyr/seeyou.wav')
 			voice_line = "I can see you."
-		if('modular_septic/sound/weapons/guns/rifle/voice_steyr/targetacquired.wav')
+		if('oworld/sound/weapons/guns/rifle/voice_steyr/targetacquired.wav')
 			voice_line = "Target acquired."
-		if('modular_septic/sound/weapons/guns/rifle/voice_steyr/runpig.wav')
+		if('oworld/sound/weapons/guns/rifle/voice_steyr/runpig.wav')
 			voice_line = "Run, pig."
 	if(voice_line)
 		say(voice_line)
@@ -299,9 +299,9 @@
 	name = "\proper Lampiao semi-automatic designated marksman rifle"
 	desc = "A Lampiao sniper-rifle firing in 7.62x54R, the design allows for comfortable medium and long range combat, and unconventional, but effective CQC against armored targets. \
 	 Has a dovetail mount for a PSO-1M2-1 4x24 scope and a threaded barrel for a sound-suppressor. "
-	icon = 'modular_septic/icons/obj/items/guns/64x32.dmi'
-	lefthand_file = 'modular_septic/icons/obj/items/guns/inhands/rifle_lefthand.dmi'
-	righthand_file = 'modular_septic/icons/obj/items/guns/inhands/rifle_righthand.dmi'
+	icon = 'oworld/icons/obj/items/guns/64x32.dmi'
+	lefthand_file = 'oworld/icons/obj/items/guns/inhands/rifle_lefthand.dmi'
+	righthand_file = 'oworld/icons/obj/items/guns/inhands/rifle_righthand.dmi'
 	worn_icon_state = "svd"
 	inhand_icon_state = "svd"
 	icon_state = "svd"
@@ -310,18 +310,18 @@
 	actions_types = null
 	burst_size = 1
 	select = FALSE
-	fire_sound = 'modular_septic/sound/weapons/guns/rifle/svd.wav'
-	suppressed_sound = 'modular_septic/sound/weapons/guns/rifle/svd_silenced.wav'
-	load_sound = 'modular_septic/sound/weapons/guns/rifle/svdmagin.wav'
-	load_empty_sound = 'modular_septic/sound/weapons/guns/rifle/svdmagin.wav'
-	eject_sound = 'modular_septic/sound/weapons/guns/rifle/svdmagout.wav'
-	eject_empty_sound = 'modular_septic/sound/weapons/guns/rifle/svdmagout.wav'
-	safety_off_sound = 'modular_septic/sound/weapons/guns/rifle/aksafety2.wav'
-	safety_on_sound = 'modular_septic/sound/weapons/guns/rifle/aksafety1.wav'
-	rack_sound = 'modular_septic/sound/weapons/guns/rifle/akrack.wav'
-	fireselector_auto = 'modular_septic/sound/weapons/guns/rifle/aksafety2.wav'
-	fireselector_burst = 'modular_septic/sound/weapons/guns/rifle/aksafety2.wav'
-	fireselector_semi = 'modular_septic/sound/weapons/guns/rifle/aksafety1.wav'
+	fire_sound = 'oworld/sound/weapons/guns/rifle/svd.wav'
+	suppressed_sound = 'oworld/sound/weapons/guns/rifle/svd_silenced.wav'
+	load_sound = 'oworld/sound/weapons/guns/rifle/svdmagin.wav'
+	load_empty_sound = 'oworld/sound/weapons/guns/rifle/svdmagin.wav'
+	eject_sound = 'oworld/sound/weapons/guns/rifle/svdmagout.wav'
+	eject_empty_sound = 'oworld/sound/weapons/guns/rifle/svdmagout.wav'
+	safety_off_sound = 'oworld/sound/weapons/guns/rifle/aksafety2.wav'
+	safety_on_sound = 'oworld/sound/weapons/guns/rifle/aksafety1.wav'
+	rack_sound = 'oworld/sound/weapons/guns/rifle/akrack.wav'
+	fireselector_auto = 'oworld/sound/weapons/guns/rifle/aksafety2.wav'
+	fireselector_burst = 'oworld/sound/weapons/guns/rifle/aksafety2.wav'
+	fireselector_semi = 'oworld/sound/weapons/guns/rifle/aksafety1.wav'
 	force = 13
 	carry_weight = 4 KILOGRAMS
 	custom_price = 30000
@@ -344,11 +344,11 @@
 	)
 
 /obj/item/gun/ballistic/rifle/boltaction/remis
-	worn_icon = 'modular_septic/icons/obj/items/guns/worn/back.dmi'
-	icon = 'modular_septic/icons/obj/items/guns/48x32.dmi'
-	lefthand_file = 'modular_septic/icons/obj/items/guns/inhands/rifle_lefthand.dmi'
-	righthand_file = 'modular_septic/icons/obj/items/guns/inhands/rifle_righthand.dmi'
-	equip_sound = 'modular_septic/sound/weapons/guns/weap_away.ogg'
+	worn_icon = 'oworld/icons/obj/items/guns/worn/back.dmi'
+	icon = 'oworld/icons/obj/items/guns/48x32.dmi'
+	lefthand_file = 'oworld/icons/obj/items/guns/inhands/rifle_lefthand.dmi'
+	righthand_file = 'oworld/icons/obj/items/guns/inhands/rifle_righthand.dmi'
+	equip_sound = 'oworld/sound/weapons/guns/weap_away.ogg'
 	slot_flags = ITEM_SLOT_BACK | ITEM_SLOT_SUITSTORE
 	rack_sound_vary = FALSE
 	suppressed = SUPPRESSED_NONE
@@ -380,12 +380,12 @@
 	inhand_icon_state = "pedersen"
 	worn_icon_state = "pedersen"
 	fire_sound_volume = 100
-	fire_sound = 'modular_septic/sound/weapons/guns/rifle/bolties/federson.wav'
-	suppressed_sound = 'modular_septic/sound/weapons/guns/rifle/bolties/federson_silenced.wav'
-	rack_sound = 'modular_septic/sound/weapons/guns/rifle/bolties/federson_boltout.wav'
-	bolt_drop_sound = 'modular_septic/sound/weapons/guns/rifle/bolties/federson_boltin.wav'
-	drop_sound = 'modular_septic/sound/weapons/guns/drop_mediumgun.wav'
-	load_sound = list('modular_septic/sound/weapons/guns/rifle/bolties/federson_load1.wav', 'modular_septic/sound/weapons/guns/rifle/bolties/federson_load2.wav', 'modular_septic/sound/weapons/guns/rifle/bolties/federson_load3.wav')
+	fire_sound = 'oworld/sound/weapons/guns/rifle/bolties/federson.wav'
+	suppressed_sound = 'oworld/sound/weapons/guns/rifle/bolties/federson_silenced.wav'
+	rack_sound = 'oworld/sound/weapons/guns/rifle/bolties/federson_boltout.wav'
+	bolt_drop_sound = 'oworld/sound/weapons/guns/rifle/bolties/federson_boltin.wav'
+	drop_sound = 'oworld/sound/weapons/guns/drop_mediumgun.wav'
+	load_sound = list('oworld/sound/weapons/guns/rifle/bolties/federson_load1.wav', 'oworld/sound/weapons/guns/rifle/bolties/federson_load2.wav', 'oworld/sound/weapons/guns/rifle/bolties/federson_load3.wav')
 	can_suppress = FALSE
 	mag_type = /obj/item/ammo_box/magazine/internal/federson
 	rack_delay = 4
@@ -394,28 +394,28 @@
 /obj/item/gun/ballistic/automatic/remis/g36
 	name = "\improper Perdedor 5.56 Void International Assault Rifle"
 	desc = "A sort-of melty, sort-of chocolately 5.56 assault rifle that has the appearance of something that would be easily churned and poured over toast or seafood."
-	icon = 'modular_septic/icons/obj/items/guns/64x32.dmi'
-	lefthand_file = 'modular_septic/icons/obj/items/guns/inhands/rifle_lefthand.dmi'
-	righthand_file = 'modular_septic/icons/obj/items/guns/inhands/rifle_righthand.dmi'
+	icon = 'oworld/icons/obj/items/guns/64x32.dmi'
+	lefthand_file = 'oworld/icons/obj/items/guns/inhands/rifle_lefthand.dmi'
+	righthand_file = 'oworld/icons/obj/items/guns/inhands/rifle_righthand.dmi'
 	worn_icon_state = "g36"
 	inhand_icon_state = "g36"
 	icon_state = "g36"
 	base_icon_state = "g36"
 	mag_type = /obj/item/ammo_box/magazine/a556g36
-	fire_sound = 'modular_septic/sound/weapons/guns/rifle/g36.ogg'
-	suppressed_sound = 'modular_septic/sound/weapons/guns/rifle/g36_suppressed.ogg'
-	load_sound = list('modular_septic/sound/weapons/guns/rifle/g36_magin1.ogg', 'modular_septic/sound/weapons/guns/rifle/g36_magin2.ogg')
-	load_empty_sound = list('modular_septic/sound/weapons/guns/rifle/g36_magin1.ogg', 'modular_septic/sound/weapons/guns/rifle/g36_magin2.ogg')
-	eject_sound = 'modular_septic/sound/weapons/guns/rifle/g36_magout.ogg'
-	eject_empty_sound = 'modular_septic/sound/weapons/guns/rifle/g36_magout.ogg'
-	safety_off_sound = 'modular_septic/sound/weapons/guns/rifle/msafety.wav'
-	safety_on_sound = 'modular_septic/sound/weapons/guns/rifle/msafety.wav'
-	rack_sound = 'modular_septic/sound/weapons/guns/smg/thump_rack.wav'
-	fireselector_auto = 'modular_septic/sound/weapons/guns/rifle/msafety.wav'
-	fireselector_burst = 'modular_septic/sound/weapons/guns/rifle/msafety.wav'
-	fireselector_semi = 'modular_septic/sound/weapons/guns/rifle/msafety.wav'
-	fold_open_sound = 'modular_septic/sound/weapons/guns/rifle/g36_fold.ogg'
-	fold_close_sound = 'modular_septic/sound/weapons/guns/rifle/g36_unfold.ogg'
+	fire_sound = 'oworld/sound/weapons/guns/rifle/g36.ogg'
+	suppressed_sound = 'oworld/sound/weapons/guns/rifle/g36_suppressed.ogg'
+	load_sound = list('oworld/sound/weapons/guns/rifle/g36_magin1.ogg', 'oworld/sound/weapons/guns/rifle/g36_magin2.ogg')
+	load_empty_sound = list('oworld/sound/weapons/guns/rifle/g36_magin1.ogg', 'oworld/sound/weapons/guns/rifle/g36_magin2.ogg')
+	eject_sound = 'oworld/sound/weapons/guns/rifle/g36_magout.ogg'
+	eject_empty_sound = 'oworld/sound/weapons/guns/rifle/g36_magout.ogg'
+	safety_off_sound = 'oworld/sound/weapons/guns/rifle/msafety.wav'
+	safety_on_sound = 'oworld/sound/weapons/guns/rifle/msafety.wav'
+	rack_sound = 'oworld/sound/weapons/guns/smg/thump_rack.wav'
+	fireselector_auto = 'oworld/sound/weapons/guns/rifle/msafety.wav'
+	fireselector_burst = 'oworld/sound/weapons/guns/rifle/msafety.wav'
+	fireselector_semi = 'oworld/sound/weapons/guns/rifle/msafety.wav'
+	fold_open_sound = 'oworld/sound/weapons/guns/rifle/g36_fold.ogg'
+	fold_close_sound = 'oworld/sound/weapons/guns/rifle/g36_unfold.ogg'
 	force = 18
 	fire_delay = 1.5
 	burst_size = 3

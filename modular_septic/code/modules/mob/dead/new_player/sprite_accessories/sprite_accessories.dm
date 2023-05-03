@@ -9,7 +9,7 @@
 /datum/sprite_accessory/spines
 	key = "spines"
 	generic = "Spines"
-	icon = 'modular_septic/icons/mob/human/sprite_accessory/mutant_bodyparts.dmi'
+	icon = 'oworld/icons/mob/human/sprite_accessory/mutant_bodyparts.dmi'
 	special_render_case = TRUE
 	default_color = DEFAULT_SECONDARY
 	recommended_species = list(SPECIES_LIZARD, SPECIES_LIZARD_ASH, SPECIES_LIZARD_SILVER)
@@ -52,7 +52,7 @@
 	name = null
 
 /datum/sprite_accessory/socks
-	icon = 'modular_septic/icons/mob/clothing/underwear.dmi'
+	icon = 'oworld/icons/mob/clothing/underwear.dmi'
 	use_static = TRUE
 
 /datum/sprite_accessory/socks/socks_knee
@@ -147,7 +147,7 @@
 	use_static = null
 
 /datum/sprite_accessory/underwear
-	icon = 'modular_septic/icons/mob/clothing/underwear.dmi'
+	icon = 'oworld/icons/mob/clothing/underwear.dmi'
 	///Whether the underwear uses a special sprite for digitigrade style (i.e. briefs, not panties). Adds a "_d" suffix to the icon state
 	var/has_digitigrade = FALSE
 
@@ -309,7 +309,7 @@
 
 
 /datum/sprite_accessory/undershirt
-	icon = 'modular_septic/icons/mob/clothing/underwear.dmi'
+	icon = 'oworld/icons/mob/clothing/underwear.dmi'
 	use_static = TRUE
 
 /datum/sprite_accessory/undershirt/tanktop_alt

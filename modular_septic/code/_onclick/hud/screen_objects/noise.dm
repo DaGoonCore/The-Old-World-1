@@ -1,6 +1,6 @@
 //Noise holder
 /atom/movable/screen/fullscreen/noise
-	icon = 'modular_septic/icons/hud/noise.dmi'
+	icon = 'oworld/icons/hud/noise.dmi'
 	icon_state = "blank"
 	screen_loc = "WEST,SOUTH to EAST,NORTH"
 	plane = NOISE_PLANE

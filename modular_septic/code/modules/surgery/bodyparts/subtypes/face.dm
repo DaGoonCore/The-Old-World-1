@@ -1,10 +1,10 @@
 /obj/item/bodypart/face
 	name = "face"
 	desc = "Won't you take me to, funkytown?"
-	icon = 'modular_septic/icons/obj/items/surgery.dmi'
+	icon = 'oworld/icons/obj/items/surgery.dmi'
 	icon_state = "face"
 	base_icon_state = "face"
-	worn_icon = 'modular_septic/icons/mob/clothing/unsorted.dmi'
+	worn_icon = 'oworld/icons/mob/clothing/unsorted.dmi'
 	worn_icon_state = "blank"
 	max_damage = 50
 	max_stamina_damage = 50
@@ -27,7 +27,7 @@
 	amputation_point_name = "head"
 
 	throw_range = 2 //not very aerodynamic
-	dismemberment_sounds = list('modular_septic/sound/gore/severed.ogg')
+	dismemberment_sounds = list('oworld/sound/gore/severed.ogg')
 
 	flags_inv = HIDEFACE|HIDEFACIALHAIR|HIDESNOUT
 	body_parts_covered = HEAD|FACE|JAW

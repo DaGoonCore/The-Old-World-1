@@ -4,7 +4,7 @@
 	/// It's description
 	var/description
 	/// Icon
-	var/icon = 'modular_septic/icons/ui_icons/preferences/culture.dmi'
+	var/icon = 'oworld/icons/ui_icons/preferences/culture.dmi'
 	/// Icon state
 	var/icon_state = "none"
 	/// How many quirk points this costs

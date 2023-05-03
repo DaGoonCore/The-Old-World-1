@@ -2,7 +2,7 @@
 	name = "cranial depressurization implant"
 	desc = "A strange implant. Probably should not be tampered."
 	organ_flags = ORGAN_SYNTHETIC|ORGAN_VITAL
-	icon = 'modular_septic/icons/obj/items/implants.dmi'
+	icon = 'oworld/icons/obj/items/implants.dmi'
 	icon_state = "implant-e"
 	implant_overlay = null
 	implant_overlay_color = null

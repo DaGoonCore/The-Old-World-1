@@ -1,18 +1,18 @@
 /obj/item/gun/energy/remis/nasr
 	name = "Nasr"
 	desc = "A handheld, industrial device meant to melt glue at low-voltages. It has been powered wirelessly by the hatred and blatent racism of a certain egyption indevidual with terroristic intentions."
-	icon = 'modular_septic/icons/obj/items/guns/energy.dmi'
-	lefthand_file = 'modular_septic/icons/obj/items/guns/inhands/pistol_lefthand.dmi'
-	righthand_file = 'modular_septic/icons/obj/items/guns/inhands/pistol_righthand.dmi'
-	equip_sound = 'modular_septic/sound/weapons/guns/pistol/pistol_holster.wav'
-	pickup_sound = 'modular_septic/sound/weapons/guns/pistol/pistol_draw.wav'
-	fire_sound = list('modular_septic/sound/weapons/guns/energy/nasr1.wav', 'modular_septic/sound/weapons/guns/energy/nasr2.wav', 'modular_septic/sound/weapons/guns/energy/nasr3.wav')
-	safety_off_sound = 'modular_septic/sound/weapons/guns/energy/siren_safetyoff.wav'
-	safety_on_sound = 'modular_septic/sound/weapons/guns/energy/siren_safetyon.wav'
-	drop_sound = 'modular_septic/sound/weapons/guns/drop_lightgun.wav'
+	icon = 'oworld/icons/obj/items/guns/energy.dmi'
+	lefthand_file = 'oworld/icons/obj/items/guns/inhands/pistol_lefthand.dmi'
+	righthand_file = 'oworld/icons/obj/items/guns/inhands/pistol_righthand.dmi'
+	equip_sound = 'oworld/sound/weapons/guns/pistol/pistol_holster.wav'
+	pickup_sound = 'oworld/sound/weapons/guns/pistol/pistol_draw.wav'
+	fire_sound = list('oworld/sound/weapons/guns/energy/nasr1.wav', 'oworld/sound/weapons/guns/energy/nasr2.wav', 'oworld/sound/weapons/guns/energy/nasr3.wav')
+	safety_off_sound = 'oworld/sound/weapons/guns/energy/siren_safetyoff.wav'
+	safety_on_sound = 'oworld/sound/weapons/guns/energy/siren_safetyon.wav'
+	drop_sound = 'oworld/sound/weapons/guns/drop_lightgun.wav'
 	dry_fire_sound_vary = TRUE
 	dry_fire_message = span_danger("*BLRRT*")
-	dry_fire_sound = list('modular_septic/sound/weapons/guns/energy/nasr_alarm1.wav', 'modular_septic/sound/weapons/guns/energy/nasr_alarm2.wav')
+	dry_fire_sound = list('oworld/sound/weapons/guns/energy/nasr_alarm1.wav', 'oworld/sound/weapons/guns/energy/nasr_alarm2.wav')
 	vary_fire_sound = FALSE
 	slot_flags = ITEM_SLOT_BELT
 	weapon_weight = WEAPON_LIGHT
@@ -59,4 +59,4 @@
 			recharge_newshot(TRUE)
 		sound_hint()
 		flick("nasr_reload", src)
-		playsound(src, 'modular_septic/sound/weapons/guns/energy/nasrcharge.wav', 75, FALSE)
+		playsound(src, 'oworld/sound/weapons/guns/energy/nasrcharge.wav', 75, FALSE)

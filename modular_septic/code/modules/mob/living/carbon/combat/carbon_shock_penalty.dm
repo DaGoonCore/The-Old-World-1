@@ -76,7 +76,7 @@
 		if(wound_messages)
 			if((body_zone == BODY_ZONE_PRECISE_VITALS) && prob(5))
 				//gut status: busted
-				playsound(src, 'modular_septic/sound/effects/gutbusted.ogg', 100, 0)
+				playsound(src, 'oworld/sound/effects/gutbusted.ogg', 100, 0)
 				SEND_SIGNAL(src, COMSIG_CARBON_ADD_TO_WOUND_MESSAGE, span_bolddanger(" [span_big("<u>Gut busted</u>!")]"))
 			else
 				SEND_SIGNAL(src, COMSIG_CARBON_ADD_TO_WOUND_MESSAGE, span_bolddanger(" [span_big("<u>Knock-out</u>!")]"))

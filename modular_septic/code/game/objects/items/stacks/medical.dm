@@ -1,5 +1,5 @@
 /obj/item/stack/medical
-	icon = 'modular_septic/icons/obj/items/stack_medical.dmi'
+	icon = 'oworld/icons/obj/items/stack_medical.dmi'
 	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
 	amount = 10
@@ -186,7 +186,7 @@
 		if(affecting.is_artery_torn())
 			var/time = (user == C ? self_delay : other_delay ) * 20
 			time *= (ATTRIBUTE_MIDDLING/max(GET_MOB_ATTRIBUTE_VALUE(user, STAT_DEXTERITY), 1))
-			playsound(C, 'modular_septic/sound/gore/suture.ogg', 65, FALSE)
+			playsound(C, 'oworld/sound/gore/suture.ogg', 65, FALSE)
 			if(!do_mob(user, C, time))
 				to_chat(user, span_warning("I must stand still!"))
 				return
@@ -208,7 +208,7 @@
 		if(affecting.is_tendon_torn())
 			var/time = (user == C ? self_delay : other_delay ) * 20
 			time *= (ATTRIBUTE_MIDDLING/max(GET_MOB_ATTRIBUTE_VALUE(user, STAT_DEXTERITY), 1))
-			playsound(C, 'modular_septic/sound/gore/suture.ogg', 65, FALSE)
+			playsound(C, 'oworld/sound/gore/suture.ogg', 65, FALSE)
 			if(!do_mob(user, C, time))
 				to_chat(user, span_warning("I must stand still!"))
 				return
@@ -232,7 +232,7 @@
 			continue
 		var/time = (user == C ? self_delay : other_delay ) * injury.damage
 		time *= (ATTRIBUTE_MIDDLING/max(GET_MOB_ATTRIBUTE_VALUE(user, STAT_DEXTERITY), 1))
-		playsound(C, 'modular_septic/sound/gore/suture.ogg', 65, FALSE)
+		playsound(C, 'oworld/sound/gore/suture.ogg', 65, FALSE)
 		if(!do_mob(user, C, time))
 			to_chat(user, span_warning("I must stand still!"))
 			return
@@ -277,7 +277,7 @@
 		return FALSE
 	var/time = (user == C ? self_delay : other_delay ) * 20
 	time *= (ATTRIBUTE_MIDDLING/max(GET_MOB_ATTRIBUTE_VALUE(user, STAT_DEXTERITY), 1))
-	playsound(C, 'modular_septic/sound/gore/suture.ogg', 65, FALSE)
+	playsound(C, 'oworld/sound/gore/suture.ogg', 65, FALSE)
 	if(!do_mob(user, C, time))
 		to_chat(user, span_warning("I must stand still!"))
 		return
@@ -339,7 +339,7 @@
 	return FALSE
 
 /obj/item/stack/medical/bone_gel
-	icon = 'modular_septic/icons/obj/items/stack_medical.dmi'
+	icon = 'oworld/icons/obj/items/stack_medical.dmi'
 	desc = "A potent medical gel that, when applied to a fractured bone, triggers an intense melding reaction. A red warning label says: \"Do not ingest.\"."
 	self_delay = 4 SECONDS
 	other_delay = 2 SECONDS
@@ -370,13 +370,13 @@
 		return
 	user.visible_message(span_warning("<b>[user]</b> begins wrapping <b>[M]</b>'s [limb.name] with [src]..."), \
 				span_warning("I begin wrapping [user == M ? "my" : "<b>[M]</b>'s"] [limb.name] with [src]..."), \
-				playsound(src, 'modular_septic/sound/effects/bandage.wav', volume, TRUE))
+				playsound(src, 'oworld/sound/effects/bandage.wav', volume, TRUE))
 	if(!do_after(user, (user == M ? self_delay : other_delay), target=M))
 		return
 
 	user.visible_message(span_green("<b>[user]</b> applies [src] to <b>[M]</b>'s [limb.name]."), \
 			span_green("I bandage [user == M ? "my" : "<b>[M]</b>'s"] [limb.name]."), \
-			playsound(src, 'modular_septic/sound/effects/bandage_end.wav', volume, TRUE))
+			playsound(src, 'oworld/sound/effects/bandage_end.wav', volume, TRUE))
 	limb.apply_gauze(src)
 	return TRUE
 

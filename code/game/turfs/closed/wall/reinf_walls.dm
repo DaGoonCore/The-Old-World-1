@@ -16,7 +16,7 @@
 	rad_insulation = RAD_HEAVY_INSULATION
 	heat_capacity = 312500 //a little over 5 cm thick , 312500 for 1 m by 2.5 m by 0.25 m plasteel wall. also indicates the temperature at wich the wall will melt (currently only able to melt with H/E pipes)
 	/// Icon for dismantled state
-	var/dismantle_icon = 'modular_septic/icons/turf/damage_overlays.dmi'
+	var/dismantle_icon = 'oworld/icons/turf/damage_overlays.dmi'
 	/// Dismantled state, related to deconstruction.
 	var/dismantle_state = INTACT
 

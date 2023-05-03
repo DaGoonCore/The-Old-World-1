@@ -53,7 +53,7 @@
 				return
 			ouchie.injury_flags |= INJURY_SURGICAL
 			SEND_SIGNAL(target, COMSIG_CARBON_CLEAR_WOUND_MESSAGE)
-			playsound(target, 'modular_septic/sound/gore/flesh1.ogg', 75, 0)
+			playsound(target, 'oworld/sound/gore/flesh1.ogg', 75, 0)
 			if(BP.current_splint)
 				BP.remove_splint()
 			if(BP.current_gauze)
@@ -141,7 +141,7 @@
 			tool.updateEmbedding()
 		tool.tryEmbed(target = BP, forced = TRUE, silent = TRUE)
 		tool.RegisterSignal(tool, COMSIG_ITEM_UNEMBEDDED, /obj/item/proc/unspeculumize, TRUE)
-		playsound(target, 'modular_septic/sound/gore/stuck2.ogg', 60, 0)
+		playsound(target, 'oworld/sound/gore/stuck2.ogg', 60, 0)
 	return SURGERY_SUCCESS
 
 //saw bone

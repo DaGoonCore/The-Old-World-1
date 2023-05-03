@@ -7,7 +7,7 @@
 		return
 
 	if(source.body_position == LYING_DOWN) //play crawling sound if we're lying
-		playsound(turf, 'modular_septic/sound/effects/footstep/crawl.ogg', 10 * volume, falloff_distance = 1, vary = sound_vary)
+		playsound(turf, 'oworld/sound/effects/footstep/crawl.ogg', 10 * volume, falloff_distance = 1, vary = sound_vary)
 		return
 
 	if(iscarbon(source))

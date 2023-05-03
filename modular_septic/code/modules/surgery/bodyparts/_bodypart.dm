@@ -191,11 +191,11 @@
 
 	/// Specific dismemberment sounds, if any
 	var/list/dismemberment_sounds = list(
-		'modular_septic/sound/gore/gib1.ogg',
-		'modular_septic/sound/gore/gib2.ogg',
-		'modular_septic/sound/gore/gib3.ogg',
-		'modular_septic/sound/gore/gib4.ogg',
-		'modular_septic/sound/gore/gib5.ogg',
+		'oworld/sound/gore/gib1.ogg',
+		'oworld/sound/gore/gib2.ogg',
+		'oworld/sound/gore/gib3.ogg',
+		'oworld/sound/gore/gib4.ogg',
+		'oworld/sound/gore/gib5.ogg',
 	)
 	var/dismemberment_volume = 80
 

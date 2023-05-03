@@ -1,8 +1,8 @@
 /datum/organ_process/heart
 	slot = ORGAN_SLOT_HEART
 	mob_types = list(/mob/living/carbon/human)
-	var/static/sound/slowbeat = sound('modular_septic/sound/heart/slowbeat.ogg', volume = 40, channel = CHANNEL_HEARTBEAT, repeat = TRUE)
-	var/static/sound/fastbeat = sound('modular_septic/sound/heart/fastbeat.ogg', volume = 40, channel = CHANNEL_HEARTBEAT, repeat = TRUE)
+	var/static/sound/slowbeat = sound('oworld/sound/heart/slowbeat.ogg', volume = 40, channel = CHANNEL_HEARTBEAT, repeat = TRUE)
+	var/static/sound/fastbeat = sound('oworld/sound/heart/fastbeat.ogg', volume = 40, channel = CHANNEL_HEARTBEAT, repeat = TRUE)
 
 /datum/organ_process/heart/handle_process(mob/living/carbon/owner, delta_time, times_fired)
 	if(owner.needs_heart())
@@ -163,7 +163,7 @@
 			temp_bleed += resulting_bleed
 	if(temp_bleed)
 		if(owner.bleed(temp_bleed) && (temp_bleed >= 1.5))
-			var/bleed_sound = "modular_septic/sound/gore/blood[rand(1, 6)].ogg"
+			var/bleed_sound = "oworld/sound/gore/blood[rand(1, 6)].ogg"
 			if((temp_bleed > 1) && (owner.body_position == STANDING_UP))
 				playsound(owner, bleed_sound, 60, FALSE)
 	if((owner.status_flags & BLEEDOUT) && DT_PROB(50, delta_time))

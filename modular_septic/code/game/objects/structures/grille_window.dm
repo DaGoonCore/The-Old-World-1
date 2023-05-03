@@ -1,8 +1,8 @@
 /obj/structure/grille/window
 	name = "window grille"
 	desc = "A simple, fragile grille that protects windows."
-	icon = 'modular_septic/icons/obj/structures/smooth_structures/tall/grille_window.dmi'
-	frill_icon = 'modular_septic/icons/obj/structures/smooth_structures/tall/grille_window_frill.dmi'
+	icon = 'oworld/icons/obj/structures/smooth_structures/tall/grille_window.dmi'
+	frill_icon = 'oworld/icons/obj/structures/smooth_structures/tall/grille_window_frill.dmi'
 	icon_state = "grille"
 	base_icon_state = "grille"
 	plane = GAME_PLANE_ABOVE_WINDOW

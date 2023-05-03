@@ -7,9 +7,9 @@
 /datum/emote/living/sneeze/get_sound(mob/living/user)
 	if(ishuman(user))
 		if(user.gender != FEMALE)
-			return "modular_septic/sound/emotes/sneeze_male[rand(1,3)].ogg"
+			return "oworld/sound/emotes/sneeze_male[rand(1,3)].ogg"
 		else
-			return "modular_septic/sound/emotes/sneeze_female[rand(1,2)].ogg"
+			return "oworld/sound/emotes/sneeze_female[rand(1,2)].ogg"
 	else
 		return ..()
 
@@ -17,9 +17,9 @@
 /datum/emote/living/choke/get_sound(mob/living/user)
 	if(ishuman(user))
 		if(user.gender != FEMALE)
-			return "modular_septic/sound/emotes/choke_male1.ogg"
+			return "oworld/sound/emotes/choke_male1.ogg"
 		else
-			return "modular_septic/sound/emotes/choke_female1.ogg"
+			return "oworld/sound/emotes/choke_female1.ogg"
 	else
 		return ..()
 
@@ -27,16 +27,16 @@
 /datum/emote/living/burp/get_sound(mob/living/user)
 	if(ishuman(user))
 		if(user.gender != FEMALE)
-			return "modular_septic/sound/emotes/burp_male1.ogg"
+			return "oworld/sound/emotes/burp_male1.ogg"
 		else
-			return "modular_septic/sound/emotes/burp_female1.ogg"
+			return "oworld/sound/emotes/burp_female1.ogg"
 	else
 		return ..()
 
 // Snoring
 /datum/emote/living/snore/get_sound(mob/living/user)
 	if(ishuman(user))
-		return "modular_septic/sound/emotes/snore[rand(1, 7)].ogg"
+		return "oworld/sound/emotes/snore[rand(1, 7)].ogg"
 	else
 		return ..()
 
@@ -56,9 +56,9 @@
 /datum/emote/living/sniff/get_sound(mob/living/user)
 	if(ishuman(user))
 		if(user.gender != FEMALE)
-			return "modular_septic/sound/emotes/snore_male1.ogg"
+			return "oworld/sound/emotes/snore_male1.ogg"
 		else
-			return "modular_septic/sound/emotes/sniff_female1.ogg"
+			return "oworld/sound/emotes/sniff_female1.ogg"
 	else
 		return ..()
 
@@ -66,16 +66,16 @@
 /datum/emote/living/sigh/get_sound(mob/living/user)
 	if(ishuman(user))
 		if(user.gender != FEMALE)
-			return "modular_septic/sound/emotes/sigh_male1.ogg"
+			return "oworld/sound/emotes/sigh_male1.ogg"
 		else
-			return "modular_septic/sound/emotes/sigh_female[rand(1,2)].ogg"
+			return "oworld/sound/emotes/sigh_female[rand(1,2)].ogg"
 	else
 		return ..()
 
 // Snore
 /datum/emote/living/carbon/clap/get_sound(mob/living/user)
 	if(ishuman(src))
-		return "modular_septic/sound/emotes/snore[rand(1,7)].ogg"
+		return "oworld/sound/emotes/snore[rand(1,7)].ogg"
 	else
 		return ..()
 
@@ -83,9 +83,9 @@
 /datum/emote/living/yawn/get_sound(mob/living/user)
 	if(ishuman(user))
 		if(user.gender != FEMALE)
-			return "modular_septic/sound/emotes/yawn_male[rand(1,2)].ogg"
+			return "oworld/sound/emotes/yawn_male[rand(1,2)].ogg"
 		else
-			return "modular_septic/sound/emotes/yawn_female[rand(1,3)].ogg"
+			return "oworld/sound/emotes/yawn_female[rand(1,3)].ogg"
 	else
 		return ..()
 
@@ -93,9 +93,9 @@
 /datum/emote/living/laugh/get_sound(mob/living/user)
 	if(ishuman(user))
 		if(user.gender != FEMALE)
-			return "modular_septic/sound/emotes/laugh_male[rand(1,5)].ogg"
+			return "oworld/sound/emotes/laugh_male[rand(1,5)].ogg"
 		else
-			return "modular_septic/sound/emotes/laugh_female[rand(1,5)].ogg"
+			return "oworld/sound/emotes/laugh_female[rand(1,5)].ogg"
 	else
 		return ..()
 
@@ -103,9 +103,9 @@
 /datum/emote/living/scream/get_sound(mob/living/user)
 	if(ishuman(user))
 		if(user.gender != FEMALE)
-			return "modular_septic/sound/emotes/terror_scream_male[rand(1,2)].ogg"
+			return "oworld/sound/emotes/terror_scream_male[rand(1,2)].ogg"
 		else
-			return "modular_septic/sound/emotes/terror_scream_female[rand(1,3)].ogg"
+			return "oworld/sound/emotes/terror_scream_female[rand(1,3)].ogg"
 	else
 		return ..()
 
@@ -121,9 +121,9 @@
 /datum/emote/living/fallscream/get_sound(mob/living/user)
 	if(ishuman(user))
 		if(user.gender != FEMALE)
-			return "modular_septic/sound/emotes/falling_down_male[rand(1,3)].ogg"
+			return "oworld/sound/emotes/falling_down_male[rand(1,3)].ogg"
 		else
-			return "modular_septic/sound/emotes/falling_down_female1.ogg"
+			return "oworld/sound/emotes/falling_down_female1.ogg"
 	else
 		return ..()
 
@@ -140,14 +140,14 @@
 	if(ishuman(user))
 		if(user.on_fire)
 			if(user.gender != FEMALE)
-				return "modular_septic/sound/emotes/agony_male[rand(1,15)].ogg"
+				return "oworld/sound/emotes/agony_male[rand(1,15)].ogg"
 			else
-				return "modular_septic/sound/emotes/agony_female[rand(1,8)].ogg"
+				return "oworld/sound/emotes/agony_female[rand(1,8)].ogg"
 		else
 			if(user.gender != FEMALE)
-				return "modular_septic/sound/emotes/pain_scream_male[rand(1,3)].ogg"
+				return "oworld/sound/emotes/pain_scream_male[rand(1,3)].ogg"
 			else
-				return "modular_septic/sound/emotes/pain_scream_female[rand(1,7)].ogg"
+				return "oworld/sound/emotes/pain_scream_female[rand(1,7)].ogg"
 	else
 		return ..()
 
@@ -163,9 +163,9 @@
 /datum/emote/living/deathscream/get_sound(mob/living/user)
 	if(ishuman(user))
 		if(user.gender != FEMALE)
-			return "modular_septic/sound/emotes/death_scream_male[rand(1,5)].ogg"
+			return "oworld/sound/emotes/death_scream_male[rand(1,5)].ogg"
 		else
-			return "modular_septic/sound/emotes/death_scream_female[rand(1,4)].ogg"
+			return "oworld/sound/emotes/death_scream_female[rand(1,4)].ogg"
 	else
 		return ..()
 
@@ -180,7 +180,7 @@
 
 /datum/emote/living/deathrattle/get_sound(mob/living/user)
 	if(ishuman(user))
-		return "modular_septic/sound/emotes/deathgasp.ogg"
+		return "oworld/sound/emotes/deathgasp.ogg"
 	else
 		return ..()
 
@@ -197,14 +197,14 @@
 
 /datum/emote/living/crackaddict/get_sound(mob/living/user)
 	if(ishuman(user))
-		return "modular_septic/sound/emotes/crack_addict.wav"
+		return "oworld/sound/emotes/crack_addict.wav"
 	else
 		return ..()
 
 // Fuck it deathgasp does the same sound
 /datum/emote/living/deathgasp/get_sound(mob/living/user)
 	if(ishuman(user))
-		return "modular_septic/sound/emotes/deathgasp.ogg"
+		return "oworld/sound/emotes/deathgasp.ogg"
 	else
 		return ..()
 
@@ -218,18 +218,18 @@
 /datum/emote/living/grunt/get_sound(mob/living/user)
 	if(ishuman(user))
 		if(user.gender != FEMALE)
-			return "modular_septic/sound/emotes/moan_male[rand(1, 8)].ogg"
+			return "oworld/sound/emotes/moan_male[rand(1, 8)].ogg"
 		else
-			return "modular_septic/sound/emotes/moan_female[rand(1, 8)].ogg"
+			return "oworld/sound/emotes/moan_female[rand(1, 8)].ogg"
 	else
 		return ..()
 
 /datum/emote/living/groan/get_sound(mob/living/user)
 	if(ishuman(user))
 		if(user.gender != FEMALE)
-			return "modular_septic/sound/emotes/moan_male[rand(1, 8)].ogg"
+			return "oworld/sound/emotes/moan_male[rand(1, 8)].ogg"
 		else
-			return "modular_septic/sound/emotes/moan_female[rand(1, 8)].ogg"
+			return "oworld/sound/emotes/moan_female[rand(1, 8)].ogg"
 	else
 		return ..()
 
@@ -237,9 +237,9 @@
 /datum/emote/living/gasp/get_sound(mob/living/user)
 	if(ishuman(user))
 		if(user.gender != FEMALE)
-			return "modular_septic/sound/emotes/gasp_male[rand(1, 7)].ogg"
+			return "oworld/sound/emotes/gasp_male[rand(1, 7)].ogg"
 		else
-			return "modular_septic/sound/emotes/gasp_female[rand(1, 13)].ogg"
+			return "oworld/sound/emotes/gasp_female[rand(1, 13)].ogg"
 	else
 		return ..()
 
@@ -254,7 +254,7 @@
 
 /datum/emote/living/gargle/get_sound(mob/living/user)
 	if(ishuman(user))
-		return "modular_septic/sound/emotes/throat[rand(1, 3)].ogg"
+		return "oworld/sound/emotes/throat[rand(1, 3)].ogg"
 	else
 		return ..()
 
@@ -262,18 +262,18 @@
 /datum/emote/living/whimper/get_sound(mob/living/user)
 	if(ishuman(user))
 		if(user.gender != FEMALE)
-			return "modular_septic/sound/emotes/whimper_male[rand(1, 3)].ogg"
+			return "oworld/sound/emotes/whimper_male[rand(1, 3)].ogg"
 		else
-			return "modular_septic/sound/emotes/whimper_female[rand(1, 3)].ogg"
+			return "oworld/sound/emotes/whimper_female[rand(1, 3)].ogg"
 	else
 		return ..()
 
 /datum/emote/living/carbon/human/cry/get_sound(mob/living/user)
 	if(ishuman(user))
 		if(user.gender != FEMALE)
-			return "modular_septic/sound/emotes/cry_male[rand(1, 4)].ogg"
+			return "oworld/sound/emotes/cry_male[rand(1, 4)].ogg"
 		else
-			return "modular_septic/sound/emotes/cry_female[rand(1, 6)].ogg"
+			return "oworld/sound/emotes/cry_female[rand(1, 6)].ogg"
 	else
 		return ..()
 
@@ -281,9 +281,9 @@
 /datum/emote/living/cough/get_sound(mob/living/user)
 	if(ishuman(user))
 		if(user.gender != FEMALE)
-			return "modular_septic/sound/emotes/cough_male[rand(1, 16)].ogg"
+			return "oworld/sound/emotes/cough_male[rand(1, 16)].ogg"
 		else
-			return "modular_septic/sound/emotes/cough_female[rand(1, 12)].ogg"
+			return "oworld/sound/emotes/cough_female[rand(1, 12)].ogg"
 	else
 		return ..()
 
@@ -299,9 +299,9 @@
 /datum/emote/living/sag/get_sound(mob/living/user)
 	if(ishuman(user))
 		if(user.gender != FEMALE)
-			return "modular_septic/sound/emotes/deathgasp.ogg"
+			return "oworld/sound/emotes/deathgasp.ogg"
 		else
-			return "modular_septic/sound/emotes/deathgasp.ogg"
+			return "oworld/sound/emotes/deathgasp.ogg"
 	else
 		return ..()
 
@@ -335,9 +335,9 @@
 /datum/emote/living/sexymoan/get_sound(mob/living/user)
 	if(ishuman(user))
 		if(user.gender != FEMALE)
-			return "modular_septic/sound/sexo/moan_m[rand(1, 7)].ogg"
+			return "oworld/sound/sexo/moan_m[rand(1, 7)].ogg"
 		else
-			return "modular_septic/sound/sexo/moan_f[rand(1, 7)].ogg"
+			return "oworld/sound/sexo/moan_f[rand(1, 7)].ogg"
 	else
 		return ..()
 
@@ -391,9 +391,9 @@
 /datum/emote/living/jumpgrunt/get_sound(mob/living/user)
 	if(ishuman(user))
 		if(user.gender != FEMALE)
-			return "modular_septic/sound/emotes/jump_male[rand(1,2)].ogg"
+			return "oworld/sound/emotes/jump_male[rand(1,2)].ogg"
 		else
-			return "modular_septic/sound/emotes/jump_female1.ogg"
+			return "oworld/sound/emotes/jump_female1.ogg"
 	else
 		return ..()
 
@@ -409,9 +409,9 @@
 /datum/emote/living/fatiguegrunt/get_sound(mob/living/user)
 	if(ishuman(user))
 		if(user.gender != FEMALE)
-			return "modular_septic/sound/emotes/fatigue_male[rand(1, 3)].ogg"
+			return "oworld/sound/emotes/fatigue_male[rand(1, 3)].ogg"
 		else
-			return "modular_septic/sound/emotes/fatigue_female[rand(1,4)].ogg"
+			return "oworld/sound/emotes/fatigue_female[rand(1,4)].ogg"
 	else
 		return ..()
 
@@ -427,9 +427,9 @@
 /datum/emote/living/hem/get_sound(mob/living/user)
 	if(ishuman(user))
 		if(user.gender != FEMALE)
-			return "modular_septic/sound/emotes/hem_male1.ogg"
+			return "oworld/sound/emotes/hem_male1.ogg"
 		else
-			return "modular_septic/sound/emotes/hem_female1.ogg"
+			return "oworld/sound/emotes/hem_female1.ogg"
 	else
 		return ..()
 

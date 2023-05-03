@@ -1,6 +1,6 @@
 /atom/movable/screen/mov_intent
 	name = "jogging"
-	icon = 'modular_septic/icons/hud/quake/screen_quake.dmi'
+	icon = 'oworld/icons/hud/quake/screen_quake.dmi'
 	icon_state = "jogging"
 	screen_loc = ui_movi
 

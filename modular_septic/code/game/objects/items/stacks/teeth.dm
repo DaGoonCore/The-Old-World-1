@@ -3,7 +3,7 @@
 	name = "teeth"
 	singular_name = "tooth"
 	desc = "Something that british people don't have."
-	icon = 'modular_septic/icons/obj/items/surgery.dmi'
+	icon = 'oworld/icons/obj/items/surgery.dmi'
 	icon_state = "tooth_4"
 	base_icon_state = "tooth"
 	max_amount = HUMAN_TEETH_AMOUNT

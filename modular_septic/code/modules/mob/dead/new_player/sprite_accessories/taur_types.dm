@@ -1,5 +1,5 @@
 /datum/sprite_accessory/taur
-	icon = 'modular_septic/icons/mob/human/sprite_accessory/taur.dmi'
+	icon = 'oworld/icons/mob/human/sprite_accessory/taur.dmi'
 	key = "taur"
 	generic = "Taur Type"
 	color_src = USE_MATRIXED_COLORS

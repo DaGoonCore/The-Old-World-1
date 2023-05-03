@@ -3,16 +3,16 @@
 	roundend_category = "inborns"
 	antagpanel_category = "Inborn"
 	preview_outfit = /datum/outfit/denominator
-	combat_music = 'modular_septic/sound/music/combat/deathmatch/inborn.ogg'
+	combat_music = 'oworld/sound/music/combat/deathmatch/inborn.ogg'
 	show_to_ghosts = TRUE
 
 /datum/antagonist/inborn/on_gain()
 	. = ..()
 	var/datum/component/babble/babble = owner.current.GetComponent(/datum/component/babble)
 	if(!babble)
-		owner.current.AddComponent(/datum/component/babble, 'modular_septic/sound/voice/babble/inborn.wav')
+		owner.current.AddComponent(/datum/component/babble, 'oworld/sound/voice/babble/inborn.wav')
 	else
-		babble.babble_sound_override = 'modular_septic/sound/voice/babble/inborn.wav'
+		babble.babble_sound_override = 'oworld/sound/voice/babble/inborn.wav'
 		babble.volume = BABBLE_DEFAULT_VOLUME
 		babble.duration = BABBLE_DEFAULT_DURATION
 
@@ -21,7 +21,7 @@
 	roundend_category = "denominators"
 	antagpanel_category = "Denominator"
 	preview_outfit = /datum/outfit/denominator
-	combat_music = 'modular_septic/sound/music/combat/deathmatch/denominator.ogg'
+	combat_music = 'oworld/sound/music/combat/deathmatch/denominator.ogg'
 	show_to_ghosts = TRUE
 	antag_hud_type = ANTAG_HUD_DENOMINATOR
 	var/employer = "OcularTech"
@@ -32,7 +32,7 @@
 /datum/antagonist/denominator/create_team(datum/team/denominator/new_team)
 
 /datum/antagonist/denominator/greet()
-	owner.current.playsound_local(get_turf(owner.current), 'modular_septic/sound/greetings/deno_greet.ogg',100,0, use_reverb = FALSE)
+	owner.current.playsound_local(get_turf(owner.current), 'oworld/sound/greetings/deno_greet.ogg',100,0, use_reverb = FALSE)
 	to_chat(owner, span_notice("You are an Agent of the Third Denomination.\nIt's been a-long time since you've been sleeping. It's time to INVESTIGATE the Abandoned Warehouse with my TEAM. \
 	And see what's going on."))
 
@@ -41,9 +41,9 @@
 	ADD_TRAIT(owner.current, TRAIT_DENOMINATOR_ACCESS, SAFEZONE_ACCESS)
 	var/datum/component/babble/babble = owner.current.GetComponent(/datum/component/babble)
 	if(!babble)
-		owner.current.AddComponent(/datum/component/babble, 'modular_septic/sound/voice/babble/denom.wav')
+		owner.current.AddComponent(/datum/component/babble, 'oworld/sound/voice/babble/denom.wav')
 	else
-		babble.babble_sound_override = 'modular_septic/sound/voice/babble/denom.wav'
+		babble.babble_sound_override = 'oworld/sound/voice/babble/denom.wav'
 		babble.volume = BABBLE_DEFAULT_VOLUME
 		babble.duration = BABBLE_DEFAULT_DURATION
 
@@ -51,7 +51,7 @@
 	name = "Third Denomination Shotgunner"
 	preview_outfit = /datum/outfit/denominator/shotgunner
 	antag_hud_name = "deno_shotgunner"
-	combat_music = 'modular_septic/sound/music/combat/deathmatch/denominator_shotgunner.ogg'
+	combat_music = 'oworld/sound/music/combat/deathmatch/denominator_shotgunner.ogg'
 
 /datum/antagonist/denominator/shotgunner/on_gain()
 	. = ..()

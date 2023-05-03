@@ -148,19 +148,19 @@
 		fov_holder.hud = source.hud_used
 		fov_holder.dir = source.dir
 		fov_holder.screen_loc = ui_fov
-		shadow_mask = image('modular_septic/icons/hud/fov_15x15.dmi', fov_holder, "[shadow_angle]")
+		shadow_mask = image('oworld/icons/hud/fov_15x15.dmi', fov_holder, "[shadow_angle]")
 		shadow_mask.plane = FIELD_OF_VISION_MASK_PLANE
 		shadow_mask.layer = FIELD_OF_VISION_MASK_LAYER
 		fov_holder.add_overlay(shadow_mask)
 		owner_mask = new()
 		owner_mask.plane = FIELD_OF_VISION_BLOCKER_PLANE
-		visual_shadow = image('modular_septic/icons/hud/fov_15x15.dmi', fov_holder, "[shadow_angle]")
+		visual_shadow = image('oworld/icons/hud/fov_15x15.dmi', fov_holder, "[shadow_angle]")
 		visual_shadow.plane = ABOVE_LIGHTING_PLANE
 		visual_shadow.layer = FIELD_OF_VISION_MASK_LAYER
 		visual_shadow.alpha = 89
 		fov_holder.add_overlay(visual_shadow)
 		if(has_adj_mask)
-			adj_mask = image('modular_septic/icons/hud/fov_15x15.dmi', fov_holder, "adj_mask", FIELD_OF_VISION_MASK_LAYER)
+			adj_mask = image('oworld/icons/hud/fov_15x15.dmi', fov_holder, "adj_mask", FIELD_OF_VISION_MASK_LAYER)
 			adj_mask.appearance_flags = RESET_TRANSFORM
 			adj_mask.plane = FIELD_OF_VISION_BLOCKER_PLANE
 	if(src.shadow_angle != shadow_angle)
@@ -218,7 +218,7 @@
 	shadow_mask_extensions = list()
 	visual_shadow_extensions = list()
 	for(var/direction in GLOB.cardinals)
-		var/image/mask_extension = image('modular_septic/icons/hud/fov_15x15.dmi', "darkness")
+		var/image/mask_extension = image('oworld/icons/hud/fov_15x15.dmi', "darkness")
 		mask_extension.plane = shadow_mask.plane
 		switch(direction)
 			if(NORTH)
@@ -234,7 +234,7 @@
 				mask_extension.pixel_x = -480
 				mask_extension.pixel_y = 0
 		shadow_mask_extensions["[direction]"] = mask_extension
-		var/image/visual_extension = image('modular_septic/icons/hud/fov_15x15.dmi', "darkness")
+		var/image/visual_extension = image('oworld/icons/hud/fov_15x15.dmi', "darkness")
 		visual_extension.plane = visual_shadow.plane
 		visual_extension.alpha = visual_shadow.alpha
 		visual_extension.pixel_x = mask_extension.pixel_x
@@ -511,7 +511,7 @@
 		if(has_alpha)
 			FOV_ANGLE_CHECK(parent_mob, visible_mob, continue, continue)
 		var/datum/weakref/mob_ref = WEAKREF(visible_mob)
-		var/image/ghost = image('modular_septic/icons/hud/screen_gen.dmi', mob_turf, "whoswatchingme", FLOAT_LAYER)
+		var/image/ghost = image('oworld/icons/hud/screen_gen.dmi', mob_turf, "whoswatchingme", FLOAT_LAYER)
 		ghost.plane = GAME_PLANE_OBJECT_PERMANENCE
 		//Scrub previous image if there is one
 		parent_mob.client.images -= object_permanence_images[mob_ref]

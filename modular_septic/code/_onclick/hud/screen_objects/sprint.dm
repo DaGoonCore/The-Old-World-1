@@ -1,7 +1,7 @@
 //Sprint button shit
 /atom/movable/screen/sprint
 	name = "sprint toggle"
-	icon = 'modular_septic/icons/hud/quake/screen_quake.dmi'
+	icon = 'oworld/icons/hud/quake/screen_quake.dmi'
 	icon_state = "act_sprint"
 	base_icon_state = "act_sprint"
 	screen_loc = ui_sprint

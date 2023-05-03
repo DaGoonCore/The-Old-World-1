@@ -230,7 +230,7 @@
 		var/obj/item/bodypart/mouth/jaw = species_human.get_bodypart_nostump(BODY_ZONE_PRECISE_MOUTH)
 		// face
 		if(!face)
-			var/mutable_appearance/face_overlay = mutable_appearance('modular_septic/icons/mob/human/sprite_accessory/human_face.dmi', "face_missing", -BODY_LAYER)
+			var/mutable_appearance/face_overlay = mutable_appearance('oworld/icons/mob/human/sprite_accessory/human_face.dmi', "face_missing", -BODY_LAYER)
 			if(OFFSET_FACE in offset_features)
 				face_overlay.pixel_x += offset_features[OFFSET_FACE][1]
 				face_overlay.pixel_y += offset_features[OFFSET_FACE][2]
@@ -239,14 +239,14 @@
 		if(jaw)
 			// lipstick
 			if(species_human.lip_style && (LIPS in species_traits))
-				var/mutable_appearance/lip_overlay = mutable_appearance('modular_septic/icons/mob/human/sprite_accessory/human_face.dmi', "lips_[species_human.lip_style]", -BODY_LAYER)
+				var/mutable_appearance/lip_overlay = mutable_appearance('oworld/icons/mob/human/sprite_accessory/human_face.dmi', "lips_[species_human.lip_style]", -BODY_LAYER)
 				lip_overlay.color = sanitize_hexcolor(species_human.lip_color, 6, TRUE)
 				if(OFFSET_FACE in species_human.dna.species.offset_features)
 					lip_overlay.pixel_x += species_human.dna.species.offset_features[OFFSET_FACE][1]
 					lip_overlay.pixel_y += species_human.dna.species.offset_features[OFFSET_FACE][2]
 				standing += lip_overlay
 		else
-			var/mutable_appearance/lip_overlay = mutable_appearance('modular_septic/icons/mob/human/sprite_accessory/human_face.dmi', "lips_missing", -BODY_LAYER)
+			var/mutable_appearance/lip_overlay = mutable_appearance('oworld/icons/mob/human/sprite_accessory/human_face.dmi', "lips_missing", -BODY_LAYER)
 			if(OFFSET_FACE in species_human.dna.species.offset_features)
 				lip_overlay.pixel_x += species_human.dna.species.offset_features[OFFSET_FACE][1]
 				lip_overlay.pixel_y += species_human.dna.species.offset_features[OFFSET_FACE][2]
@@ -270,25 +270,25 @@
 			var/mutable_appearance/right_overlay
 			var/mutable_appearance/right_emissive
 			if(RE)
-				right_overlay = mutable_appearance('modular_septic/icons/mob/human/sprite_accessory/human_face.dmi', RE.eye_icon_state, -BODY_LAYER)
+				right_overlay = mutable_appearance('oworld/icons/mob/human/sprite_accessory/human_face.dmi', RE.eye_icon_state, -BODY_LAYER)
 				if(EYECOLOR in species_traits)
 					right_overlay.color = sanitize_hexcolor(species_human.right_eye_color, 6, TRUE)
 				if(RE.overlay_ignore_lighting && !(obscured & ITEM_SLOT_EYES))
-					right_emissive = mutable_appearance('modular_septic/icons/mob/human/sprite_accessory/human_face.dmi', RE.eye_icon_state)
+					right_emissive = mutable_appearance('oworld/icons/mob/human/sprite_accessory/human_face.dmi', RE.eye_icon_state)
 					right_emissive.plane = EMISSIVE_PLANE
 			else
-				right_overlay = mutable_appearance('modular_septic/icons/mob/human/sprite_accessory/human_face.dmi', "eye-right-missing", -BODY_LAYER)
+				right_overlay = mutable_appearance('oworld/icons/mob/human/sprite_accessory/human_face.dmi', "eye-right-missing", -BODY_LAYER)
 			var/mutable_appearance/left_overlay
 			var/mutable_appearance/left_emissive
 			if(LE)
-				left_overlay = mutable_appearance('modular_septic/icons/mob/human/sprite_accessory/human_face.dmi', LE.eye_icon_state, -BODY_LAYER)
+				left_overlay = mutable_appearance('oworld/icons/mob/human/sprite_accessory/human_face.dmi', LE.eye_icon_state, -BODY_LAYER)
 				if(EYECOLOR in species_traits)
 					left_overlay.color = sanitize_hexcolor(species_human.left_eye_color, 6, TRUE)
 				if(LE.overlay_ignore_lighting && !(obscured & ITEM_SLOT_EYES))
-					left_emissive = mutable_appearance('modular_septic/icons/mob/human/sprite_accessory/human_face.dmi', LE.eye_icon_state)
+					left_emissive = mutable_appearance('oworld/icons/mob/human/sprite_accessory/human_face.dmi', LE.eye_icon_state)
 					left_emissive.plane = EMISSIVE_PLANE
 			else
-				left_overlay = mutable_appearance('modular_septic/icons/mob/human/sprite_accessory/human_face.dmi', "eye-left-missing", -BODY_LAYER)
+				left_overlay = mutable_appearance('oworld/icons/mob/human/sprite_accessory/human_face.dmi', "eye-left-missing", -BODY_LAYER)
 			if(OFFSET_FACE in offset_features)
 				if(right_overlay)
 					right_overlay.pixel_x += offset_features[OFFSET_FACE][1]
@@ -649,7 +649,7 @@
 /datum/species/proc/handle_damage_overlays(mob/living/carbon/human/H)
 	H.remove_overlay(DAMAGE_LAYER)
 
-	var/mutable_appearance/damage_overlays = mutable_appearance('modular_septic/icons/mob/human/overlays/damage.dmi', "blank", -DAMAGE_LAYER)
+	var/mutable_appearance/damage_overlays = mutable_appearance('oworld/icons/mob/human/overlays/damage.dmi', "blank", -DAMAGE_LAYER)
 	for(var/obj/item/bodypart/bodypart as anything in H.bodyparts)
 		if(bodypart.is_stump())
 			continue
@@ -657,17 +657,17 @@
 			var/image/damage
 			switch(bodypart.body_zone)
 				if(BODY_ZONE_PRECISE_FACE, BODY_ZONE_PRECISE_MOUTH)
-					damage = image('modular_septic/icons/mob/human/overlays/damage.dmi', "[bodypart.dmg_overlay_type]_[BODY_ZONE_HEAD]_[bodypart.brutestate]0")
+					damage = image('oworld/icons/mob/human/overlays/damage.dmi', "[bodypart.dmg_overlay_type]_[BODY_ZONE_HEAD]_[bodypart.brutestate]0")
 				if(BODY_ZONE_PRECISE_VITALS)
-					damage = image('modular_septic/icons/mob/human/overlays/damage.dmi', "[bodypart.dmg_overlay_type]_[BODY_ZONE_CHEST]_[bodypart.brutestate]0")
+					damage = image('oworld/icons/mob/human/overlays/damage.dmi', "[bodypart.dmg_overlay_type]_[BODY_ZONE_CHEST]_[bodypart.brutestate]0")
 				else
-					damage = image('modular_septic/icons/mob/human/overlays/damage.dmi', "[bodypart.dmg_overlay_type]_[bodypart.body_zone]_[bodypart.brutestate]0")
+					damage = image('oworld/icons/mob/human/overlays/damage.dmi', "[bodypart.dmg_overlay_type]_[bodypart.body_zone]_[bodypart.brutestate]0")
 			damage.layer = -DAMAGE_LAYER
 			if(bodypart.render_layer == HANDS_PART_LAYER)
 				damage.layer = -UPPER_DAMAGE_LAYER
 			damage_overlays.add_overlay(damage)
 			if(bodypart.spilled && bodypart.spilled_overlay)
-				var/image/spilled  = image('modular_septic/icons/mob/human/overlays/gore.dmi', bodypart.spilled_overlay)
+				var/image/spilled  = image('oworld/icons/mob/human/overlays/gore.dmi', bodypart.spilled_overlay)
 				spilled.layer = -BODY_FRONT_LAYER
 				damage_overlays.add_overlay(spilled)
 	H.overlays_standing[DAMAGE_LAYER] = damage_overlays
@@ -678,14 +678,14 @@
 	H.remove_overlay(LOWER_MEDICINE_LAYER)
 	H.remove_overlay(UPPER_MEDICINE_LAYER)
 
-	var/mutable_appearance/lower_medicine_overlays = mutable_appearance('modular_septic/icons/mob/human/overlays/medicine_overlays.dmi', "blank", -LOWER_MEDICINE_LAYER)
-	var/mutable_appearance/upper_medicine_overlays = mutable_appearance('modular_septic/icons/mob/human/overlays/medicine_overlays.dmi', "blank", -UPPER_MEDICINE_LAYER)
+	var/mutable_appearance/lower_medicine_overlays = mutable_appearance('oworld/icons/mob/human/overlays/medicine_overlays.dmi', "blank", -LOWER_MEDICINE_LAYER)
+	var/mutable_appearance/upper_medicine_overlays = mutable_appearance('oworld/icons/mob/human/overlays/medicine_overlays.dmi', "blank", -UPPER_MEDICINE_LAYER)
 	for(var/obj/item/bodypart/bodypart as anything in H.bodyparts)
 		if(bodypart.is_stump())
 			continue
 		var/image/gauze
 		if(bodypart.current_gauze?.medicine_overlay_prefix)
-			gauze = image('modular_septic/icons/mob/human/overlays/medicine_overlays.dmi', "[bodypart.current_gauze.medicine_overlay_prefix]_[bodypart.body_zone][bodypart.use_digitigrade ? "_digitigrade" : "" ]")
+			gauze = image('oworld/icons/mob/human/overlays/medicine_overlays.dmi', "[bodypart.current_gauze.medicine_overlay_prefix]_[bodypart.body_zone][bodypart.use_digitigrade ? "_digitigrade" : "" ]")
 			gauze.layer = -LOWER_MEDICINE_LAYER
 			if(bodypart.render_layer == HANDS_PART_LAYER)
 				upper_medicine_overlays.add_overlay(gauze)
@@ -693,7 +693,7 @@
 				lower_medicine_overlays.add_overlay(gauze)
 		var/image/splint
 		if(bodypart.current_splint?.medicine_overlay_prefix)
-			splint = image('modular_septic/icons/mob/human/overlays/medicine_overlays.dmi', "[bodypart.current_splint.medicine_overlay_prefix]_[check_zone(bodypart.body_zone)][bodypart.use_digitigrade ? "_digitigrade" : "" ]")
+			splint = image('oworld/icons/mob/human/overlays/medicine_overlays.dmi', "[bodypart.current_splint.medicine_overlay_prefix]_[check_zone(bodypart.body_zone)][bodypart.use_digitigrade ? "_digitigrade" : "" ]")
 			splint.layer = -LOWER_MEDICINE_LAYER
 			if(bodypart.render_layer == HANDS_PART_LAYER)
 				upper_medicine_overlays.add_overlay(splint)
@@ -708,13 +708,13 @@
 /datum/species/proc/handle_artery_overlays(mob/living/carbon/human/H)
 	H.remove_overlay(ARTERY_LAYER)
 
-	var/mutable_appearance/arteries = mutable_appearance('modular_septic/icons/mob/human/overlays/artery.dmi', "blank", -ARTERY_LAYER)
+	var/mutable_appearance/arteries = mutable_appearance('oworld/icons/mob/human/overlays/artery.dmi', "blank", -ARTERY_LAYER)
 	for(var/obj/item/bodypart/bodypart as anything in H.bodyparts)
 		if(bodypart.is_stump() || !bodypart.is_organic_limb() || !bodypart.get_bleed_rate(TRUE))
 			continue
 		var/image/artery
 		if(bodypart.is_artery_torn())
-			artery = image('modular_septic/icons/mob/human/overlays/artery.dmi', "[bodypart.body_zone]_artery1")
+			artery = image('oworld/icons/mob/human/overlays/artery.dmi', "[bodypart.body_zone]_artery1")
 			artery.layer = -ARTERY_LAYER
 			arteries.add_overlay(artery)
 	H.overlays_standing[ARTERY_LAYER] = arteries
@@ -725,13 +725,13 @@
 /datum/species/proc/handle_gore_overlays(mob/living/carbon/human/H)
 	H.remove_overlay(GORE_LAYER)
 
-	var/mutable_appearance/gore = mutable_appearance('modular_septic/icons/mob/human/overlays/gore.dmi', "blank", -ARTERY_LAYER)
+	var/mutable_appearance/gore = mutable_appearance('oworld/icons/mob/human/overlays/gore.dmi', "blank", -ARTERY_LAYER)
 	for(var/obj/item/bodypart/bodypart as anything in H.bodyparts)
 		if(bodypart.is_stump() || !bodypart.is_organic_limb() || !bodypart.get_bleed_rate(TRUE))
 			continue
 		var/image/spill
 		if(bodypart.spilled && bodypart.spilled_overlay)
-			spill = image('modular_septic/icons/mob/human/overlays/gore.dmi', "[bodypart.spilled_overlay]")
+			spill = image('oworld/icons/mob/human/overlays/gore.dmi', "[bodypart.spilled_overlay]")
 			if(bodypart.body_zone == BODY_ZONE_PRECISE_VITALS)
 				var/has_gut = FALSE
 				for(var/datum/component/rope/possible_rope as anything in H.GetComponents(/datum/component/rope))

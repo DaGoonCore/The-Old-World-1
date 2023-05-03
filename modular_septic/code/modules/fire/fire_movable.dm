@@ -1,7 +1,7 @@
 /atom/movable/fire
 	name = "Fire"
 	desc = "I'll take you to burn."
-	icon = 'modular_septic/icons/effects/fire/fire.dmi'
+	icon = 'oworld/icons/effects/fire/fire.dmi'
 	icon_state = "fire_small"
 	plane = GAME_PLANE_BLOOM
 	layer = TURF_FIRE_LAYER
@@ -32,7 +32,7 @@
 	if(power)
 		fire_power = min(TURF_FIRE_MAX_POWER, power)
 	update_fire_state()
-	playsound(loc, 'modular_septic/sound/effects/fire/fire_start.wav', 40, TRUE)
+	playsound(loc, 'oworld/sound/effects/fire/fire_start.wav', 40, TRUE)
 
 /atom/movable/fire/Destroy()
 	var/turf/turf_loc = get_turf(src)
@@ -81,7 +81,7 @@
 				if(prob(max(0, fire_power - (100 - wall_loc.hardness)/4)))
 					wall_loc.dismantle_wall(FALSE, FALSE)
 				if(prob(6))
-					playsound(wall_loc, 'modular_septic/sound/effects/fire/fire_loop.wav', 65, TRUE)
+					playsound(wall_loc, 'oworld/sound/effects/fire/fire_loop.wav', 65, TRUE)
 		if(!magical)
 			reduce_power(1)
 		return
@@ -101,7 +101,7 @@
 		movable.fire_act(TURF_FIRE_TEMP_BASE + (TURF_FIRE_TEMP_INCREMENT_PER_POWER*fire_power), TURF_FIRE_VOLUME)
 	if(!magical)
 		if(prob(6))
-			playsound(open_turf, 'modular_septic/sound/effects/fire/fire_loop.wav', 65, TRUE)
+			playsound(open_turf, 'oworld/sound/effects/fire/fire_loop.wav', 65, TRUE)
 		if(prob(fire_power))
 			open_turf.burn_tile()
 		if(prob(fire_power))
@@ -159,19 +159,19 @@
 	switch(current_fire_state)
 		if(TURF_FIRE_STATE_SMALL)
 			icon_state = "fire_small"
-			SSvis_overlays.add_vis_overlay(src, 'modular_septic/icons/effects/fire/fire_overlays.dmi', "fire_small", LARGE_TURF_FIRE_LAYER, GAME_PLANE_UPPER_BLOOM)
+			SSvis_overlays.add_vis_overlay(src, 'oworld/icons/effects/fire/fire_overlays.dmi', "fire_small", LARGE_TURF_FIRE_LAYER, GAME_PLANE_UPPER_BLOOM)
 			plane = GAME_PLANE_BLOOM
 			layer = TURF_FIRE_LAYER
 			set_light_range(1.5)
 		if(TURF_FIRE_STATE_MEDIUM)
 			icon_state = "fire_medium"
-			SSvis_overlays.add_vis_overlay(src, 'modular_septic/icons/effects/fire/fire_overlays.dmi', "fire_medium", LARGE_TURF_FIRE_LAYER, GAME_PLANE_UPPER_BLOOM)
+			SSvis_overlays.add_vis_overlay(src, 'oworld/icons/effects/fire/fire_overlays.dmi', "fire_medium", LARGE_TURF_FIRE_LAYER, GAME_PLANE_UPPER_BLOOM)
 			plane = GAME_PLANE_UPPER_BLOOM
 			layer = TURF_FIRE_LAYER
 			set_light_range(2.5)
 		if(TURF_FIRE_STATE_LARGE)
 			icon_state = "fire_big"
-			SSvis_overlays.add_vis_overlay(src, 'modular_septic/icons/effects/fire/fire_overlays.dmi', "fire_big", LARGEST_TURF_FIRE_LAYER, GAME_PLANE_UPPER_BLOOM)
+			SSvis_overlays.add_vis_overlay(src, 'oworld/icons/effects/fire/fire_overlays.dmi', "fire_big", LARGEST_TURF_FIRE_LAYER, GAME_PLANE_UPPER_BLOOM)
 			plane = GAME_PLANE_UPPER_BLOOM
 			layer = LARGE_TURF_FIRE_LAYER
 			set_light_range(3.5)

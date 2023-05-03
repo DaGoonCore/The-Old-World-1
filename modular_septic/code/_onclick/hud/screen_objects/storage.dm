@@ -1,5 +1,5 @@
 /atom/movable/screen/close
-	icon = 'modular_septic/icons/hud/quake/storage.dmi'
+	icon = 'oworld/icons/hud/quake/storage.dmi'
 	icon_state = "close"
 	var/locked = TRUE
 
@@ -68,7 +68,7 @@
 	testing("[screen_x]:[screen_pixel_x],[screen_y]:[screen_pixel_y]")
 
 /atom/movable/screen/storage
-	icon = 'modular_septic/icons/hud/quake/storage.dmi'
+	icon = 'oworld/icons/hud/quake/storage.dmi'
 	icon_state = "background"
 	alpha = 128
 	var/atom/movable/screen/storage_hover/hovering
@@ -131,7 +131,7 @@
 	usr.client.screen |= hovering
 
 /atom/movable/screen/storage_hover
-	icon = 'modular_septic/icons/hud/quake/storage.dmi'
+	icon = 'oworld/icons/hud/quake/storage.dmi'
 	icon_state = "white"
 	plane = ABOVE_HUD_PLANE
 	layer = 10

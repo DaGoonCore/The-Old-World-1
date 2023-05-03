@@ -1,6 +1,6 @@
 /atom/movable/screen/hydration
 	name = "hydration"
-	icon = 'modular_septic/icons/hud/quake/screen_quake.dmi'
+	icon = 'oworld/icons/hud/quake/screen_quake.dmi'
 	icon_state = "hydration3"
 	base_icon_state = "hydration"
 	screen_loc = ui_hydration

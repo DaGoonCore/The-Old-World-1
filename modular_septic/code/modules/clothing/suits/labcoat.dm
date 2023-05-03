@@ -1,7 +1,7 @@
 /obj/item/clothing/suit/toggle/labcoat
-	icon = 'modular_septic/icons/obj/clothing/suits.dmi'
+	icon = 'oworld/icons/obj/clothing/suits.dmi'
 	icon_state = "labcoat"
-	worn_icon = 'modular_septic/icons/mob/clothing/suit.dmi'
+	worn_icon = 'oworld/icons/mob/clothing/suit.dmi'
 	worn_icon_state = "labcoat"
 	inhand_icon_state = "labcoat"
 	blood_overlay_type = "coat"

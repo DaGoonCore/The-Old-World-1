@@ -27,21 +27,21 @@
 	*/
 	//SEPTIC EDIT BEGIN
 	if(damaged_clothes)
-		var/mutable_appearance/damage_appearance = mutable_appearance('modular_septic/icons/effects/item_damage.dmi', "damaged[blood_overlay_type]")
+		var/mutable_appearance/damage_appearance = mutable_appearance('oworld/icons/effects/item_damage.dmi', "damaged[blood_overlay_type]")
 		damage_appearance.color = "#000000"
 		. += damage_appearance
 	if(HAS_BLOOD_DNA(src))
-		. += mutable_appearance('modular_septic/icons/effects/blood.dmi', "[blood_overlay_type]blood")
+		. += mutable_appearance('oworld/icons/effects/blood.dmi', "[blood_overlay_type]blood")
 	if(HAS_SHIT_DNA(src))
-		var/mutable_appearance/shit_appearance = mutable_appearance('modular_septic/icons/effects/shit.dmi', "[blood_overlay_type]shit")
+		var/mutable_appearance/shit_appearance = mutable_appearance('oworld/icons/effects/shit.dmi', "[blood_overlay_type]shit")
 		shit_appearance.color = COLOR_BROWN_SHIT
 		. += shit_appearance
 	if(HAS_CUM_DNA(src))
-		var/mutable_appearance/cummy = mutable_appearance('modular_septic/icons/effects/cum.dmi', "[blood_overlay_type]cum")
+		var/mutable_appearance/cummy = mutable_appearance('oworld/icons/effects/cum.dmi', "[blood_overlay_type]cum")
 		cummy.color = COLOR_WHITE_CUM
 		. += cummy
 	if(HAS_FEMCUM_DNA(src))
-		var/mutable_appearance/femcummy = mutable_appearance('modular_septic/icons/effects/femcum.dmi', "[blood_overlay_type]femcum")
+		var/mutable_appearance/femcummy = mutable_appearance('oworld/icons/effects/femcum.dmi', "[blood_overlay_type]femcum")
 		femcummy.color = COLOR_WHITE_FEMCUM
 		. += femcummy
 	//SEPTIC EDIT END

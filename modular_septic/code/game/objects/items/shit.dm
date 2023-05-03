@@ -1,7 +1,7 @@
 /obj/item/shit
 	name = "shit"
 	desc = "Human fecal matter. How pleasant."
-	icon = 'modular_septic/icons/obj/items/shit.dmi'
+	icon = 'oworld/icons/obj/items/shit.dmi'
 	icon_state = "poo1"
 	base_icon_state = "poo"
 	germ_level = GERM_LEVEL_MAXIMUM
@@ -56,7 +56,7 @@
 		return
 	var/obj/effect/decal/cleanable/blood/shitty_decal = locate(/obj/effect/decal/cleanable/blood) in shitted_on
 	if(shitty_decal?.blood_state == BLOOD_STATE_SHIT)
-		playsound(src, 'modular_septic/sound/effects/step_on_shit.ogg',  60, 0, 0)
+		playsound(src, 'oworld/sound/effects/step_on_shit.ogg',  60, 0, 0)
 		return
 	if(reagents.total_volume < 3)
 		return
@@ -65,6 +65,6 @@
 	for(var/obj/shitted_item in get_turf(src))
 		reagents.expose(shitted_item, TOUCH, modifier)
 	reagents.remove_any(modifier*reagents.total_volume)
-	playsound(src, 'modular_septic/sound/effects/step_on_shit.ogg',  60, 0, 0)
+	playsound(src, 'oworld/sound/effects/step_on_shit.ogg',  60, 0, 0)
 	for(var/obj/effect/decal/cleanable/blood/splatter in shitted_on)
 		splatter.on_entered(splatter, movable)

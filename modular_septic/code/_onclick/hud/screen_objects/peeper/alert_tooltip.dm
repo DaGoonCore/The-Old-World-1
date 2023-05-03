@@ -1,6 +1,6 @@
 /atom/movable/screen/alert_tooltip
 	name = "alert tooltip"
-	icon = 'modular_septic/icons/hud/quake/peeper.dmi'
+	icon = 'oworld/icons/hud/quake/peeper.dmi'
 	icon_state = "blank"
 	maptext = "N/A"
 	maptext_width = 158

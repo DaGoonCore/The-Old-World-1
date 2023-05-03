@@ -52,7 +52,7 @@
 				used_style = STYLE_MUZZLE
 		switch(used_style)
 			if(STYLE_MUZZLE)
-				desired_icon = head.worn_icon_muzzled || 'modular_septic/icons/mob/clothing/head_muzzled.dmi'
+				desired_icon = head.worn_icon_muzzled || 'oworld/icons/mob/clothing/head_muzzled.dmi'
 
 		overlays_standing[HEAD_LAYER] = head.build_worn_icon(default_layer = HEAD_LAYER, default_icon_file = 'icons/mob/clothing/head.dmi', override_icon = desired_icon, mutant_styles = used_style)
 		update_hud_head(head)
@@ -79,7 +79,7 @@
 				used_style = STYLE_MUZZLE
 		switch(used_style)
 			if(STYLE_MUZZLE)
-				desired_icon = wear_mask.worn_icon_muzzled || 'modular_septic/icons/mob/clothing/mask_muzzled.dmi'
+				desired_icon = wear_mask.worn_icon_muzzled || 'oworld/icons/mob/clothing/mask_muzzled.dmi'
 
 		if(!(ITEM_SLOT_MASK in check_obscured_slots()))
 			overlays_standing[FACEMASK_LAYER] = wear_mask.build_worn_icon(default_layer = FACEMASK_LAYER, default_icon_file = 'icons/mob/clothing/mask.dmi', override_icon = desired_icon, mutant_styles = used_style)
@@ -233,7 +233,7 @@
 	remove_overlay(FIRE_LAYER)
 
 	if(on_fire || HAS_TRAIT(src, TRAIT_PERMANENTLY_ONFIRE))
-		var/mutable_appearance/new_fire_overlay = mutable_appearance('modular_septic/icons/mob/human/overlays/onfire.dmi', fire_icon, -FIRE_LAYER)
+		var/mutable_appearance/new_fire_overlay = mutable_appearance('oworld/icons/mob/human/overlays/onfire.dmi', fire_icon, -FIRE_LAYER)
 		new_fire_overlay.appearance_flags = RESET_COLOR
 		overlays_standing[FIRE_LAYER] = new_fire_overlay
 
@@ -242,7 +242,7 @@
 /mob/living/carbon/update_damage_overlays()
 	remove_overlay(DAMAGE_LAYER)
 
-	var/mutable_appearance/damage_overlays = mutable_appearance('modular_septic/icons/mob/human/overlays/damage.dmi', "blank", -DAMAGE_LAYER)
+	var/mutable_appearance/damage_overlays = mutable_appearance('oworld/icons/mob/human/overlays/damage.dmi', "blank", -DAMAGE_LAYER)
 	for(var/obj/item/bodypart/bodypart as anything in bodyparts)
 		if(bodypart.is_stump())
 			continue
@@ -250,11 +250,11 @@
 			var/image/damage
 			switch(bodypart.body_zone)
 				if(BODY_ZONE_PRECISE_FACE, BODY_ZONE_PRECISE_MOUTH)
-					damage = image('modular_septic/icons/mob/human/overlays/damage.dmi', "[bodypart.dmg_overlay_type]_[BODY_ZONE_HEAD]_[bodypart.brutestate]0")
+					damage = image('oworld/icons/mob/human/overlays/damage.dmi', "[bodypart.dmg_overlay_type]_[BODY_ZONE_HEAD]_[bodypart.brutestate]0")
 				if(BODY_ZONE_PRECISE_VITALS)
-					damage = image('modular_septic/icons/mob/human/overlays/damage.dmi', "[bodypart.dmg_overlay_type]_[BODY_ZONE_CHEST]_[bodypart.brutestate]0")
+					damage = image('oworld/icons/mob/human/overlays/damage.dmi', "[bodypart.dmg_overlay_type]_[BODY_ZONE_CHEST]_[bodypart.brutestate]0")
 				else
-					damage = image('modular_septic/icons/mob/human/overlays/damage.dmi', "[bodypart.dmg_overlay_type]_[bodypart.body_zone]_[bodypart.brutestate]0")
+					damage = image('oworld/icons/mob/human/overlays/damage.dmi', "[bodypart.dmg_overlay_type]_[bodypart.body_zone]_[bodypart.brutestate]0")
 			damage.layer = -DAMAGE_LAYER
 			if(bodypart.render_layer == HANDS_PART_LAYER)
 				damage.layer = -UPPER_DAMAGE_LAYER
@@ -267,14 +267,14 @@
 	remove_overlay(LOWER_MEDICINE_LAYER)
 	remove_overlay(UPPER_MEDICINE_LAYER)
 
-	var/mutable_appearance/lower_medicine_overlays = mutable_appearance('modular_septic/icons/mob/human/overlays/medicine_overlays.dmi', "blank", -LOWER_MEDICINE_LAYER)
-	var/mutable_appearance/upper_medicine_overlays = mutable_appearance('modular_septic/icons/mob/human/overlays/medicine_overlays.dmi', "blank", -UPPER_MEDICINE_LAYER)
+	var/mutable_appearance/lower_medicine_overlays = mutable_appearance('oworld/icons/mob/human/overlays/medicine_overlays.dmi', "blank", -LOWER_MEDICINE_LAYER)
+	var/mutable_appearance/upper_medicine_overlays = mutable_appearance('oworld/icons/mob/human/overlays/medicine_overlays.dmi', "blank", -UPPER_MEDICINE_LAYER)
 	for(var/obj/item/bodypart/bodypart as anything in bodyparts)
 		if(bodypart.is_stump())
 			continue
 		var/image/gauze
 		if(bodypart.current_gauze?.medicine_overlay_prefix)
-			gauze = image('modular_septic/icons/mob/human/overlays/medicine_overlays.dmi', "[bodypart.current_gauze.medicine_overlay_prefix]_[bodypart.body_zone][bodypart.use_digitigrade ? "_digitigrade" : "" ]")
+			gauze = image('oworld/icons/mob/human/overlays/medicine_overlays.dmi', "[bodypart.current_gauze.medicine_overlay_prefix]_[bodypart.body_zone][bodypart.use_digitigrade ? "_digitigrade" : "" ]")
 			gauze.layer = -LOWER_MEDICINE_LAYER
 			if(bodypart.render_layer == HANDS_PART_LAYER)
 				upper_medicine_overlays.add_overlay(gauze)
@@ -282,7 +282,7 @@
 				lower_medicine_overlays.add_overlay(gauze)
 		var/image/splint
 		if(bodypart.current_splint?.medicine_overlay_prefix)
-			splint = image('modular_septic/icons/mob/human/overlays/medicine_overlays.dmi', "[bodypart.current_splint.medicine_overlay_prefix]_[check_zone(bodypart.body_zone)][bodypart.use_digitigrade ? "_digitigrade" : "" ]")
+			splint = image('oworld/icons/mob/human/overlays/medicine_overlays.dmi', "[bodypart.current_splint.medicine_overlay_prefix]_[check_zone(bodypart.body_zone)][bodypart.use_digitigrade ? "_digitigrade" : "" ]")
 			splint.layer = -LOWER_MEDICINE_LAYER
 			if(bodypart.render_layer == HANDS_PART_LAYER)
 				upper_medicine_overlays.add_overlay(splint)
@@ -297,13 +297,13 @@
 /mob/living/carbon/proc/update_artery_overlays()
 	remove_overlay(ARTERY_LAYER)
 
-	var/mutable_appearance/arteries = mutable_appearance('modular_septic/icons/mob/human/overlays/artery.dmi', "blank", -ARTERY_LAYER)
+	var/mutable_appearance/arteries = mutable_appearance('oworld/icons/mob/human/overlays/artery.dmi', "blank", -ARTERY_LAYER)
 	for(var/obj/item/bodypart/bodypart as anything in bodyparts)
 		if(bodypart.is_stump() || !bodypart.is_organic_limb() || !bodypart.get_bleed_rate(TRUE))
 			continue
 		var/image/artery
 		if(bodypart.is_artery_torn())
-			artery = image('modular_septic/icons/mob/human/overlays/artery.dmi', "[bodypart.body_zone]_artery1")
+			artery = image('oworld/icons/mob/human/overlays/artery.dmi', "[bodypart.body_zone]_artery1")
 			artery.layer = -ARTERY_LAYER
 			arteries.add_overlay(artery)
 	overlays_standing[ARTERY_LAYER] = arteries
@@ -313,13 +313,13 @@
 /mob/living/carbon/proc/update_gore_overlays()
 	remove_overlay(GORE_LAYER)
 
-	var/mutable_appearance/gore = mutable_appearance('modular_septic/icons/mob/human/overlays/gore.dmi', "blank", -ARTERY_LAYER)
+	var/mutable_appearance/gore = mutable_appearance('oworld/icons/mob/human/overlays/gore.dmi', "blank", -ARTERY_LAYER)
 	for(var/obj/item/bodypart/bodypart as anything in bodyparts)
 		if(bodypart.is_stump() || !bodypart.is_organic_limb() || !bodypart.get_bleed_rate(TRUE))
 			continue
 		var/image/spill
 		if(bodypart.spilled && bodypart.spilled_overlay)
-			spill = image('modular_septic/icons/mob/human/overlays/gore.dmi', "[bodypart.spilled_overlay]")
+			spill = image('oworld/icons/mob/human/overlays/gore.dmi', "[bodypart.spilled_overlay]")
 			spill.layer = -GORE_LAYER
 			gore.add_overlay(spill)
 	overlays_standing[GORE_LAYER] = gore

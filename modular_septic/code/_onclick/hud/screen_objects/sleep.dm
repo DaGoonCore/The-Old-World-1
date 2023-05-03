@@ -1,6 +1,6 @@
 /atom/movable/screen/sleeping
 	name = "sleep"
-	icon = 'modular_septic/icons/hud/quake/screen_quake.dmi'
+	icon = 'oworld/icons/hud/quake/screen_quake.dmi'
 	icon_state = "act_sleep"
 	base_icon_state = "act_sleep"
 	screen_loc = ui_sleep

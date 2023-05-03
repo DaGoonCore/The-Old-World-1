@@ -4,7 +4,7 @@
 	return 0
 
 /obj/effect/decal/cleanable/blood/gibs
-	var/nice_noises = list('modular_septic/sound/gore/fleshstep1.ogg', 'modular_septic/sound/gore/fleshstep2.ogg', 'modular_septic/sound/gore/fleshstep3.ogg')
+	var/nice_noises = list('oworld/sound/gore/fleshstep1.ogg', 'oworld/sound/gore/fleshstep2.ogg', 'oworld/sound/gore/fleshstep3.ogg')
 
 /obj/effect/decal/cleanable/blood/gibs/on_entered(datum/source, atom/movable/L)
 	if(isliving(L) && has_gravity(loc))

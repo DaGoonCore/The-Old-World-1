@@ -51,5 +51,5 @@
 				bodypart.apply_dismember(WOUND_SLASH, TRUE, FALSE)
 			bodypart.open_incision()
 			SEND_SIGNAL(target, COMSIG_CARBON_CLEAR_WOUND_MESSAGE)
-			playsound(target, 'modular_septic/sound/gore/dissection.ogg', 80, 0)
+			playsound(target, 'oworld/sound/gore/dissection.ogg', 80, 0)
 	return SURGERY_SUCCESS

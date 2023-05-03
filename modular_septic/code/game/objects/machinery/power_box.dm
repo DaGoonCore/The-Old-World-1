@@ -1,7 +1,7 @@
 /obj/machinery/fusebox
 	name = "Fuse Box"
 	desc = "A large rectangular box filled with wiring, and switches that control the power in the room. Rectangular boxes are also known to contain severed human heads."
-	icon = 'modular_septic/icons/obj/structures/efn.dmi'
+	icon = 'oworld/icons/obj/structures/efn.dmi'
 	icon_state = "powerbox"
 	base_icon_state = "powerbox"
 	plane = GAME_PLANE_UPPER

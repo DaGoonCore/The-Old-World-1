@@ -1,6 +1,6 @@
 /atom/movable/screen/skills
 	name = "skills"
-	icon = 'modular_septic/icons/hud/quake/screen_quake.dmi'
+	icon = 'oworld/icons/hud/quake/screen_quake.dmi'
 	icon_state = "skills"
 	screen_loc = ui_skills
 
@@ -14,12 +14,12 @@
 
 /atom/movable/screen/craft
 	name = "crafting"
-	icon = 'modular_septic/icons/hud/quake/screen_quake.dmi'
+	icon = 'oworld/icons/hud/quake/screen_quake.dmi'
 	screen_loc = ui_crafting
 
 /atom/movable/screen/language_menu
 	name = "language"
-	icon = 'modular_septic/icons/hud/quake/screen_quake.dmi'
+	icon = 'oworld/icons/hud/quake/screen_quake.dmi'
 	screen_loc = ui_language_menu
 
 /atom/movable/screen/language_menu/Click(location, control, params)
@@ -39,7 +39,7 @@
 
 /atom/movable/screen/area_creator
 	name = "area"
-	icon = 'modular_septic/icons/hud/quake/screen_quake.dmi'
+	icon = 'oworld/icons/hud/quake/screen_quake.dmi'
 	screen_loc = ui_building
 
 /atom/movable/screen/area_creator/Click(location, control, params)

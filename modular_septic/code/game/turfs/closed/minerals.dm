@@ -7,9 +7,9 @@
 	initial_gas_mix = NEVADO_SURFACE_DEFAULT_ATMOS
 
 /turf/closed/mineral/shale
-	icon = 'modular_septic/icons/turf/tall/shale.dmi'
-	smooth_icon = 'modular_septic/icons/turf/tall/shale.dmi'
-	frill_icon = 'modular_septic/icons/turf/tall/shale_frill.dmi'
+	icon = 'oworld/icons/turf/tall/shale.dmi'
+	smooth_icon = 'oworld/icons/turf/tall/shale.dmi'
+	frill_icon = 'oworld/icons/turf/tall/shale_frill.dmi'
 	icon_state = "shale-0"
 	base_icon_state = "shale"
 	plane = GAME_PLANE

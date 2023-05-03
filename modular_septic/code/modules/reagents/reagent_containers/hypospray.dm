@@ -1,9 +1,9 @@
 /obj/item/reagent_containers/hypospray/medipen
-	var/stimulator_sound = 'modular_septic/sound/effects/stimulator.wav'
+	var/stimulator_sound = 'oworld/sound/effects/stimulator.wav'
 
 /obj/item/reagent_containers/hypospray/medipen/retractible
-	var/needle_out_sound = 'modular_septic/sound/efn/captagon/heroin_out.ogg'
-	var/needle_in_sound = 'modular_septic/sound/efn/captagon/heroin_in.ogg'
+	var/needle_out_sound = 'oworld/sound/efn/captagon/heroin_out.ogg'
+	var/needle_in_sound = 'oworld/sound/efn/captagon/heroin_in.ogg'
 	var/retracted = TRUE
 
 /obj/item/reagent_containers/hypospray/medipen/retractible/attack_self(mob/user)

@@ -1,7 +1,7 @@
 /atom/movable/screen/grab
 	name = "grab"
 	desc = "Holy shit you really shouldn't be reading this."
-	icon = 'modular_septic/icons/hud/quake/grab.dmi'
+	icon = 'oworld/icons/hud/quake/grab.dmi'
 	icon_state = "grab_wrench"
 	base_icon_state = "grab"
 	plane = HUD_PLANE

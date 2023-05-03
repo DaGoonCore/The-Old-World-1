@@ -1,6 +1,6 @@
 /atom/movable/shadow
 	name = "shadow"
-	icon = 'modular_septic/icons/effects/shadow.dmi'
+	icon = 'oworld/icons/effects/shadow.dmi'
 	icon_state = "mob_shadow"
 	plane = FLOOR_PLANE_FOV_HIDDEN
 	layer = SHADOW_LAYER

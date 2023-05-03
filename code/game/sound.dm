@@ -217,13 +217,13 @@ distance_multiplier - Can be used to multiply the distance at which the sound is
 		switch(soundin)
 			//SEPTIC EDIT BEGIN
 			if("explosion")
-				soundin = pick('modular_septic/sound/effects/explode1.wav', 'modular_septic/sound/effects/explode2.wav', 'modular_septic/sound/effects/explode3.wav')
+				soundin = pick('oworld/sound/effects/explode1.wav', 'oworld/sound/effects/explode2.wav', 'oworld/sound/effects/explode3.wav')
 			if("sparks")
-				soundin = pick('modular_septic/sound/effects/elec1.wav','modular_septic/sound/effects/elec2.wav','modular_septic/sound/effects/elec3.wav')
+				soundin = pick('oworld/sound/effects/elec1.wav','oworld/sound/effects/elec2.wav','oworld/sound/effects/elec3.wav')
 			if("rustle")
-				soundin = pick('modular_septic/sound/effects/foley3.wav','modular_septic/sound/effects/foley2.wav','modular_septic/sound/effects/foley1.wav')
+				soundin = pick('oworld/sound/effects/foley3.wav','oworld/sound/effects/foley2.wav','oworld/sound/effects/foley1.wav')
 			if("swing_hit")
-				soundin = pick('modular_septic/sound/weapons/genhit1.wav', 'modular_septic/sound/weapons/genhit2.wav', 'modular_septic/sound/weapons/genhit3.wav')
+				soundin = pick('oworld/sound/weapons/genhit1.wav', 'oworld/sound/weapons/genhit2.wav', 'oworld/sound/weapons/genhit3.wav')
 			//SEPTIC EDIT END
 			if ("shatter")
 				soundin = pick('sound/effects/glassbr1.ogg','sound/effects/glassbr2.ogg','sound/effects/glassbr3.ogg')

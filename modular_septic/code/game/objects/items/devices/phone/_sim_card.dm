@@ -1,7 +1,7 @@
 /obj/item/simcard
 	name = "\improper sim card"
 	desc = "Sim, sim, I agree with your statement"
-	icon = 'modular_septic/icons/obj/items/phone.dmi'
+	icon = 'oworld/icons/obj/items/phone.dmi'
 	icon_state = "simcard"
 	base_icon_state = "simcard"
 	item_flags = NOBLUDGEON
@@ -83,7 +83,7 @@
 	if(!silent)
 		do_sparks(3, FALSE, src)
 		audible_message(span_bolddanger("[src] fizzles, smoking at the edges!"))
-		playsound(src, 'modular_septic/sound/efn/hacker_phone_zap.ogg', 65, FALSE)
+		playsound(src, 'oworld/sound/efn/hacker_phone_zap.ogg', 65, FALSE)
 	new /obj/item/trash/simcard(get_turf(src)) //fried!
 	qdel(src)
 	if(parent)

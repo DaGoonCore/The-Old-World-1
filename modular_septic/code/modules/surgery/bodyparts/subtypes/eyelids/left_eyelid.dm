@@ -1,7 +1,7 @@
 /obj/item/bodypart/l_eyelid
 	name = "left eyelid"
 	desc = "Sightless, until the eyes reappear."
-	icon = 'modular_septic/icons/obj/items/surgery.dmi'
+	icon = 'oworld/icons/obj/items/surgery.dmi'
 	icon_state = "eyelid"
 	base_icon_state = "eyelid"
 	attack_verb_continuous = list("looks at", "sees")
@@ -25,7 +25,7 @@
 
 	throw_range = 7
 	scars_covered_by_clothes = FALSE
-	dismemberment_sounds = list('modular_septic/sound/gore/severed.ogg')
+	dismemberment_sounds = list('oworld/sound/gore/severed.ogg')
 
 	cavity_name = "orbital cavity"
 	amputation_point_name = "orbit"
@@ -36,7 +36,7 @@
 /obj/item/bodypart/l_eyelid/get_limb_icon(dropped)
 	if(dropped && !isbodypart(loc))
 		. = list()
-		var/image/funky_anus = image('modular_septic/icons/obj/items/surgery.dmi', src, base_icon_state, BELOW_MOB_LAYER)
+		var/image/funky_anus = image('oworld/icons/obj/items/surgery.dmi', src, base_icon_state, BELOW_MOB_LAYER)
 		funky_anus.plane = plane
 		funky_anus.transform = matrix(-1, 0, 0, 0, 1, 0) //mirroring
 		. += funky_anus

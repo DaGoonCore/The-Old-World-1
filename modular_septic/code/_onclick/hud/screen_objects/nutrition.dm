@@ -1,6 +1,6 @@
 /atom/movable/screen/nutrition
 	name = "nutrition"
-	icon = 'modular_septic/icons/hud/quake/screen_quake.dmi'
+	icon = 'oworld/icons/hud/quake/screen_quake.dmi'
 	icon_state = "nutrition3"
 	base_icon_state = "nutrition"
 	screen_loc = ui_nutrition

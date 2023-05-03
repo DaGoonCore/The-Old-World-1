@@ -1,2 +1,2 @@
 /obj/structure/table/optable
-	icon = 'modular_septic/icons/obj/structures/optable.dmi'
+	icon = 'oworld/icons/obj/structures/optable.dmi'

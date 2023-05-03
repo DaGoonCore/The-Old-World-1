@@ -1,6 +1,6 @@
 /atom/movable/screen/action_tooltip
 	name = "action tooltip"
-	icon = 'modular_septic/icons/hud/quake/peeper.dmi'
+	icon = 'oworld/icons/hud/quake/peeper.dmi'
 	icon_state = "blank"
 	maptext = "N/A"
 	maptext_height = 32

@@ -3,7 +3,7 @@
 	generic = "Horns"
 	relevant_layers = list(BODY_FRONT_LAYER)
 	recommended_species = list(SPECIES_LIZARD, SPECIES_LIZARD_ASH, SPECIES_LIZARD_SILVER, SPECIES_MAMMAL, SPECIES_SYNTHMAMMAL)
-	icon = 'modular_septic/icons/mob/human/sprite_accessory/horns.dmi'
+	icon = 'oworld/icons/mob/human/sprite_accessory/horns.dmi'
 	default_color = "555555"
 	genetic = TRUE
 	organ_type = /obj/item/organ/external/horns

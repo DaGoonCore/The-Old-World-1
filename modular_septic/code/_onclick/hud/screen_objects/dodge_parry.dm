@@ -1,6 +1,6 @@
 /atom/movable/screen/dodge_parry
 	name = "dodge/parry toggle"
-	icon = 'modular_septic/icons/hud/quake/screen_quake.dmi'
+	icon = 'oworld/icons/hud/quake/screen_quake.dmi'
 	icon_state = DP_PARRY
 	screentip_flags = SCREENTIP_HOVERER_CLICKER
 	screen_loc = ui_dodge_parry

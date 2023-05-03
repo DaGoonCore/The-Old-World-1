@@ -1,5 +1,5 @@
 /atom/movable/screen/fullscreen
-	icon = 'modular_septic/icons/hud/screen_full.dmi'
+	icon = 'oworld/icons/hud/screen_full.dmi'
 	screen_loc = ui_fullscreen
 
 /atom/movable/screen/fullscreen/update_for_view(client_view)

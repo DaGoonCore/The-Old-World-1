@@ -70,7 +70,7 @@
 			to_chat(player, "<span class='oocplain'><span style='color: [GLOB.connection_ooc_color]; font-weight: bold;'><span class='prefix'>SERVER:</span> Epic connection fail. Laugh at <b>[key]</b>.</span></span>")
 
 /client/proc/bruh_moment()
-	var/sound/bruh = sound('modular_septic/sound/memeshit/bruh.ogg', FALSE, 0, CHANNEL_LOBBYMUSIC, 100)
+	var/sound/bruh = sound('oworld/sound/memeshit/bruh.ogg', FALSE, 0, CHANNEL_LOBBYMUSIC, 100)
 	to_chat(src, span_cultlarge("Bruh."))
 	SEND_SOUND(src, bruh)
 

@@ -405,7 +405,7 @@
 
 	var/dismember_sound = pick(dismemberment_sounds)
 	if(status == BODYPART_ROBOTIC)
-		dismember_sound = 'modular_septic/sound/effects/crowbarhit.ogg'
+		dismember_sound = 'oworld/sound/effects/crowbarhit.ogg'
 	playsound(owner, dismember_sound, dismemberment_volume)
 	dismember(dam_type = (wounding_type == WOUND_BURN ? BURN : BRUTE), silent = TRUE, destroy = (wounding_type != WOUND_SLASH), wounding_type = wounding_type)
 

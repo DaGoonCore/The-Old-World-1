@@ -4,7 +4,7 @@
 	/// Description of the tab, for the switch tooltip
 	var/desc = "Tab that contains a bunch of stuff."
 	/// Icon our switch uses
-	var/icon = 'modular_septic/icons/hud/quake/peeper.dmi'
+	var/icon = 'oworld/icons/hud/quake/peeper.dmi'
 	/// Icon state our switch uses
 	var/icon_state = "tab"
 	/// The peeper datum that owns us

@@ -16,7 +16,7 @@ SUBSYSTEM_DEF(donators)
 	connected_donators[ckey] = rank
 
 /datum/controller/subsystem/donators/proc/load_donator_flags()
-	var/list/flags = icon_states('modular_septic/icons/ui_icons/chat/donator.dmi')
+	var/list/flags = icon_states('oworld/icons/ui_icons/chat/donator.dmi')
 	for(var/flag in flags)
 		donator_to_ooc_flag[flag] = flag
 

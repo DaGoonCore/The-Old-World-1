@@ -1,6 +1,6 @@
 /atom/movable/screen/bookmark
 	name = "toggle upper inventory on"
-	icon = 'modular_septic/icons/hud/quake/screen_quake.dmi'
+	icon = 'oworld/icons/hud/quake/screen_quake.dmi'
 	icon_state = "bookmark"
 	base_icon_state = "bookmark"
 	screen_loc = ui_bookmark_off

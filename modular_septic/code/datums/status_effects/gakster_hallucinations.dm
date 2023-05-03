@@ -7,11 +7,11 @@
 /datum/status_effect/gakster_dissociative_identity_disorder/on_apply()
 	. = ..()
 	ADD_TRAIT(owner, TRAIT_GAKSTER, TRAIT_STATUS_EFFECT(id))
-	owner.playsound_local(owner, 'modular_septic/sound/effects/whispers.wav', 60)
+	owner.playsound_local(owner, 'oworld/sound/effects/whispers.wav', 60)
 	to_chat(owner, span_warning("Something is destroying my mind, and It's getting worse minute by minute..."))
 
 /datum/status_effect/gakster_dissociative_identity_disorder/before_remove()
-	owner.playsound_local(owner, 'modular_septic/sound/effects/stream.wav', 60)
+	owner.playsound_local(owner, 'oworld/sound/effects/stream.wav', 60)
 	to_chat(owner, span_warning("I feel much more stable now, thank goodness."))
 	return TRUE
 
@@ -40,10 +40,10 @@
 		var/obj/speaker = pick(objects)
 		if(speaker && message)
 			var/speak_sound = pick(
-							'modular_septic/sound/insanity/glitchloop.wav',
-							'modular_septic/sound/insanity/glitchloop2.wav',
-							'modular_septic/sound/insanity/glitchloop3.wav',
-							'modular_septic/sound/insanity/glitchloop4.wav',
+							'oworld/sound/insanity/glitchloop.wav',
+							'oworld/sound/insanity/glitchloop2.wav',
+							'oworld/sound/insanity/glitchloop3.wav',
+							'oworld/sound/insanity/glitchloop4.wav',
 							)
 			owner.playsound_local(get_turf(owner), speak_sound, 50, 0)
 			owner.Hear(message, speaker, owner.language_holder?.selected_language, message)

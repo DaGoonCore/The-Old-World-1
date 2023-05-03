@@ -171,7 +171,7 @@
 
 /turf/open/floor/black/abyss
 	name = "black"
-	icon = 'modular_septic/icons/turf/floors.dmi'
+	icon = 'oworld/icons/turf/floors.dmi'
 	icon_state = "abyss"
 
 /turf/open/floor/plastic

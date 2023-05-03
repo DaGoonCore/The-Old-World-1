@@ -1,5 +1,5 @@
 /obj/item/radio/intercom
-	icon = 'modular_septic/icons/obj/machinery/intercom.dmi'
+	icon = 'oworld/icons/obj/machinery/intercom.dmi'
 	icon_state = "intercom"
 	base_icon_state = "intercom"
 

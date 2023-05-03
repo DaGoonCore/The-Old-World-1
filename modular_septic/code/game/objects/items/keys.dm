@@ -11,8 +11,8 @@
 /obj/item/key/dorm
 	name = "dorm key"
 	desc = "A key to one of the dorm rooms."
-	icon = 'modular_septic/icons/obj/items/keys.dmi'
+	icon = 'oworld/icons/obj/items/keys.dmi'
 	icon_state = "key_dorm"
 	base_icon_state = "key_dorm"
-	pickup_sound = 'modular_septic/sound/effects/keys_pickup.wav'
-	drop_sound = 'modular_septic/sound/effects/keys_drop.wav'
+	pickup_sound = 'oworld/sound/effects/keys_pickup.wav'
+	drop_sound = 'oworld/sound/effects/keys_drop.wav'

@@ -3,7 +3,7 @@
 	return COLOR_DARK_BROWN
 
 /datum/sprite_accessory/hair/septic
-	icon = 'modular_septic/icons/mob/human/sprite_accessory/hair.dmi'
+	icon = 'oworld/icons/mob/human/sprite_accessory/hair.dmi'
 
 /datum/sprite_accessory/hair/septic/pigtails4
 	name = "Pigtails 4"

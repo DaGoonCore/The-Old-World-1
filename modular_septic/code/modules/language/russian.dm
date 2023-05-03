@@ -3,7 +3,7 @@
 	desc = "The language of the Russian Empire, which are currently good allies of the Great British Empire."
 	key = "3"
 	default_priority = 98
-	icon = 'modular_septic/icons/misc/language.dmi'
+	icon = 'oworld/icons/misc/language.dmi'
 	icon_state = "russian"
 	space_chance = 50
 

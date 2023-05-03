@@ -39,13 +39,13 @@
 	*/
 	//SEPTIC EDIT BEGIN
 	if(damaged_clothes)
-		var/mutable_appearance/damage_appearance = mutable_appearance('modular_septic/icons/effects/item_damage.dmi', "damagedgloves")
+		var/mutable_appearance/damage_appearance = mutable_appearance('oworld/icons/effects/item_damage.dmi', "damagedgloves")
 		damage_appearance.color = "#000000"
 		. += damage_appearance
 	if(HAS_BLOOD_DNA(src))
-		. += mutable_appearance('modular_septic/icons/effects/blood.dmi', "bloodyhands")
+		. += mutable_appearance('oworld/icons/effects/blood.dmi', "bloodyhands")
 	if(HAS_SHIT_DNA(src))
-		var/mutable_appearance/shit_appearance = mutable_appearance('modular_septic/icons/effects/shit.dmi', "shithands")
+		var/mutable_appearance/shit_appearance = mutable_appearance('oworld/icons/effects/shit.dmi', "shithands")
 		shit_appearance.color = COLOR_BROWN_SHIT
 		. += shit_appearance
 	//SEPTIC EDIT END

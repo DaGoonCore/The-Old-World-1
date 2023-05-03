@@ -4,7 +4,7 @@
 	desc = "An incomprehensible language composed of mostly guttural vowel sounds."
 	key = "5"
 	default_priority = 96
-	icon = 'modular_septic/icons/misc/language.dmi'
+	icon = 'oworld/icons/misc/language.dmi'
 	icon_state = "sploinky"
 	space_chance = 65
 	secret = TRUE

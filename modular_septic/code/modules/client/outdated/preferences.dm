@@ -7,10 +7,10 @@
 	var/max_save_slots = 10
 
 	// clickity clack sounds
-	var/static/sound/resetsound = sound('modular_septic/sound/effects/reset.ogg', FALSE, FALSE, CHANNEL_CLICKITY_CLACK, 60)
-	var/static/sound/savesound = sound('modular_septic/sound/effects/save.ogg', FALSE, FALSE, CHANNEL_CLICKITY_CLACK, 60)
-	var/static/sound/undosound = sound('modular_septic/sound/effects/undo.ogg', FALSE, FALSE, CHANNEL_CLICKITY_CLACK, 60)
-	var/static/sound/clicksound = sound('modular_septic/sound/effects/tablettap.wav', FALSE, FALSE, CHANNEL_CLICKITY_CLACK, 60)
+	var/static/sound/resetsound = sound('oworld/sound/effects/reset.ogg', FALSE, FALSE, CHANNEL_CLICKITY_CLACK, 60)
+	var/static/sound/savesound = sound('oworld/sound/effects/save.ogg', FALSE, FALSE, CHANNEL_CLICKITY_CLACK, 60)
+	var/static/sound/undosound = sound('oworld/sound/effects/undo.ogg', FALSE, FALSE, CHANNEL_CLICKITY_CLACK, 60)
+	var/static/sound/clicksound = sound('oworld/sound/effects/tablettap.wav', FALSE, FALSE, CHANNEL_CLICKITY_CLACK, 60)
 
 	// non-preference stuff
 	var/muted = 0

@@ -1,5 +1,5 @@
 /atom/movable/screen/alert/buckled
-	icon = 'modular_septic/icons/hud/quake/screen_alert.dmi'
+	icon = 'oworld/icons/hud/quake/screen_alert.dmi'
 
 /atom/movable/screen/alert/cant_breathe
 	name = "Choking"

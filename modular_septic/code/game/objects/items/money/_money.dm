@@ -1,11 +1,11 @@
 /obj/item/money
 	name = "money"
 	desc = "We don't live in a cashless society."
-	icon = 'modular_septic/icons/obj/items/money.dmi'
+	icon = 'oworld/icons/obj/items/money.dmi'
 	w_class = WEIGHT_CLASS_TINY
 	carry_weight = 50 GRAMS
 	/// World icon we should use
-	var/world_icon = 'modular_septic/icons/obj/items/money_world.dmi'
+	var/world_icon = 'oworld/icons/obj/items/money_world.dmi'
 	/// If this is a coin, it shows at the bottom right when stacking
 	var/is_coin = FALSE
 	/// Stack of money, we can't stack and create another stack that is stupid
@@ -126,18 +126,18 @@
 		if(has_coin && has_note)
 			break
 	if(has_coin && has_note)
-		real_stack.drop_sound = 'modular_septic/sound/items/money_and_coin_drop.wav'
+		real_stack.drop_sound = 'oworld/sound/items/money_and_coin_drop.wav'
 	else if(has_coin)
-		real_stack.drop_sound = 'modular_septic/sound/items/coin_drop.wav'
+		real_stack.drop_sound = 'oworld/sound/items/coin_drop.wav'
 	else
-		real_stack.drop_sound = 'modular_septic/sound/items/money_drop.wav'
+		real_stack.drop_sound = 'oworld/sound/items/money_drop.wav'
 	if(!silent)
 		if(has_coin && has_note)
-			playsound(real_stack, 'modular_septic/sound/items/money_and_coin_stack.wav', 60)
+			playsound(real_stack, 'oworld/sound/items/money_and_coin_stack.wav', 60)
 		else if(has_coin)
-			playsound(real_stack, 'modular_septic/sound/items/coin_stack.wav', 60)
+			playsound(real_stack, 'oworld/sound/items/coin_stack.wav', 60)
 		else
-			playsound(real_stack, 'modular_septic/sound/items/money_stack.wav', 60)
+			playsound(real_stack, 'oworld/sound/items/money_stack.wav', 60)
 	real_stack.update_appearance()
 	return real_stack
 

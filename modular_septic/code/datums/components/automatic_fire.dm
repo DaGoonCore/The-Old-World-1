@@ -20,7 +20,7 @@
 		return
 	autofire_stat = AUTOFIRE_STAT_FIRING
 
-	clicker.mouse_override_icon = 'modular_septic/icons/effects/mouse_pointers/weapon_pointer_auto.dmi'
+	clicker.mouse_override_icon = 'oworld/icons/effects/mouse_pointers/weapon_pointer_auto.dmi'
 	shooter.update_mouse_pointer()
 
 	//See mouse_status definition for the reason for this

@@ -1,7 +1,7 @@
 /obj/item/radio
 	carry_weight = 600 GRAMS
-	var/sound/send_chatter = sound('modular_septic/sound/radio/common.ogg', FALSE, 0, CHANNEL_RADIO_CHATTER, 50)
-	var/sound/receive_chatter = sound('modular_septic/sound/radio/radio_chatter.ogg', FALSE, 0, CHANNEL_RADIO_CHATTER, 50)
+	var/sound/send_chatter = sound('oworld/sound/radio/common.ogg', FALSE, 0, CHANNEL_RADIO_CHATTER, 50)
+	var/sound/receive_chatter = sound('oworld/sound/radio/radio_chatter.ogg', FALSE, 0, CHANNEL_RADIO_CHATTER, 50)
 
 /obj/item/radio/Hear(message, atom/movable/speaker, message_language, raw_message, radio_freq, list/spans, list/message_mods)
 	. = ..()

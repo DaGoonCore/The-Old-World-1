@@ -1,5 +1,5 @@
 /obj/item/modular_computer/tablet
-	icon = 'modular_septic/icons/obj/items/modular_tablet.dmi'
+	icon = 'oworld/icons/obj/items/modular_tablet.dmi'
 	light_system = MOVABLE_LIGHT_DIRECTIONAL
 
 /obj/item/modular_computer/tablet/set_flashlight_color(color)

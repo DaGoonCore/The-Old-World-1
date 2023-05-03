@@ -8,7 +8,7 @@ GLOBAL_LIST_INIT(bloodyable, typecacheof(list(/mob/living/carbon/human)))
 
 /datum/component/creamed/blood/cream()
 	SEND_SIGNAL(parent, COMSIG_MOB_CREAMED, type)
-	creamface = mutable_appearance('modular_septic/icons/effects/blood.dmi')
+	creamface = mutable_appearance('oworld/icons/effects/blood.dmi')
 	if(ishuman(parent))
 		var/mob/living/carbon/human/humie = parent
 		if(LAZYACCESS(humie.dna.species.mutant_bodyparts, "snout"))

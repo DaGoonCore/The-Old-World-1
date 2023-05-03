@@ -1,5 +1,5 @@
 /datum/sprite_accessory/head_accessory
-	icon = 'modular_septic/icons/mob/human/sprite_accessory/head_accessory.dmi'
+	icon = 'oworld/icons/mob/human/sprite_accessory/head_accessory.dmi'
 	key = "head_acc"
 	generic = "Head Accessory"
 	relevant_layers = list(BODY_ADJ_LAYER, BODY_FRONT_LAYER)

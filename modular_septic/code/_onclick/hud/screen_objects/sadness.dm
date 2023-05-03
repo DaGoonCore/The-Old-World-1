@@ -1,5 +1,5 @@
 /atom/movable/screen/sadness
-	icon = 'modular_septic/icons/hud/screen_gen.dmi'
+	icon = 'oworld/icons/hud/screen_gen.dmi'
 	icon_state = "black"
 	alpha = 0
 	screen_loc = "WEST,SOUTH to EAST,NORTH"

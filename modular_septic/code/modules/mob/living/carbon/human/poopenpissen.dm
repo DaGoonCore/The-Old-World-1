@@ -30,7 +30,7 @@
 			reactant_holder.add_reagent(/datum/reagent/consumable/shit, amount)
 			chem_splash(src, 1, list(reactant_holder))
 			qdel(reactant_holder)
-		playsound(loc, 'modular_septic/sound/effects/poo.ogg', 75)
+		playsound(loc, 'oworld/sound/effects/poo.ogg', 75)
 		to_chat(src, span_warning("I shit on myself..."))
 		return
 	//we'll try to shit a maximum of 40u from each bowel
@@ -48,7 +48,7 @@
 	else
 		visible_message("<span class='notice'><b>[src]</b> shits on [loc].</span>", \
 					"<span class='notice'>I take a shit on [loc].")
-	playsound(loc, 'modular_septic/sound/effects/poo.ogg', 75)
+	playsound(loc, 'oworld/sound/effects/poo.ogg', 75)
 
 /mob/living/carbon/human/piss(intentional = FALSE)
 	var/list/bladders = getorganslotlist(ORGAN_SLOT_BLADDER)
@@ -72,7 +72,7 @@
 			var/amount = min(40, bladder.reagents.get_reagent_amount(/datum/reagent/consumable/piss) - bladder.food_reagents[/datum/reagent/consumable/piss])
 			bladder.reagents.remove_reagent(/datum/reagent/consumable/piss, amount)
 			pissed.add_liquid(/datum/reagent/consumable/piss, amount)
-		playsound(loc, 'modular_septic/sound/effects/pee.ogg', 75)
+		playsound(loc, 'oworld/sound/effects/pee.ogg', 75)
 		to_chat(src, span_warning("I piss on myself..."))
 		return
 	//try to evacuate 40u out of each bladder
@@ -95,4 +95,4 @@
 			pissed.add_liquid(/datum/reagent/consumable/piss, amount)
 		visible_message("<span class='notice'><b>[src]</b> pisses on [pissed].</span>", \
 					"<span class='notice'>I take a piss on [pissed].")
-	playsound(loc, 'modular_septic/sound/effects/pee.ogg', 75)
+	playsound(loc, 'oworld/sound/effects/pee.ogg', 75)

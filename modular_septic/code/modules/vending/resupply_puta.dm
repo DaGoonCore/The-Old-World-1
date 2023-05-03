@@ -6,7 +6,7 @@
 /obj/machinery/resupply_puta
 	name = "\improper Atire-Putas"
 	desc = "A machine with coursing wires filled with a red substance, containing all you need to keep you going. Has a label explaining everything you need to know about the functions. <span_class='boldwarning'>Just look twice.</span>"
-	icon = 'modular_septic/icons/obj/machinery/resupply_puta.dmi'
+	icon = 'oworld/icons/obj/machinery/resupply_puta.dmi'
 	icon_state = "new_wallputa"
 	base_icon_state = "new_wallputa"
 	light_range = 3
@@ -72,9 +72,9 @@
 		if(findtext(lowertext(message), lowertext(stack_name)))
 			if(resupply_stacks <= 0)
 				audible_message("[icon2html(src, world)] [src] [verb_say], \"I'm empty on indevidual stacks, try again later.\"")
-				playsound(src, 'modular_septic/sound/efn/resupply/failure.ogg', 65, FALSE)
+				playsound(src, 'oworld/sound/efn/resupply/failure.ogg', 65, FALSE)
 				return
-			playsound(src, 'modular_septic/sound/efn/resupply/resupply_vomit.ogg', 45, FALSE)
+			playsound(src, 'oworld/sound/efn/resupply/resupply_vomit.ogg', 45, FALSE)
 			new typepath(get_turf(src))
 			resupply_stacks--
 	for(var/medical_typepath in medical_stack_type_to_name)
@@ -82,9 +82,9 @@
 		if(findtext(lowertext(message), lowertext(medical_stack_name)))
 			if(medical_items <= 0)
 				audible_message("[icon2html(src, world)] [src] [verb_say], \"I'm empty on medical supplies, try again later.\"")
-				playsound(src, 'modular_septic/sound/efn/resupply/failure.ogg', 65, FALSE)
+				playsound(src, 'oworld/sound/efn/resupply/failure.ogg', 65, FALSE)
 				return
-			playsound(src, 'modular_septic/sound/efn/resupply/resupply_vomit.ogg', 45, FALSE)
+			playsound(src, 'oworld/sound/efn/resupply/resupply_vomit.ogg', 45, FALSE)
 			new medical_typepath(get_turf(src))
 			medical_items--
 
@@ -158,18 +158,18 @@
 	if(DT_PROB(10, delta_time) && resupply_stacks < max_resupply_stacks)
 		resupply_stacks++
 		audible_message("[icon2html(src, world)] [src] " + span_bolddanger("[sputtering]"))
-		playsound(src, list('modular_septic/sound/efn/resupply/garble1.ogg', 'modular_septic/sound/efn/resupply/garble2.ogg'), 65, FALSE)
+		playsound(src, list('oworld/sound/efn/resupply/garble1.ogg', 'oworld/sound/efn/resupply/garble2.ogg'), 65, FALSE)
 	if(DT_PROB(5, delta_time) && resupply_rounds < max_resupply_rounds)
 		var/added_rounds = 30
 		if(resupply_rounds > 90)
 			added_rounds = max_resupply_rounds - resupply_rounds
 		resupply_rounds += added_rounds
 		audible_message("[icon2html(src, world)] [src] " + span_bolddanger("[sputtering]"))
-		playsound(src, list('modular_septic/sound/efn/resupply/garble1.ogg', 'modular_septic/sound/efn/resupply/garble2.ogg'), 55, FALSE)
+		playsound(src, list('oworld/sound/efn/resupply/garble1.ogg', 'oworld/sound/efn/resupply/garble2.ogg'), 55, FALSE)
 	if(DT_PROB(3, delta_time) && medical_items < max_medical_items)
 		medical_items++
 		audible_message("[icon2html(src, world)] [src] " + span_bolddanger("[sputtering]"))
-		playsound(src, list('modular_septic/sound/efn/resupply/garble1.ogg', 'modular_septic/sound/efn/resupply/garble2.ogg'), 55, FALSE)
+		playsound(src, list('oworld/sound/efn/resupply/garble1.ogg', 'oworld/sound/efn/resupply/garble2.ogg'), 55, FALSE)
 
 /obj/machinery/resupply_puta/attack_hand_secondary(mob/user, list/modifiers)
 	. = ..()
@@ -199,7 +199,7 @@
 
 /obj/machinery/resupply_puta/attackby(obj/item/weapon, mob/user, params)
 	if(!(state_flags & RESUPPLY_READY))
-		playsound(src, 'modular_septic/sound/efn/resupply/failure.ogg', 65, FALSE)
+		playsound(src, 'oworld/sound/efn/resupply/failure.ogg', 65, FALSE)
 		return
 	if(istype(weapon, /obj/item/reagent_containers/hypospray/medipen/retractible/blacktar))
 		if(captagon)
@@ -209,7 +209,7 @@
 		captagon = weapon
 		user.visible_message(span_danger("[user] inserts the [weapon] into the [src]'s liquid refilling slot."), \
 					span_danger("I insert \the [weapon] into [src]'s liquid refilling slot."))
-		playsound(src, 'modular_septic/sound/efn/resupply/insert.ogg', 35, FALSE)
+		playsound(src, 'oworld/sound/efn/resupply/insert.ogg', 35, FALSE)
 		return
 	//if(istype(weapon, /obj/item/gun/ballistic)) Never do this
 	//	var/obj/item/gun/ballistic/ballistic_gun = weapon Never do this
@@ -223,7 +223,7 @@
 /obj/machinery/resupply_puta/attack_hand(mob/living/user, list/modifiers)
 	. = ..()
 	if(!(state_flags & RESUPPLY_READY))
-		playsound(src, 'modular_septic/sound/efn/resupply/failure.ogg', 65, FALSE)
+		playsound(src, 'oworld/sound/efn/resupply/failure.ogg', 65, FALSE)
 		return
 	if(!do_after(user, 0.2 SECONDS, target = src))
 		var/retarded = pick("Retarded.", "Fucking stupid.", "Fucked up.", "I'm a fucking lawyer.")
@@ -233,7 +233,7 @@
 		user.transferItemToLoc(user, captagon)
 		user.put_in_hands(captagon)
 		to_chat(user, span_notice("I take the [captagon] out of the machine."))
-		playsound(src, 'modular_septic/sound/efn/resupply/desert.ogg', 40, FALSE)
+		playsound(src, 'oworld/sound/efn/resupply/desert.ogg', 40, FALSE)
 		if(state_flags & RESUPPLY_JUST_FILLED && prob(8))
 			var/addict_message = list("I'm addicted...", "I'm so fucking gross...", "This IS poison, I'm putting poison inside of MY body...", "It's not MY blood...")
 			to_chat(user, span_warning(addict_message))
@@ -243,10 +243,10 @@
 
 /obj/machinery/resupply_puta/proc/spendilize(mob/user, obj/item/ammo_box/magazine)
 	if(!(state_flags & RESUPPLY_READY))
-		playsound(src, 'modular_septic/sound/efn/resupply/failure.ogg', 65, FALSE)
+		playsound(src, 'oworld/sound/efn/resupply/failure.ogg', 65, FALSE)
 		return
 	if(resupply_rounds == 0)
-		playsound(src, 'modular_septic/sound/efn/resupply/failure.ogg', 65, FALSE)
+		playsound(src, 'oworld/sound/efn/resupply/failure.ogg', 65, FALSE)
 		audible_message("[icon2html(src, world)] [src] [verb_say], \"I'm empty, try again later.\"")
 		return
 	var/obj/item/ammo_box/magazine/AM = magazine
@@ -255,7 +255,7 @@
 		var/not_any_more = pick("you can't add any more!", "you just can't do that!", "you just don't understand!", "you're a fool!", "you're a fucking lawyer!")
 		audible_message("[icon2html(src, world)] [src] [verb_say], \"The [magazine] is filled to the brim with [tasty_bullets], [not_any_more]\"")
 		sound_hint()
-		playsound(src, 'modular_septic/sound/efn/resupply/failure.ogg', 65, FALSE)
+		playsound(src, 'oworld/sound/efn/resupply/failure.ogg', 65, FALSE)
 		return
 	state_flags &= ~RESUPPLY_READY
 	update_appearance(UPDATE_ICON)
@@ -267,7 +267,7 @@
 			break
 		var/newbullet = magazine.ammo_type
 		if(!usr.Adjacent(src) || resupply_rounds == 0)
-			playsound(src, 'modular_septic/sound/efn/resupply/failure.ogg', 65, FALSE)
+			playsound(src, 'oworld/sound/efn/resupply/failure.ogg', 65, FALSE)
 			state_flags |= RESUPPLY_READY
 			needles_out()
 			return
@@ -278,13 +278,13 @@
 		to_chat(user, span_notice("Loading..."))
 		playsound(src, AM.bullet_load, 60, TRUE)
 	needles_out()
-	playsound(src, 'modular_septic/sound/efn/resupply/ticking.ogg', 65, FALSE)
+	playsound(src, 'oworld/sound/efn/resupply/ticking.ogg', 65, FALSE)
 	addtimer(CALLBACK(src, .proc/donehere), 6)
 
 /obj/machinery/resupply_puta/proc/begin_refill_captagon(mob/user)
 	if(!captagon) // NO CAPTAGON?
 		return
-	playsound(src, 'modular_septic/sound/efn/resupply/buttonpress.ogg', 65, FALSE)
+	playsound(src, 'oworld/sound/efn/resupply/buttonpress.ogg', 65, FALSE)
 	if(captagon.reagent_holder_right.total_volume && captagon.reagent_holder_left.total_volume)
 		to_chat(user, span_warning("Both vials are full!"))
 		return
@@ -300,16 +300,16 @@
 	switch(input)
 		if("Black Tar") //regenerator
 			liquid_option = /datum/reagent/medicine/blacktar
-			playsound(src, 'modular_septic/sound/efn/resupply/liquid_fill.ogg', 35, FALSE)
-			playsound(src, 'modular_septic/sound/efn/resupply/buttonpress.ogg', 65, FALSE) // usually you shouldn't add overlapping sounds but this is ok
+			playsound(src, 'oworld/sound/efn/resupply/liquid_fill.ogg', 35, FALSE)
+			playsound(src, 'oworld/sound/efn/resupply/buttonpress.ogg', 65, FALSE) // usually you shouldn't add overlapping sounds but this is ok
 		if("Pink Turbid") //reviver
 			liquid_option = /datum/reagent/medicine/pinkturbid
-			playsound(src, 'modular_septic/sound/efn/resupply/liquid_fill.ogg', 35, FALSE)
-			playsound(src, 'modular_septic/sound/efn/resupply/buttonpress.ogg', 65, FALSE)
+			playsound(src, 'oworld/sound/efn/resupply/liquid_fill.ogg', 35, FALSE)
+			playsound(src, 'oworld/sound/efn/resupply/buttonpress.ogg', 65, FALSE)
 		if("White Viscous") //brain fixer
 			liquid_option = /datum/reagent/medicine/whiteviscous
-			playsound(src, 'modular_septic/sound/efn/resupply/liquid_fill.ogg', 35, FALSE)
-			playsound(src, 'modular_septic/sound/efn/resupply/buttonpress.ogg', 65, FALSE)
+			playsound(src, 'oworld/sound/efn/resupply/liquid_fill.ogg', 35, FALSE)
+			playsound(src, 'oworld/sound/efn/resupply/buttonpress.ogg', 65, FALSE)
 	if(!input)
 		to_chat(user, span_warning("Nevermind."))
 	addtimer(CALLBACK(src, .proc/finalize_refill_captagon, liquid_option), 3 SECONDS)
@@ -342,7 +342,7 @@
 		captagon.reagent_holder_left.flags = initial(captagon.reagent_holder_left.flags)
 	captagon.update_appearance(UPDATE_ICON)
 	state_flags |= RESUPPLY_READY
-	playsound(src, 'modular_septic/sound/efn/captagon/heroin_fill.ogg', 65, FALSE)
+	playsound(src, 'oworld/sound/efn/captagon/heroin_fill.ogg', 65, FALSE)
 
 /obj/machinery/resupply_puta/proc/donehere(mob/user)
 	state_flags |= RESUPPLY_READY
@@ -350,7 +350,7 @@
 	var/yep = pick("Yep", "Yessir", "Alright", "Okay", "Great", "Finally", "Mhm", "It's over")
 	audible_message("[icon2html(src, world)] [src] [verb_say], \"[yep], we're done here.\"")
 	sound_hint()
-	playsound(src, 'modular_septic/sound/efn/resupply/success.ogg', 65, FALSE)
+	playsound(src, 'oworld/sound/efn/resupply/success.ogg', 65, FALSE)
 
 /obj/machinery/resupply_puta/proc/needles_out()
 	spendilizer_state = SPENDILIZER_EXTENDING

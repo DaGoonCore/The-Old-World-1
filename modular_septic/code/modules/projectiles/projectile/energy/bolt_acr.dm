@@ -1,5 +1,5 @@
 /obj/projectile/beam/bolt_acr
-	icon = 'modular_septic/icons/obj/items/guns/projectiles/energy.dmi'
+	icon = 'oworld/icons/obj/items/guns/projectiles/energy.dmi'
 	icon_state = "demoncore"
 	pass_flags = PASSTABLE | PASSGLASS | PASSGRILLE | PASSBLOB | PASSCLOSEDTURF | PASSMACHINE | PASSSTRUCTURE | PASSDOORS
 	pass_flags_self = PASSTABLE | PASSGLASS | PASSGRILLE | PASSBLOB | PASSCLOSEDTURF | PASSMACHINE | PASSSTRUCTURE | PASSDOORS

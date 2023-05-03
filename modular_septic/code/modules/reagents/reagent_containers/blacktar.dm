@@ -6,7 +6,7 @@
 /obj/item/reagent_containers/hypospray/medipen/retractible/blacktar
 	name = "Captagon medipen"
 	desc = "Black Tar Heroin, highly dangerous on overdose. Injects using the left vial."
-	icon = 'modular_septic/icons/obj/items/syringe.dmi'
+	icon = 'oworld/icons/obj/items/syringe.dmi'
 	icon_state = "captagon"
 	base_icon_state = "captagon"
 	fill_icon_state = "captagon_vial1_"
@@ -16,7 +16,7 @@
 	amount_per_transfer_from_this = 75
 	possible_transfer_amounts = 75
 	fill_icon_thresholds = list(10)
-	stimulator_sound = 'modular_septic/sound/efn/captagon/heroin_injection.ogg'
+	stimulator_sound = 'oworld/sound/efn/captagon/heroin_injection.ogg'
 	var/state = BLACKTAR_RETRACTED
 	var/datum/reagents/reagent_holder_left
 	var/datum/reagents/reagent_holder_right
@@ -44,7 +44,7 @@
 		return
 
 	var/fill_name = fill_icon_state_left? fill_icon_state_left : icon_state
-	var/mutable_appearance/filling = mutable_appearance('modular_septic/icons/obj/reagentfillings.dmi', "[fill_name][fill_icon_thresholds[1]]")
+	var/mutable_appearance/filling = mutable_appearance('oworld/icons/obj/reagentfillings.dmi', "[fill_name][fill_icon_thresholds[1]]")
 
 	var/percent = round((inactive_reagents.total_volume / volume) * 100)
 	for(var/i in 1 to fill_icon_thresholds.len)
@@ -72,7 +72,7 @@
 	else
 		reagents = reagent_holder_right
 	to_chat(user, span_notice("Switched. I'm now using the [reagent_holder_left == reagents ? "left" : "right"] captagon vial."))
-	playsound(src, 'modular_septic/sound/efn/captagon/heroin_switch.ogg', 65, FALSE)
+	playsound(src, 'oworld/sound/efn/captagon/heroin_switch.ogg', 65, FALSE)
 	update_appearance(UPDATE_ICON)
 
 /obj/item/reagent_containers/hypospray/medipen/retractible/blacktar/update_overlays()

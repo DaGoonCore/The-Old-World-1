@@ -33,12 +33,12 @@
 /obj/item/clothing/suit/armor/vest/alt/bobby
 	name = "bobby coat"
 	desc = "A dark armored leather coat."
-	icon = 'modular_septic/icons/obj/clothing/suits.dmi'
+	icon = 'oworld/icons/obj/clothing/suits.dmi'
 	icon_state = "bobby_coat"
-	worn_icon = 'modular_septic/icons/mob/clothing/suit.dmi'
+	worn_icon = 'oworld/icons/mob/clothing/suit.dmi'
 	worn_icon_state = "bobby_coat"
-	lefthand_file = 'modular_septic/icons/mob/inhands/clothing/clothing_lefthand.dmi'
-	righthand_file = 'modular_septic/icons/mob/inhands/clothing/clothing_righthand.dmi'
+	lefthand_file = 'oworld/icons/mob/inhands/clothing/clothing_lefthand.dmi'
+	righthand_file = 'oworld/icons/mob/inhands/clothing/clothing_righthand.dmi'
 	inhand_icon_state = "ordinator_cloak"
 	blood_overlay_type = "coat"
 	subarmor = list(SUBARMOR_FLAGS = SUBARMOR_FLEXIBLE, \

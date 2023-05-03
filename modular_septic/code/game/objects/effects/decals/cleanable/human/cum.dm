@@ -3,7 +3,7 @@
 	desc = "Someone had fun."
 	dryname = "dry cum"
 	drydesc = "Someone had fun, a long time ago..."
-	icon = 'modular_septic/icons/effects/cum.dmi'
+	icon = 'oworld/icons/effects/cum.dmi'
 	icon_state = "cum1"
 	random_icon_states = list("cum1", "cum2", "cum3", "cum4")
 	beauty = -50
@@ -16,7 +16,7 @@
 	desc = "Someone had fun."
 	dryname = "dry cum footprints"
 	drydesc = "Someone had fun, a long time ago..."
-	icon = 'modular_septic/icons/effects/cum_footprints.dmi'
+	icon = 'oworld/icons/effects/cum_footprints.dmi'
 	icon_state = "cum1"
 	beauty = -50
 	blood_state = BLOOD_STATE_CUM

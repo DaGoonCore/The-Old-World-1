@@ -1,9 +1,9 @@
 /datum/antagonist/traitor
 	name = "Sleeper agent"
-	combat_music = 'modular_septic/sound/music/combat/Orcherd.ogg'
+	combat_music = 'oworld/sound/music/combat/Orcherd.ogg'
 	roundend_category = "sleeper agents"
 	antagpanel_category = "Sleeper Agent"
-	greeting_sound = 'modular_septic/sound/villain/mkultra.wav'
+	greeting_sound = 'oworld/sound/villain/mkultra.wav'
 	attribute_sheet = /datum/attribute_holder/sheet/traitor
 	var/datum/weakref/cranial_depressurization_implant
 

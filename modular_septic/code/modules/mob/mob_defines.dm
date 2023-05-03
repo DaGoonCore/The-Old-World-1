@@ -1,6 +1,6 @@
 /mob
 	inspect_icon_state = "mob"
-	examine_cursor_icon = 'modular_septic/icons/effects/mouse_pointers/normal_examine.dmi'
+	examine_cursor_icon = 'oworld/icons/effects/mouse_pointers/normal_examine.dmi'
 	base_pixel_z = MOB_PIXEL_Z //Are you ready to suffer?
 	pixel_z = MOB_PIXEL_Z
 	/// Skill holder
@@ -8,7 +8,7 @@
 	/// Extra effort that can be spent on efforts
 	var/extra_effort = 0
 	/// Sound we play to the player who controls us on death
-	var/deathsound_local = sound('modular_septic/sound/effects/death.wav', FALSE, 0, CHANNEL_EAR_RING, 100)
+	var/deathsound_local = sound('oworld/sound/effects/death.wav', FALSE, 0, CHANNEL_EAR_RING, 100)
 	/// Works like client.movement_locked, but handled mob-wise
 	var/movement_locked = FALSE
 	/// Hydration level of the mob
