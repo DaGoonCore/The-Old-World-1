@@ -2,7 +2,7 @@ import { useBackend } from "../backend";
 import { LabeledList, Section, Stack, BlockQuote, Box } from "../components";
 import { Window } from "../layouts";
 
-export const OworldShockCredits = (props, context) => {
+export const SepticShockCredits = (props, context) => {
   const { act, data } = useBackend(context);
 
   return (

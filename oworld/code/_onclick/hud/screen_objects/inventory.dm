@@ -1,5 +1,5 @@
 /atom/movable/screen/inventory
-	icon = 'modular_septic/icons/hud/quake/screen_quake.dmi'
+	icon = 'oworld/icons/hud/quake/screen_quake.dmi'
 	icon_full = "occupied"
 
 /atom/movable/screen/inventory/add_overlays()
@@ -38,7 +38,7 @@
 			our_item.remove_filter("hover_outline")
 
 /atom/movable/screen/inventory/hand
-	icon = 'modular_septic/icons/hud/quake/handjob_UI.dmi'
+	icon = 'oworld/icons/hud/quake/handjob_UI.dmi'
 	icon_full = null
 
 /atom/movable/screen/inventory/hand/update_icon_state()
