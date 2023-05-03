@@ -7,7 +7,7 @@ export const OworldShockCredits = (props, context) => {
 
   return (
     <Window
-      title="Oworld Shock Credits"
+      title="Septic Shock Credits"
       width={450}
       height={700}
       theme="quake">
