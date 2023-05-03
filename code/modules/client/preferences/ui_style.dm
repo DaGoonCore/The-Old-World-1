@@ -4,7 +4,7 @@
 	savefile_identifier = PREFERENCE_PLAYER
 	savefile_key = "UI_style"
 	should_generate_icons = TRUE
-
+/*
 /datum/preference/choiced/ui_style/init_possible_values()
 	var/list/values = list()
 
@@ -18,7 +18,7 @@
 		values[style] = icon
 
 	return values
-
+*/
 /datum/preference/choiced/ui_style/create_default_value()
 	return GLOB.available_ui_styles[1]
 
