@@ -189,7 +189,7 @@ Temporary Items
 /tools/LinuxOneShot/TGS_Instances
 /tools/LinuxOneShot/TGS_Logs
 
-lobalvars/time.dm
+oworld/code/_globalvars/time.dm
 
 .vs/VSWorkspaceState.json
 
