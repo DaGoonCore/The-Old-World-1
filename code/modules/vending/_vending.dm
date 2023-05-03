@@ -465,12 +465,12 @@ GLOBAL_LIST_EMPTY(vending_products)
 				else
 					to_chat(user, span_warning("There's nothing to restock!"))
 			return
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(compartmentLoadAccessCheck(user) && !user.combat_mode)
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	if(compartmentLoadAccessCheck(user) && IS_HELP_INTENT(user, modifiers))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		if(canLoadItem(I))
 			loadingAttempt(I,user)
 			updateUsrDialog() //can't put this on the proc above because we spam it below

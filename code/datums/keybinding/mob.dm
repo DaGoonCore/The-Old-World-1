@@ -72,12 +72,12 @@
 	return TRUE
 
 /datum/keybinding/mob/toggle_move_intent
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	hotkey_keys = list("C")
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	hotkey_keys = list("Ctrl")
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	name = "toggle_move_intent"
 	full_name = "Hold to toggle move intent"
 	description = "Held down to cycle to the other move intent, release to cycle back"

@@ -53,12 +53,12 @@
 
 /proc/sanitize_hexcolor(color, desired_format = 6, include_crunch = TRUE, default)
 	var/crunch = include_crunch ? "#" : ""
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	if(islist(color))
 		var/list/color_list = color
 		color = color_list.Join()
 	color = replacetext(color, "#", "") //this ensures the crunch only appears when desidered
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	if(!istext(color))
 		color = ""
 

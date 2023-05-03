@@ -27,15 +27,15 @@
 /mob/living/carbon/alien/Initialize(mapload)
 	add_verb(src, /mob/living/proc/mob_sleep)
 	add_verb(src, /mob/living/proc/toggle_resting)
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	status_flags |= BUILDING_ORGANS
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	create_bodyparts() //initialize bodyparts
 
 	create_internal_organs()
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	status_flags &= ~BUILDING_ORGANS
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	ADD_TRAIT(src, TRAIT_CAN_STRIP, INNATE_TRAIT)
 	ADD_TRAIT(src, TRAIT_NEVER_WOUNDED, INNATE_TRAIT)
 	ADD_TRAIT(src, TRAIT_VENTCRAWLER_ALWAYS, INNATE_TRAIT)
@@ -47,9 +47,9 @@
 	internal_organs += new /obj/item/organ/alien/hivenode
 	internal_organs += new /obj/item/organ/tongue/alien
 	internal_organs += new /obj/item/organ/eyes/night_vision/alien
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	internal_organs += new /obj/item/organ/eyes/night_vision/alien/l
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	internal_organs += new /obj/item/organ/liver/alien
 	internal_organs += new /obj/item/organ/ears
 	..()
@@ -84,9 +84,9 @@
 /mob/living/carbon/alien/get_status_tab_items()
 	. = ..()
 	. += "Combat mode: [combat_mode ? "On" : "Off"]"
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	. += "Intent: [capitalize(a_intent)]"
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 
 /mob/living/carbon/alien/getTrail()
 	if(getBruteLoss() < 200)

@@ -19,12 +19,12 @@
 
 /datum/element/earhealing/proc/equippedChanged(datum/source, mob/living/carbon/user, slot)
 	SIGNAL_HANDLER
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(slot == ITEM_SLOT_EARS && istype(user))
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	if(slot & ITEM_SLOT_EARS && istype(user))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		user_by_item[source] = user
 	else
 		user_by_item -= source

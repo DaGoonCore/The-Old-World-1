@@ -15,9 +15,9 @@
 #define CLOTH (1<<14)
 #define NUTS (1<<15)
 #define SEAFOOD (1<<16)
-//SEPTIC EDIT BEGIN
+//OWORLD EDIT BEGIN
 #define SEWAGE (1<<17)
-//SEPTIC EDIT END
+//OWORLD EDIT END
 
 /// A list of food type names, in order of their flags
 #define FOOD_FLAGS list( \

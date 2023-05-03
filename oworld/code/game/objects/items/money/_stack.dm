@@ -1,8 +1,8 @@
 /obj/item/money/stack
 	name = "stack of money"
 	desc = "Money for nothing, chicks for free."
-	drop_sound = 'modular_septic/sound/items/money_drop.wav'
-	icon = 'modular_septic/icons/obj/items/money.dmi'
+	drop_sound = 'oworld/sound/items/money_drop.wav'
+	icon = 'oworld/icons/obj/items/money.dmi'
 	icon_state = ""
 	base_icon_state = ""
 	item_flags = NO_ANGLE_RANDOM_DROP

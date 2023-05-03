@@ -123,20 +123,20 @@
 		qdel(src)
 
 /obj/item/clothing/attack(mob/living/M, mob/living/user, params)
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(user.combat_mode || !ismoth(M))
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	var/modifiers = params2list(params)
 	if(!IS_HELP_INTENT(user, modifiers) || !ismoth(M))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		return ..()
 	if(isnull(moth_snack))
 		moth_snack = new
 		moth_snack.name = name
 		moth_snack.clothing = WEAKREF(src)
 	moth_snack.attack(M, user, params)
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /obj/item/clothing/attackby(obj/item/W, mob/user, params)
 	if(!istype(W, repairable_by))
 		return ..()
@@ -269,12 +269,12 @@
 	if (!istype(user))
 		return
 	if(slot_flags & slot) //Was equipped to a valid slot for this item?
-		/* SEPTIC EDIT REMOVAL
+		/* OWORLD EDIT REMOVAL
 		if(iscarbon(user) && LAZYLEN(zones_disabled))
 		*/
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		if(iscarbon(user) && zones_disabled)
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 			RegisterSignal(user, COMSIG_MOVABLE_MOVED, .proc/bristle, override = TRUE)
 		for(var/trait in clothing_traits)
 			ADD_TRAIT(user, trait, "[CLOTHING_TRAIT] [REF(src)]")
@@ -326,7 +326,7 @@
 			how_cool_are_your_threads += "Adding or removing items from [src] makes no noise.\n"
 		how_cool_are_your_threads += "</span>"
 		. += how_cool_are_your_threads.Join()
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 	if(LAZYLEN(armor_list))
 		armor_list.Cut()
 	if(armor.bio)
@@ -419,7 +419,7 @@
 //This mostly exists so subtypes can call appriopriate update icon calls on the wearer.
 /obj/item/clothing/proc/update_clothes_damaged_state(damaged_state = CLOTHING_DAMAGED)
 	damaged_clothes = damaged_state
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /obj/item/clothing/update_overlays()
 	. = ..()
 	if(!damaged_clothes)

@@ -1,6 +1,6 @@
 /atom/movable/screen/breath
 	name = "breath"
-	icon = 'modular_septic/icons/hud/quake/screen_quake.dmi'
+	icon = 'oworld/icons/hud/quake/screen_quake.dmi'
 	icon_state = "breath3"
 	base_icon_state = "breath"
 	screen_loc = ui_breath

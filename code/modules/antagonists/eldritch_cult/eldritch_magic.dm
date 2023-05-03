@@ -251,12 +251,12 @@
 		target.visible_message(span_danger("[target]'s veins are shredded from within as an unholy blaze erupts from their blood!"), \
 							span_danger("Your veins burst from within and unholy flame erupts from your blood!"))
 		var/obj/item/bodypart/bodypart = pick(target.bodyparts)
-		/* SEPTIC EDIT REMOVAL
+		/* OWORLD EDIT REMOVAL
 		var/datum/wound/slash/critical/crit_wound = new
 		*/
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		var/datum/wound/artery/dissect/crit_wound = new
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 		crit_wound.apply_wound(bodypart)
 		target.adjustFireLoss(20)
 		new /obj/effect/temp_visual/cleave(target.drop_location())
@@ -525,12 +525,12 @@
 	if(!ishuman(user))
 		return
 	var/mob/living/carbon/human/human_user = user
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	for(var/mob/living/carbon/target in view(7,user)
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	for(var/mob/living/carbon/target in fov_view(7, user))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		if(target.stat == DEAD || !target.on_fire)
 			continue
 		//This is essentially a death mark, use this to finish your opponent quicker.
@@ -817,12 +817,12 @@
 
 	playsound(user,'sound/magic/voidblink.ogg',100)
 	new /obj/effect/temp_visual/voidin(user.drop_location())
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	for(var/mob/living/livies in view(7,user)-user)
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	for(var/mob/living/livies in fov_view(world.view, user)-user)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		if(get_dist(user,livies) < 4)
 			livies.AdjustKnockdown(3 SECONDS)
 			livies.AdjustParalyzed(0.5 SECONDS)

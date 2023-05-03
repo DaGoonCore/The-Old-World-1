@@ -1,4 +1,4 @@
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 //The contant in the rate of reagent transfer on life ticks
 #define STOMACH_METABOLISM_CONSTANT 0.25
 

@@ -105,13 +105,13 @@
 
 /obj/machinery/pdapainter/attackby(obj/item/O, mob/living/user, params)
 	if(machine_stat & BROKEN)
-		/* SEPTIC EDIT REMOVAL
+		/* OWORLD EDIT REMOVAL
 		if(O.tool_behaviour == TOOL_WELDER && !user.combat_mode)
 		*/
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		var/list/modifiers = params2list(params)
 		if(O.tool_behaviour == TOOL_WELDER && IS_HELP_INTENT(user, modifiers))
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 			if(!O.tool_start_check(user, amount=0))
 				return
 			user.visible_message(span_notice("[user] is repairing [src]."), \

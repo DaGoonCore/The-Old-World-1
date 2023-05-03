@@ -73,12 +73,12 @@
 	set waitfor = FALSE
 	if(!scanning)
 		// Can remotely scan objects and mobs.
-		/* SEPTIC EDIT REMOVAL
+		/* OWORLD EDIT REMOVAL
 		if((get_dist(A, user) > range) || (!(A in view(range, user)) && view_check) || (loc != user))
 		*/
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		if((get_dist(A, user) > range) || (!(A in fov_view(range, user)) && view_check) || (loc != user))
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 			return
 
 		scanning = TRUE

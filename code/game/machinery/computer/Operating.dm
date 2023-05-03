@@ -37,7 +37,7 @@
 	return ..()
 
 /obj/machinery/computer/operating/proc/sync_surgeries()
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	for(var/i in linked_techweb.researched_designs)
 		var/datum/design/surgery/D = SSresearch.techweb_design_by_id(i)
 		if(!istype(D))
@@ -63,7 +63,7 @@
 /obj/machinery/computer/operating/ui_data(mob/user)
 	var/list/data = list()
 	var/list/surgeries = list()
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	for(var/X in advanced_surgeries)
 		var/datum/surgery/S = X
 		var/list/surgery = list()
@@ -106,7 +106,7 @@
 	data["patient"]["toxLoss"] = patient.getToxLoss()
 	data["patient"]["oxyLoss"] = patient.getOxyLoss()
 	data["procedures"] = list()
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(patient.surgeries.len)
 		for(var/datum/surgery/procedure in patient.surgeries)
 			var/datum/surgery_step/surgery_step = procedure.get_surgery_step()

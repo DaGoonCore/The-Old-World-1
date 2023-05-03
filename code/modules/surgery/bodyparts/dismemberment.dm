@@ -1,4 +1,4 @@
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /obj/item/bodypart/proc/can_dismember(obj/item/item)
 	if(dismemberable)
 		return TRUE

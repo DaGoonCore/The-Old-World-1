@@ -886,7 +886,7 @@
 	else
 		stack_trace("WARNING: Projectile [type] fired without either mouse parameters, or a target atom to aim at!")
 		qdel(src)
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /proc/calculate_projectile_angle_and_pixel_offsets(mob/user, modifiers)
 	var/p_x = 0
 	var/p_y = 0

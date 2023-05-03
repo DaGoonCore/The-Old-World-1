@@ -79,7 +79,7 @@
 
 //This is an UNSAFE proc. Use mob_can_equip() before calling this one! Or rather use equip_to_slot_if_possible() or advanced_equip_to_slot_if_possible()
 // Initial is used to indicate whether or not this is the initial equipment (job datums etc) or just a player doing it
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /mob/living/carbon/human/equip_to_slot(obj/item/I, slot, initial = FALSE, redraw_mob = FALSE)
 	if(!..()) //a check failed or the item has already found its slot
 		return
@@ -184,7 +184,7 @@
 	if(index && !QDELETED(src) && dna.species.mutanthands) //hand freed, fill with claws, skip if we're getting deleted.
 		put_in_hand(new dna.species.mutanthands(), index)
 	if(I == wear_suit)
-		/* SEPTIC EDIT REMOVAL
+		/* OWORLD EDIT REMOVAL
 		if(s_store && invdrop)
 			dropItemToGround(s_store, TRUE) //It makes no sense for your suit storage to stay on you if you drop your suit.
 		*/
@@ -233,12 +233,12 @@
 		ears = null
 		if(!QDELETED(src))
 			update_inv_ears()
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	else if(I == ears_extra)
 		ears_extra = null
 		if(!QDELETED(src))
 			update_inv_ears()
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	else if(I == shoes)
 		shoes = null
 		if(!QDELETED(src))
@@ -338,12 +338,12 @@
 			to_chat(src, span_warning("You can't fit [thing] into your [equipped_item.name]!"))
 		return
 	if(thing) // put thing in storage item
-		/* SEPTIC EDIT REMOVAL
+		/* OWORLD EDIT REMOVAL
 		if(!SEND_SIGNAL(equipped_item, COMSIG_TRY_STORAGE_INSERT, thing, src))
 		*/
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		if(!SEND_SIGNAL(equipped_item, COMSIG_TRY_STORAGE_INSERT, thing, src, FALSE, FALSE, TRUE))
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 			to_chat(src, span_warning("You can't fit [thing] into your [equipped_item.name]!"))
 		return
 	if(!equipped_item.contents.len) // nothing to take out

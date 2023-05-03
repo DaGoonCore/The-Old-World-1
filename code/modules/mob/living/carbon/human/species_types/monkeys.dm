@@ -55,7 +55,7 @@
 	. = ..()
 	H.pass_flags |= PASSTABLE
 	H.butcher_results = knife_butcher_results
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(!H.dna.features["tail_monkey"] || H.dna.features["tail_monkey"] == "None")
 		H.dna.features["tail_monkey"] = "Monkey"
 		handle_mutant_bodyparts(H)

@@ -89,12 +89,12 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 
 /obj/item/radio/headset/syndicate/alt/ComponentInitialize()
 	. = ..()
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	AddComponent(/datum/component/wearertargeting/earprotection, list(ITEM_SLOT_EARS))
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	AddComponent(/datum/component/wearertargeting/earprotection, list(ITEM_SLOT_LEAR,ITEM_SLOT_REAR))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 
 /obj/item/radio/headset/syndicate/alt/leader
 	name = "team leader headset"
@@ -125,12 +125,12 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 
 /obj/item/radio/headset/headset_sec/alt/ComponentInitialize()
 	. = ..()
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	AddComponent(/datum/component/wearertargeting/earprotection, list(ITEM_SLOT_EARS))
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	AddComponent(/datum/component/wearertargeting/earprotection, list(ITEM_SLOT_LEAR,ITEM_SLOT_REAR))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 
 /obj/item/radio/headset/headset_eng
 	name = "engineering radio headset"
@@ -197,12 +197,12 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 
 /obj/item/radio/headset/heads/captain/alt/ComponentInitialize()
 	. = ..()
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	AddComponent(/datum/component/wearertargeting/earprotection, list(ITEM_SLOT_EARS))
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	AddComponent(/datum/component/wearertargeting/earprotection, list(ITEM_SLOT_LEAR,ITEM_SLOT_REAR))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 
 /obj/item/radio/headset/heads/rd
 	name = "\proper the research director's headset"
@@ -224,12 +224,12 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 
 /obj/item/radio/headset/heads/hos/ComponentInitialize()
 	. = ..()
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	AddComponent(/datum/component/wearertargeting/earprotection, list(ITEM_SLOT_EARS))
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	AddComponent(/datum/component/wearertargeting/earprotection, list(ITEM_SLOT_LEAR,ITEM_SLOT_REAR))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 
 /obj/item/radio/headset/heads/ce
 	name = "\proper the chief engineer's headset"
@@ -290,12 +290,12 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 
 /obj/item/radio/headset/headset_cent/alt/ComponentInitialize()
 	. = ..()
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	AddComponent(/datum/component/wearertargeting/earprotection, list(ITEM_SLOT_EARS))
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	AddComponent(/datum/component/wearertargeting/earprotection, list(ITEM_SLOT_LEAR,ITEM_SLOT_REAR))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 
 /obj/item/radio/headset/silicon/pai
 	name = "\proper mini Integrated Subspace Transceiver "

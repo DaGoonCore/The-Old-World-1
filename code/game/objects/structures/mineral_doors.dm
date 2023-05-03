@@ -130,10 +130,10 @@
 /obj/structure/mineral_door/attackby(obj/item/I, mob/living/user)
 	if(pickaxe_door(user, I))
 		return
-	//else if(!user.combat_mode) //SEPTIC EDIT REMOVAL
-	//SEPTIC EDIT BEGIN
+	//else if(!user.combat_mode) //OWORLD EDIT REMOVAL
+	//OWORLD EDIT BEGIN
 	else if(IS_HELP_INTENT(user, null))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		return attack_hand(user)
 	else
 		return ..()
@@ -343,12 +343,12 @@
 	if(I.get_temperature()) //BURN IT ALL DOWN JIM
 		fire_act(I.get_temperature())
 		return
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if((!user.combat_mode) && istype(I, /obj/item/paper) && (atom_integrity < max_integrity))
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	if(IS_HELP_INTENT(user, null) && istype(I, /obj/item/paper) && (atom_integrity < max_integrity))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		user.visible_message(span_notice("[user] starts to patch the holes in [src]."), span_notice("You start patching some of the holes in [src]!"))
 		if(do_after(user, 2 SECONDS, src))
 			atom_integrity = min(atom_integrity+4,max_integrity)

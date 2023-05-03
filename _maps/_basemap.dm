@@ -12,11 +12,11 @@
 		#include "map_files\MetaStation\MetaStation.dmm"
 		#include "map_files\IceBoxStation\IceBoxStation.dmm"
 		#include "map_files\tramstation\tramstation.dmm"
-		#include "_septic\map_files\Baluarte\Baluarte.dmm"
-		#include "_septic\map_files\Combat\Combat.dmm"
-		#include "_septic\map_files\Gringo\Gringo.dmm"
-		#include "_septic\map_files\Breaker\Breaker.dmm"
-		#include "_septic\map_files\SpaceBoxStation\SpaceBoxStation.dmm"
+		#include "_oworld\map_files\Baluarte\Baluarte.dmm"
+		#include "_oworld\map_files\Combat\Combat.dmm"
+		#include "_oworld\map_files\Gringo\Gringo.dmm"
+		#include "_oworld\map_files\Breaker\Breaker.dmm"
+		#include "_oworld\map_files\SpaceBoxStation\SpaceBoxStation.dmm"
 
 		#ifdef CIBUILDING
 			#include "templates.dm"

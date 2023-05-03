@@ -71,7 +71,7 @@
 /area/maintenance/liminal/intro
 	name = "Liminal Introduction"
 	icon_state = "introduction"
-	icon = 'modular_septic/icons/turf/areas.dmi'
+	icon = 'oworld/icons/turf/areas.dmi'
 	droning_sound = DRONING_LIMINALINTRO
 
 /area/engineering/greed

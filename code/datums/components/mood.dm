@@ -132,7 +132,7 @@
 	if(!(owner.client || owner.hud_used))
 		return
 	screen_obj.cut_overlays()
-	//screen_obj.color = initial(screen_obj.color) //SEPTIC EDIT REMOVAL
+	//screen_obj.color = initial(screen_obj.color) //OWORLD EDIT REMOVAL
 	//lets see if we have any special icons to show instead of the normal mood levels
 	var/list/conflicting_moodies = list()
 	var/highest_absolute_mood = 0
@@ -147,7 +147,7 @@
 			var/absmood = abs(event.mood_change)
 			if(absmood > highest_absolute_mood)
 				highest_absolute_mood = absmood
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	switch(sanity_level)
 		if(1)
 			screen_obj.color = "#2eeb9a"
@@ -164,7 +164,7 @@
 	*/
 	if(!conflicting_moodies.len) //no special icons- go to the normal icon states
 		screen_obj.icon_state = "mood[mood_level]"
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		var/motherfucker = ""
 		switch(CEILING(mood_level/3, 1))
 			if(1)
@@ -175,7 +175,7 @@
 				motherfucker = ""
 		owner.hud_used.noise?.loggers = motherfucker
 		owner.hud_used.noise?.update_appearance()
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 		return
 
 	for(var/i in conflicting_moodies)
@@ -330,7 +330,7 @@
 	var/mob/living/owner = parent
 	var/datum/hud/hud = owner.hud_used
 	screen_obj = new
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	screen_obj.color = "#4b96c4"
 	*/
 	hud.infodisplay += screen_obj

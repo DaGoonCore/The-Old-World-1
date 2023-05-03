@@ -95,9 +95,9 @@
 	..()
 
 /obj/structure/toilet/attackby(obj/item/I, mob/living/user, params)
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	var/list/modifiers = params2list(params)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	add_fingerprint(user)
 	if(I.tool_behaviour == TOOL_CROWBAR)
 		to_chat(user, span_notice("You start to [cistern ? "replace the lid on the cistern" : "lift the lid off the cistern"]..."))
@@ -111,12 +111,12 @@
 		I.play_tool_sound(src)
 		deconstruct()
 		return TRUE
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	else if(cistern && !user.combat_mode)
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	else if(cistern && IS_HELP_INTENT(user, modifiers))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		if(I.w_class > WEIGHT_CLASS_NORMAL)
 			to_chat(user, span_warning("[I] does not fit!"))
 			return
@@ -129,10 +129,10 @@
 		w_items += I.w_class
 		to_chat(user, span_notice("You carefully place [I] into the cistern."))
 
-	//else if(istype(I, /obj/item/reagent_containers) && !user.combat_mode) //SEPTIC EDIT REMOVAL
-	//SEPTIC EDIT
+	//else if(istype(I, /obj/item/reagent_containers) && !user.combat_mode) //OWORLD EDIT REMOVAL
+	//OWORLD EDIT
 	else if(istype(I, /obj/item/reagent_containers) && IS_HELP_INTENT(user, params2list(params)))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		if (!open)
 			return
 		if(istype(I, /obj/item/food/monkeycube))
@@ -325,14 +325,14 @@
 		return
 	var/selected_area = parse_zone(user.zone_selected)
 	var/washing_face = 0
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(selected_area in list(BODY_ZONE_HEAD, BODY_ZONE_PRECISE_MOUTH, BODY_ZONE_PRECISE_EYES))
 		washing_face = 1
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	if(selected_area in list(BODY_ZONE_HEAD, BODY_ZONE_PRECISE_FACE, BODY_ZONE_PRECISE_MOUTH, BODY_ZONE_PRECISE_L_EYE, BODY_ZONE_PRECISE_R_EYE))
 		washing_face = 1
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	user.visible_message(span_notice("[user] starts washing [user.p_their()] [washing_face ? "face" : "hands"]..."), \
 						span_notice("You start washing your [washing_face ? "face" : "hands"]..."))
 	busy = TRUE
@@ -429,13 +429,13 @@
 		return
 	if(O.item_flags & ABSTRACT) //Abstract items like grabs won't wash. No-drop items will though because it's still technically an item in your hand.
 		return
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(!user.combat_mode)
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	var/list/modifiers = params2list(params)
 	if(IS_HELP_INTENT(user, modifiers))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		to_chat(user, span_notice("You start washing [O]..."))
 		busy = TRUE
 		if(!do_after(user, 40, target = src))
@@ -552,14 +552,14 @@
 		return
 	var/selected_area = parse_zone(user.zone_selected)
 	var/washing_face = FALSE
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(selected_area in list(BODY_ZONE_HEAD, BODY_ZONE_PRECISE_MOUTH, BODY_ZONE_PRECISE_EYES))
 		washing_face = TRUE
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	if(selected_area in list(BODY_ZONE_HEAD, BODY_ZONE_PRECISE_FACE, BODY_ZONE_PRECISE_MOUTH, BODY_ZONE_PRECISE_L_EYE, BODY_ZONE_PRECISE_R_EYE))
 		washing_face = TRUE
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	user.visible_message(span_notice("[user] starts washing [user.p_their()] [washing_face ? "face" : "hands"]..."), \
 						span_notice("You start washing your [washing_face ? "face" : "hands"]..."))
 	busy = TRUE
@@ -639,13 +639,13 @@
 
 	if(O.item_flags & ABSTRACT) //Abstract items like grabs won't wash. No-drop items will though because it's still technically an item in your hand.
 		return
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(!user.combat_mode)
 	*/
-	//SEPTIC EDIT
+	//OWORLD EDIT
 	var/list/modifiers = params2list(params)
 	if(IS_HELP_INTENT(user, modifiers))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		to_chat(user, span_notice("You start washing [O]..."))
 		busy = TRUE
 		if(!do_after(user, 4 SECONDS, target = src))

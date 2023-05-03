@@ -1,7 +1,7 @@
 /// Slashes up the target
 /datum/smite/bloodless
 	name = ":B:loodless"
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /datum/smite/bloodless/effect(client/user, mob/living/target)
 	. = ..()
 	if (!iscarbon(target))

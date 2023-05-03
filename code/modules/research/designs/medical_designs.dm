@@ -504,7 +504,7 @@
 	category = list("Medical Designs")
 	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE | DEPARTMENTAL_FLAG_SECURITY | DEPARTMENTAL_FLAG_MEDICAL
 
-/*SEPTIC EDIT REMOVAL
+/*OWORLD EDIT REMOVAL
 /datum/design/implant_sadtrombone
 	name = "Sad Trombone Implant Case"
 	desc = "Makes death amusing."
@@ -684,7 +684,7 @@
 /////////////////////
 ///Surgery Designs///
 /////////////////////
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /datum/design/surgery
 	name = "Surgery Design"
 	desc = "what"

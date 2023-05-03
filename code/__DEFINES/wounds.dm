@@ -1,4 +1,4 @@
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 // ~wound damage/rolling defines
 /// the cornerstone of the wound threshold system, your base wound roll for any attack is rand(1, damage^this), after armor reduces said damage. See [/obj/item/bodypart/proc/check_wounding]
 #define WOUND_DAMAGE_EXPONENT 1.4
@@ -69,9 +69,9 @@ GLOBAL_LIST_INIT(global_all_wound_types, list(/datum/wound/blunt/critical, /datu
 #define WOUND_INFECTION_SEVERE 8
 /// then below here, your limb occasionally locks up from damage and infection and briefly becomes disabled. Things are getting really bad
 #define WOUND_INFECTION_CRITICAL 12
-/// below here, your skin is almost entirely falling off and your limb locks up more frequently. You are within a stone's throw of septic paralysis and losing the limb
-#define WOUND_INFECTION_SEPTIC 20
-// above WOUND_INFECTION_SEPTIC, your limb is completely putrid and you start rolling to lose the entire limb by way of paralyzation. After 3 failed rolls (~4-5% each probably), the limb is paralyzed
+/// below here, your skin is almost entirely falling off and your limb locks up more frequently. You are within a stone's throw of oworld paralysis and losing the limb
+#define WOUND_INFECTION_OWORLD 20
+// above WOUND_INFECTION_OWORLD, your limb is completely putrid and you start rolling to lose the entire limb by way of paralyzation. After 3 failed rolls (~4-5% each probably), the limb is paralyzed
 
 
 // ~random wound balance defines

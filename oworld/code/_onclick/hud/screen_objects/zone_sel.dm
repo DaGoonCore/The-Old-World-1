@@ -52,8 +52,8 @@
 
 /atom/movable/screen/zone_sel/big
 	name = "zone doll"
-	icon = 'modular_septic/icons/hud/quake/screen_quake_32x64.dmi'
-	overlay_icon = 'modular_septic/icons/hud/quake/screen_quake_32x64.dmi'
+	icon = 'oworld/icons/hud/quake/screen_quake_32x64.dmi'
+	overlay_icon = 'oworld/icons/hud/quake/screen_quake_32x64.dmi'
 
 /atom/movable/screen/zone_sel/big/set_selected_zone(choice, mob/user)
 	if(user != hud?.mymob)

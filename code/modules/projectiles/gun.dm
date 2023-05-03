@@ -125,7 +125,7 @@
 
 /obj/item/gun/examine(mob/user)
 	. = ..()
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(!pinless)
 		if(pin)
 			. += "It has \a [pin] installed."
@@ -333,9 +333,9 @@
 		return FALSE
 	process_chamber()
 	update_appearance()
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	firing_animation(user, TRUE)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	return TRUE
 
 /obj/item/gun/proc/process_fire(atom/target, mob/living/user, message = TRUE, params = null, zone_override = "", bonus_spread = 0)
@@ -387,9 +387,9 @@
 			return
 		process_chamber()
 		update_appearance()
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		firing_animation(user, FALSE)
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 		semicd = TRUE
 		addtimer(CALLBACK(src, .proc/reset_semicd), fire_delay)
 
@@ -403,14 +403,14 @@
 	semicd = FALSE
 
 /obj/item/gun/attack(mob/M, mob/living/user)
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(user.combat_mode) //Flogging
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	if(IS_HARM_INTENT(user, null))
 		if(!bayonet)
 			attack_fatigue_cost = isnull(initial(attack_fatigue_cost)) ?  (1.5*w_class) : initial(attack_fatigue_cost)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		if(bayonet)
 			M.attackby(bayonet, user)
 			return
@@ -419,19 +419,19 @@
 	return
 
 /obj/item/gun/attack_atom(obj/O, mob/living/user, params)
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(user.combat_mode)
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	var/list/modifiers = params2list(params)
 	if(!IS_HELP_INTENT(user, modifiers))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		if(bayonet)
 			O.attackby(bayonet, user)
 			return
 	return ..()
 
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /obj/item/gun/attackby(obj/item/I, mob/living/user, params)
 	if(user.combat_mode)
 		return ..()
@@ -619,7 +619,7 @@
 		azoom.Remove(user)
 	if(zoomed)
 		zoom(user, user.dir, FALSE)
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /obj/item/gun/update_overlays()
 	. = ..()
 	if(gun_light)

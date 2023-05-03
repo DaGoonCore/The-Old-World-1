@@ -1,4 +1,4 @@
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /obj/item/organ/heart
 	name = "heart"
 	desc = "I feel bad for the heartless bastard who lost this."

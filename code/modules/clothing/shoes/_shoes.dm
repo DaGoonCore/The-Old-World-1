@@ -45,7 +45,7 @@
 	if(isinhands)
 		return
 
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(damaged_clothes)
 		. += mutable_appearance('icons/effects/item_damage.dmi', "damagedshoe")
 	if(HAS_BLOOD_DNA(src))
@@ -54,7 +54,7 @@
 		else
 			. += mutable_appearance('icons/effects/blood.dmi', "shoeblood")
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	if(damaged_clothes)
 		var/mutable_appearance/damage_appearance = mutable_appearance('oworld/icons/effects/item_damage.dmi', "damagedshoe")
 		damage_appearance.color = "#000000"
@@ -76,7 +76,7 @@
 		var/mutable_appearance/femcummy = mutable_appearance('oworld/icons/effects/femcum.dmi', "shoefemcum")
 		femcummy.color = COLOR_WHITE_FEMCUM
 		. += femcummy
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 
 /obj/item/clothing/shoes/examine(mob/user)
 	. = ..()

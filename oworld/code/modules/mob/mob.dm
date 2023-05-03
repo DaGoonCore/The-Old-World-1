@@ -1,8 +1,8 @@
 /mob
 	plane = GAME_PLANE_FOV_HIDDEN
-	var/cursor_icon = 'modular_septic/icons/effects/mouse_pointers/normal.dmi'
-	var/combat_cursor_icon = 'modular_septic/icons/effects/mouse_pointers/combat.dmi'
-	var/examine_cursor_icon_combat = 'modular_septic/icons/effects/mouse_pointers/combat_examine.dmi'
+	var/cursor_icon = 'oworld/icons/effects/mouse_pointers/normal.dmi'
+	var/combat_cursor_icon = 'oworld/icons/effects/mouse_pointers/combat.dmi'
+	var/examine_cursor_icon_combat = 'oworld/icons/effects/mouse_pointers/combat_examine.dmi'
 	/// Type of frill blocker we use
 	var/frill_blocker
 
@@ -57,7 +57,7 @@
 			QDEL_NULL(peeper_actions)
 
 /mob/get_projectile_hitsound(obj/projectile/projectile)
-	return "modular_septic/sound/bullet/projectile_impact/ric_flesh[rand(1,4)].wav"
+	return "oworld/sound/bullet/projectile_impact/ric_flesh[rand(1,4)].wav"
 
 /// Attributes
 /mob/proc/attribute_initialize()

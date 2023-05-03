@@ -1,4 +1,4 @@
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 #define INFINITE -1
 /obj/item/autosurgeon
 	name = "autosurgeon"

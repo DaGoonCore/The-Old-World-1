@@ -71,10 +71,10 @@
 			if(pushed_mob.buckled)
 				to_chat(user, span_warning("[pushed_mob] is buckled to [pushed_mob.buckled]!"))
 				return
-			//if(user.combat_mode) //SEPTIC EDIT REMOVAL
-			//SEPTIC EDIT BEGIN
+			//if(user.combat_mode) //OWORLD EDIT REMOVAL
+			//OWORLD EDIT BEGIN
 			if(!IS_HELP_INTENT(user, modifiers))
-			//SEPTIC EDIT END
+			//OWORLD EDIT END
 				switch(user.grab_state)
 					if(GRAB_PASSIVE)
 						to_chat(user, span_warning("You need a better grip to do that!"))
@@ -198,12 +198,12 @@
 		var/mob/living/carried_mob = riding_item.rider
 		if(carried_mob == user) //Piggyback user.
 			return
-		/* SEPTIC EDIT REMOVAL
+		/* OWORLD EDIT REMOVAL
 		if(user.combat_mode)
 		*/
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		if(!IS_HELP_INTENT(user, modifiers))
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 			user.unbuckle_mob(carried_mob)
 			tablelimbsmash(user, carried_mob)
 		else
@@ -221,12 +221,12 @@
 				user.unbuckle_mob(carried_mob)
 				tableplace(user, carried_mob)
 		return TRUE
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(!user.combat_mode && !(I.item_flags & ABSTRACT))
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	if(IS_HELP_INTENT(user, modifiers) && !(I.item_flags & ABSTRACT))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		if(user.transferItemToLoc(I, drop_location(), silent = FALSE))
 			//Center the icon where the user clicked.
 			if(!LAZYACCESS(modifiers, ICON_X) || !LAZYACCESS(modifiers, ICON_Y))
@@ -728,10 +728,10 @@
 		W.play_tool_sound(src)
 		deconstruct(TRUE)
 		return
-	//if(user.combat_mode) //SEPTIC EDIT REMOVAL
-	//SEPTIC EDIT BEGIN
+	//if(user.combat_mode) //OWORLD EDIT REMOVAL
+	//OWORLD EDIT BEGIN
 	if(!IS_HELP_INTENT(user, params2list(params)))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		return ..()
 	if(user.transferItemToLoc(W, drop_location()))
 		return 1
@@ -743,14 +743,14 @@
 	. = ..()
 	if(.)
 		return
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(user.body_position == LYING_DOWN || user.usable_legs < 2)
 		return
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	if(user.body_position == LYING_DOWN || user.usable_legs < user.default_num_legs)
 		return
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	user.changeNext_move(CLICK_CD_MELEE)
 	user.do_attack_animation(src, ATTACK_EFFECT_KICK)
 	user.visible_message(span_danger("[user] kicks [src]."), null, null, COMBAT_MESSAGE_RANGE)

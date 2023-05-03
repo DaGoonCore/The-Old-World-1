@@ -37,13 +37,13 @@
 /obj/structure/railing/attackby(obj/item/I, mob/living/user, params)
 	..()
 	add_fingerprint(user)
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(I.tool_behaviour == TOOL_WELDER && !user.combat_mode)
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	var/list/modifiers = params2list(params)
 	if(I.tool_behaviour == TOOL_WELDER && IS_HELP_INTENT(user, modifiers))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		if(atom_integrity < max_integrity)
 			if(!I.tool_start_check(user, amount=0))
 				return

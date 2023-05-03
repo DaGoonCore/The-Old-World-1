@@ -1,4 +1,4 @@
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 ///Wing base type. doesn't really do anything
 /obj/item/organ/external/wings
 	zone = BODY_ZONE_CHEST

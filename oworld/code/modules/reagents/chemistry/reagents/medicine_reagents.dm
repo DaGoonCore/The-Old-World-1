@@ -324,7 +324,7 @@
 
 /datum/reagent/medicine/blacktar/on_mob_metabolize(mob/living/L)
 	. = ..()
-	L.playsound_local(L, 'modular_septic/sound/insanity/painhuff_start.wav', 100)
+	L.playsound_local(L, 'oworld/sound/insanity/painhuff_start.wav', 100)
 	to_chat(L, span_achievementneutral("My skin feels numb and I can't feel pain anymore."))
 	L.heal_overall_damage(brute = 6 * REM)
 	L.add_chem_effect(CE_PAINKILLER, 200, "[type]")
@@ -332,7 +332,7 @@
 
 /datum/reagent/medicine/blacktar/on_mob_end_metabolize(mob/living/L)
 	. = ..()
-	L.playsound_local(L, 'modular_septic/sound/insanity/painhuff_end.wav', 100)
+	L.playsound_local(L, 'oworld/sound/insanity/painhuff_end.wav', 100)
 	to_chat(L, span_achievementneutral("My skin doesn't feel numb anymore."))
 	L.remove_chem_effect(CE_PAINKILLER, "[type]")
 	L.remove_chem_effect(CE_PULSE, "[type]")
@@ -370,7 +370,7 @@
 	var/amount_to_revive = round((exposed_mob.getBruteLoss()+exposed_mob.getFireLoss())/20)
 	var/excess_healing = 5*(reac_volume-amount_to_revive) //excess turbid will heal blood and organs across the board, carryover from strange reagent
 	exposed_mob.visible_message(span_warning("[exposed_mob] <b>shakes!</b>"))
-	playsound(exposed_mob, 'modular_septic/sound/effects/revival.ogg', 45, FALSE)
+	playsound(exposed_mob, 'oworld/sound/effects/revival.ogg', 45, FALSE)
 	exposed_mob.do_jitter_animation(10)
 	exposed_mob.cure_all_traumas(TRAUMA_RESILIENCE_ABSOLUTE)
 	addtimer(CALLBACK(exposed_mob, /mob/living.proc/revive, FALSE, FALSE, excess_healing), 79)
@@ -424,7 +424,7 @@
 
 /datum/reagent/medicine/copium/on_mob_metabolize(mob/living/L)
 	. = ..()
-	L.playsound_local(L, 'modular_septic/sound/insanity/painhuff_start.wav', 100)
+	L.playsound_local(L, 'oworld/sound/insanity/painhuff_start.wav', 100)
 	to_chat(L, span_achievementneutral("My skin feels numb and I can't feel pain anymore."))
 	L.add_chem_effect(CE_PULSE, -2, "[type]")
 	L.add_chem_effect(CE_PAINKILLER, 200, "[type]")
@@ -432,7 +432,7 @@
 
 /datum/reagent/medicine/copium/on_mob_end_metabolize(mob/living/L)
 	. = ..()
-	L.playsound_local(L, 'modular_septic/sound/insanity/painhuff_end.wav', 100)
+	L.playsound_local(L, 'oworld/sound/insanity/painhuff_end.wav', 100)
 	to_chat(L, span_achievementneutral("My skin doesn't feel numb anymore."))
 	L.remove_chem_effect(CE_PAINKILLER, "[type]")
 	L.remove_chem_effect(CE_PULSE, "[type]")

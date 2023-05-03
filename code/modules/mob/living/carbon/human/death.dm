@@ -21,7 +21,7 @@ GLOBAL_LIST_EMPTY(dead_players_during_shift)
 	if(stat == DEAD)
 		return
 	stop_sound_channel(CHANNEL_HEARTBEAT)
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	var/obj/item/organ/heart/H = getorganslot(ORGAN_SLOT_HEART)
 	if(H)
 		H.beat = BEAT_NONE
@@ -40,12 +40,12 @@ GLOBAL_LIST_EMPTY(dead_players_during_shift)
 	if(SSticker.HasRoundStarted())
 		SSblackbox.ReportDeath(src)
 		log_message("has died (BRUTE: [src.getBruteLoss()], BURN: [src.getFireLoss()], TOX: [src.getToxLoss()], OXY: [src.getOxyLoss()], CLONE: [src.getCloneLoss()])", LOG_ATTACK)
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	to_chat(src, span_warning("You have died. Barring complete bodyloss, you can in most cases be revived by other players. If you do not wish to be brought back, use the \"Do Not Resuscitate\" verb in the ghost tab."))
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	to_chat(src, span_dead("I am past death's door!"))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 
 /mob/living/carbon/human/proc/makeSkeleton()
 	ADD_TRAIT(src, TRAIT_DISFIGURED, TRAIT_GENERIC)

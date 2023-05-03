@@ -1,12 +1,12 @@
 /obj/item/clothing/neck/ordinator
 	name = "\proper ordinator's cloak"
 	desc = "A dark cloak. One could argue that it's style over substance."
-	icon = 'modular_septic/icons/obj/clothing/neck.dmi'
+	icon = 'oworld/icons/obj/clothing/neck.dmi'
 	icon_state = "ordinator_cloak"
-	worn_icon = 'modular_septic/icons/mob/clothing/neck.dmi'
+	worn_icon = 'oworld/icons/mob/clothing/neck.dmi'
 	worn_icon_state = "ordinator_cloak"
-	lefthand_file = 'modular_septic/icons/mob/inhands/clothing/clothing_lefthand.dmi'
-	righthand_file = 'modular_septic/icons/mob/inhands/clothing/clothing_righthand.dmi'
+	lefthand_file = 'oworld/icons/mob/inhands/clothing/clothing_lefthand.dmi'
+	righthand_file = 'oworld/icons/mob/inhands/clothing/clothing_righthand.dmi'
 	inhand_icon_state = "ordinator_cloak"
 	strip_delay = 20
 	body_parts_covered = NECK|CHEST|ARMS
@@ -27,12 +27,12 @@
 /obj/item/clothing/neck/ordinator/coordinator
 	name = "\proper coordinator's cloak"
 	desc = "A dark cloak with gold trimmings. Truly, attire worthy of a dictator."
-	icon = 'modular_septic/icons/obj/clothing/neck.dmi'
+	icon = 'oworld/icons/obj/clothing/neck.dmi'
 	icon_state = "coordinator_cloak"
-	worn_icon = 'modular_septic/icons/mob/clothing/neck.dmi'
+	worn_icon = 'oworld/icons/mob/clothing/neck.dmi'
 	worn_icon_state = "coordinator_cloak"
-	lefthand_file = 'modular_septic/icons/mob/inhands/clothing/clothing_lefthand.dmi'
-	righthand_file = 'modular_septic/icons/mob/inhands/clothing/clothing_righthand.dmi'
+	lefthand_file = 'oworld/icons/mob/inhands/clothing/clothing_lefthand.dmi'
+	righthand_file = 'oworld/icons/mob/inhands/clothing/clothing_righthand.dmi'
 	inhand_icon_state = "coordinator_cloak"
 	strip_delay = 25
 	armor = list(MELEE = 0, \

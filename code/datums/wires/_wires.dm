@@ -251,12 +251,12 @@
 	// Station blueprints do that too, but only if the wires are not randomized.
 	if(user.is_holding_item_of_type(/obj/item/areaeditor/blueprints) && !randomize)
 		return TRUE
-	//SEPTIC EDIT START
+	//OWORLD EDIT START
 	if(GET_MOB_ATTRIBUTE_VALUE(user, SKILL_ELECTRONICS) >= 5)
 		return TRUE
 	if(revealed_wires)
 		return TRUE
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 
 	return FALSE
 
@@ -305,7 +305,7 @@
 	data["proper_name"] = (proper_name != "Unknown") ? proper_name : null
 	return data
 
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /datum/wires/ui_act(action, params)
 	. = ..()
 	if(. || !interactable(usr))

@@ -72,7 +72,7 @@
 		newbrain.brainmob = null
 		brainmob.forceMove(src)
 		brainmob.container = src
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		/*
 		var/fubar_brain = newbrain.suicided || brainmob.suiciding //brain is from a suicider
 		if(!fubar_brain && !(newbrain.organ_flags & ORGAN_FAILING)) // the brain organ hasn't been beaten to death, nor was from a suicider.
@@ -91,7 +91,7 @@
 			brainmob.set_stat(CONSCIOUS)
 			to_chat(brainmob, "<span class='warning'>What the fuck is going on with me?!</span>")
 			SEND_SIGNAL(brainmob, COMSIG_ADD_MOOD_EVENT, "freakofnature", /datum/mood_event/freakofnature)
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 
 		brainmob.reset_perspective()
 		brain = newbrain
@@ -273,14 +273,14 @@
 		if(user)
 			to_chat(user, span_warning("\The [src] indicates that their mind is currently inactive."))
 		return FALSE
-//SEPTIC EDIT BEGIN
+//OWORLD EDIT BEGIN
 	/*
 	if(B.suiciding || brain?.suicided)
 		if(user)
 			to_chat(user, span_warning("\The [src] indicates that their mind has no will to live!"))
 		return FALSE
 	*/
-//SEPTIC EDIT END
+//OWORLD EDIT END
 	if(B.stat == DEAD)
 		if(user)
 			to_chat(user, span_warning("\The [src] indicates that the brain is dead!"))

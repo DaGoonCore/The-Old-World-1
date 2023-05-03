@@ -48,13 +48,13 @@
 	flick("synthesizer_beam", src)
 
 /obj/machinery/dish_drive/attackby(obj/item/I, mob/living/user, params)
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(is_type_in_list(I, collectable_items) && !user.combat_mode)
 	*/
-	//SEPTIC EDIT
+	//OWORLD EDIT
 	var/list/modifiers = params2list(params)
 	if(is_type_in_list(I, collectable_items) && !IS_HELP_INTENT(user, modifiers))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		if(!user.transferItemToLoc(I, src))
 			return
 		LAZYADD(dish_drive_contents, I)

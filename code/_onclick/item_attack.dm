@@ -147,7 +147,7 @@
 /obj/attackby(obj/item/I, mob/living/user, params)
 	return ..() || ((obj_flags & CAN_BE_HIT) && I.attack_atom(src, user, params))
 
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /mob/living/attackby(obj/item/I, mob/living/user, params)
 	if(..())
 		return TRUE

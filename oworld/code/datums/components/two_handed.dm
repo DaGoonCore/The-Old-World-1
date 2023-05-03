@@ -9,8 +9,8 @@
 	var/min_force_strength = 0
 	/// Increases maximum bound for the force increase we get per point of strength
 	var/force_strength = 0
-	var/wieldnoise = 'modular_septic/sound/effects/hand_grip.wav'
-	var/unwieldnoise = 'modular_septic/sound/effects/hand_release.wav'
+	var/wieldnoise = 'oworld/sound/effects/hand_grip.wav'
+	var/unwieldnoise = 'oworld/sound/effects/hand_release.wav'
 	var/wieldvolume = 30
 	var/unwieldvolume = 25
 
@@ -190,7 +190,7 @@
 	return wielded
 
 /obj/item/offhand
-	icon = 'modular_septic/icons/hud/quake/grab.dmi'
+	icon = 'oworld/icons/hud/quake/grab.dmi'
 	icon_state = "blank"
 	base_icon_state = "blank"
 	carry_weight = 0

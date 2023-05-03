@@ -43,12 +43,12 @@
 	name = "Organic Eyes"
 	description = "Station 5's Research Director Willem is requesting a few pairs of non-robotic eyes. Don't ask questions, just ship them."
 	reward = CARGO_CRATE_VALUE * 20
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	required_count = 3
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	required_count = 4
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	wanted_types = list(/obj/item/organ/eyes)
 	exclude_types = list(/obj/item/organ/eyes/robotic)
 

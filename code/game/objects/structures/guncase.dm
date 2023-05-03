@@ -44,10 +44,10 @@
 			to_chat(user, span_warning("[src] is full."))
 		return
 
-	//else if(!user.combat_mode) //SEPTIC EDIT REMOVAL
-	//SEPTIC EDIT BEGIN
+	//else if(!user.combat_mode) //OWORLD EDIT REMOVAL
+	//OWORLD EDIT BEGIN
 	else if(!IS_HELP_INTENT(user, params2list(params)))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		open = !open
 		update_appearance()
 	else

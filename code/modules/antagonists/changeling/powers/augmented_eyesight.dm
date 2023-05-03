@@ -12,13 +12,13 @@
 
 /datum/action/changeling/augmented_eyesight/on_purchase(mob/user) //The ability starts inactive, so we should be protected from flashes.
 	..()
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	var/obj/item/organ/eyes/E = user.getorganslot(ORGAN_SLOT_EYES)
 	if (E)
 		E.flash_protect = FLASH_PROTECTION_WELDER //Adjust the user's eyes' flash protection
 		to_chat(user, "We adjust our eyes to protect them from bright lights.")
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	var/mob/living/carbon/carbon_user = user
 	var/obj/item/organ/eyes/LE = LAZYACCESS(carbon_user.eye_organs, 1)
 	var/obj/item/organ/eyes/RE = LAZYACCESS(carbon_user.eye_organs, 2)
@@ -27,7 +27,7 @@
 		RE?.flash_protect = FLASH_PROTECTION_WELDER
 		LE?.flash_protect = FLASH_PROTECTION_WELDER
 		to_chat(user, "We adjust our eyes to protect them from bright lights.")
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	else
 		to_chat(user, "We can't adjust our eyes if we don't have any!")
 
@@ -35,7 +35,7 @@
 	if(!istype(user))
 		return
 	..()
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	var/obj/item/organ/eyes/E = user.getorganslot(ORGAN_SLOT_EYES)
 	if(E)
 		if(!active)
@@ -50,7 +50,7 @@
 			active = FALSE
 		user.update_sight()
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	var/mob/living/carbon/carbon_user = user
 	var/obj/item/organ/eyes/LE = LAZYACCESS(carbon_user.eye_organs, 1)
 	var/obj/item/organ/eyes/RE = LAZYACCESS(carbon_user.eye_organs, 2)
@@ -70,14 +70,14 @@
 			to_chat(user, "We adjust our eyes to protect them from bright lights.")
 			active = FALSE
 		user.update_sight()
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	else
 		to_chat(user, "We can't adjust our eyes if we don't have any!")
 	return 1
 
 
 /datum/action/changeling/augmented_eyesight/Remove(mob/user) //Get rid of x-ray vision and flash protection when the user refunds this ability
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	var/obj/item/organ/eyes/E = user.getorganslot(ORGAN_SLOT_EYES)
 	if(E)
 		if (active)
@@ -86,7 +86,7 @@
 			E.flash_protect = FLASH_PROTECTION_NONE
 		user.update_sight()
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	var/mob/living/carbon/carbon_user = user
 	var/obj/item/organ/eyes/LE = LAZYACCESS(carbon_user.eye_organs, 1)
 	var/obj/item/organ/eyes/RE = LAZYACCESS(carbon_user.eye_organs, 2)
@@ -98,5 +98,5 @@
 			RE?.flash_protect = FLASH_PROTECTION_NONE
 			LE?.flash_protect = FLASH_PROTECTION_NONE
 		user.update_sight()
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	..()

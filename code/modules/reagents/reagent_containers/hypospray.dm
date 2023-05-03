@@ -121,7 +121,7 @@
 	user.visible_message(span_suicide("[user] begins to choke on \the [src]! It looks like [user.p_theyre()] trying to commit suicide!"))
 	return OXYLOSS//ironic. he could save others from oxyloss, but not himself.
 
-/* SEPTIC SHOCK REMOVAL
+/* OWORLD SHOCK REMOVAL
 /obj/item/reagent_containers/hypospray/medipen/inject(mob/living/affected_mob, mob/user)
 	. = ..()
 	if(.)

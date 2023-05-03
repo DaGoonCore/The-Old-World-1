@@ -47,7 +47,7 @@
 		owner.emote("agonyscream")
 		owner.flash_pain(100)
 		to_chat(owner, span_bigdanger("NEURAL ENTANGLEMENT!"))
-		playsound(owner, 'modular_septic/sound/efn/hacker_fucked.ogg', 90, FALSE)
+		playsound(owner, 'oworld/sound/efn/hacker_fucked.ogg', 90, FALSE)
 		addtimer(CALLBACK(owner, /mob/living/carbon.proc/neural_entanglement), 1.67 SECONDS)
 		return
 	if(control <= 0)
@@ -87,17 +87,17 @@
 			to_chat(owner, span_bigdanger("[fail_msg()]... I have lost control."))
 		else
 			to_chat(owner, span_warning("I am losing control. \n<b>\[[chat_progress_characters(rounded_control, 10)]\]</b>."))
-		playsound(owner, 'modular_septic/sound/efn/earfuck_losecontrol.ogg', 20, TRUE)
+		playsound(owner, 'oworld/sound/efn/earfuck_losecontrol.ogg', 20, TRUE)
 	if(owner_backseat)
 		if(control <= 0)
 			to_chat(owner_backseat, span_bigdanger("Their control is destroyed.\n<b>\[[chat_progress_characters(rounded_control, 10)]\]</b>"))
 		else
 			to_chat(owner_backseat, span_boldwarning("I make progress.\n<b>\[[chat_progress_characters(rounded_control, 10)]\]</b>"))
-	var/sound_pool = list('modular_septic/sound/effects/mind_break_audible1.ogg')
+	var/sound_pool = list('oworld/sound/effects/mind_break_audible1.ogg')
 	if(owner.gender == MALE)
-		sound_pool += 'modular_septic/sound/effects/mind_break_audible2.ogg' //man angry
+		sound_pool += 'oworld/sound/effects/mind_break_audible2.ogg' //man angry
 	if(owner.gender == FEMALE)
-		sound_pool += 'modular_septic/sound/effects/mind_break_visible.ogg' //woman angry
+		sound_pool += 'oworld/sound/effects/mind_break_visible.ogg' //woman angry
 	playsound(owner, sound_pool, 80, FALSE)
 	owner.sound_hint()
 
@@ -140,8 +140,8 @@
 
 	to_chat(current_backseat, span_userdanger("I seize this body."))
 	if(!(silent && cancel_possession))
-		playsound(owner, 'modular_septic/sound/efn/earfuck_laugh.ogg', 65, FALSE, 2)
-		current_backseat.playsound_local(owner.loc, 'modular_septic/sound/efn/earfuck_switch.ogg', 70, FALSE)
+		playsound(owner, 'oworld/sound/efn/earfuck_laugh.ogg', 65, FALSE, 2)
+		current_backseat.playsound_local(owner.loc, 'oworld/sound/efn/earfuck_switch.ogg', 70, FALSE)
 		owner.visible_message(span_bolddanger("[owner] makes otherwordly noises as [owner.p_their()] head snaps and switches!"))
 		owner.sound_hint()
 
@@ -211,7 +211,7 @@
 
 		set_eyecolors(color = "#ffc813")
 
-		var/end_possession_noise = pick('modular_septic/sound/efn/possession/p_shake1.ogg', 'modular_septic/sound/efn/possession/p_shake2.ogg', 'modular_septic/sound/efn/possession/p_shake3.ogg') // The possession shaker
+		var/end_possession_noise = pick('oworld/sound/efn/possession/p_shake1.ogg', 'oworld/sound/efn/possession/p_shake2.ogg', 'oworld/sound/efn/possession/p_shake3.ogg') // The possession shaker
 		var/bad_message = "shakes their head, their eyes blinking rapidly."
 		switch(violence)
 			if(11 to 20)
@@ -233,7 +233,7 @@
 				original_stranger.emote("agonyscream", intentional = FALSE)
 				original_stranger.flash_pain(100)
 				to_chat(original_stranger, span_bigdanger("NEURAL DEGRADATION!"))
-				playsound(original_stranger, 'modular_septic/sound/efn/hacker_fucked.ogg', 90, FALSE)
+				playsound(original_stranger, 'oworld/sound/efn/hacker_fucked.ogg', 90, FALSE)
 				addtimer(CALLBACK(original_stranger, /mob/living/carbon.proc/neural_entanglement), 1.67 SECONDS)
 				return
 		if(violence > 0)

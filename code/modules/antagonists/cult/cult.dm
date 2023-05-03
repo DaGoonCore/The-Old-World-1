@@ -152,16 +152,16 @@
 	current.clear_alert("bloodsense")
 	if(ishuman(current))
 		var/mob/living/carbon/human/H = current
-		/* SEPTIC EDIT REMOVAL
+		/* OWORLD EDIT REMOVAL
 		H.eye_color = initial(H.eye_color)
 		H.dna.update_ui_block(DNA_EYE_COLOR_BLOCK)
 		*/
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		H.left_eye_color = initial(H.left_eye_color)
 		H.right_eye_color = initial(H.right_eye_color)
 		H.dna.update_ui_block(DNA_LEFT_EYE_COLOR_BLOCK)
 		H.dna.update_ui_block(DNA_RIGHT_EYE_COLOR_BLOCK)
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 		REMOVE_TRAIT(H, TRAIT_UNNATURAL_RED_GLOWY_EYES, CULT_TRAIT)
 		H.remove_overlay(HALO_LAYER)
 		H.update_body()
@@ -307,16 +307,16 @@
 /datum/team/cult/proc/rise(cultist)
 	if(ishuman(cultist))
 		var/mob/living/carbon/human/H = cultist
-		/* SEPTIC EDIT REMOVAL
+		/* OWORLD EDIT REMOVAL
 		H.eye_color = BLOODCULT_EYE
 		H.dna.update_ui_block(DNA_EYE_COLOR_BLOCK)
 		*/
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		H.left_eye_color = "ff0000"
 		H.right_eye_color = H.left_eye_color
 		H.dna.update_ui_block(DNA_LEFT_EYE_COLOR_BLOCK)
 		H.dna.update_ui_block(DNA_RIGHT_EYE_COLOR_BLOCK)
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 		ADD_TRAIT(H, TRAIT_UNNATURAL_RED_GLOWY_EYES, CULT_TRAIT)
 		H.update_body()
 
@@ -479,13 +479,13 @@
 	r_hand = /obj/item/melee/blood_magic/stun
 
 /datum/outfit/cultist/post_equip(mob/living/carbon/human/H, visualsOnly)
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	H.eye_color = BLOODCULT_EYE
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	H.left_eye_color = BLOODCULT_EYE
 	H.right_eye_color = BLOODCULT_EYE
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	H.update_body()
 
 	var/obj/item/clothing/suit/hooded/hooded = locate() in H

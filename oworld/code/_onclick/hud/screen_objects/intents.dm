@@ -1,6 +1,6 @@
 /atom/movable/screen/intent_select
 	name = "intent selection"
-	icon = 'modular_septic/icons/hud/quake/screen_quake.dmi'
+	icon = 'oworld/icons/hud/quake/screen_quake.dmi'
 	icon_state = INTENT_HELP
 	screentip_flags = SCREENTIP_HOVERER_CLICKER
 	screen_loc = ui_intents

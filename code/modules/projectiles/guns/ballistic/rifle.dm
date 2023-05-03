@@ -38,7 +38,7 @@
 		return
 	return ..()
 
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /obj/item/gun/ballistic/rifle/examine(mob/user)
 	. = ..()
 	. += "The bolt is [bolt_locked ? "open" : "closed"]."

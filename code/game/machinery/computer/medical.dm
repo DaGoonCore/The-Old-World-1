@@ -473,12 +473,12 @@
 				var/counter = 1
 				while(active2.fields[text("com_[]", counter)])
 					counter++
-				/* SEPTIC EDIT REMOVAL
+				/* OWORLD EDIT REMOVAL
 				active2.fields[text("com_[]", counter)] = text("Made by [] ([]) on [] [], []<BR>[]", authenticated, rank, station_time_timestamp(), time2text(world.realtime, "MMM DD"), GLOB.year_integer+540, t1)
 				*/
-				//SEPTIC EDIT BEGIN
+				//OWORLD EDIT BEGIN
 				active2.fields[text("com_[]", counter)] = text("Made by [] ([]) on [] [], []<BR>[]", authenticated, rank, station_time_timestamp(), time2text(world.realtime, "MMM DD"), SSstation_time.get_station_year(), t1)
-				//SEPTIC EDIT END
+				//OWORLD EDIT END
 			else if(href_list["del_c"])
 				if((istype(active2, /datum/data/record) && active2.fields[text("com_[]", href_list["del_c"])]))
 					active2.fields[text("com_[]", href_list["del_c"])] = "<B>Deleted</B>"

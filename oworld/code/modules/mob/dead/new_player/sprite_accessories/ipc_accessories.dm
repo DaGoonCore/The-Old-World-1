@@ -3,7 +3,7 @@
 ************** IPC SCREENS ****************
 *******************************************/
 /datum/sprite_accessory/screen
-	icon = 'modular_septic/icons/mob/human/sprite_accessory/ipc_screens.dmi'
+	icon = 'oworld/icons/mob/human/sprite_accessory/ipc_screens.dmi'
 	color_src = null
 	key = "ipc_screen"
 	generic = "Screen"
@@ -136,7 +136,7 @@
 *******************************************/
 
 /datum/sprite_accessory/ipc_antennae
-	icon = 'modular_septic/icons/mob/human/sprite_accessory/ipc_antennaes.dmi'
+	icon = 'oworld/icons/mob/human/sprite_accessory/ipc_antennaes.dmi'
 	color_src = USE_ONE_COLOR
 	default_color = DEFAULT_SECONDARY
 	recommended_species = list("ipc")

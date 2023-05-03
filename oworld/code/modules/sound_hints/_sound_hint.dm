@@ -1,7 +1,7 @@
 #define SOUND_HINT_COOLDOWN_DURATION 1 SECONDS
 
 //Do a little sound hint
-/atom/proc/sound_hint(duration = 5, use_icon = 'modular_septic/icons/effects/sound.dmi', use_states = "sound2")
+/atom/proc/sound_hint(duration = 5, use_icon = 'oworld/icons/effects/sound.dmi', use_states = "sound2")
 	//this is HORRIBLE but it prevents runtimes
 	if(SSticker.current_state < GAME_STATE_PLAYING)
 		return

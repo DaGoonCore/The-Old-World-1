@@ -2,7 +2,7 @@
 /mob/living/simple_animal/pet/caracal
 	name = "caracal"
 	desc = "A domesticated caracal. Much cuter than a mere cat."
-	icon = 'modular_septic/icons/mob/floppa.dmi'
+	icon = 'oworld/icons/mob/floppa.dmi'
 	icon_state = "caracal"
 	icon_dead = "caracal_dead"
 	speak_chance = 5

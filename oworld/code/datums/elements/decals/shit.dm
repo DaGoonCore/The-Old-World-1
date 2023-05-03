@@ -14,7 +14,7 @@
 /datum/element/decal/shit/generate_appearance(_icon, _icon_state, _dir, _plane, _layer, _color, _alpha, _smoothing, source)
 	var/obj/item/I = source
 	if(!_icon)
-		_icon = 'modular_septic/icons/effects/shit.dmi'
+		_icon = 'oworld/icons/effects/shit.dmi'
 	if(!_icon_state)
 		_icon_state = "itemshit"
 	var/icon = I.icon
@@ -33,13 +33,13 @@
 		var/icon/decal_icon
 		switch(width_height)
 			if("40x32")
-				decal_icon = icon('modular_septic/icons/effects/40x32.dmi', _icon_state)
+				decal_icon = icon('oworld/icons/effects/40x32.dmi', _icon_state)
 			if("48x32")
-				decal_icon = icon('modular_septic/icons/effects/48x32.dmi', _icon_state)
+				decal_icon = icon('oworld/icons/effects/48x32.dmi', _icon_state)
 			if("64x32")
-				decal_icon = icon('modular_septic/icons/effects/64x32.dmi', _icon_state)
+				decal_icon = icon('oworld/icons/effects/64x32.dmi', _icon_state)
 			if("64x64")
-				decal_icon = icon('modular_septic/icons/effects/64x64.dmi', _icon_state)
+				decal_icon = icon('oworld/icons/effects/64x64.dmi', _icon_state)
 			else
 				decal_icon = icon(_icon, _icon_state)
 		item_icon.Blend("#ffffff", ICON_ADD) //fills the icon_state with white (except where it's transparent)

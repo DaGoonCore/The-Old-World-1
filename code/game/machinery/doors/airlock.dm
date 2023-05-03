@@ -1087,12 +1087,12 @@
 		if(obj_flags & EMAGGED)
 			return FALSE
 		use_power(50)
-		/* SEPTIC EDIT REMOVAL
+		/* OWORLD EDIT REMOVAL
 		playsound(src, doorOpen, 30, TRUE)
 		*/
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		playsound(src, doorOpen, 30, FALSE)
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 	else
 		playsound(src, 'sound/machines/airlockforced.ogg', 30, TRUE)
 
@@ -1159,12 +1159,12 @@
 		if(obj_flags & EMAGGED)
 			return
 		use_power(50)
-		/* SEPTIC EDIT REMOVAL
+		/* OWORLD EDIT REMOVAL
 		playsound(src, doorClose, 30, TRUE)
 		*/
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		playsound(src, doorClose, 30, FALSE)
-		//SEPTIC EEDIT END
+		//OWORLD EEDIT END
 	else
 		playsound(src, 'sound/machines/airlockforced.ogg', 30, TRUE)
 
@@ -1260,10 +1260,10 @@
 	if(!density) //Already open
 		return ..()
 	if(locked || welded || seal) //Extremely generic, as aliens only understand the basics of how airlocks work.
-		//if(user.combat_mode) //SEPTIC EDIT REMOVAL
-		//SEPTIC EDIT BEGIN
+		//if(user.combat_mode) //OWORLD EDIT REMOVAL
+		//OWORLD EDIT BEGIN
 		if(IS_HARM_INTENT(user, modifiers))
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 			return ..()
 		to_chat(user, span_warning("[src] refuses to budge!"))
 		return

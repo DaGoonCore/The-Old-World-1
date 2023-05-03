@@ -1,6 +1,6 @@
 //Organ storage component, used in surgeries
 /datum/component/storage/concrete/organ
-	rustle_sound = list('modular_septic/sound/gore/organ1.ogg', 'modular_septic/sound/gore/organ2.ogg')
+	rustle_sound = list('oworld/sound/gore/organ1.ogg', 'oworld/sound/gore/organ2.ogg')
 	attack_hand_interact = FALSE
 	max_items = 99 //this doesn't actually matter
 	max_combined_w_class = 99 //this doesn't actually matter
@@ -13,13 +13,13 @@
 	if(!iscarbon(parent))
 		return COMPONENT_INCOMPATIBLE
 	. = ..()
-	boxes?.icon = 'modular_septic/icons/hud/screen_organ.dmi'
+	boxes?.icon = 'oworld/icons/hud/screen_organ.dmi'
 	boxes?.icon_state = "organ_block"
 	if(boxes)
 		var/image/ribs = image(boxes.icon, boxes, "[boxes.icon_state]_overlay", boxes.layer+1)
 		ribs.plane = ABOVE_HUD_PLANE
 		boxes.add_overlay(ribs)
-	closer?.icon = 'modular_septic/icons/hud/screen_organ.dmi'
+	closer?.icon = 'oworld/icons/hud/screen_organ.dmi'
 	closer?.icon_state = "organ_close"
 	UnregisterSignal(parent, list(COMSIG_MOUSEDROPPED_ONTO, COMSIG_CLICK_ALT, \
 							COMSIG_ATOM_ATTACK_HAND, COMSIG_ATOM_ATTACK_HAND_SECONDARY, \

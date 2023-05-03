@@ -3,11 +3,11 @@
 /datum/unit_test/designs/Run()
 //Can't use allocate because of bug with certain datums
 	var/datum/design/default_design = new /datum/design()
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	var/datum/design/surgery/default_design_surgery = new /datum/design/surgery()
 	*/
 	for(var/path in subtypesof(/datum/design))
-		/* SEPTIC EDIT REMOVAL
+		/* OWORLD EDIT REMOVAL
 		if (ispath(path, /datum/design/surgery)) //We are checking surgery design separatly later since they work differently
 			continue
 		*/
@@ -22,7 +22,7 @@
 		else if (!isnull(current_design.build_path) || !isnull(current_design.build_path)) // //Design requires no materials but creates stuff
 			Fail("Design [current_design.type] requires NO materials but has build_path or make_reagents set")
 
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	for(var/path in subtypesof(/datum/design/surgery))
 		var/datum/design/surgery/current_design = new path //Create an instance of each design
 		if (isnull(current_design.id) || current_design.id == default_design_surgery.id) //Check if ID was not set

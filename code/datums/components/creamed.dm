@@ -39,7 +39,7 @@ GLOBAL_LIST_INIT(creamable, typecacheof(list(
 
 	var/atom/A = parent
 	A.add_overlay(creamface)
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /datum/component/creamed/Destroy(force, silent)
 	var/atom/A = parent
 	A.cut_overlay(creamface)

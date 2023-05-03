@@ -31,13 +31,13 @@
 	icon = 'icons/obj/surgery.dmi'
 	icon_state = "demon_heart-on"
 	color = "#1C1C1C"
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	decay_factor = 0
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	min_decay_factor = 0
 	max_decay_factor = 0
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	/// How many life ticks in the dark the owner has been dead for. Used for nightmare respawns.
 	var/respawn_progress = 0
 	/// The armblade granted to the host of this heart.

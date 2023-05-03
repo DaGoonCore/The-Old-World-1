@@ -25,7 +25,7 @@
 			return FALSE
 		user.lose_extra_effort(cost, silent)
 	if(!silent)
-		user.playsound_local(user, 'modular_septic/sound/effects/effort.ogg', 100, FALSE)
+		user.playsound_local(user, 'oworld/sound/effects/effort.ogg', 100, FALSE)
 		if(gain_message)
 			to_chat(user, gain_message)
 	ADD_TRAIT(user, TRAIT_EFFORT_ACTIVE, EFFORT_TRAIT)
@@ -40,7 +40,7 @@
 
 /datum/effort/proc/deactivate(mob/user, silent = FALSE)
 	if(!silent)
-		user.playsound_local(user, 'modular_septic/sound/effects/effort_expired.ogg', 100, FALSE)
+		user.playsound_local(user, 'oworld/sound/effects/effort_expired.ogg', 100, FALSE)
 		if(lose_message)
 			to_chat(user, lose_message)
 	REMOVE_TRAIT(user, TRAIT_EFFORT_ACTIVE, EFFORT_TRAIT)

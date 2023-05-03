@@ -1,7 +1,7 @@
 {
 	"version": 1,
 	"map_name": "Baluarte",
-	"map_path": "_septic/map_files/Baluarte",
+	"map_path": "_oworld/map_files/Baluarte",
 	"map_file": [
 		"BaluarteZ3.dmm",
 		"BaluarteZ2.dmm",

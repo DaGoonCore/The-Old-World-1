@@ -99,10 +99,10 @@
 				deconstruct()
 			return
 
-	//if(!user.combat_mode) //SEPTIC EDIT REMOVAL
-	//SEPTIC EDIT
+	//if(!user.combat_mode) //OWORLD EDIT REMOVAL
+	//OWORLD EDIT
 	if(IS_HELP_INTENT(user, params2list(params)))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		if((I.item_flags & ABSTRACT) || !user.temporarilyRemoveItemFromInventory(I))
 			return
 		place_item_in_disposal(I, user)

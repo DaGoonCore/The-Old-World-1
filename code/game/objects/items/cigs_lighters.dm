@@ -90,12 +90,12 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		log_game("[key_name(user)] set [key_name(M)] on fire with [src] at [AREACOORD(user)]")
 
 	var/obj/item/clothing/mask/cigarette/cig = help_light_cig(M)
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(!lit || !cig || user.combat_mode)
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	if(!lit || !cig || IS_HARM_INTENT(user, null))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		..()
 		return
 
@@ -335,12 +335,12 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		light(span_notice("[user] lights [src] with [M]'s burning body. What a cold-blooded badass."))
 		return
 	var/obj/item/clothing/mask/cigarette/cig = help_light_cig(M)
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(!lit || !cig || user.combat_mode)
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	if(!lit || !cig || IS_HARM_INTENT(user, null))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		return ..()
 
 	if(cig.lit)
@@ -819,12 +819,12 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		message_admins("[ADMIN_LOOKUPFLW(user)] set [key_name_admin(M)] on fire with [src] at [AREACOORD(user)]")
 		log_game("[key_name(user)] set [key_name(M)] on fire with [src] at [AREACOORD(user)]")
 	var/obj/item/clothing/mask/cigarette/cig = help_light_cig(M)
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(!lit || !cig || user.combat_mode)
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	if(!lit || !cig || IS_HARM_INTENT(user, null))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		..()
 		return
 

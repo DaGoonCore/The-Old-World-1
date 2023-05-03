@@ -94,12 +94,12 @@
 	//human/alien mobs
 	if(iscarbon(target))
 		var/mob/living/carbon/C = target
-		/* SEPTIC EDIT REMOVAL
+		/* OWORLD EDIT REMOVAL
 		if(user.zone_selected == BODY_ZONE_PRECISE_EYES)
 		*/
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		if(user.zone_selected in list(BODY_ZONE_PRECISE_L_EYE, BODY_ZONE_PRECISE_R_EYE))
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 			var/severity = 1
 			if(prob(33))
 				severity = 2

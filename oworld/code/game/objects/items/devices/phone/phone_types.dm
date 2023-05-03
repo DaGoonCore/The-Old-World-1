@@ -6,8 +6,8 @@
 	brand_name = "VANTABLACK VAGRANT"
 	phone_flags = PHONE_FLIPHONE | PHONE_NO_UNFLIPPED_SCREEN
 	simcard = /obj/item/simcard/hacker
-	flip_sound = 'modular_septic/sound/efn/hacker_phone_flip.ogg'
-	unflip_sound = 'modular_septic/sound/efn/hacker_phone_unflip.ogg'
+	flip_sound = 'oworld/sound/efn/hacker_phone_flip.ogg'
+	unflip_sound = 'oworld/sound/efn/hacker_phone_unflip.ogg'
 
 /obj/item/cellphone/sponge
 	name = "SongSong"

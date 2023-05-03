@@ -97,10 +97,10 @@
 			force_lose(HM)
 
 #define sanitize_shortcolor(color) sanitize_hexcolor(color, 3, include_crunch = FALSE)
-//SEPTIC EDIT BEGIN
+//OWORLD EDIT BEGIN
 #undef sanitize_shortcolor
 #define sanitize_shortcolor(color) sanitize_hexcolor(color, 6, include_crunch = FALSE)
-//SEPTIC EDIT END
+//OWORLD EDIT END
 
 /datum/dna/proc/generate_unique_identity()
 	. = ""
@@ -124,13 +124,13 @@
 		L[DNA_FACIAL_HAIRSTYLE_BLOCK] = construct_block(GLOB.facial_hairstyles_list.Find(H.facial_hairstyle), GLOB.facial_hairstyles_list.len)
 		L[DNA_FACIAL_HAIR_COLOR_BLOCK] = sanitize_shortcolor(H.facial_hair_color)
 		L[DNA_SKIN_TONE_BLOCK] = construct_block(GLOB.skin_tones.Find(H.skin_tone), GLOB.skin_tones.len)
-		/* SEPTIC EDIT REMOVAL
+		/* OWORLD EDIT REMOVAL
 		L[DNA_EYE_COLOR_BLOCK] = sanitize_shortcolor(H.eye_color)
 		*/
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		L[DNA_LEFT_EYE_COLOR_BLOCK] = sanitize_shortcolor(H.left_eye_color)
 		L[DNA_RIGHT_EYE_COLOR_BLOCK] = sanitize_shortcolor(H.right_eye_color)
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 
 	for(var/i=1, i<=DNA_UNI_IDENTITY_BLOCKS, i++)
 		if(L[i])
@@ -139,7 +139,7 @@
 			. += random_string(DNA_BLOCK_SIZE,GLOB.hex_characters)
 	return .
 
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /datum/dna/proc/generate_unique_features()
 	var/list/data = list()
 
@@ -247,16 +247,16 @@
 			setblock(unique_identity, blocknumber, sanitize_shortcolor(H.facial_hair_color))
 		if(DNA_SKIN_TONE_BLOCK)
 			setblock(unique_identity, blocknumber, construct_block(GLOB.skin_tones.Find(H.skin_tone), GLOB.skin_tones.len))
-		/* SEPTIC EDIT REMOVAL
+		/* OWORLD EDIT REMOVAL
 		if(DNA_EYE_COLOR_BLOCK)
 			setblock(unique_identity, blocknumber, sanitize_shortcolor(H.eye_color))
 		*/
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		if(DNA_LEFT_EYE_COLOR_BLOCK)
 			setblock(unique_identity, blocknumber, sanitize_shortcolor(H.left_eye_color))
 		if(DNA_RIGHT_EYE_COLOR_BLOCK)
 			setblock(unique_identity, blocknumber, sanitize_shortcolor(H.right_eye_color))
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 		if(DNA_GENDER_BLOCK)
 			switch(H.gender)
 				if(MALE)
@@ -270,7 +270,7 @@
 		if(DNA_HAIRSTYLE_BLOCK)
 			setblock(unique_identity, blocknumber, construct_block(GLOB.hairstyles_list.Find(H.hairstyle), GLOB.hairstyles_list.len))
 
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /datum/dna/proc/update_uf_block(blocknumber)
 	if(!blocknumber)
 		CRASH("UF block index is null")
@@ -435,7 +435,7 @@
 			var/species_holder = initial(mrace.species_language_holder)
 			language_holder = new species_holder(src)
 		update_atom_languages()
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /mob/living/carbon/human/set_species(datum/species/mrace, icon_update = TRUE, pref_load = FALSE)
 	..()
 	if(icon_update)
@@ -513,7 +513,7 @@
 		else
 			gender = PLURAL
 
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /mob/living/carbon/human/updateappearance(icon_update=1, mutcolor_update=0, mutations_overlay_update=0)
 	..()
 	var/structure = dna.unique_identity
@@ -738,9 +738,9 @@
 //value in range 1 to values. values must be greater than 0
 //all arguments assumed to be positive integers
 /proc/construct_block(value, values, blocksize=DNA_BLOCK_SIZE)
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	values = max(1, values)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	var/width = round((16**blocksize)/values)
 	if(value < 1)
 		value = 1

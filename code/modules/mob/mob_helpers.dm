@@ -8,7 +8,7 @@
 		. = Buckled.lowest_buckled_mob()
 
 ///Convert a PRECISE ZONE into the BODY_ZONE
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /proc/check_zone(zone)
 	if(!zone)
 		return BODY_ZONE_CHEST

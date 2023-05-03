@@ -1,11 +1,11 @@
 /obj/item/clothing/head/denominator
 	name = "darkened denominator's armored face cover"
 	desc = "A mask with some ceramic plating put underneath the metal surface; classified under type IV ballistic protection."
-	icon = 'modular_septic/icons/obj/clothing/masks.dmi'
+	icon = 'oworld/icons/obj/clothing/masks.dmi'
 	icon_state = "deno"
-	worn_icon = 'modular_septic/icons/mob/clothing/mask.dmi'
-	lefthand_file = 'modular_septic/icons/mob/inhands/clothing/clothing_lefthand.dmi'
-	righthand_file = 'modular_septic/icons/mob/inhands/clothing/clothing_righthand.dmi'
+	worn_icon = 'oworld/icons/mob/clothing/mask.dmi'
+	lefthand_file = 'oworld/icons/mob/inhands/clothing/clothing_lefthand.dmi'
+	righthand_file = 'oworld/icons/mob/inhands/clothing/clothing_righthand.dmi'
 	inhand_icon_state = "ordinator_mask"
 	worn_icon_state = "deno"
 	max_integrity = 200
@@ -32,9 +32,9 @@
 	armor_damaged_sound = "heavy_helmet"
 	armor_damaged_sound_local = "heavy_helmet"
 	carry_weight = 2.5 KILOGRAMS
-	equip_sound = 'modular_septic/sound/armor/equip/helmet_use.wav'
-	pickup_sound = 'modular_septic/sound/armor/equip/helmet_pickup.wav'
-	drop_sound = 'modular_septic/sound/armor/equip/helmet_drop.wav'
+	equip_sound = 'oworld/sound/armor/equip/helmet_use.wav'
+	pickup_sound = 'oworld/sound/armor/equip/helmet_pickup.wav'
+	drop_sound = 'oworld/sound/armor/equip/helmet_drop.wav'
 	body_parts_covered = HEAD|FACE|JAW|EYES|NECK
 	flags_inv = HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDESNOUT|HIDEEYES
 

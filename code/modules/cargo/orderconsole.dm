@@ -241,7 +241,7 @@
 				reason = stripped_input("Reason:", name, "")
 				if(isnull(reason) || ..())
 					return
-			/* SEPTIC EDIT REMOVAL
+			/* OWORLD EDIT REMOVAL
 			if(pack.goody && !self_paid)
 				playsound(src, 'sound/machines/buzz-sigh.ogg', 50, FALSE)
 				say("ERROR: Small crates may only be purchased by private accounts.")

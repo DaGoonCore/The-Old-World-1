@@ -298,7 +298,7 @@ GLOBAL_LIST_EMPTY(cryopod_computers)
 	if(target == user && (tgalert(target, "Would you like to enter cryosleep?", "Enter Cryopod?", "Yes", "No") != "Yes"))
 		return
 
-//SEPTIC EDIT START
+//OWORLD EDIT START
 /*
 	if(target == user)
 		if(target.mind.assigned_role.req_admin_notify)
@@ -307,7 +307,7 @@ GLOBAL_LIST_EMPTY(cryopod_computers)
 		if(antag)
 			tgui_alert(target, "You're \a [antag.name]! [AHELP_FIRST_MESSAGE]")
 */
-//SEPTIC EDIT END
+//OWORLD EDIT END
 
 	if(!istype(target) || !can_interact(user) || !target.Adjacent(user) || !ismob(target) || isanimal(target) || !istype(user.loc, /turf) || target.buckled)
 		return

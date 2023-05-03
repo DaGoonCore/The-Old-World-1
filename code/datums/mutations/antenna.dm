@@ -94,12 +94,12 @@
 					to_chat(user, span_notice("[recent_speech[spoken_memory]]"))
 			if(iscarbon(M))
 				var/mob/living/carbon/human/H = M
-				/* SEPTIC EDIT REMOVAL
+				/* OWORLD EDIT REMOVAL
 				to_chat(user, span_boldnotice("You find that their intent is to [H.combat_mode ? "Harm" : "Help"]..."))
 				*/
-				//SEPTIC EDIT BEGIN
+				//OWORLD EDIT BEGIN
 				to_chat(user, "<span class='boldnotice'>You find that their intent is to [istype(H) ? H.a_intent : (H.combat_mode ? "harm" : "help")]...</span>")
-				//SEPTIC EDIT END
+				//OWORLD EDIT END
 				if(H.mind)
 					to_chat(user, span_boldnotice("You uncover that [H.p_their()] true identity is [H.mind.name]."))
 		else

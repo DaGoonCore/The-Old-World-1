@@ -151,10 +151,10 @@ GLOBAL_LIST(labor_sheet_values)
 	..()
 
 /obj/machinery/mineral/stacking_machine/laborstacker/attackby(obj/item/I, mob/living/user)
-	//if(istype(I, /obj/item/stack/sheet) && user.canUnEquip(I) && !user.combat_mode) //SEPTIC EDIT REMOVAL
-	//SEPTIC EDIT BEGIN
+	//if(istype(I, /obj/item/stack/sheet) && user.canUnEquip(I) && !user.combat_mode) //OWORLD EDIT REMOVAL
+	//OWORLD EDIT BEGIN
 	if(istype(I, /obj/item/stack/sheet) && user.canUnEquip(I) && IS_HELP_INTENT(user, null))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		var/obj/item/stack/sheet/inp = I
 		points += inp.point_value * inp.amount
 	return ..()

@@ -16,12 +16,12 @@
 #define PREFERENCE_PRIORITY_NAMES 5
 
 /// The maximum preference priority, keep this updated, but don't use it for `priority`.
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 #define MAX_PREFERENCE_PRIORITY PREFERENCE_PRIORITY_NAMES
 */
-//SEPTIC EDIT BEGIN
+//OWORLD EDIT BEGIN
 #define MAX_PREFERENCE_PRIORITY 9
-//SEPTIC EDIT END
+//OWORLD EDIT END
 
 /// For choiced preferences, this key will be used to set display names in constant data.
 #define CHOICED_PREFERENCE_DISPLAY_NAMES "display_names"
@@ -448,7 +448,7 @@ GLOBAL_LIST_INIT(preference_entries_by_key, init_preference_entries_by_key())
 
 /// Takes an assoc list of names to /datum/sprite_accessory and returns a value
 /// fit for `/datum/preference/init_possible_values()`
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /proc/possible_values_for_sprite_accessory_list(list/datum/sprite_accessory/sprite_accessories)
 	var/list/possible_values = list()
 	for (var/name in sprite_accessories)

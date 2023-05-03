@@ -2,7 +2,7 @@
 	name = "cellular phone"
 	desc = "An allegedly portable phone that comes with primarily communication uses, with the ability to make both public and private calls from anywhere in the world. Data service may vary If you're \
 			tightly trapped in a supernatural warehouse with only one way out."
-	icon = 'modular_septic/icons/obj/items/phone.dmi'
+	icon = 'oworld/icons/obj/items/phone.dmi'
 	icon_state = "phone"
 	base_icon_state = "phone"
 	worn_icon_state = "pda"
@@ -13,8 +13,8 @@
 	w_class = WEIGHT_CLASS_SMALL
 	slot_flags = ITEM_SLOT_ID | ITEM_SLOT_BELT
 	verb_say = "communicates"
-	pickup_sound = 'modular_septic/sound/efn/phone_pickup.ogg'
-	equip_sound = 'modular_septic/sound/efn/phone_holster.ogg'
+	pickup_sound = 'oworld/sound/efn/phone_pickup.ogg'
+	equip_sound = 'oworld/sound/efn/phone_holster.ogg'
 	/// General flags about the state of the phone
 	var/phone_flags = PHONE_FLIPHONE
 	/// Only matters if phone_flags has PHONE_FLIPHONE enabled
@@ -42,8 +42,8 @@
 	var/stop_calling_timer
 
 	// SOUNDING
-	var/flip_sound = 'modular_septic/sound/efn/phone_flip.ogg'
-	var/unflip_sound = 'modular_septic/sound/efn/phone_unflip.ogg'
+	var/flip_sound = 'oworld/sound/efn/phone_flip.ogg'
+	var/unflip_sound = 'oworld/sound/efn/phone_unflip.ogg'
 
 	// SOUNDING LOOPS
 	var/datum/looping_sound/phone_ringtone/ringtone_soundloop
@@ -185,14 +185,14 @@
 		var/obj/item/simcard/simpsons_card = attacking_item
 		if(user.transferItemToLoc(simpsons_card, src))
 			to_chat(user, span_notice("I carefully install [icon2html(simpsons_card, user)] <b>[simpsons_card]</b> into [src]'s sim card slot."))
-			playsound(src, 'modular_septic/sound/efn/phone_simcard_insert.ogg', 65, FALSE)
+			playsound(src, 'oworld/sound/efn/phone_simcard_insert.ogg', 65, FALSE)
 			install_simcard(simpsons_card, user)
 			sound_hint()
 	if(istype(attacking_item, /obj/item/cellphone))
 		var/obj/item/cellphone/attacker_cellphone = attacking_item
 		var/datum/simcard_application/hacking/hacking_application = locate(/datum/simcard_application/hacking) in attacker_cellphone.simcard?.applications
 		to_chat(user, span_notice("I tap the [attacker_cellphone] against the [src]. <b>Clink!</b> So nice!"))
-		playsound(src, 'modular_septic/sound/efn/clink_so_nice.ogg', 35, FALSE, 1)
+		playsound(src, 'oworld/sound/efn/clink_so_nice.ogg', 35, FALSE, 1)
 		if(!simcard) //HOW!
 			return
 		if(hacking_application)
@@ -215,7 +215,7 @@
 	var/obj/item/simcard/simpsons_card = simcard
 	if(user.transferItemToLoc(simpsons_card, user.loc))
 		to_chat(user, span_notice("I carefully take out [simpsons_card] from [src]'s sim card slot."))
-		playsound(src, 'modular_septic/sound/efn/phone_simcard_desert.ogg', 65, FALSE)
+		playsound(src, 'oworld/sound/efn/phone_simcard_desert.ogg', 65, FALSE)
 		uninstall_simcard(user)
 		sound_hint()
 
@@ -250,7 +250,7 @@
 
 	phone_flags |= PHONE_RECEIVING_INPUT
 
-	var/random_press_sound = pick('modular_septic/sound/effects/phone_press.ogg', 'modular_septic/sound/effects/phone_press2.ogg', 'modular_septic/sound/effects/phone_press3.ogg', 'modular_septic/sound/effects/phone_press4.ogg')
+	var/random_press_sound = pick('oworld/sound/effects/phone_press.ogg', 'oworld/sound/effects/phone_press2.ogg', 'oworld/sound/effects/phone_press3.ogg', 'oworld/sound/effects/phone_press4.ogg')
 	playsound(src, random_press_sound, 65, FALSE)
 	var/title = "What do you want to do?"
 	var/message = "Options Menu"
@@ -279,12 +279,12 @@
 		return
 	if(get_turf(src) != get_turf(speaker))
 		return
-	var/talking_noise = pick('modular_septic/sound/efn/phone_talk1.ogg', 'modular_septic/sound/efn/phone_talk2.ogg', 'modular_septic/sound/efn/phone_talk3.ogg')
+	var/talking_noise = pick('oworld/sound/efn/phone_talk1.ogg', 'oworld/sound/efn/phone_talk2.ogg', 'oworld/sound/efn/phone_talk3.ogg')
 	if(!ishuman(speaker))
 		return
 	var/mob/living/carbon/human/human_speaker = speaker
 	if(istype(human_speaker) && (human_speaker.dna.species.id == SPECIES_INBORN))
-		talking_noise = pick('modular_septic/sound/efn/evil_talk1.ogg', 'modular_septic/sound/efn/evil_talk2.ogg', 'modular_septic/sound/efn/evil_talk3.ogg')
+		talking_noise = pick('oworld/sound/efn/evil_talk1.ogg', 'oworld/sound/efn/evil_talk2.ogg', 'oworld/sound/efn/evil_talk3.ogg')
 	playsound(connected_phone, talking_noise, 18, FALSE, -6)
 	if(connected_phone == speaker)
 		audible_message(span_warning("[icon2html(src, world)] [src] makes godawful noises as [p_they()] fall[p_s()] into a feedback loop!"))
@@ -300,7 +300,7 @@
 
 	phone_flags |= PHONE_RECEIVING_INPUT
 
-	var/random_press_sound = pick('modular_septic/sound/effects/phone_press.ogg', 'modular_septic/sound/effects/phone_press2.ogg', 'modular_septic/sound/effects/phone_press3.ogg', 'modular_septic/sound/effects/phone_press4.ogg')
+	var/random_press_sound = pick('oworld/sound/effects/phone_press.ogg', 'oworld/sound/effects/phone_press2.ogg', 'oworld/sound/effects/phone_press3.ogg', 'oworld/sound/effects/phone_press4.ogg')
 	playsound(src, random_press_sound, 65, FALSE)
 	var/title = "Dial who?"
 	var/message = "Dialing menu"
@@ -350,7 +350,7 @@
 									vital_status = "CRITICAL"
 							if(!isnull(vital_human))
 								vital_message = "This phone has a <b>[vital_status]</b> user."
-							var/vital_scan_sound = list('modular_septic/sound/efn/hacker_vital_scan1.ogg', 'modular_septic/sound/efn/hacker_vital_scan2.ogg')
+							var/vital_scan_sound = list('oworld/sound/efn/hacker_vital_scan1.ogg', 'oworld/sound/efn/hacker_vital_scan2.ogg')
 							playsound(scanned_simcard, vital_scan_sound, rand(5, 10), FALSE)
 							to_chat(user, span_notice("[vital_message]"))
 					var/list/hacker_options = list("Call without being Malicious")
@@ -366,7 +366,7 @@
 								return
 							friend_card?.parent.start_glitching()
 							to_chat(user, span_boldnotice("Successful Denial-of-Service Attack."))
-							playsound(src, 'modular_septic/sound/efn/phone_jammer.ogg', 65, FALSE)
+							playsound(src, 'oworld/sound/efn/phone_jammer.ogg', 65, FALSE)
 							phone_flags &= ~PHONE_RECEIVING_INPUT
 							return
 						if("MINDJACK")
@@ -392,14 +392,14 @@
 	connected_phone.audible_message("[icon2html(connected_phone, world)] [simcard.username] has accepted the call.", hearing_distance = 1)
 	connected_phone.connection_state = CONNECTION_ACTIVE_CALL
 	connected_phone.call_soundloop.stop()
-	playsound(connected_phone, 'modular_septic/sound/efn/phone_answer.ogg', 65, FALSE)
+	playsound(connected_phone, 'oworld/sound/efn/phone_answer.ogg', 65, FALSE)
 	connected_phone.update_appearance()
 
 	if(user)
 		to_chat(user, span_notice("I accept the call. Now speaking with [connected_phone.simcard.username]."))
 	connection_state = CONNECTION_ACTIVE_CALL
 	ringtone_soundloop.stop()
-	playsound(src, 'modular_septic/sound/efn/phone_answer.ogg', 65, FALSE)
+	playsound(src, 'oworld/sound/efn/phone_answer.ogg', 65, FALSE)
 	update_appearance()
 	if(phone_flags & PHONE_MINDJACKED)
 		if(!ishuman(user))
@@ -409,11 +409,11 @@
 		user.emote("deathscream")
 		user.flash_pain(75)
 		do_sparks(6, FALSE, src)
-		playsound(src, 'modular_septic/sound/efn/hacker_phone_zap.ogg', 95, FALSE)
+		playsound(src, 'oworld/sound/efn/hacker_phone_zap.ogg', 95, FALSE)
 		var/datum/simcard_application/hacking/hacking_application = locate(/datum/simcard_application/hacking) in simcard?.applications
 		if(hacking_application)
 			to_chat(user, span_boldwarning("Firewall stops the neural connection before It hijacks my brain!"))
-			playsound(src, 'modular_septic/sound/efn/phone_jammer.ogg', 65, FALSE)
+			playsound(src, 'oworld/sound/efn/phone_jammer.ogg', 65, FALSE)
 			if(connected_phone)
 				connected_phone.start_glitching()
 			return
@@ -432,7 +432,7 @@
 			addtimer(CALLBACK(earfuck, /datum/brain_trauma/severe/earfuck.proc/switch_minds), 0.4 SECONDS)
 		else
 			connected_phone.audible_message("[icon2html(connected_phone, world)] OPERATION EARFUCK FAILED!", hearing_distance = 1)
-			playsound(connected_phone, 'modular_septic/sound/efn/phone_subtlealert.ogg', 25, FALSE)
+			playsound(connected_phone, 'oworld/sound/efn/phone_subtlealert.ogg', 25, FALSE)
 			hang_up(user, silent = TRUE)
 			return
 
@@ -455,7 +455,7 @@
 	connected_phone.connection_state = CONNECTION_NONE
 	connected_phone.call_soundloop.stop()
 	if(!silent)
-		playsound(connected_phone, 'modular_septic/sound/efn/phone_dead.ogg', 65, FALSE)
+		playsound(connected_phone, 'oworld/sound/efn/phone_dead.ogg', 65, FALSE)
 
 	if(user)
 		to_chat(user, span_notice("[icon2html(src, user)] I reject the call from [connected_phone.simcard.username]."))
@@ -467,7 +467,7 @@
 	connected_phone = null
 	update_appearance()
 	if(!silent)
-		playsound(src, 'modular_septic/sound/efn/phone_hangup.ogg', 65, FALSE)
+		playsound(src, 'oworld/sound/efn/phone_hangup.ogg', 65, FALSE)
 
 /obj/item/cellphone/proc/start_calling(obj/item/cellphone/receiver, mob/living/user, silent = FALSE, mindjack = FALSE)
 	if(receiver.connected_phone)
@@ -482,11 +482,11 @@
 		to_chat(user, span_notice("[icon2html(src, user)] I start calling [receiver.simcard.username]."))
 	if(mindjack)
 		audible_message(span_notice("[src] has connected a neural tripwire to [receiver.simcard.username]."))
-		playsound(src, 'modular_septic/sound/efn/earfuck_connect.ogg', 35, FALSE)
-		playsound(receiver, 'modular_septic/sound/efn/phone_jammer.ogg', 1, FALSE)
+		playsound(src, 'oworld/sound/efn/earfuck_connect.ogg', 35, FALSE)
+		playsound(receiver, 'oworld/sound/efn/phone_jammer.ogg', 1, FALSE)
 		receiver?.phone_flags |= PHONE_MINDJACKED
 	if(!silent)
-		playsound(src, 'modular_septic/sound/efn/phone_start_call.ogg')
+		playsound(src, 'oworld/sound/efn/phone_start_call.ogg')
 	connected_phone = receiver
 	connection_state = CONNECTION_CALLING
 	call_soundloop.start()
@@ -500,7 +500,7 @@
 	connected_phone.update_appearance()
 	connected_phone.ringtone_soundloop.stop()
 	if(!silent)
-		playsound(connected_phone, 'modular_septic/sound/efn/phone_hangup.ogg', 65, FALSE)
+		playsound(connected_phone, 'oworld/sound/efn/phone_hangup.ogg', 65, FALSE)
 
 	if(user)
 		to_chat(user, span_notice("[icon2html(src, user)] I stop calling [connected_phone.simcard.username]."))
@@ -509,7 +509,7 @@
 	update_appearance()
 	call_soundloop.stop()
 	if(!silent)
-		playsound(src, 'modular_septic/sound/efn/phone_hangup.ogg', 65, FALSE)
+		playsound(src, 'oworld/sound/efn/phone_hangup.ogg', 65, FALSE)
 
 	if(stop_calling_timer)
 		deltimer(stop_calling_timer)
@@ -521,7 +521,7 @@
 	connected_phone.connection_state = CONNECTION_NONE
 	connected_phone.update_appearance()
 	if(!silent)
-		playsound(connected_phone, 'modular_septic/sound/efn/phone_hangup.ogg', 65, FALSE)
+		playsound(connected_phone, 'oworld/sound/efn/phone_hangup.ogg', 65, FALSE)
 
 	if(user)
 		to_chat(user, span_notice("[icon2html(src, user)] I hang up the call with [connected_phone.simcard.username]."))
@@ -533,7 +533,7 @@
 	connection_state = CONNECTION_NONE
 	update_appearance()
 	if(!silent)
-		playsound(src, 'modular_septic/sound/efn/phone_hangup.ogg', 65, FALSE)
+		playsound(src, 'oworld/sound/efn/phone_hangup.ogg', 65, FALSE)
 
 #define woke_message audible_message
 #define squiggly_shit span_notice
@@ -586,7 +586,7 @@
 		return
 	stop_calling(silent = TRUE)
 	if(!silent)
-		playsound(src, 'modular_septic/sound/efn/phone_dead.ogg', 65, FALSE)
+		playsound(src, 'oworld/sound/efn/phone_dead.ogg', 65, FALSE)
 
 /obj/item/cellphone/proc/terminate_connection(mob/living/user)
 	if(connected_phone)
@@ -611,7 +611,7 @@
 		else
 			struggle_msg = "[simcard]'s programming defends against a DoS attack!"
 		audible_message(span_danger("[icon2html(simcard, world)] [struggle_msg]"))
-		playsound(src, 'modular_septic/sound/efn/phone_query_master.ogg', 30, FALSE)
+		playsound(src, 'oworld/sound/efn/phone_query_master.ogg', 30, FALSE)
 		return FALSE
 	terminate_connection()
 	addtimer(CALLBACK(src, .proc/stop_glitching), rand(10, 30) SECONDS)
@@ -635,12 +635,12 @@
 	var/funny_moment = "Not enough access."
 	if(istype(human_user) && (human_user.dna.species.id == SPECIES_INBORN))
 		funny_moment = "MY [pick("MOMMY", "DADDY")] TOLD ME NOT TO."
-	playsound(src, 'modular_septic/sound/efn/phone_query.ogg', 65, FALSE)
+	playsound(src, 'oworld/sound/efn/phone_query.ogg', 65, FALSE)
 	to_chat(user, span_boldwarning(funny_moment))
 
 /obj/item/cellphone/proc/toggle_simcard_publicity(mob/living/user)
 	simcard.toggle_publicity()
-	playsound(src, 'modular_septic/sound/efn/phone_query.ogg', 65, FALSE)
+	playsound(src, 'oworld/sound/efn/phone_query.ogg', 65, FALSE)
 	if(simcard.publicity)
 		to_chat(user, span_notice("[icon2html(simcard, user)] [simcard] put on public record."))
 	else
@@ -665,7 +665,7 @@
 		GLOB.simcard_list_by_username[simcard.username] = simcard
 		if(simcard.publicity)
 			GLOB.active_public_simcard_list[simcard.username] = simcard
-		playsound(src, 'modular_septic/sound/efn/phone_query.ogg', 65, FALSE)
+		playsound(src, 'oworld/sound/efn/phone_query.ogg', 65, FALSE)
 		to_chat(user, span_notice("Username set."))
 
 /obj/item/cellphone/proc/ringtone_select(mob/living/user)
@@ -677,7 +677,7 @@
 		"Badinerie" = /datum/looping_sound/phone_ringtone/bad,
 		"Prodigydance" = /datum/looping_sound/phone_ringtone/prodigydance,
 	)
-	var/random_press_sound = pick('modular_septic/sound/effects/phone_press.ogg', 'modular_septic/sound/effects/phone_press2.ogg', 'modular_septic/sound/effects/phone_press3.ogg', 'modular_septic/sound/effects/phone_press4.ogg')
+	var/random_press_sound = pick('oworld/sound/effects/phone_press.ogg', 'oworld/sound/effects/phone_press2.ogg', 'oworld/sound/effects/phone_press3.ogg', 'oworld/sound/effects/phone_press4.ogg')
 	playsound(src, random_press_sound, 65, FALSE)
 	var/title = "What do you want to do?"
 	var/message = "Change Ringtone"
@@ -764,7 +764,7 @@
 /obj/item/cellphone/proc/begin_selfdestruct(silent = FALSE)
 	phone_flags |= PHONE_GLITCHING
 	audible_message(span_bigdanger("[icon2html(src, world)] [src] makes an unnatural whirring and buzzing noise, vibrating uncontrollably!"))
-	playsound(src, 'modular_septic/sound/efn/virus_explode_buildup.ogg', 90, FALSE)
+	playsound(src, 'oworld/sound/efn/virus_explode_buildup.ogg', 90, FALSE)
 	addtimer(CALLBACK(src, .proc/selfdestruct, src), 1.8 SECONDS)
 	update_appearance()
 

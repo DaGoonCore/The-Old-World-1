@@ -1048,18 +1048,18 @@
  */
 /atom/proc/setDir(newdir)
 	SHOULD_CALL_PARENT(TRUE)
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	SEND_SIGNAL(src, COMSIG_ATOM_DIR_CHANGE, dir, newdir)
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	if(SEND_SIGNAL(src, COMSIG_ATOM_DIR_CHANGE, dir, newdir) & COMPONENT_NO_DIR_CHANGE)
 		return
 	var/olddir = dir
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	dir = newdir
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	SEND_SIGNAL(src, COMSIG_ATOM_POST_DIR_CHANGE, olddir, newdir)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 
 /**
  * Called when the atom log's in or out
@@ -2093,7 +2093,7 @@
 /atom/MouseEntered(location, control, params)
 	. = ..()
 	// Statusbar
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	status_bar_set_text(usr, name)
 	// Screentips
 	if(usr?.hud_used)

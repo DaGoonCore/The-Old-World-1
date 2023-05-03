@@ -1,6 +1,6 @@
 /atom/movable/screen/give
 	name = "give"
-	icon = 'modular_septic/icons/hud/quake/screen_quake.dmi'
+	icon = 'oworld/icons/hud/quake/screen_quake.dmi'
 	icon_state = "act_give"
 	screen_loc = ui_give
 

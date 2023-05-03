@@ -221,7 +221,7 @@
 			backpack_contents[box] = 1
 
 		if(backpack_contents)
-			/* SEPTIC EDIT REMOVAL
+			/* OWORLD EDIT REMOVAL
 			for(var/path in backpack_contents)
 				var/number = backpack_contents[path]
 				if(!isnum(number))//Default to 1
@@ -229,7 +229,7 @@
 				for(var/i in 1 to number)
 					H.equip_to_slot_or_del(new path(H),ITEM_SLOT_BACKPACK, TRUE)
 			*/
-			//SEPTIC EDIT BEGIN
+			//OWORLD EDIT BEGIN
 			//This is outrageously stupid, forgive me
 			var/obj/item/backpack = H.back
 			if(backpack)
@@ -241,7 +241,7 @@
 						var/obj/item/item = new path(H.loc)
 						if(!SEND_SIGNAL(backpack, COMSIG_TRY_STORAGE_INSERT, item, null, TRUE, FALSE, FALSE))
 							qdel(item)
-			//SEPTIC EDIT BEGIN
+			//OWORLD EDIT BEGIN
 	if(!H.head && toggle_helmet && istype(H.wear_suit, /obj/item/clothing/suit/space/hardsuit))
 		var/obj/item/clothing/suit/space/hardsuit/HS = H.wear_suit
 		HS.ToggleHelmet()

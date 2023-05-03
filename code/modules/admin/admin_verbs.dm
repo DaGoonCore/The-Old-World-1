@@ -70,11 +70,11 @@ GLOBAL_PROTECT(admin_verbs_admin)
 	/client/proc/cmd_admin_check_player_exp, /* shows players by playtime */
 	/client/proc/toggle_combo_hud, // toggle display of the combination pizza antag and taco sci/med/eng hud
 	/client/proc/toggle_AI_interact, /*toggle admin ability to interact with machines as an AI*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	/client/proc/toggle_rightclickmenu,
 	/client/proc/toggle_liquid_debug,
 	/client/proc/spawn_pollution,
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	/datum/admins/proc/open_shuttlepanel, /* Opens shuttle manipulator UI */
 	/client/proc/respawn_character,
 	/datum/admins/proc/open_borgopanel,

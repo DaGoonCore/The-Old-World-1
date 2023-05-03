@@ -1,4 +1,4 @@
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /datum/surgery/coronary_bypass
 	name = "Coronary Bypass"
 	steps = list(

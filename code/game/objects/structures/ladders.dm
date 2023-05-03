@@ -87,7 +87,7 @@
 	if(AM)
 		user.start_pulling(AM)
 
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 	//reopening ladder radial menu ahead
 	T = get_turf(user)
 	var/obj/structure/ladder/ladder_structure = locate() in T

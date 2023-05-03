@@ -204,16 +204,16 @@
 
 	var/raw_msg = message
 	if(visible_message_flags & EMOTE_MESSAGE)
-		/* SEPTIC EDIT REMOVAL
+		/* OWORLD EDIT REMOVAL
 		message = "<span class='emote'><b>[src]</b> [message]</span>"
 		*/
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		if(ismob(src))
 			var/mob/mob_messager = src
 			message = "<span class='emote'><span style='color: [mob_messager.chat_color];'><b>[src]</b></span> [message]</span>"
 		else
 			message = "<span class='emote'><b>[src]</b> [message]</span>"
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 
 	for(var/mob/M in hearers)
 		if(!M.client)
@@ -228,13 +228,13 @@
 				msg = blind_message
 		else if(M.lighting_alpha > LIGHTING_PLANE_ALPHA_MOSTLY_INVISIBLE && T.is_softly_lit() && !in_range(T,M)) //if it is too dark, unless we're right next to them.
 			msg = blind_message
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		var/signal = SEND_SIGNAL(M, COMSIG_MOB_VISIBLE_MESSAGE, src, message, vision_distance, ignored_mobs)
 		if(signal & COMPONENT_NO_VISIBLE_MESSAGE)
 			msg = null
 		else if(signal & COMPONENT_VISIBLE_MESSAGE_BLIND)
 			msg = blind_message
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 		if(!msg)
 			continue
 
@@ -266,16 +266,16 @@
 		hearers -= src
 	var/raw_msg = message
 	if(audible_message_flags & EMOTE_MESSAGE)
-		/* SEPTIC EDIT REMOVAL
+		/* OWORLD EDIT REMOVAL
 		message = "<span class='emote'><b>[src]</b> [message]</span>"
 		*/
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		if(ismob(src))
 			var/mob/mob_messager = src
 			message = "<span class='emote'><span style='color: [mob_messager.chat_color];'><b>[src]</b></span> [message]</span>"
 		else
 			message = "<span class='emote'><b>[src]</b> [message]</span>"
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 
 	for(var/mob/M in hearers)
 		if(audible_message_flags & EMOTE_MESSAGE && runechat_prefs_check(M, audible_message_flags) && M.can_hear())
@@ -409,7 +409,7 @@
 	var/slot_priority = W.slot_equipment_priority
 
 	if(!slot_priority)
-		/* SEPTIC EDIT REMOVAL
+		/* OWORLD EDIT REMOVAL
 		slot_priority = list( \
 			ITEM_SLOT_BACK, ITEM_SLOT_ID,\
 			ITEM_SLOT_ICLOTHING, ITEM_SLOT_OCLOTHING,\
@@ -421,7 +421,7 @@
 			ITEM_SLOT_DEX_STORAGE\
 		)
 		*/
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		slot_priority = list( \
 			ITEM_SLOT_BACK, ITEM_SLOT_ID,\
 			ITEM_SLOT_ICLOTHING, ITEM_SLOT_OCLOTHING,\
@@ -432,7 +432,7 @@
 			ITEM_SLOT_LPOCKET, ITEM_SLOT_RPOCKET,\
 			ITEM_SLOT_DEX_STORAGE\
 		)
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 
 	for(var/slot in slot_priority)
 		if(equip_to_slot_if_possible(W, slot, FALSE, TRUE, TRUE, FALSE, FALSE)) //qdel_on_fail = FALSE; disable_warning = TRUE; redraw_mob = TRUE;
@@ -476,9 +476,9 @@
 			else
 				client.perspective = EYE_PERSPECTIVE
 				client.eye = loc
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		SEND_SIGNAL(src, COMSIG_MOB_RESET_PERSPECTIVE, A)
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 		return 1
 
 /**
@@ -488,7 +488,7 @@
  * [this byond forum post](https://secure.byond.com/forum/?post=1326139&page=2#comment8198716)
  * for why this isn't atom/verb/examine()
  */
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /mob/verb/examinate(atom/examinify as mob|obj|turf in view()) //It used to be oview(12), but I can't really say why
 	set name = "Examine"
 	set category = "IC"
@@ -632,12 +632,12 @@
 /mob/verb/pointed(atom/A as mob|obj|turf in view())
 	set name = "Point To"
 	set category = "Object"
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(client && !(A in view(client.view, src)))
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	if(client && !(A in fov_view(world.view, src)))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		return FALSE
 	if(istype(A, /obj/effect/temp_visual/point))
 		return FALSE

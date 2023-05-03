@@ -40,9 +40,9 @@
 
 /obj/structure/tank_dispenser/attackby(obj/item/I, mob/living/user, params)
 	var/full
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	var/list/modifiers = params2list(params)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	if(istype(I, /obj/item/tank/internals/plasma))
 		if(plasmatanks < TANK_DISPENSER_CAPACITY)
 			plasmatanks++
@@ -56,12 +56,12 @@
 	else if(I.tool_behaviour == TOOL_WRENCH)
 		default_unfasten_wrench(user, I, time = 20)
 		return
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	else if(!user.combat_mode)
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	else if(IS_HELP_INTENT(user, modifiers))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		to_chat(user, span_notice("[I] does not fit into [src]."))
 		return
 	else

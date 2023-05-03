@@ -1,4 +1,4 @@
-/datum/preferences/proc/save_character_septic(savefile/S)
+/datum/preferences/proc/save_character_oworld(savefile/S)
 	if(!S?.cd)
 		return FALSE
 	//Languages
@@ -13,7 +13,7 @@
 	WRITE_FILE(S["birthsign"], birthsign)
 	return TRUE
 
-/datum/preferences/proc/load_character_septic(savefile/S)
+/datum/preferences/proc/load_character_oworld(savefile/S)
 	if(!S?.cd)
 		return FALSE
 	//Languages

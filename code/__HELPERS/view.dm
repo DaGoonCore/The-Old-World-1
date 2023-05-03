@@ -1,8 +1,8 @@
 /proc/getviewsize(view)
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	if(islist(view))
 		return view
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	if(isnum(view))
 		var/totalviewrange = (view < 0 ? -1 : 1) + 2 * view
 		return list(totalviewrange, totalviewrange)

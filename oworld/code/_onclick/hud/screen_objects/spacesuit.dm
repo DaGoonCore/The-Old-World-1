@@ -1,6 +1,6 @@
 /atom/movable/screen/spacesuit
 	name = "suit cell"
-	icon = 'modular_septic/icons/hud/quake/screen_quake.dmi'
+	icon = 'oworld/icons/hud/quake/screen_quake.dmi'
 	icon_state = "spacesuit_missing"
 	screen_loc = ui_spacesuit
 

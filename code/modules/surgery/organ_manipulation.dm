@@ -1,4 +1,4 @@
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /datum/surgery/organ_manipulation
 	name = "Organ manipulation"
 	target_mobtypes = list(/mob/living/carbon/human)

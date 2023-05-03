@@ -78,20 +78,20 @@
 					adjustOxyLoss(max(200 - getToxLoss() - getFireLoss() - getBruteLoss() - getOxyLoss(), 0))
 
 				death(FALSE)
-//SEPTIC EDIT BEGIN
+//OWORLD EDIT BEGIN
 				/*
 				ghostize(FALSE) // Disallows reentering body and disassociates mind
 				*/
-//SEPTIC EDIT END
+//OWORLD EDIT END
 
 				return
 
 		var/suicide_message
 
-		//if(!combat_mode) //SEPTIC EDIT REMOVAL
-		//SEPTIC EDIT BEGIN
+		//if(!combat_mode) //OWORLD EDIT REMOVAL
+		//OWORLD EDIT BEGIN
 		if(IS_HELP_INTENT(src, null))
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 			var/obj/item/organ/brain/userbrain = getorgan(/obj/item/organ/brain)
 			if(userbrain?.damage >= 75)
 				suicide_message = "[src] pulls both arms outwards in front of [p_their()] chest and pumps them behind [p_their()] back, repeats this motion in a smaller range of motion \
@@ -116,11 +116,11 @@
 
 		adjustOxyLoss(max(200 - getToxLoss() - getFireLoss() - getBruteLoss() - getOxyLoss(), 0))
 		death(FALSE)
-//SEPTIC EDIT BEGIN
+//OWORLD EDIT BEGIN
 		/*
 		ghostize(FALSE) // Disallows reentering body and disassociates mind
 		*/
-//SEPTIC EDIT END
+//OWORLD EDIT END
 
 /mob/living/brain/verb/suicide()
 	set hidden = TRUE
@@ -137,11 +137,11 @@
 		suicide_log()
 
 		death(FALSE)
-//SEPTIC EDIT BEGIN
+//OWORLD EDIT BEGIN
 		/*
 		ghostize(FALSE) // Disallows reentering body and disassociates mind
 		*/
-//SEPTIC EDIT END
+//OWORLD EDIT END
 
 /mob/living/silicon/ai/verb/suicide()
 	set hidden = TRUE
@@ -160,11 +160,11 @@
 		//put em at -175
 		adjustOxyLoss(max(maxHealth * 2 - getToxLoss() - getFireLoss() - getBruteLoss() - getOxyLoss(), 0))
 		death(FALSE)
-//SEPTIC EDIT BEGIN
+//OWORLD EDIT BEGIN
 		/*
 		ghostize(FALSE) // Disallows reentering body and disassociates mind
 		*/
-//SEPTIC EDIT END
+//OWORLD EDIT END
 
 /mob/living/silicon/robot/verb/suicide()
 	set hidden = TRUE
@@ -183,11 +183,11 @@
 		//put em at -175
 		adjustOxyLoss(max(maxHealth * 2 - getToxLoss() - getFireLoss() - getBruteLoss() - getOxyLoss(), 0))
 		death(FALSE)
-//SEPTIC EDIT BEGIN
+//OWORLD EDIT BEGIN
 		/*
 		ghostize(FALSE) // Disallows reentering body and disassociates mind
 		*/
-//SEPTIC EDIT END
+//OWORLD EDIT END
 
 /mob/living/silicon/pai/verb/suicide()
 	set hidden = TRUE
@@ -200,11 +200,11 @@
 		suicide_log()
 
 		death(FALSE)
-//SEPTIC EDIT BEGIN
+//OWORLD EDIT BEGIN
 		/* pai's already call ghostize() on death??
 		ghostize(FALSE) // Disallows reentering body and disassociates mind
 		*/
-//SEPTIC EDIT END
+//OWORLD EDIT END
 	else
 		to_chat(src, "Aborting suicide attempt.")
 
@@ -226,11 +226,11 @@
 		//put em at -175
 		adjustOxyLoss(max(200 - getFireLoss() - getBruteLoss() - getOxyLoss(), 0))
 		death(FALSE)
-//SEPTIC EDIT BEGIN
+//OWORLD EDIT BEGIN
 		/*
 		ghostize(FALSE) // Disallows reentering body and disassociates mind
 		*/
-//SEPTIC EDIT END
+//OWORLD EDIT END
 
 /mob/living/simple_animal/verb/suicide()
 	set hidden = TRUE
@@ -247,11 +247,11 @@
 		suicide_log()
 
 		death(FALSE)
-//SEPTIC EDIT BEGIN
+//OWORLD EDIT BEGIN
 		/*
 		ghostize(FALSE) // Disallows reentering body and disassociates mind
 		*/
-//SEPTIC EDIT END
+//OWORLD EDIT END
 
 /mob/living/proc/suicide_log()
 	log_message("committed suicide as [src.type]", LOG_ATTACK)

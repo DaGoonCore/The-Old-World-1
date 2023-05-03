@@ -1,5 +1,5 @@
 /// This test is used to make sure a flesh-and-bone base human can suffer all the types of wounds, and that suffering more severe wounds removes and replaces the lesser wound. Also tests that [/mob/living/carbon/proc/fully_heal] removes all wounds
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /datum/unit_test/test_human_base/Run()
 	var/mob/living/carbon/human/victim = allocate(/mob/living/carbon/human)
 

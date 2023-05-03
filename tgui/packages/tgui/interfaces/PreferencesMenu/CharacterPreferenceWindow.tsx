@@ -120,7 +120,7 @@ export const CharacterPreferenceWindow = (props, context) => {
           )}
           {!data.donator_rank && (
             <Stack.Item align="center">
-              Support Septic Shock on patreon for an extra 5 slots!
+              Support Oworld Shock on patreon for an extra 5 slots!
             </Stack.Item>
           )}
 

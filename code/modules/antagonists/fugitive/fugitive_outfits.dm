@@ -30,13 +30,13 @@
 	if(visualsOnly)
 		return
 	equipped_on.fully_replace_character_name(null,"Waldo")
-	/*SEPTIC EDIT REMOVAL
+	/*OWORLD EDIT REMOVAL
 	equipped_on.eye_color = "#000000"
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	equipped_on.left_eye_color = "#000000"
 	equipped_on.right_eye_color = "#000000"
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	equipped_on.gender = MALE
 	equipped_on.skin_tone = "caucasian3"
 	equipped_on.hairstyle = "Business Hair 3"
@@ -59,7 +59,7 @@
 	name = "Factory Error Synth"
 	uniform = /obj/item/clothing/under/color/white
 	ears = /obj/item/radio/headset
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /datum/outfit/synthetic/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	if(visualsOnly)
 		return

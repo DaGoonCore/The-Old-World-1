@@ -1,4 +1,4 @@
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /datum/surgery/advanced/bioware/vein_threading
 	name = "Vein Threading"
 	desc = "A surgical procedure which severely reduces the amount of blood lost in case of injury."

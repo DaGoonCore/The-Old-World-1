@@ -358,7 +358,7 @@
 	loot = list(
 		/obj/item/organ/ears/penguin,
 		/obj/item/organ/ears/cat,
-		/* SEPTIC EDIT REMOVAL
+		/* OWORLD EDIT REMOVAL
 		/obj/item/organ/eyes/moth,
 		/obj/item/organ/eyes/snail,
 		*/

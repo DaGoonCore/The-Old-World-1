@@ -38,7 +38,7 @@ extra range addition
 
 */
 
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 
 GLOBAL_LIST_INIT(footstep, list(
 	FOOTSTEP_WOOD = list(list(

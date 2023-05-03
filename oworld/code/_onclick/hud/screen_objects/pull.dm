@@ -1,5 +1,5 @@
 /atom/movable/screen/pull
-	icon = 'modular_septic/icons/hud/quake/screen_quake.dmi'
+	icon = 'oworld/icons/hud/quake/screen_quake.dmi'
 	icon_state = "act_pull"
 	base_icon_state = "act_pull"
 	screen_loc = ui_pull

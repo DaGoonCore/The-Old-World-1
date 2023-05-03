@@ -154,7 +154,7 @@
 		leaving.Bump(src)
 		return COMPONENT_ATOM_BLOCK_EXIT
 
-/* SEPTIC SHOCK EDIT
+/* OWORLD SHOCK EDIT
 
 /obj/machinery/door/window/open(forced=FALSE)
 	if (operating) //doors can still open when emag-disabled

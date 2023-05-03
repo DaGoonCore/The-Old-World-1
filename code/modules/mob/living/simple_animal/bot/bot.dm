@@ -294,10 +294,10 @@
 
 
 /mob/living/simple_animal/bot/attack_hand(mob/living/carbon/human/user, list/modifiers)
-	//if(!user.combat_mode) //SEPTIC EDIT REMOVAL
-	//SEPTIC EDIT BEGIN
+	//if(!user.combat_mode) //OWORLD EDIT REMOVAL
+	//OWORLD EDIT BEGIN
 	if(IS_HELP_INTENT(user, modifiers))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		interact(user)
 	else
 		return ..()
@@ -355,10 +355,10 @@
 					ejectpai(user)
 	else
 		user.changeNext_move(CLICK_CD_MELEE)
-		//if(W.tool_behaviour == TOOL_WELDER && !user.combat_mode) //SEPTIC EDIT REMOVAL
-		//SEPTIC EDIT BEGIN
+		//if(W.tool_behaviour == TOOL_WELDER && !user.combat_mode) //OWORLD EDIT REMOVAL
+		//OWORLD EDIT BEGIN
 		if(W.tool_behaviour == TOOL_WELDER && IS_HELP_INTENT(user, params2list(params)))
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 			if(health >= maxHealth)
 				to_chat(user, span_warning("[src] does not need a repair!"))
 				return

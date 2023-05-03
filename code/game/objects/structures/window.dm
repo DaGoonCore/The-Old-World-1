@@ -163,12 +163,12 @@
 	if(!can_be_reached(user))
 		return
 	user.changeNext_move(CLICK_CD_MELEE)
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(!user.combat_mode)
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	if(IS_HELP_INTENT(user, modifiers))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		user.visible_message(span_notice("[user] knocks on [src]."), \
 			span_notice("I knock on [src]."))
 		playsound(src, knocksound, 50, TRUE)
@@ -348,7 +348,7 @@
 	update_appearance()
 	if(smoothing_flags & (SMOOTH_CORNERS|SMOOTH_BITMASK))
 		QUEUE_SMOOTH_NEIGHBORS(src)
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 //merges adjacent full-tile windows into one
 /obj/structure/window/update_overlays(updates=ALL)
 	. = ..()
@@ -482,7 +482,7 @@
 		state = RWINDOW_SECURE
 		visible_message(span_notice("The bolts on \the [src] look like they've cooled off..."))
 
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /obj/structure/window/reinforced/examine(mob/user)
 	. = ..()
 	switch(state)
@@ -770,12 +770,12 @@
 	. = ..()
 	if(.)
 		return
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(user.combat_mode)
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	if(IS_HARM_INTENT(user, modifiers))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		take_damage(4, BRUTE, MELEE, 0)
 		if(!QDELETED(src))
 			update_appearance()
@@ -797,12 +797,12 @@
 	if(W.get_temperature())
 		fire_act(W.get_temperature())
 		return
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(user.combat_mode)
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	if(!IS_HELP_INTENT(user, null))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		return ..()
 	if(istype(W, /obj/item/paper) && atom_integrity < max_integrity)
 		user.visible_message(span_notice("[user] starts to patch the holes in \the [src]."))

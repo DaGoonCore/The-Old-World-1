@@ -1,8 +1,8 @@
 /datum/wound/artery
 	name = "Torn Artery"
-	sound_effect = list('modular_septic/sound/gore/artery1.ogg', \
-						'modular_septic/sound/gore/artery2.ogg', \
-						'modular_septic/sound/gore/artery3.ogg')
+	sound_effect = list('oworld/sound/gore/artery1.ogg', \
+						'oworld/sound/gore/artery2.ogg', \
+						'oworld/sound/gore/artery3.ogg')
 	base_treat_time = 3 SECONDS
 	wound_type = WOUND_ARTERY
 	severity = WOUND_SEVERITY_MODERATE

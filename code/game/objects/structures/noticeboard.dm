@@ -44,7 +44,7 @@
 //attaching papers!!
 /obj/structure/noticeboard/attackby(obj/item/O, mob/user, params)
 	if(istype(O, /obj/item/paper) || istype(O, /obj/item/photo))
-/*SEPTIC EDIT REMOVAL
+/*OWORLD EDIT REMOVAL
 		if(!allowed(user))
 			to_chat(user, span_warning("You are not authorized to add notices!"))
 			return
@@ -100,7 +100,7 @@
 				user.examinate(item)
 			return TRUE
 		if("remove")
-/*SEPTIC EDIT REMOVAL
+/*OWORLD EDIT REMOVAL
 			if(!allowed(user))
 				return
 */

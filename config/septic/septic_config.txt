@@ -1,4 +1,4 @@
-## Septic exclusive configuration goes here
+## Oworld exclusive configuration goes here
 
 ## Enable/disable FoV
 USE_FIELD_OF_VISION

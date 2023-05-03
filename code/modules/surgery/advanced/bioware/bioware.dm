@@ -1,6 +1,6 @@
 //Bioware
 //Body modifications applied through surgery. They generally affect physiology.
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /datum/bioware
 	var/name = "Generic Bioware"
 	var/mob/living/carbon/human/owner

@@ -285,12 +285,12 @@ GLOBAL_LIST_INIT(bibleitemstates, list("bible", "koran", "scrapbook", "burning",
 		desc += span_warning("The name [ownername] is written in blood inside the cover.")
 
 /obj/item/storage/book/bible/syndicate/attack(mob/living/M, mob/living/carbon/human/user, heal_mode = TRUE)
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if (!user.combat_mode)
 	*/
-	//SEPTIC EDIT
+	//OWORLD EDIT
 	if(IS_HELP_INTENT(user, null))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		return ..()
 	else
 		return ..(M,user,heal_mode = FALSE)

@@ -1,4 +1,4 @@
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /datum/surgery/organ_extraction
 	name = "Experimental organ replacement"
 	steps = list(/datum/surgery_step/incise, /datum/surgery_step/clamp_bleeders, /datum/surgery_step/retract_skin, /datum/surgery_step/incise, /datum/surgery_step/extract_organ, /datum/surgery_step/gland_insert)
@@ -54,4 +54,4 @@
 	gland.Insert(target, 2)
 	return 1
 */
-//SEPTIC EDIT END
+//OWORLD EDIT END

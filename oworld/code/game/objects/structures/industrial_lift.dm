@@ -1,11 +1,11 @@
 /obj/structure/industrial_lift/tram/central/baluarte
-	icon = 'modular_septic/icons/turf/floors.dmi'
+	icon = 'oworld/icons/turf/floors.dmi'
 	icon_state = "textured"
 	base_icon_state = "textured"
 	initial_id = "arrival_station"
 
 /obj/structure/industrial_lift/tram/baluarte
-	icon = 'modular_septic/icons/turf/floors.dmi'
+	icon = 'oworld/icons/turf/floors.dmi'
 	icon_state = "textured"
 	base_icon_state = "textured"
 	initial_id = "arrival_station"
@@ -29,7 +29,7 @@
 	RegisterSignal(AM, COMSIG_PARENT_QDELETING, .proc/RemoveItemFromLift)
 
 /obj/structure/industrial_lift
-	icon = 'modular_septic/icons/turf/floors.dmi'
+	icon = 'oworld/icons/turf/floors.dmi'
 	icon_state = "lift"
 	base_icon_state = "lift"
 	smoothing_flags = null

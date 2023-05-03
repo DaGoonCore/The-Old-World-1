@@ -395,9 +395,9 @@
 			var/cyberimp_detect
 			for(var/obj/item/organ/cyberimp/CI in internal_organs)
 				//if(CI.status == ORGAN_ROBOTIC && !CI.syndicate_implant) // BLEDIT REMOVAL
-				//SEPTIC EDIT BEGIN
+				//OWORLD EDIT BEGIN
 				if(CI.status == ORGAN_ROBOTIC && !CI.scanner_hidden)
-				//SEPTIC EDIT END
+				//OWORLD EDIT END
 					cyberimp_detect += "[!cyberimp_detect ? "[CI.get_examine_string(user)]" : ", [CI.get_examine_string(user)]"]"
 			if(cyberimp_detect)
 				. += "<span class='notice ml-1'>Detected cybernetic modifications:</span>"

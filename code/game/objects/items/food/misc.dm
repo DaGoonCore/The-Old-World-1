@@ -604,7 +604,7 @@
 	w_class = WEIGHT_CLASS_SMALL
 	preserved_food = TRUE
 
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /obj/item/food/canned/proc/open_can(mob/user)
 	to_chat(user, span_notice("You pull back the tab of \the [src]."))
 	playsound(user.loc, 'sound/items/foodcanopen.ogg', 50)

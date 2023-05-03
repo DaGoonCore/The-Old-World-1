@@ -77,10 +77,10 @@
 	return ..()
 
 /obj/machinery/biogenerator/attackby(obj/item/O, mob/living/user, params)
-	//if(user.combat_mode) ///SEPTIC EDIT REMOVAL
-	//SEPTIC EDIT BEGIN
+	//if(user.combat_mode) ///OWORLD EDIT REMOVAL
+	//OWORLD EDIT BEGIN
 	if(!IS_HELP_INTENT(user, params2list(params)))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		return ..()
 
 	if(processing)

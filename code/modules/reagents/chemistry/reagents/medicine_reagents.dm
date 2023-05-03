@@ -372,7 +372,7 @@
 
 	if(methods & (PATCH|TOUCH))
 		var/mob/living/carbon/exposed_carbon = exposed_mob
-		/* SEPTIC EDIT REMOVAL
+		/* OWORLD EDIT REMOVAL
 		for(var/s in exposed_carbon.surgeries)
 			var/datum/surgery/surgery = s
 			surgery.speed_modifier = max(0.1, surgery.speed_modifier)
@@ -446,7 +446,7 @@
 	metabolization_rate = 2 * REAGENTS_METABOLISM
 	ph = 12 //It's a reducing agent
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /datum/reagent/medicine/potass_iodide/on_mob_metabolize(mob/living/L)
 	. = ..()
 	ADD_TRAIT(L, TRAIT_HALT_RADIATION_EFFECTS, "[type]")
@@ -518,7 +518,7 @@
 	metabolization_rate = 0.25 * REAGENTS_METABOLISM
 	ph = 2
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
-/* SEPTIC EDIT REMMOVAL
+/* OWORLD EDIT REMMOVAL
 /datum/reagent/medicine/salbutamol/on_mob_life(mob/living/carbon/M, delta_time, times_fired)
 	M.adjustOxyLoss(-3 * REM * delta_time, 0)
 	if(M.losebreath >= 4)
@@ -604,7 +604,7 @@
 	ph = 8.96
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 	addiction_types = list(/datum/addiction/opiods = 10)
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /datum/reagent/medicine/morphine/on_mob_metabolize(mob/living/L)
 	..()
 	L.add_movespeed_mod_immunities(type, /datum/movespeed_modifier/damage_slowdown)
@@ -649,7 +649,7 @@
 	inverse_chem_val = 0.45
 	///The lighting alpha that the mob had on addition
 	var/delta_light
-/* SEPTIC EDIT REMOVAL - Note to self: Fix functionality later if possible
+/* OWORLD EDIT REMOVAL - Note to self: Fix functionality later if possible
 /datum/reagent/medicine/oculine/on_mob_add(mob/living/owner)
 	if(!iscarbon(owner))
 		return
@@ -763,7 +763,7 @@
 	overdose_threshold = 35
 	ph = 12
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /datum/reagent/medicine/atropine/on_mob_life(mob/living/carbon/M, delta_time, times_fired)
 	if(M.health <= M.crit_threshold)
 		M.adjustToxLoss(-2 * REM * delta_time, 0)
@@ -793,7 +793,7 @@
 	overdose_threshold = 30
 	ph = 10.2
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /datum/reagent/medicine/epinephrine/on_mob_metabolize(mob/living/carbon/M)
 	..()
 	ADD_TRAIT(M, TRAIT_NOCRITDAMAGE, type)
@@ -1065,7 +1065,7 @@
 	color = "#A4D8D8"
 	ph = 8.5
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /datum/reagent/medicine/inaprovaline/on_mob_life(mob/living/carbon/M, delta_time, times_fired)
 	if(M.losebreath >= 5)
 		M.losebreath -= 5 * REM * delta_time

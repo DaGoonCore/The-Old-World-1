@@ -1,6 +1,6 @@
 /// Allows an item to  be used to initiate surgeries.
 /datum/element/surgery_initiator
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 	element_flags = ELEMENT_DETACH
 
 /datum/element/surgery_initiator/Attach(datum/target)

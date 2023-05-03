@@ -121,13 +121,13 @@
 	return ..()
 
 /datum/asset/spritesheet/chat/register()
-	InsertAll("donator",'modular_septic/icons/ui_icons/chat/donator.dmi')
-	InsertAll("ooc", 'modular_septic/icons/ui_icons/chat/ooc.dmi')
-	InsertAll("emoji", EMOJI_SET_SEPTIC)
+	InsertAll("donator",'oworld/icons/ui_icons/chat/donator.dmi')
+	InsertAll("ooc", 'oworld/icons/ui_icons/chat/ooc.dmi')
+	InsertAll("emoji", EMOJI_SET_OWORLD)
 	return ..()
 
 /datum/asset/spritesheet/simple/pda/register()
-	assets["mail"] = 'modular_septic/icons/pda_icons/pda_zap.png'
+	assets["mail"] = 'oworld/icons/pda_icons/pda_zap.png'
 	return ..()
 
 /datum/asset/simple/inventory/register()

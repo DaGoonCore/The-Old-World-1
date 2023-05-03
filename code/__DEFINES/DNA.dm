@@ -83,7 +83,7 @@
 #define MUT_OTHER 3
 
 //DNA - Because fuck you and your magic numbers being all over the codebase.
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 #define DNA_BLOCK_SIZE 3
 #define DNA_EYE_COLOR_BLOCK 4
 #define DNA_FACIAL_HAIR_COLOR_BLOCK 2
@@ -148,7 +148,7 @@
 #define NOAUGMENTS 21
 
 //organ slots
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 #define ORGAN_SLOT_ADAMANTINE_RESONATOR "adamantine_resonator"
 #define ORGAN_SLOT_APPENDIX "appendix"
 #define ORGAN_SLOT_BRAIN "brain"

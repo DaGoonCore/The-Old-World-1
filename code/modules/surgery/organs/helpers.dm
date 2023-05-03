@@ -1,4 +1,4 @@
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /**
  * Get the organ object from the mob matching the passed in typepath
  *

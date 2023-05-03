@@ -450,12 +450,12 @@
 			electronics_ref.forceMove(drop_location())
 		secure = FALSE
 		update_appearance()
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	else if(!user.combat_mode)
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	else if(IS_HELP_INTENT(user, null))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		var/item_is_id = W.GetID()
 		if(!item_is_id)
 			return FALSE

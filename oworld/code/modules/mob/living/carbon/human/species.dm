@@ -40,7 +40,7 @@
 		"20" = "groan",
 		"10" = "grunt",
 	) //Below 10 pain, we shouldn't emote
-	var/examine_icon = 'modular_septic/icons/mob/human/fullhuman.dmi'
+	var/examine_icon = 'oworld/icons/mob/human/fullhuman.dmi'
 	var/examine_icon_state = "human"
 
 /datum/species/on_species_gain(mob/living/carbon/C, datum/species/old_species, pref_load)

@@ -74,15 +74,15 @@
 		if(data[achievement_type]) //You already unlocked it so don't bother running the unlock proc
 			return
 		data[achievement_type] = TRUE
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		A.inform_user(user)
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 		A.on_unlock(user) //Only on default achievement, as scores keep going up.
 	else if(istype(A, /datum/award/score))
 		data[achievement_type] += value
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		A.inform_user(user)
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 
 ///Getter for the status/score of an achievement
 /datum/achievement_data/proc/get_achievement_status(achievement_type)

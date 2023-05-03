@@ -1,4 +1,4 @@
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /proc/generate_possible_values_for_sprite_accessories_on_head(accessories)
 	var/list/values = possible_values_for_sprite_accessory_list(accessories)
 
@@ -31,12 +31,12 @@
 	relevant_species_trait = EYECOLOR
 
 /datum/preference/color/eye_color/apply_to_human(mob/living/carbon/human/target, value)
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	target.eye_color = value
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	target.left_eye_color = value
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 
 	var/obj/item/organ/eyes/eyes_organ = target.getorgan(/obj/item/organ/eyes)
 	if (istype(eyes_organ))

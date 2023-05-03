@@ -8,9 +8,9 @@
 /obj/item/clothing/suit/space/stray
 	name = "\"Mentalidade Presidente\" type V combat-ready biosuit"
 	desc = "A type V ballistic-armored biosuit coming straight from the depths of shit, protects against all biological hazards and is equipped with hard, calloused organic platings."
-	icon = 'modular_septic/icons/obj/clothing/suits.dmi'
+	icon = 'oworld/icons/obj/clothing/suits.dmi'
 	icon_state = "yoinky"
-	worn_icon = 'modular_septic/icons/mob/clothing/suit.dmi'
+	worn_icon = 'oworld/icons/mob/clothing/suit.dmi'
 	worn_icon_state = "yoinky"
 	armor_broken_sound = "heavy"
 	armor_damaged_sound = "heavy"
@@ -38,15 +38,15 @@
 /obj/item/clothing/suit/space/stray/Initialize(mapload)
 	. = ..()
 	LoadComponent(/datum/component/shuffling, list(
-				'modular_septic/sound/armor/heavygear_stereo1.ogg'=1,
-				'modular_septic/sound/armor/heavygear_stereo2.ogg'=1), 42, falloff_exponent = 20)
+				'oworld/sound/armor/heavygear_stereo1.ogg'=1,
+				'oworld/sound/armor/heavygear_stereo2.ogg'=1), 42, falloff_exponent = 20)
 
 /obj/item/clothing/head/helmet/space/stray
 	name = "\"Mentalidade Presidente\" type V combat-ready biosuit helmet"
 	desc = "A type V ballistic-armored biosuit helmet coming straight from the depths of shit, protects against all biological hazards and is equipped with hard, calloused organic platings."
-	icon = 'modular_septic/icons/obj/clothing/hats.dmi'
+	icon = 'oworld/icons/obj/clothing/hats.dmi'
 	icon_state = "sploinky"
-	worn_icon = 'modular_septic/icons/mob/clothing/head.dmi'
+	worn_icon = 'oworld/icons/mob/clothing/head.dmi'
 	worn_icon_state = "sploinky"
 	armor_broken_sound = "heavy"
 	armor_damaged_sound = "heavy"

@@ -55,24 +55,24 @@
 			initialized = TRUE
 	else
 		payload_type = projectile_payload
-		/* SEPTIC EDIT REMOVAL
+		/* OWORLD EDIT REMOVAL
 		RegisterSignal(target, COMSIG_PROJECTILE_SELF_ON_HIT, .proc/checkEmbedProjectile)
 		*/
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		RegisterSignal(target, COMSIG_PROJECTILE_TRY_EMBED, .proc/projectile_try_embed)
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 
 /datum/element/embed/Detach(obj/target)
 	. = ..()
 	if(isitem(target))
 		UnregisterSignal(target, list(COMSIG_MOVABLE_IMPACT_ZONE, COMSIG_ELEMENT_ATTACH, COMSIG_MOVABLE_IMPACT, COMSIG_PARENT_EXAMINE, COMSIG_EMBED_TRY_FORCE, COMSIG_ITEM_DISABLE_EMBED))
 	else
-		/* SEPTIC EDIT REMOVAL
+		/* OWORLD EDIT REMOVAL
 		UnregisterSignal(target, list(COMSIG_PROJECTILE_SELF_ON_HIT, COMSIG_ELEMENT_ATTACH))
 		*/
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		UnregisterSignal(target, list(COMSIG_PROJECTILE_TRY_EMBED, COMSIG_ELEMENT_ATTACH))
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 
 /// Checking to see if we're gonna embed into a human
 /datum/element/embed/proc/checkEmbed(obj/item/weapon, mob/living/carbon/victim, hit_zone, datum/thrownthing/throwingdatum, forced=FALSE)
@@ -108,7 +108,7 @@
 		return
 
 	var/obj/item/bodypart/limb = victim.get_bodypart(hit_zone) || pick(victim.bodyparts)
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	victim.AddComponent(/datum/component/embedded,\
 		weapon,\
 		throwingdatum,\
@@ -124,7 +124,7 @@
 		jostle_pain_mult = jostle_pain_mult,\
 		pain_stam_pct = pain_stam_pct)
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	var/supply_injury = limb.last_injury
 	if(!weapon.isEmbedHarmless() && (!limb.last_injury || !(limb.last_injury.damage_type in list(WOUND_SLASH, WOUND_PIERCE))) )
 		supply_injury = limb.create_injury(WOUND_PIERCE, weapon.w_class * 4)
@@ -145,7 +145,7 @@
 		pain_stam_pct = pain_stam_pct,\
 		supplied_injury = supply_injury,\
 		)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 
 	return TRUE
 
@@ -165,7 +165,7 @@
 ///Someone inspected our embeddable item
 /datum/element/embed/proc/examined(obj/item/I, mob/user, list/examine_list)
 	SIGNAL_HANDLER
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(I.isEmbedHarmless())
 		examine_list += "[I] feels sticky, and could probably get stuck to someone if thrown properly!"
 	else

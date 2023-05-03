@@ -165,9 +165,9 @@
 		C.Knockdown(20)
 
 /mob/living/simple_animal/bot/cleanbot/attackby(obj/item/W, mob/living/user, params)
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	var/list/modifiers = params2list(params)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	if(W.GetID())
 		if(bot_core.allowed(user) && !open && !emagged)
 			locked = !locked
@@ -179,12 +179,12 @@
 				to_chat(user, span_warning("Please close the access panel before locking it."))
 			else
 				to_chat(user, span_notice("\The [src] doesn't seem to respect your authority."))
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	else if(istype(W, /obj/item/knife) && !user.combat_mode)
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	else if(istype(W, /obj/item/knife) && IS_HELP_INTENT(user, modifiers))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		to_chat(user, span_notice("You start attaching \the [W] to \the [src]..."))
 		if(do_after(user, 25, target = src))
 			deputize(W, user)

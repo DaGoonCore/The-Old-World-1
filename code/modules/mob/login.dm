@@ -33,7 +33,7 @@
 	world.update_status()
 	client.screen = list() //remove hud items just in case
 	client.images = list()
-	//client.set_right_click_menu_mode(shift_to_open_context_menu) //SEPTIC EDIT REMOVAL
+	//client.set_right_click_menu_mode(shift_to_open_context_menu) //OWORLD EDIT REMOVAL
 
 	if(!hud_used)
 		create_mob_hud()
@@ -82,12 +82,12 @@
 		if(client.view_size)
 			client.view_size.resetToDefault() // Resets the client.view in case it was changed.
 		else
-			/* SEPTIC EDIT REMOVAL
+			/* OWORLD EDIT REMOVAL
 			client.change_view(getScreenSize(client.prefs.read_preference(/datum/preference/toggle/widescreen)))
 			*/
-			//SEPTIC EDIT BEGIN
+			//OWORLD EDIT BEGIN
 			client.change_view(getScreenSize(client.prefs?.read_preference(/datum/preference/toggle/widescreen)))
-			//SEPTIC EDIT END
+			//OWORLD EDIT END
 
 		if(client.player_details.player_actions.len)
 			for(var/datum/action/A in client.player_details.player_actions)

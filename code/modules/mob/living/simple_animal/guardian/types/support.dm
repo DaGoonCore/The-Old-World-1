@@ -46,10 +46,10 @@
 /mob/living/simple_animal/hostile/guardian/healer/ToggleMode()
 	if(src.loc == summoner)
 		if(toggle)
-			//set_combat_mode(TRUE) //SEPTIC EDIT REMOVAL
-			//SEPTIC EDIT BEGIN
+			//set_combat_mode(TRUE) //OWORLD EDIT REMOVAL
+			//OWORLD EDIT BEGIN
 			SET_HARM_INTENT(src)
-			//SEPTIC EDIT END
+			//OWORLD EDIT END
 			speed = 0
 			damage_coeff = list(BRUTE = 0.7, BURN = 0.7, TOX = 0.7, CLONE = 0.7, STAMINA = 0, OXY = 0.7)
 			melee_damage_lower = 15
@@ -57,10 +57,10 @@
 			to_chat(src, "[span_danger("<B>You switch to combat mode.")]</B>")
 			toggle = FALSE
 		else
-			//set_combat_mode(FALSE) //SEPTIC EDIT REMOVAL
-			//SEPTIC EDIT BEGIN
+			//set_combat_mode(FALSE) //OWORLD EDIT REMOVAL
+			//OWORLD EDIT BEGIN
 			SET_HELP_INTENT(src)
-			//SEPTIC EDIT END
+			//OWORLD EDIT END
 			speed = 1
 			damage_coeff = list(BRUTE = 1, BURN = 1, TOX = 1, CLONE = 1, STAMINA = 0, OXY = 1)
 			melee_damage_lower = 0

@@ -1,10 +1,10 @@
 /obj/item/clothing/suit/armor/denominator
 	name = "\"Loucura\" type IV armored denominator suit"
 	desc = "A type IV full body armored suit for protection against unknown forces, fire, and high-powered energy firearms."
-	icon = 'modular_septic/icons/obj/clothing/suits.dmi'
-	worn_icon = 'modular_septic/icons/mob/clothing/suit.dmi'
-	lefthand_file = 'modular_septic/icons/mob/inhands/clothing/clothing_lefthand.dmi'
-	righthand_file = 'modular_septic/icons/mob/inhands/clothing/clothing_righthand.dmi'
+	icon = 'oworld/icons/obj/clothing/suits.dmi'
+	worn_icon = 'oworld/icons/mob/clothing/suit.dmi'
+	lefthand_file = 'oworld/icons/mob/inhands/clothing/clothing_lefthand.dmi'
+	righthand_file = 'oworld/icons/mob/inhands/clothing/clothing_righthand.dmi'
 	icon_state = "deno"
 	worn_icon_state = "deno"
 	armor_broken_sound = "heavy"
@@ -35,8 +35,8 @@
 	. = ..()
 	var/datum/component/shuffling/shuffling = GetComponent(/datum/component/shuffling)
 	if(shuffling)
-		shuffling.override_squeak_sounds = list('modular_septic/sound/armor/heavygear_stereo1.ogg'=1,
-												'modular_septic/sound/armor/heavygear_stereo2.ogg'=1)
+		shuffling.override_squeak_sounds = list('oworld/sound/armor/heavygear_stereo1.ogg'=1,
+												'oworld/sound/armor/heavygear_stereo2.ogg'=1)
 		shuffling.volume = 20
 		shuffling.sound_falloff_exponent = 20
 

@@ -1,7 +1,7 @@
 /// Spilling wounds
 /datum/wound/spill
 	name = "Spill"
-	sound_effect = list('modular_septic/sound/gore/spill1.ogg', 'modular_septic/sound/gore/spill2.ogg')
+	sound_effect = list('oworld/sound/gore/spill1.ogg', 'oworld/sound/gore/spill2.ogg')
 	severity = WOUND_SEVERITY_CRITICAL
 
 	wound_type = WOUND_SPILL
@@ -54,7 +54,7 @@
 	qdel(src)
 
 /datum/wound/spill/brain/proc/debrain_animation(mob/living/carbon/debrained)
-	var/image/debraining_overlay = image('modular_septic/icons/mob/human/overlays/gore.dmi', "brain_bust")
+	var/image/debraining_overlay = image('oworld/icons/mob/human/overlays/gore.dmi', "brain_bust")
 	debrained.overlays += debraining_overlay
 	sleep(0.8 SECONDS)
 	if(QDELETED(debrained))
@@ -133,7 +133,7 @@
 		var/turf/drop_location = victim.drop_location()
 		if(istype(drop_location))
 			gut.forceMove(victim.drop_location())
-			victim.AddComponent(/datum/component/rope, gut, 'modular_septic/icons/effects/beam.dmi', "gut_beam2", 3, TRUE, /obj/effect/ebeam/gut, CALLBACK(victim, /mob/living/carbon/proc/gut_cut))
+			victim.AddComponent(/datum/component/rope, gut, 'oworld/icons/effects/beam.dmi', "gut_beam2", 3, TRUE, /obj/effect/ebeam/gut, CALLBACK(victim, /mob/living/carbon/proc/gut_cut))
 		else
 			qdel(gut)
 	for(var/obj/item/grab/grabber as anything in new_limb.grasped_by)

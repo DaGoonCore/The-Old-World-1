@@ -2,14 +2,14 @@
 #define DEFAULT_ANNOUNCEMENT_SOUND "default_announcement"
 
 /// Preset central command names to chose from for centcom reports.
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 #define CENTCOM_PRESET "Central Command"
 #define SYNDICATE_PRESET "The Syndicate"
 */
-//SEPTIC EDIT BEGIN
+//OWORLD EDIT BEGIN
 #define CENTCOM_PRESET "ZoomTech Operational Command"
 #define SYNDICATE_PRESET "ITOBE"
-//SEPTIC EDIT END
+//OWORLD EDIT END
 #define WIZARD_PRESET "The Wizard Federation"
 #define CUSTOM_PRESET "Custom Command Name"
 

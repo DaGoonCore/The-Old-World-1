@@ -125,21 +125,21 @@
 		return
 
 /obj/structure/displaycase/attackby(obj/item/W, mob/living/user, params)
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	var/list/modifiers = params2list(params)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	if(W.GetID() && !broken && openable)
 		if(allowed(user))
 			to_chat(user,  span_notice("You [open ? "close":"open"] [src]."))
 			toggle_lock(user)
 		else
 			to_chat(user, span_alert("Access denied."))
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	else if(W.tool_behaviour == TOOL_WELDER && !user.combat_mode && !broken)
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	else if((W.tool_behaviour == TOOL_WELDER) && IS_HELP_INTENT(user, modifiers) && !broken)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		if(atom_integrity < max_integrity)
 			if(!W.tool_start_check(user, amount=5))
 				return
@@ -211,12 +211,12 @@
 	    //prevents remote "kicks" with TK
 		if (!Adjacent(user))
 			return
-		/* SEPTIC EDIT REMOVAL
+		/* OWORLD EDIT REMOVAL
 		if (!user.combat_mode)
 		*/
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		if(IS_HELP_INTENT(user, modifiers))
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 			if(!user.is_blind())
 				user.examinate(src)
 			return
@@ -321,10 +321,10 @@
 
 	if(!user.Adjacent(src)) //no TK museology
 		return
-	//if(user.combat_mode) //SEPTIC EDIT REMOVAL
-	//SEPTIC EDIT BEGIN
+	//if(user.combat_mode) //OWORLD EDIT REMOVAL
+	//OWORLD EDIT BEGIN
 	if(!IS_HELP_INTENT(user, params2list(params)))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		return ..()
 	if(W.tool_behaviour == TOOL_WELDER && !broken)
 		return ..()
@@ -566,10 +566,10 @@
 
 /obj/structure/displaycase/forsale/wrench_act(mob/living/user, obj/item/I)
 	. = ..()
-	//if(open && !user.combat_mode) //SEPTIC EDIT REMOVAL
-	//SEPTIC EDIT BEGIN
+	//if(open && !user.combat_mode) //OWORLD EDIT REMOVAL
+	//OWORLD EDIT BEGIN
 	if(open && IS_HELP_INTENT(user, null))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		if(anchored)
 			to_chat(user, span_notice("You start unsecuring [src]..."))
 		else
@@ -583,12 +583,12 @@
 				to_chat(user, span_notice("You secure [src]."))
 			set_anchored(!anchored)
 			return TRUE
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	else if(!open && !user.combat_mode)
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	else if(!open && IS_HELP_INTENT(user, null))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		to_chat(user, span_notice("[src] must be open to move it."))
 		return
 

@@ -758,10 +758,10 @@ GLOBAL_LIST_EMPTY(allCasters)
 				to_chat(user, span_notice("You [anchored ? "un" : ""]secure [name]."))
 				new /obj/item/wallframe/newscaster(loc)
 			qdel(src)
-	else if(I.tool_behaviour == TOOL_WELDER && !user.combat_mode) //SEPTIC EDIT REMOVAL
-	//SEPTIC EDIT BEGIN
+	else if(I.tool_behaviour == TOOL_WELDER && !user.combat_mode) //OWORLD EDIT REMOVAL
+	//OWORLD EDIT BEGIN
 	else if(I.tool_behaviour == TOOL_WELDER && !IS_HELP_INTENT(user, params2list(params)))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		if(machine_stat & BROKEN)
 			if(!I.tool_start_check(user, amount=0))
 				return
@@ -805,9 +805,9 @@ GLOBAL_LIST_EMPTY(allCasters)
 
 
 /obj/machinery/newscaster/attack_paw(mob/living/user, list/modifiers)
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	if(IS_HELP_INTENT(user, modifiers))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		to_chat(user, span_warning("The newscaster controls are far too complicated for your tiny brain!"))
 	else
 		take_damage(5, BRUTE, MELEE)

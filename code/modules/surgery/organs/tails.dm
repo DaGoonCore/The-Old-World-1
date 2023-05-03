@@ -1,5 +1,5 @@
 // Note: tails only work in humans. They use human-specific parameters and rely on human code for displaying.
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /obj/item/organ/tail
 	name = "tail"
 	desc = "A severed tail. What did you cut this off of?"

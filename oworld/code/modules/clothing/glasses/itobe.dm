@@ -1,10 +1,10 @@
 /obj/item/clothing/glasses/itobe
 	name = "ITOBE eyepiece"
 	desc = "A device served to enhance acrobatics on the battlefield, similar to the slaughter mask manufactored by the death sec unit, but with better materials."
-	icon = 'modular_septic/icons/obj/clothing/glasses.dmi'
+	icon = 'oworld/icons/obj/clothing/glasses.dmi'
 	base_icon_state = "soldat-s"
 	icon_state = "soldat-s"
-	worn_icon = 'modular_septic/icons/mob/clothing/eyes.dmi'
+	worn_icon = 'oworld/icons/mob/clothing/eyes.dmi'
 	worn_icon_state = "soldat-s"
 	actions_types = list(/datum/action/item_action/toggle)
 	flash_protect = FLASH_PROTECTION_WELDER

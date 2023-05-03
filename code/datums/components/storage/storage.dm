@@ -93,12 +93,12 @@
 	RegisterSignal(parent, COMSIG_ITEM_PRE_ATTACK, .proc/preattack_intercept)
 	RegisterSignal(parent, COMSIG_ITEM_ATTACK_SELF, .proc/attack_self)
 	RegisterSignal(parent, COMSIG_ITEM_PICKUP, .proc/signal_on_pickup)
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	RegisterSignal(parent, COMSIG_ITEM_EQUIPPED, .proc/update_actions)
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	RegisterSignal(parent, COMSIG_ITEM_EQUIPPED, .proc/on_equipped)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	RegisterSignal(parent, COMSIG_MOVABLE_POST_THROW, .proc/close_all)
 	RegisterSignal(parent, COMSIG_MOVABLE_MOVED, .proc/on_move)
 
@@ -197,12 +197,12 @@
 	if(locked)
 		to_chat(M, span_warning("[parent] seems to be locked!"))
 		return FALSE
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	if(isitem(parent))
 		var/obj/item/item_parent = parent
 		if(!worn_check(item_parent, M))
 			return FALSE
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	if((M.get_active_held_item() == parent) && allow_quick_empty)
 		INVOKE_ASYNC(src, .proc/quick_empty, M)
 
@@ -216,10 +216,10 @@
 		to_chat(M, span_warning("[parent] seems to be locked!"))
 		return FALSE
 	var/obj/item/I = O
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	if(!worn_check(parent, M))
 		return
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	if(collection_mode == COLLECT_ONE)
 		if(can_be_inserted(I, null, M))
 			handle_item_insertion(I, null, M)
@@ -253,12 +253,12 @@
 		if(user.active_storage != src_object)
 			if(I.on_found(user))
 				break
-		/* SEPTIC EDIT REMOVAL
+		/* OWORLD EDIT REMOVAL
 		if(can_be_inserted(I,FALSE,user))
 		*/
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		if(can_be_inserted(I, FALSE, user, TRUE))
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 			handle_item_insertion(I, TRUE, user)
 		if (TICK_CHECK)
 			progress.update(progress.goal - things.len)
@@ -297,12 +297,12 @@
 	if(locked)
 		to_chat(M, span_warning("[parent] seems to be locked!"))
 		return FALSE
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	if(isitem(A))
 		var/obj/item/I = parent
 		if(!worn_check(I, M))
 			return FALSE
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	A.add_fingerprint(M)
 	to_chat(M, span_notice("You start dumping out [parent]."))
 	var/turf/T = get_turf(A)
@@ -535,19 +535,19 @@
 		if(locked)
 			to_chat(M, span_warning("[parent] seems to be locked!"))
 			return FALSE
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		if(isitem(A))
 			var/obj/item/I = parent
 			if(!worn_check(I, M))
 				return FALSE
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 		if(dump_destination.storage_contents_dump_act(src, M))
-			/* SEPTIC EDIT REMOVAL
+			/* OWORLD EDIT REMOVAL
 			playsound(A, "rustle", 50, TRUE, -5)
 			*/
-			//SEPTIC EDIT BEGIN
+			//OWORLD EDIT BEGIN
 			playsound(A, rustle_sound, 50, TRUE, -5)
-			//SEPTIC EDIT END
+			//OWORLD EDIT END
 			return TRUE
 	return FALSE
 
@@ -623,12 +623,12 @@
 		return
 	if(A.loc != M)
 		return
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	playsound(A, "rustle", 50, TRUE, -5)
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	playsound(A, rustle_sound, 50, TRUE, -5)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	if(istype(over_object, /atom/movable/screen/inventory/hand))
 		var/atom/movable/screen/inventory/hand/H = over_object
 		M.putItemFromInventoryInHandIfPossible(A, H.held_index)
@@ -640,14 +640,14 @@
 	if(!istype(M))
 		return FALSE
 	A.add_fingerprint(M)
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(locked && !force)
 		to_chat(M, span_warning("[parent] seems to be locked!"))
 		return FALSE
 	if(force || M.CanReach(parent, view_only = TRUE))
 		show_to(M)
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	if(!force)
 		if(locked)
 			to_chat(M, "<span class='warning'>[parent] seems to be locked!</span>")
@@ -659,7 +659,7 @@
 		if(!M.CanReach(parent, view_only = TRUE))
 			return FALSE
 	show_to(M)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 
 /datum/component/storage/proc/mousedrop_receive(datum/source, atom/movable/O, mob/M)
 	SIGNAL_HANDLER
@@ -669,12 +669,12 @@
 		if(iscarbon(M) || isdrone(M))
 			var/mob/living/L = M
 			if(!L.incapacitated() && I == L.get_active_held_item())
-				/* SEPTIC EDIT REMOVAL
+				/* OWORLD EDIT REMOVAL
 				if(!SEND_SIGNAL(I, COMSIG_CONTAINS_STORAGE) && can_be_inserted(I, FALSE)) //If it has storage it should be trying to dump, not insert.
 				*/
-				//SEPTIC EDIT BEGIN
+				//OWORLD EDIT BEGIN
 				if(!SEND_SIGNAL(I, COMSIG_CONTAINS_STORAGE) && can_be_inserted(I, FALSE, M, TRUE))
-				//SEPTIC EDIT END
+				//OWORLD EDIT END
 					handle_item_insertion(I, FALSE, L)
 
 //This proc return 1 if the item can be picked up and 0 if it can't.
@@ -758,16 +758,16 @@
 /datum/component/storage/proc/mob_item_insertion_feedback(mob/user, mob/M, obj/item/I, override = FALSE)
 	if(silent && !override)
 		return
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(rustle_sound)
 		playsound(parent, "rustle", 50, TRUE, -5)
 	for(var/mob/viewing in viewers(user, null))
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	if(rustle_sound)
 		playsound(parent, rustle_sound, 50, TRUE, -5)
 	for(var/mob/viewing in fov_viewers(world.view, user))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		if(M == viewing)
 			to_chat(usr, span_notice("You put [I] [insert_preposition]to [parent]."))
 		else if(in_range(M, viewing)) //If someone is standing close enough, they can tell what it is...
@@ -816,12 +816,12 @@
 
 	if(!force)
 		if(check_adjacent)
-			/* SEPTIC EDIT REMOVAL
+			/* OWORLD EDIT REMOVAL
 			if(!user || !user.CanReach(destination) || !user.CanReach(parent))
 			*/
-			//SEPTIC EDIT BEGIN
+			//OWORLD EDIT BEGIN
 			if(!user || !user.CanReach(destination) || !user.CanReach(parent) || !worn_check(parent, user))
-			//SEPTIC EDIT END
+			//OWORLD EDIT END
 				return FALSE
 	var/list/taking = typecache_filter_list(contents(), typecacheof(type))
 	if(taking.len > amount)
@@ -864,15 +864,15 @@
 		close(user)
 		. = COMPONENT_CANCEL_ATTACK_CHAIN
 		return
-	/* SEPTIC EDIT BEGIN
+	/* OWORLD EDIT BEGIN
 	if(rustle_sound)
 		playsound(A, "rustle", 50, TRUE, -5)
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	if(!worn_check(A, user, TRUE))
 		return COMPONENT_CANCEL_ATTACK_CHAIN
 	playsound(A, rustle_sound, 50, TRUE, -5)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
@@ -893,10 +893,10 @@
 			to_chat(user, span_warning("[parent] seems to be locked!"))
 		else
 			show_to(user)
-			//SEPTIC EDIT BEGIN
+			//OWORLD EDIT BEGIN
 			if(rustle_sound)
 				playsound(A, rustle_sound, 50, TRUE, -5)
-			//SEPTIC EDIT END
+			//OWORLD EDIT END
 
 
 /datum/component/storage/proc/signal_on_pickup(datum/source, mob/user)
@@ -933,19 +933,19 @@
 
 	. = TRUE
 	var/atom/A = parent
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	if(!worn_check(A, user))
 		return FALSE
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	if(!quickdraw)
 		A.add_fingerprint(user)
 		user_show_to_mob(user)
-		/* SEPTIC EDIT REMOVAL
+		/* OWORLD EDIT REMOVAL
 		playsound(A, "rustle", 50, TRUE, -5)
 		*/
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		playsound(A, rustle_sound, 50, TRUE, -5)
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 		return
 
 	var/obj/item/to_remove = locate() in real_location()

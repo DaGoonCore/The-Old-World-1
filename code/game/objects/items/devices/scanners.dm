@@ -9,7 +9,7 @@ SLIME SCANNER
 GENE SCANNER
 
 */
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 // Describes the three modes of scanning available for health analyzers
 #define SCANMODE_HEALTH 0
 #define SCANMODE_WOUND 1
@@ -101,7 +101,7 @@ GENE SCANNER
 /obj/item/healthanalyzer/suicide_act(mob/living/carbon/user)
 	user.visible_message(span_suicide("[user] begins to analyze [user.p_them()]self with [src]! The display shows that [user.p_theyre()] dead!"))
 	return BRUTELOSS
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /obj/item/healthanalyzer/attack_self(mob/user)
 	scanmode = (scanmode + 1) % SCANMODE_COUNT
 	switch(scanmode)
@@ -405,10 +405,10 @@ GENE SCANNER
 
 		var/cyberimp_detect
 		for(var/obj/item/organ/cyberimp/CI in C.internal_organs)
-			//if(CI.status == ORGAN_ROBOTIC && !CI.syndicate_implant) //SEPTIC EDIT REMOVAL
-			//SEPTIC EDIT BEGIN
+			//if(CI.status == ORGAN_ROBOTIC && !CI.syndicate_implant) //OWORLD EDIT REMOVAL
+			//OWORLD EDIT BEGIN
 			if(CI.status == ORGAN_ROBOTIC && !CI.scanner_hidden)
-			//SEPTIC EDIT END
+			//OWORLD EDIT END
 				cyberimp_detect += "[!cyberimp_detect ? "[CI.get_examine_string(user)]" : ", [CI.get_examine_string(user)]"]"
 		if(cyberimp_detect)
 			render_list += "<span class='notice ml-1'>Detected cybernetic modifications:</span>\n"
@@ -921,7 +921,7 @@ GENE SCANNER
 /obj/item/scanner_wand/proc/return_patient()
 	var/returned_target = selected_target
 	return returned_target
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 #undef SCANMODE_HEALTH
 #undef SCANMODE_WOUND
 #undef SCANMODE_COUNT

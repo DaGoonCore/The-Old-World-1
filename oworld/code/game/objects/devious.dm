@@ -6,7 +6,7 @@
 	name = "Sounding Rod"
 	desc = "UUUUUUUUUUUUUUUUUA\n\
 			AUUUUUUUUUUUUUUUUUUUUUUUUU"
-	icon = 'modular_septic/icons/obj/items/deviouslick.dmi'
+	icon = 'oworld/icons/obj/items/deviouslick.dmi'
 	icon_state = "OOOOOOO"
 	inhand_icon_state = "buildpipe"
 	item_flags = NO_PIXEL_RANDOM_DROP | NO_ANGLE_RANDOM_DROP
@@ -25,14 +25,14 @@
 	var/sound_to_play
 	//make uuuuuuua sound
 	if(uuuua)
-		sound_to_play = 'modular_septic/sound/memeshit/uuua.ogg'
+		sound_to_play = 'oworld/sound/memeshit/uuua.ogg'
 		SEND_SIGNAL(user, COMSIG_ADD_MOOD_EVENT, "sounding[flip_count]", /datum/mood_event/sounding_ua)
 	else
-		sound_to_play = 'modular_septic/sound/memeshit/auuu.ogg'
+		sound_to_play = 'oworld/sound/memeshit/auuu.ogg'
 		SEND_SIGNAL(user, COMSIG_ADD_MOOD_EVENT, "sounding[flip_count]", /datum/mood_event/sounding_au)
 	INVOKE_ASYNC(src, .proc/do_sounding, user, sound_to_play)
 
-/obj/item/deviouslick/sounding/proc/do_sounding(mob/user, sound_to_play = 'modular_septic/sound/memeshit/uuua.ogg')
+/obj/item/deviouslick/sounding/proc/do_sounding(mob/user, sound_to_play = 'oworld/sound/memeshit/uuua.ogg')
 	doing_animation = TRUE
 	var/duration = 1 SECONDS
 	var/smoothness = 4
@@ -63,10 +63,10 @@
 /obj/item/deviouslick/soapdispenser
 	name = "Soap Dispensed"
 	desc = "<b>DEVIOUS.</b>"
-	icon = 'modular_septic/icons/obj/items/deviouslick.dmi'
+	icon = 'oworld/icons/obj/items/deviouslick.dmi'
 	icon_state = "soapdispenser"
-	lefthand_file = 'modular_septic/icons/obj/items/inhands/items_and_weapons_lefthand.dmi'
-	righthand_file = 'modular_septic/icons/obj/items/inhands/items_and_weapons_righthand.dmi'
+	lefthand_file = 'oworld/icons/obj/items/inhands/items_and_weapons_lefthand.dmi'
+	righthand_file = 'oworld/icons/obj/items/inhands/items_and_weapons_righthand.dmi'
 	inhand_icon_state = "dispenser"
 	tetris_width = 96
 	tetris_height = 96
@@ -75,7 +75,7 @@
 	name = "Soap Dispenser mount"
 	desc = "A mount for a soap dispenser. Commonly seen in buisnesses, schools, malls and pools. Basically everywhere that has a bathroom, you'd have one of these. \
 	Your peers would be disappointed in you If you did a <b>devious lick.</b>"
-	icon = 'modular_septic/icons/obj/structures/deviouslick.dmi'
+	icon = 'oworld/icons/obj/structures/deviouslick.dmi'
 	icon_state = "soapmount_occupied"
 	anchored = TRUE
 	density = FALSE
@@ -131,7 +131,7 @@
 /obj/item/deviouslick/broken_lcd
 	name = "broken LCD"
 	desc = "A shattered LCD with valuable components inside. Barely, valuable. Who the hell would steal this?"
-	icon = 'modular_septic/icons/obj/items/deviouslick.dmi'
+	icon = 'oworld/icons/obj/items/deviouslick.dmi'
 	icon_state = "lcd"
 	tetris_width = 64
 	tetris_height = 32

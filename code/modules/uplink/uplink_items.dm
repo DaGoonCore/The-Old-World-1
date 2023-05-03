@@ -1549,7 +1549,7 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 	surplus = 75
 	restricted = TRUE
 
-//SEPTIC EDIT BEGIN
+//OWORLD EDIT BEGIN
 /*
 /datum/uplink_item/device_tools/syndietome
 	name = "Syndicate Tome"
@@ -1560,7 +1560,7 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 	item = /obj/item/storage/book/bible/syndicate
 	cost = 5
 */
-//SEPTIC EDIT END
+//OWORLD EDIT END
 
 /datum/uplink_item/device_tools/thermal
 	name = "Thermal Imaging Glasses"
@@ -1771,7 +1771,7 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 	item = /obj/item/storage/box/gorillacubes
 	cost = 6
 	restricted_roles = list("Geneticist", "Research Director")
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /datum/uplink_item/role_restricted/brainwash_disk
 	name = "Brainwashing Surgery Program"
 	desc = "A disk containing the procedure to perform a brainwashing surgery, allowing you to implant an objective onto a target. \

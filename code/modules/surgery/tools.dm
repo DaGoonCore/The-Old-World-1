@@ -1,4 +1,4 @@
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /obj/item/retractor
 	name = "retractor"
 	desc = "Retracts stuff."

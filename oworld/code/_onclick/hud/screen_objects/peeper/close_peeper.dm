@@ -1,6 +1,6 @@
 /atom/movable/screen/peeper_close
 	name = "close peeper"
-	icon = 'modular_septic/icons/hud/quake/peeper.dmi'
+	icon = 'oworld/icons/hud/quake/peeper.dmi'
 	icon_state = "close"
 	base_icon_state = "close"
 	plane = PEEPER_PLANE

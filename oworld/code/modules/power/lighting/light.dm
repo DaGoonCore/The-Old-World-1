@@ -1,6 +1,6 @@
 /obj/machinery/light
-	icon = 'modular_septic/icons/obj/machinery/lighting.dmi'
-	overlay_icon = 'modular_septic/icons/obj/machinery/lighting_overlays.dmi'
+	icon = 'oworld/icons/obj/machinery/lighting.dmi'
+	overlay_icon = 'oworld/icons/obj/machinery/lighting_overlays.dmi'
 	plane = GAME_PLANE_UPPER
 	layer = WALL_OBJ_LAYER
 	var/wall_mounted = TRUE

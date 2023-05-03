@@ -1,9 +1,9 @@
 /obj/item/grab
 	name = "grab"
-	icon = 'modular_septic/icons/hud/quake/grab.dmi'
+	icon = 'oworld/icons/hud/quake/grab.dmi'
 	icon_state = "blank"
 	base_icon_state = "blank"
-	worn_icon = 'modular_septic/icons/hud/quake/grab.dmi'
+	worn_icon = 'oworld/icons/hud/quake/grab.dmi'
 	worn_icon_state = "blank"
 	item_flags = DROPDEL | NOBLUDGEON | ABSTRACT | HAND_ITEM
 	slot_flags = ITEM_SLOT_MASK
@@ -75,7 +75,7 @@
 	. = ..()
 	if(owner)
 		if(victim)
-			playsound(victim, 'modular_septic/sound/attack/thudswoosh.ogg', 50, 1, -1)
+			playsound(victim, 'oworld/sound/attack/thudswoosh.ogg', 50, 1, -1)
 			var/grab_wording = (bite_grab ? "biting" : "grabbing")
 			if(owner == victim)
 				victim.visible_message(span_warning("<b>[owner]</b> stops [grab_wording] [victim.p_themselves()] by [victim.p_their()] [grasped_part.name]!"),\
@@ -259,7 +259,7 @@
 		if(biting_grab)
 			playsound(victim, owner.dna.species.bite_sound, 75, FALSE)
 		else
-			playsound(victim, 'modular_septic/sound/attack/grapple.wav', 75, FALSE)
+			playsound(victim, 'oworld/sound/attack/grapple.wav', 75, FALSE)
 	/// The owner always has to be a carbon - Thus selfgrab always has a bodypart being grasped
 	if(owner == victim)
 		if(biting_grab)

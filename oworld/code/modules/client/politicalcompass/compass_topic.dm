@@ -35,7 +35,7 @@
 	data["final_color"] = get_color()
 	var/flag = get_flag()
 	if(flag)
-		var/icon/iconflag = icon('modular_septic/icons/ui_icons/chat/ooc.dmi', get_flag())
+		var/icon/iconflag = icon('oworld/icons/ui_icons/chat/ooc.dmi', get_flag())
 		data["flagicon64"] = icon2base64(iconflag)
 	return data
 

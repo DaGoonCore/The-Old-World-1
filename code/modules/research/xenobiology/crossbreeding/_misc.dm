@@ -44,12 +44,12 @@ Slimecrossing Items
 		var/obj/item/bodypart/part = _part
 		if(dont_chop[part.body_zone])
 			continue
-		/* SEPTIC EDIT REMOVAL
+		/* OWORLD EDIT REMOVAL
 		part.drop_limb(TRUE)
 		*/
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		part.drop_limb(TRUE, FALSE, TRUE)
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 
 /mob/living/carbon/proc/save_bodyparts()
 	var/list/datum/saved_bodypart/ret = list()

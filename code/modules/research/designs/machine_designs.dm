@@ -290,7 +290,7 @@
 	category = list("Research Machinery")
 	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE
 
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /datum/design/board/cyborgrecharger
 	name = "Machine Design (Cyborg Recharger Board)"
 	desc = "The circuit board for a Cyborg Recharger."

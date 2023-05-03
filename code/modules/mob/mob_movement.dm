@@ -74,9 +74,9 @@
 		next_move_dir_sub = 0
 	var/old_move_delay = move_delay
 	move_delay = world.time + world.tick_lag //this is here because Move() can now be called mutiple times per tick
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	var/old_loc = mob.loc
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	if(!mob || !mob.loc)
 		return FALSE
 	if(!new_loc || !direct)
@@ -147,12 +147,12 @@
 	. = ..()
 
 	if((direct & (direct - 1)) && mob.loc == new_loc) //moved diagonally successfully
-		/* SEPTIC EDIT REMOVAL
+		/* OWORLD EDIT REMOVAL
 		add_delay *= 2
 		*/
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		add_delay *= SQRT_2
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 	mob.set_glide_size(DELAY_TO_GLIDE_SIZE(add_delay))
 	move_delay += add_delay
 	if(.) // If mob is null here, we deserve the runtime
@@ -161,12 +161,12 @@
 
 		// At this point we've moved the client's attached mob. This is one of the only ways to guess that a move was done
 		// as a result of player input and not because they were pulled or any other magic.
-		/* SEPTIC EDIT REMOVAL
+		/* OWORLD EDIT REMOVAL
 		SEND_SIGNAL(mob, COMSIG_MOB_CLIENT_MOVED)
 		*/
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		SEND_SIGNAL(mob, COMSIG_MOB_CLIENT_MOVED, src, direct, new_loc, old_loc, add_delay)
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 
 	var/atom/movable/P = mob.pulling
 	if(P && !ismob(P) && P.density)
@@ -373,7 +373,7 @@
  *
  * (bound to 8) - repeated presses toggles through head - eyes - mouth
  */
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 ///Hidden verb to target the head, bound to 8
 /client/verb/body_toggle_head()
 	set name = "body-toggle-head"
@@ -503,7 +503,7 @@
 	if(hud_used?.static_inventory)
 		for(var/atom/movable/screen/mov_intent/selector in hud_used.static_inventory)
 			selector.update_appearance()
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 ///Moves a mob upwards in z level
 /mob/verb/up()
 	set name = "Move Upwards"

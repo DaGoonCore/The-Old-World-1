@@ -1,4 +1,4 @@
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 //open shell
 /datum/surgery_step/mechanic_open
 	name = "unscrew shell"

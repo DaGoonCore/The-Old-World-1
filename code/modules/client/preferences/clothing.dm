@@ -1,4 +1,4 @@
-/* SEPTIC EDiT REMOVAL
+/* OWORLD EDiT REMOVAL
 /proc/generate_values_for_underwear(list/accessory_list, list/icons, color)
 	var/icon/lower_half = icon('icons/blanks/32x32.dmi', "nothing")
 

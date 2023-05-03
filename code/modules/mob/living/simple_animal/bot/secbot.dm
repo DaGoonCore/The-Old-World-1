@@ -203,10 +203,10 @@ Auto Patrol: []"},
 	return
 
 /mob/living/simple_animal/bot/secbot/attack_hand(mob/living/carbon/human/user, list/modifiers)
-	//if(user.combat_mode) //SEPTIC EDIT REMOVAL
-	//SEPTIC EDIT BEGIN
+	//if(user.combat_mode) //OWORLD EDIT REMOVAL
+	//OWORLD EDIT BEGIN
 	if(!IS_HELP_INTENT(user, modifiers))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		retaliate(user)
 		if(special_retaliate_after_attack(user))
 			return
@@ -226,10 +226,10 @@ Auto Patrol: []"},
 	..()
 	if(!on) // Bots won't remember if you hit them while they're off.
 		return
-	//if(W.tool_behaviour == TOOL_WELDER && !user.combat_mode) // Any intent but harm will heal, so we shouldn't get angry. //SEPTIC EDIT REMOVAL
-	//SEPTIC EDIT BEGIN
+	//if(W.tool_behaviour == TOOL_WELDER && !user.combat_mode) // Any intent but harm will heal, so we shouldn't get angry. //OWORLD EDIT REMOVAL
+	//OWORLD EDIT BEGIN
 	if(W.tool_behaviour == TOOL_WELDER && !IS_HARM_INTENT(user, null))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		return
 	if(W.tool_behaviour != TOOL_SCREWDRIVER && (W.force) && (!target) && (W.damtype != STAMINA) ) // Added check for welding tool to fix #2432. Welding tool behavior is handled in superclass.
 		retaliate(user)

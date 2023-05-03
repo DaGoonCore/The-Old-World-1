@@ -30,9 +30,9 @@
 		item.do_messy(duration = 4)
 	step(thrown_atom, get_dir(src, thrown_atom))
 	if(ismob(src) || ismob(thrown_atom))
-		playsound(src, 'modular_septic/sound/effects/colision_bodyalt.ogg', 65, 0)
+		playsound(src, 'oworld/sound/effects/colision_bodyalt.ogg', 65, 0)
 	else
-		playsound(src, pick('modular_septic/sound/effects/colision1.ogg', 'modular_septic/sound/effects/colision2.ogg', 'modular_septic/sound/effects/colision3.ogg', 'modular_septic/sound/effects/colision4.ogg'), 65, 0)
+		playsound(src, pick('oworld/sound/effects/colision1.ogg', 'oworld/sound/effects/colision2.ogg', 'oworld/sound/effects/colision3.ogg', 'oworld/sound/effects/colision4.ogg'), 65, 0)
 
 /// Used to add or reduce germ level on an atom
 /atom/proc/adjust_germ_level(add_germs, minimum_germs = 0, maximum_germs = GERM_LEVEL_MAXIMUM)

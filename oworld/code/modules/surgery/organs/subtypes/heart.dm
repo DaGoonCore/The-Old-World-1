@@ -28,7 +28,7 @@
 	/// If we're not beating that is not a good sign
 	var/beating = TRUE
 	///convulsion sounds
-	var/convulsion_sound = list('modular_septic/sound/emotes/convulse1.wav', 'modular_septic/sound/emotes/convulse2.wav')
+	var/convulsion_sound = list('oworld/sound/emotes/convulse1.wav', 'oworld/sound/emotes/convulse2.wav')
 
 /obj/item/organ/heart/Initialize()
 	. = ..()

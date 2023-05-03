@@ -2,12 +2,12 @@
 	name = "festering ooze"
 	desc = "A black web of pus and viscera."
 	zone = BODY_ZONE_HEAD
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	slot = ORGAN_SLOT_ZOMBIE
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	organ_efficiency = list(ORGAN_SLOT_ZOMBIE = 100)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	icon_state = "blacktumor"
 	var/causes_damage = TRUE
 	var/datum/species/old_species = /datum/species/human

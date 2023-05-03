@@ -5,7 +5,7 @@
 /datum/element/eyestab
 	element_flags = ELEMENT_BESPOKE | ELEMENT_DETACH
 	id_arg_index = 2
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 	/// The amount of damage to do per eyestab
 	var/damage = 7
 

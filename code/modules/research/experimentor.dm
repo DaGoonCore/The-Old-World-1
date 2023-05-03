@@ -108,10 +108,10 @@
 	return TRUE
 
 /obj/machinery/rnd/experimentor/Insert_Item(obj/item/O, mob/living/user)
-	//if(!user.combat_mode) //SEPTIC EDIT REMOVAL
-	//SEPTIC EDIT BEGIN
+	//if(!user.combat_mode) //OWORLD EDIT REMOVAL
+	//OWORLD EDIT BEGIN
 	if(IS_HELP_INTENT(user, null))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		. = 1
 		if(!is_insertion_ready(user))
 			return

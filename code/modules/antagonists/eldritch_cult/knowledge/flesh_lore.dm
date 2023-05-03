@@ -132,12 +132,12 @@
 		if(iscarbon(target))
 			var/mob/living/carbon/carbon_target = target
 			var/obj/item/bodypart/bodypart = pick(carbon_target.bodyparts)
-			/* SEPTIC EDIT REMOVAL
+			/* OWORLD EDIT REMOVAL
 			var/datum/wound/slash/severe/crit_wound = new
 			*/
-			//SEPTIC EDIT BEGIN
+			//OWORLD EDIT BEGIN
 			var/datum/wound/artery/dissect/crit_wound = new
-			//SEPTIC EDIT END
+			//OWORLD EDIT END
 			crit_wound.apply_wound(bodypart)
 
 /datum/eldritch_knowledge/flesh_grasp/proc/remove_ghoul(datum/source)
@@ -180,12 +180,12 @@
 	if(iscarbon(target))
 		var/mob/living/carbon/carbon_target = target
 		var/obj/item/bodypart/bodypart = pick(carbon_target.bodyparts)
-		/* SEPTIC EDIT REMOVAL
+		/* OWORLD EDIT REMOVAL
 		var/datum/wound/slash/severe/crit_wound = new
 		*/
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		var/datum/wound/artery/dissect/crit_wound = new
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 		crit_wound.apply_wound(bodypart)
 
 /datum/eldritch_knowledge/summon/raw_prophet

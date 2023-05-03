@@ -1,6 +1,6 @@
 /atom/movable/screen/special_attack
 	name = "special attack"
-	icon = 'modular_septic/icons/hud/quake/screen_quake.dmi'
+	icon = 'oworld/icons/hud/quake/screen_quake.dmi'
 	icon_state = "act_specialatk"
 	base_icon_state = "act_specialatk"
 	screentip_flags = SCREENTIP_HOVERER_CLICKER

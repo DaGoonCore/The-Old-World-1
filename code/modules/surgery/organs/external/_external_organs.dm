@@ -3,7 +3,7 @@
 * Works in tandem with the /datum/sprite_accessory datum to generate sprites
 * Unlike normal organs, we're actually inside a persons limbs at all times
 */
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /obj/item/organ/external
 	name = "external organ"
 	desc = "An external organ that is too external."

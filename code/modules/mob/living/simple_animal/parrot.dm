@@ -288,10 +288,10 @@ GLOBAL_LIST_INIT(strippable_parrot_items, create_strippable_list(list(
 	..()
 	if(client)
 		return
-	//if(!stat && user.combat_mode) //SEPTIC EDIT REMOVAL
-	//SEPTIC EDIT BEGIN
+	//if(!stat && user.combat_mode) //OWORLD EDIT REMOVAL
+	//OWORLD EDIT BEGIN
 	if(!stat && !IS_HELP_INTENT(user, modifiers))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 
 		icon_state = icon_living //It is going to be flying regardless of whether it flees or attacks
 
@@ -306,10 +306,10 @@ GLOBAL_LIST_INIT(strippable_parrot_items, create_strippable_list(list(
 		else
 			parrot_state |= PARROT_FLEE //Otherwise, fly like a bat out of hell!
 			drop_held_item(0)
-	//if(stat != DEAD && !user.combat_mode) //SEPTIC EDIT REMOVAL
-	//SEPTIC EDIT BEGIN
+	//if(stat != DEAD && !user.combat_mode) //OWORLD EDIT REMOVAL
+	//OWORLD EDIT BEGIN
 	if(stat != DEAD && IS_HELP_INTENT(user, modifiers))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		handle_automated_speech(1) //assured speak/emote
 	return
 
@@ -579,10 +579,10 @@ GLOBAL_LIST_INIT(strippable_parrot_items, create_strippable_list(list(
 		var/mob/living/L = parrot_interest
 		if(melee_damage_upper == 0)
 			melee_damage_upper = parrot_damage_upper
-			//set_combat_mode(TRUE) //SEPTIC EDIT REMOVAL
-			//SEPTIC EDIT BEGIN
+			//set_combat_mode(TRUE) //OWORLD EDIT REMOVAL
+			//OWORLD EDIT BEGIN
 			SET_HARM_INTENT(src)
-			//SEPTIC EDIT END
+			//OWORLD EDIT END
 
 		//If the mob is close enough to interact with
 		if(Adjacent(parrot_interest))
@@ -878,20 +878,20 @@ GLOBAL_LIST_INIT(strippable_parrot_items, create_strippable_list(list(
 
 	if(combat_mode)
 		melee_damage_upper = 0
-		/* SEPTIC EDIT REMOVAL
+		/* OWORLD EDIT REMOVAL
 		set_combat_mode(FALSE)
 		*/
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		SET_HELP_INTENT(src)
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 	else
 		melee_damage_upper = parrot_damage_upper
-		/* SEPTIC EDIT REMOVAL
+		/* OWORLD EDIT REMOVAL
 		set_combat_mode(TRUE)
 		*/
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		SET_HARM_INTENT(src)
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 	to_chat(src, span_notice("You will now [combat_mode ? "Harm" : "Help"] others."))
 	return
 

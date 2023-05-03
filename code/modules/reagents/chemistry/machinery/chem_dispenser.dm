@@ -355,9 +355,9 @@
 				beaker.reagents.ui_interact(usr)
 
 /obj/machinery/chem_dispenser/attackby(obj/item/I, mob/living/user, params)
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	var/list/modifiers = params2list(params)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	if(default_unfasten_wrench(user, I))
 		return
 	if(default_deconstruction_screwdriver(user, icon_state, icon_state, I))
@@ -373,12 +373,12 @@
 		replace_beaker(user, B)
 		to_chat(user, span_notice("You add [B] to [src]."))
 		updateUsrDialog()
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	else if(!user.combat_mode && !istype(I, /obj/item/card/emag))
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	else if(IS_HELP_INTENT(user, modifiers) && !istype(I, /obj/item/card/emag))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		to_chat(user, span_warning("You can't load [I] into [src]!"))
 		return ..()
 	else

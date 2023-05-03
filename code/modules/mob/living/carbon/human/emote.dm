@@ -126,7 +126,7 @@
 	if(H.dna.species.is_wagging_tail())
 		. = null
 
-/* SEPTIC EDIT BEGIN
+/* OWORLD EDIT BEGIN
 /datum/emote/living/carbon/human/wing
 	key = "wing"
 	key_third_person = "wings"

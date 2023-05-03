@@ -70,20 +70,20 @@
 	if(!ishuman(owner))
 		CRASH("[type] status effect added to non-human owner: [owner ? owner.type : "null owner"]")
 	var/mob/living/carbon/human/human_owner = owner
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	original_eye_color = human_owner.eye_color
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	original_eye_color = human_owner.left_eye_color
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	human_owner.add_movespeed_modifier(/datum/movespeed_modifier/reagent/cannabis) //slows you down
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	human_owner.eye_color = BLOODCULT_EYE //makes cult eyes less obvious
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	human_owner.left_eye_color = BLOODCULT_EYE
 	human_owner.right_eye_color = BLOODCULT_EYE
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	human_owner.update_body() //updates eye color
 	ADD_TRAIT(human_owner, TRAIT_BLOODSHOT_EYES, type) //dilates blood vessels in eyes
 	ADD_TRAIT(human_owner, TRAIT_CLUMSY, type) //impairs motor coordination
@@ -96,13 +96,13 @@
 		stack_trace("[type] status effect being removed from non-human owner: [owner ? owner.type : "null owner"]")
 	var/mob/living/carbon/human/human_owner = owner
 	human_owner.remove_movespeed_modifier(/datum/movespeed_modifier/reagent/cannabis)
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	human_owner.eye_color = original_eye_color
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	human_owner.left_eye_color = original_eye_color
 	human_owner.right_eye_color = original_eye_color
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	human_owner.update_body()
 	REMOVE_TRAIT(human_owner, TRAIT_BLOODSHOT_EYES, type)
 	REMOVE_TRAIT(human_owner, TRAIT_CLUMSY, type)

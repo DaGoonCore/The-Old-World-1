@@ -310,7 +310,7 @@
 /obj/item/food/pizza/arnold/raw/MakeBakeable()
 	AddComponent(/datum/component/bakeable, /obj/item/food/pizza/arnold, rand(70 SECONDS, 80 SECONDS), TRUE, TRUE)
 
-/* SEPTIC EDIT BEGIN
+/* OWORLD EDIT BEGIN
 //fuck it, i will leave this at the food level for now.
 /obj/item/food/proc/try_break_off(mob/living/M, mob/living/user) //maybe i give you a pizza maybe i break off your arm
 	if(prob(50) || (M != user) || !iscarbon(user) || HAS_TRAIT(user, TRAIT_NODISMEMBER))
@@ -349,7 +349,7 @@
 	tastes = list("crust" = 1, "tomato" = 1, "cheese" = 1, "pepperoni" = 2, "9 millimeter bullets" = 2)
 	foodtypes = GRAIN | VEGETABLES | DAIRY | MEAT
 
-/* SEPTIC EDIT BEGIN
+/* OWORLD EDIT BEGIN
 /obj/item/food/pizzaslice/arnold/attack(mob/living/M, mob/living/user)
 	. =..()
 	try_break_off(M, user)

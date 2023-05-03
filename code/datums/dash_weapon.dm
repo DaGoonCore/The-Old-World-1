@@ -36,12 +36,12 @@
 		return FALSE
 
 	var/turf/target_turf = get_turf(target)
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(target in view(user.client.view, user))
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	if(target in fov_view(world.view, user))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		if(!do_teleport(user, target_turf, no_effects = TRUE))
 			user.balloon_alert(user, "dash blocked by location!")
 			return FALSE

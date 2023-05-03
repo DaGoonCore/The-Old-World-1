@@ -133,13 +133,13 @@
 			else
 				to_chat(user, span_warning("There is nothing in [O] to put in [src]!"))
 				return FALSE
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(!user.combat_mode)
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	var/list/modifiers = params2list(params)
 	if(IS_HELP_INTENT(user, modifiers))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		to_chat(user, span_warning("\The [src] smartly refuses [O]."))
 		SStgui.update_uis(src)
 		return FALSE

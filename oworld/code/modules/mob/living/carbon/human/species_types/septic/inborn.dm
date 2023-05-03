@@ -22,6 +22,6 @@
 	say_mod = "screeches"
 	attack_verb = "slashes"
 	bite_sharpness = SHARP_POINTY
-	limbs_icon = 'modular_septic/icons/mob/human/species/human/creepypasta_parts.dmi'
+	limbs_icon = 'oworld/icons/mob/human/species/human/creepypasta_parts.dmi'
 	limbs_id = "human"
 	examine_icon_state = "inborn"

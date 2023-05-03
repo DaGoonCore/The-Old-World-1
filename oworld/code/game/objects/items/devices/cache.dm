@@ -6,7 +6,7 @@
 /obj/machinery/cache
 	name = "Wall-mounted Cache"
 	desc = "A cache meant for securing goods in a nice, steel-reinforced package."
-	icon = 'modular_septic/icons/obj/structures/efn.dmi'
+	icon = 'oworld/icons/obj/structures/efn.dmi'
 	icon_state = "cache"
 	base_icon_state = "cache"
 	plane = GAME_PLANE_UPPER
@@ -15,14 +15,14 @@
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF | FREEZE_PROOF
 	// Determines If people can reach inside and use the cache.
 	var/locked = TRUE
-	var/buttonsound = 'modular_septic/sound/efn/cache_button.ogg'
-	var/cacheOpen = 'modular_septic/sound/efn/cache_open.ogg'
-	var/cacheClose = 'modular_septic/sound/efn/cache_close.ogg'
-	var/cachecoverBreak = 'modular_septic/sound/efn/cache_cover_open.ogg'
+	var/buttonsound = 'oworld/sound/efn/cache_button.ogg'
+	var/cacheOpen = 'oworld/sound/efn/cache_open.ogg'
+	var/cacheClose = 'oworld/sound/efn/cache_close.ogg'
+	var/cachecoverBreak = 'oworld/sound/efn/cache_cover_open.ogg'
 	var/state = CACHE_CLOSED
 	var/cover_open = FALSE
-	var/firsthack = 'modular_septic/sound/efn/cache_elec1.ogg'
-	var/secondhack = 'modular_septic/sound/efn/cache_elec2.ogg'
+	var/firsthack = 'oworld/sound/efn/cache_elec1.ogg'
+	var/secondhack = 'oworld/sound/efn/cache_elec2.ogg'
 
 /obj/machinery/cache/update_overlays()
 	. = ..()

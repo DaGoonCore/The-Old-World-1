@@ -19,7 +19,7 @@
 		if(QDELETED(src))
 			return
 
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		if(handle_bodyparts(delta_time, times_fired) & BODYPART_LIFE_UPDATE_HEALTH)
 			//needs to go before updatehealth to remove stamcrit, also calls update_fatigue()
 			update_stamina()
@@ -27,16 +27,16 @@
 		handle_shock(delta_time, times_fired)
 		handle_shock_stage(delta_time, times_fired)
 		handle_fatigue(delta_time, times_fired)
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 
-		/* SEPTIC EDIT REMOVAL - Handled by organ process datums
+		/* OWORLD EDIT REMOVAL - Handled by organ process datums
 		if(.) //not dead
 			handle_blood(delta_time, times_fired)
 
 		if(stat != DEAD)
 			handle_brain_damage(delta_time, times_fired)
 		*/
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(stat == DEAD)
 		stop_sound_channel(CHANNEL_HEARTBEAT)
 	else
@@ -765,7 +765,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 /////////////
 //CREMATION//
 /////////////
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /mob/living/carbon/proc/check_cremation(delta_time, times_fired)
 	//Only cremate while actively on fire
 	if(!on_fire)

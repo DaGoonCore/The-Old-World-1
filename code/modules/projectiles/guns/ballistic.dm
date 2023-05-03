@@ -158,7 +158,7 @@
 		icon_state = "[base_icon_state || initial(icon_state)][sawn_off ? "_sawn" : ""]"
 	return ..()
 
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /obj/item/gun/ballistic/update_overlays()
 	. = ..()
 	if(show_bolt_icon)
@@ -314,7 +314,7 @@
 /obj/item/gun/ballistic/can_shoot()
 	return chambered
 
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /obj/item/gun/ballistic/attackby(obj/item/A, mob/user, params)
 	. = ..()
 	if (.)
@@ -398,7 +398,7 @@
 		var/obj/item/I = suppressed
 		w_class -= I.w_class
 	return ..()
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /obj/item/gun/ballistic/AltClick(mob/user)
 	if (unique_reskin && !current_skin && user.canUseTopic(src, BE_CLOSE, NO_DEXTERITY))
 		reskin_obj(user)
@@ -429,7 +429,7 @@
 		if (last_shot_succeeded && bolt_type == BOLT_TYPE_LOCKING)
 			bolt_locked = TRUE
 			update_appearance()
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /obj/item/gun/ballistic/afterattack()
 	prefire_empty_checks()
 	. = ..() //The gun actually firing
@@ -456,7 +456,7 @@
 			user.visible_message(span_notice("[user] spins [src] around [user.p_their()] finger by the trigger. That’s pretty badass."))
 			playsound(src, 'sound/items/handling/ammobox_pickup.ogg', 20, FALSE)
 			return
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(!internal_magazine && magazine)
 		if(!magazine.ammo_count())
 			eject_magazine(user)
@@ -479,7 +479,7 @@
 			to_chat(user, span_warning("[src] is empty!"))
 		return
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	if((bolt_type == BOLT_TYPE_BREAK_ACTION) && cylinder_open)
 		chambered = null
 		var/num_unloaded = 0
@@ -514,7 +514,7 @@
 		else
 			to_chat(user, span_warning("[src] is empty!"))
 		return
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	if(bolt_type == BOLT_TYPE_LOCKING && bolt_locked)
 		drop_bolt(user)
 		return
@@ -527,7 +527,7 @@
 
 /obj/item/gun/ballistic/examine(mob/user)
 	. = ..()
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	var/count_chambered = !(bolt_type == BOLT_TYPE_NO_BOLT || bolt_type == BOLT_TYPE_OPEN)
 	. += "It has [get_ammo(count_chambered)] round\s remaining."
 
@@ -537,7 +537,7 @@
 	if (bolt_locked)
 		. += "The [bolt_wording] is locked back and needs to be released before firing or de-fouling."
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	var/chamber_examine = chamber_examine(user)
 	if(LAZYLEN(chamber_examine))
 		. += chamber_examine
@@ -547,8 +547,8 @@
 		. += span_danger("This might explode if you fire it....")
 		if(misfire_probability > 0)
 			. += span_danger("Given the state of the gun, there is a [misfire_probability]% chance it'll misfire.")
-	//SEPTIC EDIT END
-	/* SEPTIC EDIT REMOVAL
+	//OWORLD EDIT END
+	/* OWORLD EDIT REMOVAL
 	if (suppressed)
 		. += "It has a suppressor attached that can be removed with <b>alt+click</b>."
 	if(can_misfire)

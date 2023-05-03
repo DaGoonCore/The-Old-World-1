@@ -31,7 +31,7 @@
 	STR.max_w_class = WEIGHT_CLASS_SMALL
 	STR.max_combined_w_class = 14
 
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /obj/item/storage/secure/examine(mob/user)
 	. = ..()
 	if(can_hack_open)

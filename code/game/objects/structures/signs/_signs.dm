@@ -94,12 +94,12 @@
 
 /obj/structure/sign/welder_act(mob/living/user, obj/item/I)
 	. = ..()
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(user.combat_mode)
 	*/
-	//SEPTIC EDIT
+	//OWORLD EDIT
 	if(!IS_HELP_INTENT(user, null))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		return FALSE
 	if(atom_integrity == max_integrity)
 		to_chat(user, span_warning("This sign is already in perfect condition."))
@@ -117,12 +117,12 @@
 
 /obj/item/sign/welder_act(mob/living/user, obj/item/I)
 	. = ..()
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(user.combat_mode)
 	*/
-	//SEPTIC EDIT
+	//OWORLD EDIT
 	if(!IS_HELP_INTENT(user, null))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		return FALSE
 	if(atom_integrity == max_integrity)
 		to_chat(user, span_warning("This sign is already in perfect condition."))

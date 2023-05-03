@@ -1,4 +1,4 @@
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /obj/item/organ/brain
 	name = "brain"
 	desc = "A piece of juicy meat found in a person's head."

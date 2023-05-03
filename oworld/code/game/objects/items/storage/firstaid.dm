@@ -153,14 +153,14 @@
 	name = "morango first-aid kit"
 	desc = "A kevlar bag containing lifesaving equipment secured with only simple clip. Usually contains enough medical equipment to perform the suturing of a tendon on the field while \
 	also being able to stabalize bruises, cuts, etc. The intense, overpowering smell of strawberry radiates off of it."
-	icon = 'modular_septic/icons/obj/items/firstaid.dmi'
-	lefthand_file = 'modular_septic/icons/mob/inhands/remis_lefthand.dmi'
-	righthand_file = 'modular_septic/icons/mob/inhands/remis_righthand.dmi'
+	icon = 'oworld/icons/obj/items/firstaid.dmi'
+	lefthand_file = 'oworld/icons/mob/inhands/remis_lefthand.dmi'
+	righthand_file = 'oworld/icons/mob/inhands/remis_righthand.dmi'
 	icon_state = "morango"
 	inhand_icon_state = "morango"
 	base_icon_state = "morango"
-	pickup_sound = 'modular_septic/sound/effects/pouch_pickup.wav'
-	drop_sound = 'modular_septic/sound/effects/pouch_drop.wav'
+	pickup_sound = 'oworld/sound/effects/pouch_pickup.wav'
+	drop_sound = 'oworld/sound/effects/pouch_drop.wav'
 	var/is_open = FALSE
 
 /obj/item/storage/firstaid/morango/Initialize()
@@ -189,9 +189,9 @@
 	. = ..()
 	is_open = !is_open
 	if(is_open)
-		playsound(src, 'modular_septic/sound/effects/pouch_open.wav', volume, TRUE, vary = FALSE)
+		playsound(src, 'oworld/sound/effects/pouch_open.wav', volume, TRUE, vary = FALSE)
 	else
-		playsound(src, 'modular_septic/sound/effects/pouch_close.wav', volume, TRUE, vary = FALSE)
+		playsound(src, 'oworld/sound/effects/pouch_close.wav', volume, TRUE, vary = FALSE)
 	update_appearance()
 
 /obj/item/storage/firstaid/morango/update_icon_state()
@@ -204,26 +204,26 @@
 /obj/item/storage/firstaid/morango/Exited(atom/movable/gone, direction)
 	. = ..()
 	if(!is_open)
-		playsound(src, 'modular_septic/sound/effects/pouch_open.wav', 30, FALSE)
+		playsound(src, 'oworld/sound/effects/pouch_open.wav', 30, FALSE)
 	is_open = TRUE
-	playsound(src, 'modular_septic/sound/effects/pouch_use.wav', 30, FALSE)
+	playsound(src, 'oworld/sound/effects/pouch_use.wav', 30, FALSE)
 	update_appearance()
 
 /obj/item/storage/firstaid/morango/Entered(atom/movable/arrived, atom/old_loc, list/atom/old_locs)
 	. = ..()
 	if(!is_open)
-		playsound(src, 'modular_septic/sound/effects/pouch_open.wav', 30, FALSE)
+		playsound(src, 'oworld/sound/effects/pouch_open.wav', 30, FALSE)
 	is_open = TRUE
-	playsound(src, 'modular_septic/sound/effects/pouch_use.wav', 30, FALSE)
+	playsound(src, 'oworld/sound/effects/pouch_use.wav', 30, FALSE)
 	update_appearance()
 
 /obj/item/storage/pill_bottle/carbonylmethamphetamine
 	name = "carbonylmethamphetamine pill bottle"
 	desc = "Pills stated to increase your fervor in combat, just chew and drink water."
-	icon = 'modular_septic/icons/obj/items/firstaid.dmi'
+	icon = 'oworld/icons/obj/items/firstaid.dmi'
 	icon_state = "pep"
 	base_icon_state = "pep"
-	pickup_sound = 'modular_septic/sound/effects/pillsbottle_foley.wav'
+	pickup_sound = 'oworld/sound/effects/pillsbottle_foley.wav'
 	var/is_open = FALSE
 
 /obj/item/storage/pill_bottle/carbonylmethamphetamine/Initialize()
@@ -240,9 +240,9 @@
 	. = ..()
 	is_open = !is_open
 	if(is_open)
-		playsound(src, 'modular_septic/sound/effects/pillsbottle_open.wav', volume, TRUE, vary = FALSE)
+		playsound(src, 'oworld/sound/effects/pillsbottle_open.wav', volume, TRUE, vary = FALSE)
 	else
-		playsound(src, 'modular_septic/sound/effects/pillsbottle_close.wav', volume, TRUE, vary = FALSE)
+		playsound(src, 'oworld/sound/effects/pillsbottle_close.wav', volume, TRUE, vary = FALSE)
 	update_appearance()
 
 /obj/item/storage/pill_bottle/carbonylmethamphetamine/update_icon_state()
@@ -255,15 +255,15 @@
 /obj/item/storage/pill_bottle/carbonylmethamphetamine/Exited(atom/movable/gone, direction)
 	. = ..()
 	if(!is_open)
-		playsound(src, 'modular_septic/sound/effects/pillsbottle_open.wav', 30, FALSE)
+		playsound(src, 'oworld/sound/effects/pillsbottle_open.wav', 30, FALSE)
 	is_open = TRUE
-	playsound(src, 'modular_septic/sound/effects/pillsbottle_pill.wav', 30, FALSE)
+	playsound(src, 'oworld/sound/effects/pillsbottle_pill.wav', 30, FALSE)
 	update_appearance()
 
 /obj/item/storage/pill_bottle/carbonylmethamphetamine/Entered(atom/movable/arrived, atom/old_loc, list/atom/old_locs)
 	. = ..()
 	if(!is_open)
-		playsound(src, 'modular_septic/sound/effects/pillsbottle_open.wav', 30, FALSE)
+		playsound(src, 'oworld/sound/effects/pillsbottle_open.wav', 30, FALSE)
 	is_open = TRUE
-	playsound(src, 'modular_septic/sound/effects/pillsbottle_pill_put.wav', 30, FALSE)
+	playsound(src, 'oworld/sound/effects/pillsbottle_pill_put.wav', 30, FALSE)
 	update_appearance()

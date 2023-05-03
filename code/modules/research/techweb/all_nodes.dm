@@ -69,7 +69,7 @@
 		"mmi",
 	)
 
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /datum/techweb_node/cyborg
 	id = "cyborg"
 	starting_node = TRUE
@@ -352,7 +352,7 @@
 
 /////////////////////////Advanced Surgery/////////////////////////
 
-/* SEPTIC EDIT START
+/* OWORLD EDIT START
 /datum/techweb_node/imp_wt_surgery
 	id = "imp_wt_surgery"
 	display_name = "Improved Wound-Tending Surgery"
@@ -776,7 +776,7 @@
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 
-/*SEPTIC EDIT REMOVAL
+/*OWORLD EDIT REMOVAL
 /datum/techweb_node/cyborg_upg_util
 	id = "cyborg_upg_util"
 	display_name = "Cyborg Upgrades: Utility"
@@ -902,7 +902,7 @@
 	discount_experiments = list(/datum/experiment/scanning/points/machinery_pinpoint_scan/tier3_microlaser = 4000)
 
 /////////////////////////Clown tech/////////////////////////
-/*SEPTIC EDIT REMOVAL
+/*OWORLD EDIT REMOVAL
 /datum/techweb_node/clown
 	id = "clown"
 	display_name = "Clown Technology"

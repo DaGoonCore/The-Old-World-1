@@ -5,14 +5,14 @@ GLOBAL_LIST_EMPTY(denominator_exiterporter)
 /obj/structure/gptdfm
 	name = "rapid-major-transportation-effect"
 	desc = "Rapid teleportation area."
-	icon = 'modular_septic/icons/obj/structures/gptdfm.dmi'
+	icon = 'oworld/icons/obj/structures/gptdfm.dmi'
 	icon_state = "child_transporter"
 	density = FALSE
 	resistance_flags = INDESTRUCTIBLE | FIRE_PROOF | ACID_PROOF | LAVA_PROOF
 	anchored = TRUE
-	var/gurby = list('modular_septic/sound/effects/teleporter/gurby1.wav', 'modular_septic/sound/effects/teleporter/gurby2.wav', 'modular_septic/sound/effects/teleporter/gurby3.wav', 'modular_septic/sound/effects/teleporter/gurby4.wav', 'modular_septic/sound/effects/teleporter/gurby5.wav')
-	var/gurby_escape = 'modular_septic/sound/effects/chadjack.wav'
-	var/gurby_unescape = 'modular_septic/sound/effects/soyjack.wav'
+	var/gurby = list('oworld/sound/effects/teleporter/gurby1.wav', 'oworld/sound/effects/teleporter/gurby2.wav', 'oworld/sound/effects/teleporter/gurby3.wav', 'oworld/sound/effects/teleporter/gurby4.wav', 'oworld/sound/effects/teleporter/gurby5.wav')
+	var/gurby_escape = 'oworld/sound/effects/chadjack.wav'
+	var/gurby_unescape = 'oworld/sound/effects/soyjack.wav'
 
 /obj/structure/gptdfm/Initialize(mapload)
 	. = ..()

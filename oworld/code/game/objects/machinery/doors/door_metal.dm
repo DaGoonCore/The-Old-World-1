@@ -3,16 +3,16 @@
 /obj/machinery/door/metal_door
 	name = "Metal Door"
 	desc = "A broad metal door with a lock for keys, usually not locked, If It is, a nice firm kick from a friendly orange-suited protagonist would do the trick."
-	icon = 'modular_septic/icons/obj/structures/metal_door.dmi'
+	icon = 'oworld/icons/obj/structures/metal_door.dmi'
 	base_icon_state = "metal"
 	icon_state = "metal"
 	key_worthy = TRUE
-	var/doorOpen = 'modular_septic/sound/doors/door_metal_open.ogg'
-	var/doorClose = 'modular_septic/sound/doors/door_metal_close.ogg'
-	var/doorDeni = list('modular_septic/sound/doors/door_metal_try1.ogg', 'modular_septic/sound/doors/door_metal_try2.ogg')
-	var/kickfailure = 'modular_septic/sound/doors/door_metal_freeman_impersonator.ogg'
-	var/kicksuccess = 'modular_septic/sound/doors/smod_freeman.ogg'
-	var/kickcriticalsuccess = 'modular_septic/sound/doors/smod_freeman_extreme.ogg'
+	var/doorOpen = 'oworld/sound/doors/door_metal_open.ogg'
+	var/doorClose = 'oworld/sound/doors/door_metal_close.ogg'
+	var/doorDeni = list('oworld/sound/doors/door_metal_try1.ogg', 'oworld/sound/doors/door_metal_try2.ogg')
+	var/kickfailure = 'oworld/sound/doors/door_metal_freeman_impersonator.ogg'
+	var/kicksuccess = 'oworld/sound/doors/smod_freeman.ogg'
+	var/kickcriticalsuccess = 'oworld/sound/doors/smod_freeman_extreme.ogg'
 
 	var/obj/structure/metal_door_frame/door_frame
 	var/obj/structure/metal_door/thrown_door
@@ -110,7 +110,7 @@
 /obj/structure/metal_door_frame
 	name = "Metal Door Frame"
 	desc = "Someone broke down this fucking door, now where is it?"
-	icon = 'modular_septic/icons/obj/structures/metal_door.dmi'
+	icon = 'oworld/icons/obj/structures/metal_door.dmi'
 	base_icon_state = "metal_broken"
 	icon_state = "metal_broken"
 	density = FALSE
@@ -122,7 +122,7 @@
 /obj/structure/metal_door
 	name = "Metal Door"
 	desc = "A door lying on the floor, the hinges are broken and It's broken and useless, just like you."
-	icon = 'modular_septic/icons/obj/structures/metal_door.dmi'
+	icon = 'oworld/icons/obj/structures/metal_door.dmi'
 	base_icon_state = "metal_freeman_evidence"
 	icon_state = "metal_freeman_evidence"
 	density = FALSE

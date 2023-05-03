@@ -160,11 +160,11 @@
 /mob/living/carbon/alien/larva/UnarmedAttack(atom/attack_target, proximity_flag, list/modifiers)
 	if(LIVING_UNARMED_ATTACK_BLOCKED(attack_target))
 		return
-	/* SEPTIC EDIT BEGIN
+	/* OWORLD EDIT BEGIN
 	attack_target.attack_larva(src)
 	*/
 	attack_target.attack_larva(src, modifiers)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 
 /atom/proc/attack_larva(mob/user)
 	return
@@ -179,11 +179,11 @@
 		return
 	if(isturf(attack_target))
 		return ..()
-	/* SEPTIC EDIT BEGIN
+	/* OWORLD EDIT BEGIN
 	attack_target.attack_slime(src)
 	*/
 	attack_target.attack_slime(src, modifiers)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 
 /atom/proc/attack_slime(mob/user)
 	return

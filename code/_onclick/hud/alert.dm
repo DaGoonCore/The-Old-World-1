@@ -105,7 +105,7 @@
 	/// Boolean. If TRUE, the Click() proc will attempt to Click() on the master first if there is a master.
 	var/click_master = TRUE
 
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /atom/movable/screen/alert/MouseEntered(location,control,params)
 	. = ..()
 	if(!QDELETED(src))

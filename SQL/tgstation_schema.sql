@@ -24,7 +24,7 @@ CREATE TABLE `admin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
--- SEPTIC SHOCK TABLE
+-- OWORLD SHOCK TABLE
 -- Table structure for table `admin`
 --
 
@@ -38,7 +38,7 @@ CREATE TABLE `donators` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
--- SEPTIC SHOCK END
+-- OWORLD SHOCK END
 
 --
 -- Table structure for table `admin_log`

@@ -9,7 +9,7 @@ GLOBAL_LIST_INIT(shitfaceable, typecacheof(list(/mob/living/carbon/human)))
 
 /datum/component/creamed/shit/cream()
 	SEND_SIGNAL(parent, COMSIG_MOB_CREAMED, type)
-	creamface = mutable_appearance('modular_septic/icons/effects/shit.dmi')
+	creamface = mutable_appearance('oworld/icons/effects/shit.dmi')
 	if(ishuman(parent))
 		var/mob/living/carbon/human/humie = parent
 		if(LAZYACCESS(humie.dna.species.mutant_bodyparts, "snout"))

@@ -1,6 +1,6 @@
 /atom/movable/screen/pressure
 	name = "pressure"
-	icon = 'modular_septic/icons/hud/quake/screen_quake.dmi'
+	icon = 'oworld/icons/hud/quake/screen_quake.dmi'
 	icon_state = "pressure2"
 	base_icon_state = "pressure"
 	screen_loc = ui_pressure

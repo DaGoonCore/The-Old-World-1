@@ -64,14 +64,14 @@
 	if(!client && !HAS_TRAIT(src, TRAIT_PRESERVE_UI_WITHOUT_CLIENT))
 		return UI_CLOSE
 	// Disable UIs if unconcious.
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	else if(stat)
 		return UI_DISABLED
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	else if(stat > SOFT_CRIT)
 		return UI_DISABLED
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	// Update UIs if incapicitated but concious.
 	else if(incapacitated())
 		return UI_UPDATE

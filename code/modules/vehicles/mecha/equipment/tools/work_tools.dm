@@ -91,12 +91,12 @@
 		var/mob/living/M = target
 		if(M.stat == DEAD)
 			return
-		/* SEPTIC EDIT REMOVAL
+		/* OWORLD EDIT REMOVAL
 		if(!source.combat_mode)
 		*/
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		if(IS_HELP_INTENT(source, modifiers))
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 			step_away(M,chassis)
 			if(killer_clamp)
 				target.visible_message(span_danger("[chassis] tosses [target] like a piece of paper!"), \

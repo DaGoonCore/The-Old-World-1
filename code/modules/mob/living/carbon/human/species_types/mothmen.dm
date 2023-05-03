@@ -11,7 +11,7 @@
 	)
 	inherent_biotypes = MOB_ORGANIC|MOB_HUMANOID|MOB_BUG
 	mutant_bodyparts = list("moth_markings" = "None")
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	external_organs = list(/obj/item/organ/external/wings/moth = "Plain", /obj/item/organ/external/antennae = "Plain")
 	*/
 	attack_verb = "slash"

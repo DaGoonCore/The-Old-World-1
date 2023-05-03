@@ -356,12 +356,12 @@
 		var/mob/living/carbon/C = L
 		if(C.body_position == STANDING_UP)
 			def_zone = pick(BODY_ZONE_L_LEG, BODY_ZONE_R_LEG)
-			/* SEPTIC EDIT REMOVAL
+			/* OWORLD EDIT REMOVAL
 			if(!C.legcuffed && C.num_legs >= 2) //beartrap can't cuff your leg if there's already a beartrap or legcuffs, or you don't have two legs.
 			*/
-			//SEPTIC EDIT BEGIN
+			//OWORLD EDIT BEGIN
 			if(!C.legcuffed && C.num_legs >= C.default_num_legs)
-			//SEPTIC EDIT END
+			//OWORLD EDIT END
 				INVOKE_ASYNC(C, /mob/living/carbon.proc/equip_to_slot, src, ITEM_SLOT_LEGCUFFED)
 				SSblackbox.record_feedback("tally", "handcuffs", 1, type)
 	else if(snap && isanimal(L))
@@ -445,12 +445,12 @@
  * * C - the carbon that we will try to ensnare
  */
 /obj/item/restraints/legcuffs/bola/proc/ensnare(mob/living/carbon/C)
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(!C.legcuffed && C.num_legs >= 2)
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	if(!C.legcuffed && C.num_legs >= C.default_num_legs)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		visible_message(span_danger("\The [src] ensnares [C]!"), span_userdanger("\The [src] ensnares you!"))
 		C.equip_to_slot(src, ITEM_SLOT_LEGCUFFED)
 		SSblackbox.record_feedback("tally", "handcuffs", 1, type)

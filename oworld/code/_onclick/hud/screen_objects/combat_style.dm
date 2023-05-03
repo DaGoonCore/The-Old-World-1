@@ -1,6 +1,6 @@
 /atom/movable/screen/combat_style
 	name = "combat style"
-	icon = 'modular_septic/icons/hud/quake/screen_quake_combat_styles.dmi'
+	icon = 'oworld/icons/hud/quake/screen_quake_combat_styles.dmi'
 	icon_state = CS_DEFAULT
 	screen_loc = ui_combat_style
 	var/expanded = FALSE
@@ -38,7 +38,7 @@
 
 /obj/effect/overlay/combatstyle
 	name = "combat styles"
-	icon = 'modular_septic/icons/hud/quake/screen_quake_combat_style.dmi'
+	icon = 'oworld/icons/hud/quake/screen_quake_combat_style.dmi'
 	icon_state = "combat_style"
 	plane = HUD_PLANE
 	screentip_flags = SCREENTIP_HOVERER_CLICKER

@@ -22,10 +22,10 @@
 		cock_type = (user.gender != FEMALE ? pick("KNOB", "DICK", "PENIS", "WEINER", "JOHNSON") : pick("FANNY", "CUNNY", "CUNT", "VAGINA", "VEGANA"))
 		hacker = WEAKREF(user)
 		to_chat(user, span_notice("[icon2html(parent, user)] [cock_type] SCANNED AND SAVED. WELCOME, [user.real_name]."))
-		playsound(parent.parent, 'modular_septic/sound/efn/phone_subtlealert.ogg', 65, FALSE)
+		playsound(parent.parent, 'oworld/sound/efn/phone_subtlealert.ogg', 65, FALSE)
 	else if(hacker != WEAKREF(user))
 		to_chat(user, span_danger("[icon2html(parent, user)] INVALID [cock_type] DETECTED. ACCESS DENIED!"))
-		playsound(parent.parent, 'modular_septic/sound/efn/phone_firewall.ogg', 65, FALSE)
+		playsound(parent.parent, 'oworld/sound/efn/phone_firewall.ogg', 65, FALSE)
 		return
 	var/datum/simcard_virus/punjabi_virus = infection_type
 	var/static/list/antiviruses = list(
@@ -39,7 +39,7 @@
 		"ShitDefender",
 	)
 	var/antivirus_chosen = pick(antiviruses)
-	var/random_press_sound = pick('modular_septic/sound/effects/phone_press.ogg', 'modular_septic/sound/effects/phone_press2.ogg', 'modular_septic/sound/effects/phone_press3.ogg', 'modular_septic/sound/effects/phone_press4.ogg')
+	var/random_press_sound = pick('oworld/sound/effects/phone_press.ogg', 'oworld/sound/effects/phone_press2.ogg', 'oworld/sound/effects/phone_press3.ogg', 'oworld/sound/effects/phone_press4.ogg')
 	playsound(parent.parent, random_press_sound, 65, FALSE)
 	to_chat(user, div_infobox(span_notice("[icon2html(parent, user)] <b>BINARY INTEGRITY:</b> [CEILING((parent.firewall_health/max(1, parent.firewall_maxhealth)) * 100, 0.1)]%\n\
 								[icon2html(parent, user)] MY CALL VIRUS IS [infective ? "ENABLED" : "DISABLED"]\n\
@@ -77,12 +77,12 @@
 		return
 	friend.parent.start_glitching()
 	to_chat(user, span_notice("[icon2html(friend, user)] SUCCESSFUL DoS ATTACK."))
-	playsound(parent.parent, 'modular_septic/sound/efn/phone_jammer.ogg', 65, FALSE)
+	playsound(parent.parent, 'oworld/sound/efn/phone_jammer.ogg', 65, FALSE)
 
 /datum/simcard_application/hacking/proc/toggle_infectivity(mob/living/user, antivirus)
 	infective = !infective
 	to_chat(user, span_danger("[icon2html(parent, user)] INFECTIVITY TOGGLED [infective ? "ON" : "OFF"]."))
-	playsound(parent.parent, 'modular_septic/sound/efn/phone_firewall.ogg', 65, FALSE)
+	playsound(parent.parent, 'oworld/sound/efn/phone_firewall.ogg', 65, FALSE)
 
 /datum/simcard_application/hacking/proc/toggle_firewall(mob/living/user, antivirus)
 	parent.virus_immunity = !parent.virus_immunity
@@ -90,7 +90,7 @@
 		to_chat(user, span_notice("[icon2html(parent, user)] [uppertext(antivirus)] ANTIVIRUS ENABLED."))
 	else
 		to_chat(user, span_warning("[icon2html(parent, user)] [uppertext(antivirus)] ANTIVIRUS DISABLED."))
-	playsound(parent.parent, 'modular_septic/sound/efn/phone_firewall.ogg', 65, FALSE)
+	playsound(parent.parent, 'oworld/sound/efn/phone_firewall.ogg', 65, FALSE)
 
 /datum/simcard_application/hacking/proc/ping(mob/living/user, radius = ping_range)
 	if(!user || !parent)
@@ -99,7 +99,7 @@
 	//should not happen
 	if(!hacker_turf)
 		return
-	playsound(parent.parent, 'modular_septic/sound/efn/phone_jammer.ogg', 65, FALSE)
+	playsound(parent.parent, 'oworld/sound/efn/phone_jammer.ogg', 65, FALSE)
 	to_chat(user, span_notice("[icon2html(parent, user)] Pinging all users in radius of <b>[radius]</b>."))
 	var/list/near_phones = list()
 	var/turf/simcard_turf
@@ -111,12 +111,12 @@
 		simcard_turf = get_turf(simcard)
 		if(!simcard_turf || (simcard_turf.z != hacker_turf.z) || (get_dist(simcard_turf, hacker_turf) > radius))
 			continue
-		var/ping_screams = pick('modular_septic/sound/efn/virus_scream.ogg', 'modular_septic/sound/efn/virus_scream2.ogg', 'modular_septic/sound/efn/virus_scream3.ogg')
+		var/ping_screams = pick('oworld/sound/efn/virus_scream.ogg', 'oworld/sound/efn/virus_scream2.ogg', 'oworld/sound/efn/virus_scream3.ogg')
 		playsound(simcard, ping_screams, rand(5, 8), FALSE)
 		near_phones[username] = simcard
 	if(!length(near_phones))
 		to_chat(user, span_notice("[icon2html(parent, user)] Clear. No users detected in immediate area."))
-		playsound(parent.parent, 'modular_septic/sound/efn/phone_subtlealert.ogg', 25, FALSE)
+		playsound(parent.parent, 'oworld/sound/efn/phone_subtlealert.ogg', 25, FALSE)
 		return
 	var/tooth = pick("bluetooth", "redtooth", "greentooth", "whitetooth", "cyantooth", "pinktooth", "<u>wifisteal.com</u>", "<u>mobverify.com</u>")
 	to_chat(user, span_boldnotice("Phones detected via [tooth]. I can dial them from here."))
@@ -162,7 +162,7 @@
 				return
 			victim_card?.parent.start_glitching()
 			to_chat(user, span_boldnotice("Successful Denial-of-Service Attack."))
-			playsound(parent.parent, 'modular_septic/sound/efn/phone_jammer.ogg', 65, FALSE)
+			playsound(parent.parent, 'oworld/sound/efn/phone_jammer.ogg', 65, FALSE)
 		if("MINDJACK")
 			parent.parent.start_calling(victim_card.parent, mindjack = TRUE)
 
@@ -225,7 +225,7 @@
 			if(prob(5))
 				progressmessage += funnymessage
 			to_chat(user, div_infobox(span_warning("[progressmessage]")))
-			playsound(parent.parent, list('modular_septic/sound/efn/progress_check1.ogg', 'modular_septic/sound/efn/progress_check2.ogg', 'modular_septic/sound/efn/progress_check3.ogg'), 40, FALSE)
+			playsound(parent.parent, list('oworld/sound/efn/progress_check1.ogg', 'oworld/sound/efn/progress_check2.ogg', 'oworld/sound/efn/progress_check3.ogg'), 40, FALSE)
 		return
 	var/selected_ability = pick(ability_pool)
 	switch(selected_ability)
@@ -247,5 +247,5 @@
 	to_chat(user, span_notice("[unlocked_message]"))
 	to_chat(user, span_info(div_infobox(ability_description(selected_ability))))
 	level_progress = initial(level_progress)
-	var/unlock_sounding = pick('modular_septic/sound/efn/hacker_phone_unlock1.ogg', 'modular_septic/sound/efn/hacker_phone_unlock2.ogg')
+	var/unlock_sounding = pick('oworld/sound/efn/hacker_phone_unlock1.ogg', 'oworld/sound/efn/hacker_phone_unlock2.ogg')
 	playsound(parent.parent, unlock_sounding, 40, FALSE)

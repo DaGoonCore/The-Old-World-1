@@ -1,7 +1,7 @@
 /obj/machinery/broken_ventilation
 	name = "broken vent"
 	desc = "Some holes in the wall to cycle air around the warehouse, looks like it hasn't been maintained for years, but it still runs."
-	icon = 'modular_septic/icons/obj/structures/efn.dmi'
+	icon = 'oworld/icons/obj/structures/efn.dmi'
 	icon_state = "vents"
 	base_icon_state = "vents"
 	plane = GAME_PLANE_UPPER
@@ -30,7 +30,7 @@
 
 /obj/effect/escape_noises
 	name = "escape noises"
-	icon = 'modular_septic/icons/obj/structures/efn.dmi'
+	icon = 'oworld/icons/obj/structures/efn.dmi'
 	icon_state = "escape_noises"
 	plane = GAME_PLANE_UPPER
 	layer = WALL_OBJ_LAYER

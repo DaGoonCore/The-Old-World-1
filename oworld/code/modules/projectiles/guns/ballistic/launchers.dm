@@ -7,20 +7,20 @@
 /obj/item/gun/ballistic/shotgun/grenadelauncher/batata
 	name = "40mm Batata Frita explosive fragmentation launcher"
 	desc = "A pump-operated grenade launcher that filled the need for yet another firearm instead of an important invention or update."
-	icon = 'modular_septic/icons/obj/items/guns/48x32.dmi'
-	lefthand_file = 'modular_septic/icons/obj/items/guns/inhands/shotgun_lefthand.dmi'
-	righthand_file = 'modular_septic/icons/obj/items/guns/inhands/shotgun_righthand.dmi'
+	icon = 'oworld/icons/obj/items/guns/48x32.dmi'
+	lefthand_file = 'oworld/icons/obj/items/guns/inhands/shotgun_lefthand.dmi'
+	righthand_file = 'oworld/icons/obj/items/guns/inhands/shotgun_righthand.dmi'
 	inhand_icon_state = "chlake"
 	icon_state = "chinalake"
 	base_icon_state = "chinalake"
-	fire_sound = 'modular_septic/sound/weapons/guns/launcher/batata.wav'
-	lock_back_sound = 'modular_septic/sound/weapons/guns/launcher/batata_lock_back.ogg'
-	bolt_drop_sound = 'modular_septic/sound/weapons/guns/launcher/batata_lockin.wav'
-	rack_sound = 'modular_septic/sound/weapons/guns/launcher/batata_rack.ogg'
+	fire_sound = 'oworld/sound/weapons/guns/launcher/batata.wav'
+	lock_back_sound = 'oworld/sound/weapons/guns/launcher/batata_lock_back.ogg'
+	bolt_drop_sound = 'oworld/sound/weapons/guns/launcher/batata_lockin.wav'
+	rack_sound = 'oworld/sound/weapons/guns/launcher/batata_rack.ogg'
 	load_sound = list(
-		'modular_septic/sound/weapons/guns/launcher/batata_load1.wav', \
-		'modular_septic/sound/weapons/guns/launcher/batata_load2.wav', \
-		'modular_septic/sound/weapons/guns/launcher/batata_load3.wav', \
+		'oworld/sound/weapons/guns/launcher/batata_load1.wav', \
+		'oworld/sound/weapons/guns/launcher/batata_load2.wav', \
+		'oworld/sound/weapons/guns/launcher/batata_load3.wav', \
 	)
 	mag_type = /obj/item/ammo_box/magazine/internal/grenadelauncher/batata
 	pin = /obj/item/firing_pin

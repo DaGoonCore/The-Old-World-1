@@ -84,12 +84,12 @@
 			return
 		if (GUILLOTINE_BLADE_RAISED)
 			if (LAZYLEN(buckled_mobs))
-				/* SEPTIC EDIT REMOVAL
+				/* OWORLD EDIT REMOVAL
 				if (user.combat_mode)
 				*/
-				//SEPTIC EDIT BEGIN
+				//OWORLD EDIT BEGIN
 				if(!IS_HELP_INTENT(user, modifiers))
-				//SEPTIC EDIT END
+				//OWORLD EDIT END
 					user.visible_message(span_warning("[user] begins to pull the lever!"),
 						                 span_warning("You begin to the pull the lever."))
 					current_action = GUILLOTINE_ACTION_INUSE
@@ -151,12 +151,12 @@
 			// The crowd is pleased
 			// The delay is to making large crowds have a longer laster applause
 			var/delay_offset = 0
-			/* SEPTIC EDIT REMOVAL
+			/* OWORLD EDIT REMOVAL
 			for(var/mob/M in viewers(src, 7))
 			*/
-			//SEPTIC EDIT BEGIN
+			//OWORLD EDIT BEGIN
 			for(var/mob/M in fov_viewers(world.view, src))
-			//SEPTIC EDIT END
+			//OWORLD EDIT END
 				var/mob/living/carbon/human/C = M
 				if (ishuman(M))
 					addtimer(CALLBACK(C, /mob/.proc/emote, "clap"), delay_offset * 0.3)

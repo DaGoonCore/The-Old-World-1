@@ -1,7 +1,7 @@
 /obj/item/bodypart/mouth
 	name = "jaw"
 	desc = "I have no mouth and i must scream."
-	icon = 'modular_septic/icons/obj/items/surgery.dmi'
+	icon = 'oworld/icons/obj/items/surgery.dmi'
 	icon_state = "jaw"
 	base_icon_state = "jaw"
 	attack_verb_continuous = list("bites", "munches")
@@ -25,7 +25,7 @@
 	melee_hit_zone_modifier = -1
 
 	throw_range = 5
-	dismemberment_sounds = list('modular_septic/sound/gore/severed.ogg')
+	dismemberment_sounds = list('oworld/sound/gore/severed.ogg')
 	scars_covered_by_clothes = FALSE
 
 	cavity_name = "oral cavity"
@@ -56,7 +56,7 @@
 /obj/item/bodypart/mouth/get_limb_icon(dropped)
 	if(dropped && !isbodypart(loc))
 		. = list()
-		var/image/funky_anus = image('modular_septic/icons/obj/items/surgery.dmi', src, base_icon_state, BELOW_MOB_LAYER)
+		var/image/funky_anus = image('oworld/icons/obj/items/surgery.dmi', src, base_icon_state, BELOW_MOB_LAYER)
 		funky_anus.plane = plane
 		. += funky_anus
 
@@ -199,7 +199,7 @@
 				tapered = null
 				owner.visible_message(span_warning("<b>[owner]</b> rips \the [tapered] from their mouth!"),
 									span_warning("You successfully remove \the [tapered] from your mouth!"))
-				playsound(owner, 'modular_septic/sound/effects/clothripping.ogg', 40, 0, -4)
+				playsound(owner, 'oworld/sound/effects/clothripping.ogg', 40, 0, -4)
 				owner.emote("scream")
 				REMOVE_TRAIT(owner, TRAIT_MUTE, "tape")
 			else
@@ -211,7 +211,7 @@
 				tapered = null
 				C.visible_message(span_warning("<b>[C]</b> rips \the [tapered] from <b>[owner]</b>'s mouth!"),
 								span_warning("You rip \the [tapered] out of <b>[owner]</b>'s mouth!"))
-				playsound(owner, 'modular_septic/sound/effects/clothripping.ogg', 40, 0, -4)
+				playsound(owner, 'oworld/sound/effects/clothripping.ogg', 40, 0, -4)
 				if(owner)
 					owner.emote("scream")
 					REMOVE_TRAIT(owner, TRAIT_MUTE, "tape")

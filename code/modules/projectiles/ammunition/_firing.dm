@@ -7,12 +7,12 @@
 			if(randomspread)
 				spread = round((rand() - 0.5) * distro)
 			else //Smart spread
-				/* SEPTIC EDIT REMOVAL
+				/* OWORLD EDIT REMOVAL
 				spread = round(1 - 0.5) * distro
 				*/
-				//SEPTIC EDIT BEGIN
+				//OWORLD EDIT BEGIN
 				spread = round(0.5 * distro)
-				//SEPTIC EDIT END
+				//OWORLD EDIT END
 		if(!throw_proj(target, targloc, user, params, spread))
 			return FALSE
 	else

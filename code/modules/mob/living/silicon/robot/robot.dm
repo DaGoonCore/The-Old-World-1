@@ -6,11 +6,11 @@
 	ADD_TRAIT(src, TRAIT_CAN_STRIP, INNATE_TRAIT)
 
 	wires = new /datum/wires/robot(src)
-	//SEPTIC EDIT START
+	//OWORLD EDIT START
 	/*
 	AddElement(/datum/element/empprotection, EMP_PROTECT_WIRES)
 	*/
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	AddElement(/datum/element/ridable, /datum/component/riding/creature/cyborg)
 	RegisterSignal(src, COMSIG_PROCESS_BORGCHARGER_OCCUPANT, .proc/charge)
 	RegisterSignal(src, COMSIG_LIGHT_EATER_ACT, .proc/on_light_eater)

@@ -415,10 +415,10 @@
 		return FALSE
 	if(!..())
 		return FALSE
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	visible_message("<span class='infoplain'>[span_name("[src]")] points at [A].</span>", span_notice("You point at [A]."))
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	if(isliving(A))
 		var/mob/living/living_atom = A
 		visible_message("<span class='infoplain'><span style='color: [chat_color];'><b>[src]</b></span> points at <span style='color: [living_atom.chat_color];'><b>[living_atom]</b></span>.</span>", \
@@ -426,10 +426,10 @@
 	else
 		visible_message("<span class='infoplain'><span style='color: [chat_color];'><b>[src]</b></span> points at <b>[A]</b>.</span>", \
 						span_notice("I point at <b>[A]</b>."))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	return TRUE
 
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /mob/living/verb/succumb(whispered as null)
 	set hidden = TRUE
 	if (!CAN_SUCCUMB(src))
@@ -820,14 +820,14 @@
 
 	if(active_storage && !(CanReach(active_storage.parent,view_only = TRUE)))
 		active_storage.close(src)
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(body_position == LYING_DOWN && !buckled && prob(getBruteLoss()*200/maxHealth))
 		makeTrail(newloc, T, old_direction)
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	if(body_position == LYING_DOWN && !buckled)
 		makeTrail(newloc, T, old_direction)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 
 ///Called by mob Move() when the lying_angle is different than zero, to better visually simulate crawling.
 /mob/living/proc/lying_angle_on_movement(direct)
@@ -933,9 +933,9 @@
 	set category = "IC"
 
 	if(!can_resist())
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		to_chat(src, click_fail_msg())
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 		return
 	changeNext_move(CLICK_CD_RESIST)
 
@@ -1516,7 +1516,7 @@
 	return L
 
 /mob/living/forceMove(atom/destination)
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	stop_pulling()
 	*/
 	if(buckled)
@@ -1527,9 +1527,9 @@
 	if(.)
 		if(client)
 			reset_perspective()
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		check_pulling()
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 
 /mob/living/proc/update_z(new_z) // 1+ to register, null to unregister
 	if (registered_z != new_z)
@@ -1681,7 +1681,7 @@
 /mob/living/vv_get_header()
 	. = ..()
 	var/refid = REF(src)
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	. += {"
 		<br><font size='1'>[VV_HREF_TARGETREF(refid, VV_HK_GIVE_DIRECT_CONTROL, "[ckey || "no ckey"]")] / [VV_HREF_TARGETREF_1V(refid, VV_HK_BASIC_EDIT, "[real_name || "no real name"]", NAMEOF(src, real_name))]</font>
 		<br><font size='1'>
@@ -1695,7 +1695,7 @@
 		</font>
 	"}
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	. += {"
 		<br><font size='1'>[VV_HREF_TARGETREF(refid, VV_HK_GIVE_DIRECT_CONTROL, "[ckey || "no ckey"]")] / [VV_HREF_TARGETREF_1V(refid, VV_HK_BASIC_EDIT, "[real_name || "no real name"]", NAMEOF(src, real_name))]</font>
 		<br><font size='1'>
@@ -1712,7 +1712,7 @@
 			SHOCK STAGE:<font size='1'><a href='?_src_=vars;[HrefToken()];mobToDamage=[refid];adjustDamage=shock_stage' id='shock'>[getShockStage()]</a>
 		</font>
 	"}
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 
 /mob/living/proc/move_to_error_room()
 	var/obj/effect/landmark/error/error_landmark = locate(/obj/effect/landmark/error) in GLOB.landmarks_list
@@ -1917,14 +1917,14 @@
 		if(SOFT_CRIT)
 			if(stat >= UNCONSCIOUS)
 				ADD_TRAIT(src, TRAIT_IMMOBILIZED, TRAIT_KNOCKEDOUT) //adding trait sources should come before removing to avoid unnecessary updates
-			/* SEPTIC EDIT REMOVAL
+			/* OWORLD EDIT REMOVAL
 			if(pulledby)
 				REMOVE_TRAIT(src, TRAIT_IMMOBILIZED, PULLED_WHILE_SOFTCRIT_TRAIT)
 			*/
-			//SEPTIC EDIT BEGIN
+			//OWORLD EDIT BEGIN
 			if(!pulledby)
 				REMOVE_TRAIT(src, TRAIT_IMMOBILIZED, PULLED_WHILE_SOFTCRIT_TRAIT)
-			//SEPTIC EDIT END
+			//OWORLD EDIT END
 		if(UNCONSCIOUS)
 			if(stat != HARD_CRIT)
 				cure_blind(UNCONSCIOUS_TRAIT)
@@ -2113,10 +2113,10 @@
 		return
 	. = body_position
 	body_position = new_value
-	//SEND_SIGNAL(src, COMSIG_LIVING_SET_BODY_POSITION) //SEPTIC EDIT REMOVAL
-	//SEPTIC EDIT BEGIN
+	//SEND_SIGNAL(src, COMSIG_LIVING_SET_BODY_POSITION) //OWORLD EDIT REMOVAL
+	//OWORLD EDIT BEGIN
 	SEND_SIGNAL(src, COMSIG_LIVING_SET_BODY_POSITION, new_value)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	if(new_value == LYING_DOWN) // From standing to lying down.
 		on_lying_down()
 	else // From lying down to standing up.
@@ -2171,19 +2171,19 @@
 	// will return boolean below since it's not invalid
 	if (is_grab)
 		return style.grab_act(src, target)
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if (LAZYACCESS(modifiers, RIGHT_CLICK))
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	if(IS_DISARM_INTENT(src, modifiers))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		return style.disarm_act(src, target)
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(combat_mode)
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	if(IS_HARM_INTENT(src, modifiers))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		if (HAS_TRAIT(src, TRAIT_PACIFISM))
 			return FALSE
 		return style.harm_act(src, target)

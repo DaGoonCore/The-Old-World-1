@@ -1,9 +1,9 @@
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 #define PROGRESSBAR_HEIGHT 6
 */
-//SEPTIC EDIT BEGIN
+//OWORLD EDIT BEGIN
 #define PROGRESSBAR_HEIGHT 8
-//SEPTIC EDIT END
+//OWORLD EDIT END
 #define PROGRESSBAR_ANIMATION_TIME 5
 
 /datum/progressbar
@@ -37,14 +37,14 @@
 		return
 	goal = goal_number
 	bar_loc = target
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	bar = image('icons/effects/progessbar.dmi', bar_loc, "prog_bar_0")
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	bar = image('oworld/icons/effects/loadingcircle.dmi', bar_loc, "prog_bar_0")
 	bar.color = "#27c400"
 	bar.filters += filter(type = "drop_shadow", size = 1, color = "#000000", x = 1, y = -1, offset = 1)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	bar.plane = ABOVE_HUD_PLANE
 	bar.appearance_flags = APPEARANCE_UI_IGNORE_ALPHA
 	user = User
@@ -135,24 +135,24 @@
 	if(progress == last_progress)
 		return
 	last_progress = progress
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	bar.icon_state = "prog_bar_[round(((progress / goal) * 100), 5)]"
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	bar.icon_state = "progress-[FLOOR(((progress / goal) * 16), 1)]"
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 
 
 ///Called on progress end, be it successful or a failure. Wraps up things to delete the datum and bar.
 /datum/progressbar/proc/end_progress()
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(last_progress != goal)
 		bar.icon_state = "[bar.icon_state]_fail"
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	if(last_progress != goal)
 		bar.color = "#ff0000"
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	animate(bar, alpha = 0, time = PROGRESSBAR_ANIMATION_TIME)
 
 	QDEL_IN(src, PROGRESSBAR_ANIMATION_TIME)

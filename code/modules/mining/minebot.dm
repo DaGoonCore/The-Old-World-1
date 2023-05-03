@@ -126,10 +126,10 @@
 	. = ..()
 	if(.)
 		return
-	//if(!user.combat_mode) //SEPTIC EDIT REMOVAL
-	//SEPTIC EDIT BEGIN
+	//if(!user.combat_mode) //OWORLD EDIT REMOVAL
+	//OWORLD EDIT BEGIN
 	if(IS_HELP_INTENT(user, modifiers))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		toggle_mode()
 		switch(mode)
 			if(MINEDRONE_COLLECT)

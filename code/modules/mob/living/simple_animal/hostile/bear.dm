@@ -131,10 +131,10 @@
 	icon_state = "butterbear"
 	icon_living = "butterbear"
 	icon_dead = "butterbear_dead"
-	//desc = "I can't believe its not a bear!" //SEPTIC EDIT REMOVAL
-	//SEPTIC EDIT BEGIN
+	//desc = "I can't believe its not a bear!" //OWORLD EDIT REMOVAL
+	//OWORLD EDIT BEGIN
 	desc = "Butter bear - The bear with the butter on it."
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	faction = list("neutral", "russian")
 	obj_damage = 11
 	melee_damage_lower = 0
@@ -162,10 +162,10 @@
 
 /mob/living/simple_animal/hostile/bear/butter/attack_hand(mob/living/user, list/modifiers) //Borrowed code from Cak, feeds people if they hit you. More nutriment but less vitamin to represent BUTTER.
 	..()
-	//if(user.combat_mode && user.reagents && !stat) //SEPTIC EDIT REMOVAL
-	//SEPTIC EDIT BEGIN
+	//if(user.combat_mode && user.reagents && !stat) //OWORLD EDIT REMOVAL
+	//OWORLD EDIT BEGIN
 	if(!IS_HELP_INTENT(user, modifiers) && user.reagents && !stat)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		user.reagents.add_reagent(/datum/reagent/consumable/nutriment, 1)
 		user.reagents.add_reagent(/datum/reagent/consumable/nutriment/vitamin, 0.1)
 

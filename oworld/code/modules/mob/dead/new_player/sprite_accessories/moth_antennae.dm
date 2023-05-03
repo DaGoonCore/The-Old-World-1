@@ -14,36 +14,36 @@
 
 //thx fulp lmao
 /datum/sprite_accessory/moth_antennae/rosy
-	icon = 'modular_septic/icons/mob/human/sprite_accessory/moth_antennas.dmi'
+	icon = 'oworld/icons/mob/human/sprite_accessory/moth_antennas.dmi'
 	name = "Rosy"
 	icon_state = "rosy"
 
 /datum/sprite_accessory/moth_antennae/dreamhead
-	icon = 'modular_septic/icons/mob/human/sprite_accessory/moth_antennas.dmi'
+	icon = 'oworld/icons/mob/human/sprite_accessory/moth_antennas.dmi'
 	name = "Dreamhead"
 	icon_state = "dreamhead"
 
 /datum/sprite_accessory/moth_antennae/delirious
-	icon = 'modular_septic/icons/mob/human/sprite_accessory/moth_antennas.dmi'
+	icon = 'oworld/icons/mob/human/sprite_accessory/moth_antennas.dmi'
 	name = "Delirious"
 	icon_state = "delirious"
 
 /datum/sprite_accessory/moth_antennae/feathery
-	icon = 'modular_septic/icons/mob/human/sprite_accessory/moth_antennas.dmi'
+	icon = 'oworld/icons/mob/human/sprite_accessory/moth_antennas.dmi'
 	name = "Feathery"
 	icon_state = "feathery"
 
 /datum/sprite_accessory/moth_antennae/brown
-	icon = 'modular_septic/icons/mob/human/sprite_accessory/moth_antennas.dmi'
+	icon = 'oworld/icons/mob/human/sprite_accessory/moth_antennas.dmi'
 	name = "Brown"
 	icon_state = "brown"
 
 /datum/sprite_accessory/moth_antennae/plasmafire
-	icon = 'modular_septic/icons/mob/human/sprite_accessory/moth_antennas.dmi'
+	icon = 'oworld/icons/mob/human/sprite_accessory/moth_antennas.dmi'
 	name = "Plasmafire"
 	icon_state = "plasmafire"
 
 /datum/sprite_accessory/moth_antennae/aspen
-	icon = 'modular_septic/icons/mob/human/sprite_accessory/moth_antennas.dmi'
+	icon = 'oworld/icons/mob/human/sprite_accessory/moth_antennas.dmi'
 	name = "Aspen"
 	icon_state = "aspen"

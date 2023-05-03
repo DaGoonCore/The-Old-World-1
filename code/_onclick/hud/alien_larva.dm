@@ -5,10 +5,10 @@
 	..()
 	var/atom/movable/screen/using
 
-	//action_intent = new /atom/movable/screen/combattoggle/flashy() //SEPTIC EDIT REMOVAL
-	//SEPTIC EDIT BEGIN
+	//action_intent = new /atom/movable/screen/combattoggle/flashy() //OWORLD EDIT REMOVAL
+	//OWORLD EDIT BEGIN
 	action_intent = new /atom/movable/screen/combattoggle()
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	action_intent.hud = src
 	action_intent.icon = ui_style
 	action_intent.screen_loc = ui_combat_toggle
@@ -25,10 +25,10 @@
 	pull_icon = new /atom/movable/screen/pull()
 	pull_icon.icon = 'icons/hud/screen_alien.dmi'
 	pull_icon.update_appearance()
-	//pull_icon.screen_loc = ui_above_movement //SEPTIC EDIT REMOVAL
-	//SEPTIC EDIT BEGIN
+	//pull_icon.screen_loc = ui_above_movement //OWORLD EDIT REMOVAL
+	//OWORLD EDIT BEGIN
 	pull_icon.screen_loc = ui_pull
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	pull_icon.hud = src
 	hotkeybuttons += pull_icon
 

@@ -1,4 +1,4 @@
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /proc/priority_announce(text, title = "", sound, type , sender_override, has_important_message)
 	if(!text)
 		return
@@ -19,12 +19,12 @@
 
 	else
 		if(!sender_override)
-			/* SEPTIC EDIT REMOVAL
+			/* OWORLD EDIT REMOVAL
 			announcement += "<h1 class='alert'>[command_name()] Update</h1>"
 			*/
-			//SEPTIC EDIT BEGIN
+			//OWORLD EDIT BEGIN
 			announcement += "<h1 class='alert'>[command_name()]</h1>"
-			//SEPTIC EDIT END
+			//OWORLD EDIT END
 		else
 			announcement += "<h1 class='alert'>[sender_override]</h1>"
 		if (title && length(title) > 0)
@@ -35,14 +35,14 @@
 				GLOB.news_network.SubmitArticle(text, "Central Command Update", "Station Announcements", null)
 			else
 				GLOB.news_network.SubmitArticle(title + "<br><br>" + text, "Central Command", "Station Announcements", null)
-			//SEPTIC EDIT BEGIN
+			//OWORLD EDIT BEGIN
 			var/parsed_title = (type == "Priority" ? "(Priority) " : "") + (title ?  html_encode(title) : html_encode(command_name()) )
 			var/parsed_text = html_encode(text)
 			SSstation.station_announcements += list(
 				list("title" = parsed_title, \
 					"text" = parsed_text)
 			)
-			//SEPTIC EDIT END
+			//OWORLD EDIT END
 
 	///If the announcer overrides alert messages, use that message.
 	if(SSstation.announcer.custom_alert_message && !has_important_message)

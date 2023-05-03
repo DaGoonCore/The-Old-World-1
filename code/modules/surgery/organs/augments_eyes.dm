@@ -1,4 +1,4 @@
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /obj/item/organ/cyberimp/eyes
 	name = "cybernetic eye implant"
 	desc = "Implants for your eyes."

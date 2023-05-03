@@ -29,7 +29,7 @@
 	. = ..()
 	air_update_turf(TRUE, TRUE)
 
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /obj/structure/falsewall/attack_hand(mob/user, list/modifiers)
 	if(opening)
 		return

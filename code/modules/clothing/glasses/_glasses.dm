@@ -215,12 +215,12 @@
 
 /obj/item/clothing/glasses/regular/Initialize(mapload)
 	. = ..()
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	AddComponent(/datum/component/knockoff,25,list(BODY_ZONE_PRECISE_EYES),list(ITEM_SLOT_EYES))
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	AddComponent(/datum/component/knockoff,25,list(BODY_ZONE_PRECISE_L_EYE, BODY_ZONE_PRECISE_R_EYE),list(ITEM_SLOT_EYES))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	var/static/list/loc_connections = list(
 		COMSIG_ATOM_ENTERED = .proc/on_entered,
 	)
@@ -411,12 +411,12 @@
 /obj/item/clothing/glasses/blindfold/white/update_icon(updates=ALL, mob/living/carbon/human/user)
 	. = ..()
 	if(ishuman(user) && !colored_before)
-		/* SEPTIC EDIT REMOVAL
+		/* OWORLD EDIT REMOVAL
 		add_atom_colour(user.eye_color, FIXED_COLOUR_PRIORITY)
 		*/
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		add_atom_colour(sanitize_hexcolor(user.right_eye_color, 6, TRUE), FIXED_COLOUR_PRIORITY)
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 		colored_before = TRUE
 
 /obj/item/clothing/glasses/blindfold/white/worn_overlays(mutable_appearance/standing, isinhands = FALSE, file2use)
@@ -427,12 +427,12 @@
 	var/mob/living/carbon/human/H = loc
 	var/mutable_appearance/M = mutable_appearance('icons/mob/clothing/eyes.dmi', "blindfoldwhite")
 	M.appearance_flags |= RESET_COLOR
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	M.color = H.eye_color
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	M.color = "#[H.left_eye_color]"
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	. += M
 
 /obj/item/clothing/glasses/sunglasses/big

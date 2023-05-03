@@ -344,10 +344,10 @@
 			L.extinguish_mob()
 		for(var/obj/item/Item in O)
 			Item.extinguish()
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		if(O.turf_fire)
 			qdel(O.turf_fire)
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 
 #undef ALUMINUM_FOAM
 #undef IRON_FOAM

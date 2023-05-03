@@ -1,4 +1,4 @@
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /obj/item/organ
 	name = "organ"
 	icon = 'icons/obj/surgery.dmi'

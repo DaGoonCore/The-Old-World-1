@@ -64,7 +64,7 @@
 
 /obj/item/organ/body_egg/alien_embryo/egg_process()
 	if(stage == 6 && prob(50))
-		/* SEPTIC EDIT REMOVAL
+		/* OWORLD EDIT REMOVAL
 		for(var/datum/surgery/S in owner.surgeries)
 			if(S.location == BODY_ZONE_CHEST && istype(S.get_surgery_step(), /datum/surgery_step/manipulate_organs))
 				AttemptGrow(0)

@@ -3,7 +3,7 @@
 	"map_name": "ZSS Munchausen",
 	"map_lore": "The year is 2560. The Itobite Revolution is happening all around you, but the station has yet to be affected. If God wills it, you will not die at their hands today.",
 	"command_name": "ZoomTech Operational Command",
-	"map_path": "_septic/map_files/SpaceBoxStation",
+	"map_path": "_oworld/map_files/SpaceBoxStation",
 	"map_file": "SpaceBoxStation.dmm",
 	"shuttles": {
 		"cargo": "cargo_box",

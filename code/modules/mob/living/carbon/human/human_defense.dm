@@ -52,7 +52,7 @@
 	if(dna?.species)
 		dna.species.on_hit(P, src)
 
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /mob/living/carbon/human/bullet_act(obj/projectile/P, def_zone, piercing_hit = FALSE)
 	if(dna?.species)
 		var/spec_return = dna.species.bullet_act(P, src)
@@ -144,7 +144,7 @@
 		if(mind.martial_art && prob(mind.martial_art.block_chance) && mind.martial_art.can_use(src) && throw_mode && !incapacitated(FALSE, TRUE))
 			return TRUE
 	return FALSE
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /mob/living/carbon/human/hitby(atom/movable/AM, skipcatch = FALSE, hitpush = TRUE, blocked = FALSE, datum/thrownthing/throwingdatum)
 	if(dna?.species)
 		var/spec_return = dna.species.spec_hitby(AM, src)
@@ -205,7 +205,7 @@
 					span_userdanger("[user] [hulk_verb]ed [src]!"), span_hear("You hear a sickening sound of flesh hitting flesh!"), null, user)
 	to_chat(user, span_danger("You [hulk_verb] [src]!"))
 	apply_damage(15, BRUTE, wound_bonus=10)
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /mob/living/carbon/human/attack_hand(mob/user, list/modifiers)
 	if(..()) //to allow surgery to return properly.
 		return
@@ -246,10 +246,10 @@
 				to_chat(user, span_danger("You tackle [src] down!"))
 		return TRUE
 
-	//if(!user.combat_mode) //SEPTIC EDIT REMOVAL
-	//SEPTIC EDIT BEGIN
+	//if(!user.combat_mode) //OWORLD EDIT REMOVAL
+	//OWORLD EDIT BEGIN
 	if(IS_HELP_INTENT(user, modifiers))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		..() //shaking
 		return FALSE
 

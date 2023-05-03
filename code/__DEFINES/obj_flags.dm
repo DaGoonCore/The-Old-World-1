@@ -61,7 +61,7 @@
 #define PLASMAMAN_HELMET_EXEMPT (1<<17) //prevents from placing on plasmaman helmet
 
 /// Flags for the organ_flags var on /obj/item/organ
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 #define ORGAN_SYNTHETIC (1<<0) //Synthetic organs, or cybernetic organs. Reacts to EMPs and don't deteriorate or heal
 #define ORGAN_FROZEN (1<<1) //Frozen organs, don't deteriorate
 #define ORGAN_FAILING (1<<2) //Failing organs perform damaging effects until replaced or fixed

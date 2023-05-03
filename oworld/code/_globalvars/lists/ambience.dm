@@ -1,31 +1,31 @@
 GLOBAL_LIST_INIT(generic_ambience,list(
-	'modular_septic/sound/ambience/ambidanger1.ogg', 'modular_septic/sound/ambience/ambidanger2.ogg',
-	'modular_septic/sound/ambience/ambidanger3.ogg',
-	'modular_septic/sound/ambience/ambigen1.ogg', 'modular_septic/sound/ambience/ambigen2.ogg',
-	'modular_septic/sound/ambience/ambigen3.ogg', 'modular_septic/sound/ambience/ambigen4.ogg',
-	'modular_septic/sound/ambience/ambigen5.ogg', 'modular_septic/sound/ambience/ambigen6.ogg',
-	'modular_septic/sound/ambience/ambigen7.ogg', 'modular_septic/sound/ambience/ambigen8.ogg'))
+	'oworld/sound/ambience/ambidanger1.ogg', 'oworld/sound/ambience/ambidanger2.ogg',
+	'oworld/sound/ambience/ambidanger3.ogg',
+	'oworld/sound/ambience/ambigen1.ogg', 'oworld/sound/ambience/ambigen2.ogg',
+	'oworld/sound/ambience/ambigen3.ogg', 'oworld/sound/ambience/ambigen4.ogg',
+	'oworld/sound/ambience/ambigen5.ogg', 'oworld/sound/ambience/ambigen6.ogg',
+	'oworld/sound/ambience/ambigen7.ogg', 'oworld/sound/ambience/ambigen8.ogg'))
 
 GLOBAL_LIST_INIT(maint_ambience,list(
-	'modular_septic/sound/ambience/zoltan1.wav', 'modular_septic/sound/ambience/zoltan2.wav',
-	'modular_septic/sound/ambience/creepywave1.wav', 'modular_septic/sound/ambience/creepywave2.wav',
-	'modular_septic/sound/ambience/maintgen1.ogg', 'modular_septic/sound/ambience/maintgen2.ogg',
-	'modular_septic/sound/ambience/maintgen3.ogg', 'modular_septic/sound/ambience/maintgen4.ogg',
-	'modular_septic/sound/ambience/maintgen5.ogg', 'modular_septic/sound/ambience/pipegen1.ogg',
-	'modular_septic/sound/ambience/pipegen2.ogg', 'modular_septic/sound/ambience/pipegen3.ogg'))
+	'oworld/sound/ambience/zoltan1.wav', 'oworld/sound/ambience/zoltan2.wav',
+	'oworld/sound/ambience/creepywave1.wav', 'oworld/sound/ambience/creepywave2.wav',
+	'oworld/sound/ambience/maintgen1.ogg', 'oworld/sound/ambience/maintgen2.ogg',
+	'oworld/sound/ambience/maintgen3.ogg', 'oworld/sound/ambience/maintgen4.ogg',
+	'oworld/sound/ambience/maintgen5.ogg', 'oworld/sound/ambience/pipegen1.ogg',
+	'oworld/sound/ambience/pipegen2.ogg', 'oworld/sound/ambience/pipegen3.ogg'))
 
 GLOBAL_LIST_INIT(escape_ambience,list(
-	'modular_septic/sound/ambience/ext01.ogg', 'modular_septic/sound/ambience/ext02.ogg',
-	'modular_septic/sound/ambience/ext03.ogg', 'modular_septic/sound/ambience/ext04.ogg',
-	'modular_septic/sound/ambience/ext05.ogg'))
+	'oworld/sound/ambience/ext01.ogg', 'oworld/sound/ambience/ext02.ogg',
+	'oworld/sound/ambience/ext03.ogg', 'oworld/sound/ambience/ext04.ogg',
+	'oworld/sound/ambience/ext05.ogg'))
 
 GLOBAL_LIST_INIT(lab_ambience,list(
-	'modular_septic/sound/ambience/lab_ambigen1.ogg', 'modular_septic/sound/ambience/lab_ambigen2.ogg',
-	'modular_septic/sound/ambience/lab_ambigen3.ogg'))
+	'oworld/sound/ambience/lab_ambigen1.ogg', 'oworld/sound/ambience/lab_ambigen2.ogg',
+	'oworld/sound/ambience/lab_ambigen3.ogg'))
 
 GLOBAL_LIST_INIT(zeethree_ambience,list(
-	'modular_septic/sound/ambience/z3_1.wav', 'modular_septic/sound/ambience/z3_2.wav', 'modular_septic/sound/ambience/z3_3.wav',
-	'modular_septic/sound/ambience/z3_4.wav'))
+	'oworld/sound/ambience/z3_1.wav', 'oworld/sound/ambience/z3_2.wav', 'oworld/sound/ambience/z3_3.wav',
+	'oworld/sound/ambience/z3_4.wav'))
 
 GLOBAL_LIST_INIT(holy_ambience,list(
 	'sound/ambience/ambicha1.ogg', 'sound/ambience/ambicha2.ogg',
@@ -34,7 +34,7 @@ GLOBAL_LIST_INIT(holy_ambience,list(
 	'sound/ambience/ambiholy3.ogg'))
 
 GLOBAL_LIST_INIT(danger_ambience,list(
-	'modular_septic/sound/ambience/ambidanger1.ogg', 'modular_septic/sound/ambience/ambidanger2.ogg', 'modular_septic/sound/ambience/ambidanger3.ogg'))
+	'oworld/sound/ambience/ambidanger1.ogg', 'oworld/sound/ambience/ambidanger2.ogg', 'oworld/sound/ambience/ambidanger3.ogg'))
 
 GLOBAL_LIST_INIT(ruins_ambience,list(
 	'sound/ambience/ambimine.ogg', 'sound/ambience/ambicave.ogg',
@@ -46,7 +46,7 @@ GLOBAL_LIST_INIT(ruins_ambience,list(
 	'sound/ambience/ambimystery.ogg', 'sound/ambience/ambimaint1.ogg'))
 
 GLOBAL_LIST_INIT(engi_ambience,list(
-	'modular_septic/sound/ambience/ambitech1.wav', 'modular_septic/sound/ambience/ambitech2.wav'))
+	'oworld/sound/ambience/ambitech1.wav', 'oworld/sound/ambience/ambitech2.wav'))
 
 GLOBAL_LIST_INIT(mining_ambience,list(
 	'sound/ambience/ambimine.ogg', 'sound/ambience/ambicave.ogg',
@@ -70,8 +70,8 @@ GLOBAL_LIST_INIT(space_ambience,list(
 	'sound/ambience/ambispace3.ogg', 'sound/ambience/ambiatmos.ogg'))
 
 GLOBAL_LIST_INIT(elevator_ambience,list(
-	'modular_septic/sound/ambience/elevator1.wav', 'modular_septic/sound/ambience/elevator2.wav', 'modular_septic/sound/ambience/elevator3.wav',
-	'modular_septic/sound/ambience/elevator4.wav', 'modular_septic/sound/ambience/elevator5.wav', 'modular_septic/sound/ambience/elevator6.wav'))
+	'oworld/sound/ambience/elevator1.wav', 'oworld/sound/ambience/elevator2.wav', 'oworld/sound/ambience/elevator3.wav',
+	'oworld/sound/ambience/elevator4.wav', 'oworld/sound/ambience/elevator5.wav', 'oworld/sound/ambience/elevator6.wav'))
 
 GLOBAL_LIST_INIT(away_ambience,list(
 	'sound/ambience/ambitech.ogg', 'sound/ambience/ambitech2.ogg',
@@ -100,7 +100,7 @@ GLOBAL_LIST_INIT(creepy_ambience,list(
 	'sound/hallucinations/wail.ogg'))
 
 GLOBAL_LIST_INIT(outdoor_ambience,list(
-	'modular_septic/sound/ambience/winder1.wav', 'modular_septic/sound/ambience/winder2.wav', 'modular_septic/sound/ambience/winder3.wav'))
+	'oworld/sound/ambience/winder1.wav', 'oworld/sound/ambience/winder2.wav', 'oworld/sound/ambience/winder3.wav'))
 
 GLOBAL_LIST_INIT(ambience_assoc,list(
 	AMBIENCE_GENERIC = GLOB.generic_ambience,

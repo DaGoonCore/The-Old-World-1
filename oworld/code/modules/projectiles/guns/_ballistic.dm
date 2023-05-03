@@ -16,7 +16,7 @@
 	/// Gives us an unique icon_state with an uncocked hammer, if we are a break action or revovler
 	var/uncocked_icon_state = FALSE
 	/// Unracking sound
-	var/unrack_sound = 'modular_septic/sound/weapons/guns/decock_generic.wav'
+	var/unrack_sound = 'oworld/sound/weapons/guns/decock_generic.wav'
 	/// Volume of unracking sound
 	var/unrack_sound_volume = 40
 	/// Whether unracking sound should vary
@@ -25,7 +25,7 @@
 /obj/item/suppressor
 	name = "suppressor"
 	desc = "A multi-caliber suppressor for the discerete massacre of homeless, children, and homeless children."
-	icon = 'modular_septic/icons/obj/items/gun_mods/mods.dmi'
+	icon = 'oworld/icons/obj/items/gun_mods/mods.dmi'
 	icon_state = "suppressor"
 
 /obj/item/gun/ballistic/update_icon_state()
@@ -172,12 +172,12 @@
 /obj/item/gun/ballistic/AltClick(mob/user)
 	if(can_unsuppress && suppressed && user.is_holding(src))
 		var/obj/item/suppressor/suppressor = suppressed
-		playsound(user, 'modular_septic/sound/weapons/guns/silencer_start.ogg', 60, TRUE)
+		playsound(user, 'oworld/sound/weapons/guns/silencer_start.ogg', 60, TRUE)
 		to_chat(user, span_notice("I start unscrewing."))
 		if(!do_after(user, 3 SECONDS, src))
 			return
 		to_chat(user, span_notice("I unscrew [suppressor] from [src]."))
-		playsound(user, 'modular_septic/sound/weapons/guns/silencer_off.wav', 75, TRUE)
+		playsound(user, 'oworld/sound/weapons/guns/silencer_off.wav', 75, TRUE)
 		user.put_in_hands(suppressor)
 		clear_suppressor()
 	else
@@ -226,15 +226,15 @@
 			return
 		if(user.transferItemToLoc(suppressor, src))
 			install_suppressor(suppressor)
-			playsound(user, 'modular_septic/sound/weapons/guns/silencer_start.ogg', 60, TRUE)
+			playsound(user, 'oworld/sound/weapons/guns/silencer_start.ogg', 60, TRUE)
 			to_chat(user, span_notice("I start screwing."))
 			if(!do_after(user, 3 SECONDS, src))
 				user.put_in_hands(suppressor)
-				playsound(user, 'modular_septic/sound/weapons/guns/silencer_fumble.ogg', 25, TRUE)
+				playsound(user, 'oworld/sound/weapons/guns/silencer_fumble.ogg', 25, TRUE)
 				clear_suppressor()
 				return
 			to_chat(user, span_notice("I screw [suppressor] onto [src]."))
-			playsound(user, 'modular_septic/sound/weapons/guns/silencer_on.wav', 75, TRUE)
+			playsound(user, 'oworld/sound/weapons/guns/silencer_on.wav', 75, TRUE)
 			return
 
 	if(can_be_sawn_off)

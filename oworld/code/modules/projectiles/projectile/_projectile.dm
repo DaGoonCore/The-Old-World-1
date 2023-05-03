@@ -1,6 +1,6 @@
 /obj/projectile
 	speed = 0.3
-	icon = 'modular_septic/icons/obj/items/guns/projectiles/projectiles.dmi'
+	icon = 'oworld/icons/obj/items/guns/projectiles/projectiles.dmi'
 	icon_state = "bullet"
 	/// Minimum damage this projectile can do
 	var/min_damage

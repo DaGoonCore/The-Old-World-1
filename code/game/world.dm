@@ -42,9 +42,9 @@ GLOBAL_VAR(restart_counter)
 
 	config.Load(params[OVERRIDE_CONFIG_DIRECTORY_PARAMETER])
 
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	generate_selectable_species()
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	load_admins()
 
 	//SetupLogs depends on the RoundID, so lets check

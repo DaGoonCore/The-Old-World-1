@@ -49,7 +49,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 		if(HAS_TRAIT(C, TRAIT_LIGHT_DRINKER))
 			booze_power *= 2
 		C.drunkenness = max((C.drunkenness + (sqrt(volume) * booze_power * ALCOHOL_RATE * REM * delta_time)), 0) //Volume, power, and server alcohol rate effect how quickly one gets drunk
-		/* SEPTIC EDIT REMOVAL
+		/* OWORLD EDIT REMOVAL
 		if(boozepwr > 0)
 			var/obj/item/organ/liver/L = C.getorganslot(ORGAN_SLOT_LIVER)
 			if (istype(L))
@@ -77,7 +77,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 		return
 
 	exposed_mob.adjust_fire_stacks(reac_volume / 15)
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(!iscarbon(exposed_mob))
 		return
 	var/mob/living/carbon/exposed_carbon = exposed_mob

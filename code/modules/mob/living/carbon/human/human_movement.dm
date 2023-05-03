@@ -43,7 +43,7 @@
 /mob/living/carbon/human/mob_negates_gravity()
 	return ((shoes?.negates_gravity()) || (dna.species.negates_gravity(src)))
 
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /mob/living/carbon/human/Move(NewLoc, direct)
 	. = ..()
 	if(shoes && body_position == STANDING_UP && loc == NewLoc && has_gravity(loc))

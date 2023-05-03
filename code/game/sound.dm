@@ -209,13 +209,13 @@ distance_multiplier - Can be used to multiply the distance at which the sound is
 
 
 /proc/get_sfx(soundin)
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	if(islist(soundin) && LAZYLEN(soundin))
 		soundin = pick(soundin)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	if(istext(soundin))
 		switch(soundin)
-			//SEPTIC EDIT BEGIN
+			//OWORLD EDIT BEGIN
 			if("explosion")
 				soundin = pick('oworld/sound/effects/explode1.wav', 'oworld/sound/effects/explode2.wav', 'oworld/sound/effects/explode3.wav')
 			if("sparks")
@@ -224,10 +224,10 @@ distance_multiplier - Can be used to multiply the distance at which the sound is
 				soundin = pick('oworld/sound/effects/foley3.wav','oworld/sound/effects/foley2.wav','oworld/sound/effects/foley1.wav')
 			if("swing_hit")
 				soundin = pick('oworld/sound/weapons/genhit1.wav', 'oworld/sound/weapons/genhit2.wav', 'oworld/sound/weapons/genhit3.wav')
-			//SEPTIC EDIT END
+			//OWORLD EDIT END
 			if ("shatter")
 				soundin = pick('sound/effects/glassbr1.ogg','sound/effects/glassbr2.ogg','sound/effects/glassbr3.ogg')
-			/* SEPTIC EDIT REMOVAL
+			/* OWORLD EDIT REMOVAL
 			if ("explosion")
 				soundin = pick('sound/effects/explosion1.ogg','sound/effects/explosion2.ogg')
 			*/
@@ -235,7 +235,7 @@ distance_multiplier - Can be used to multiply the distance at which the sound is
 				soundin = pick('sound/effects/explosioncreak1.ogg', 'sound/effects/explosioncreak2.ogg')
 			if ("hull_creaking")
 				soundin = pick('sound/effects/creak1.ogg', 'sound/effects/creak2.ogg', 'sound/effects/creak3.ogg')
-			/* SEPTIC EDIT REMOVAL
+			/* OWORLD EDIT REMOVAL
 			if ("sparks")
 				soundin = pick('sound/effects/sparks1.ogg','sound/effects/sparks2.ogg','sound/effects/sparks3.ogg','sound/effects/sparks4.ogg')
 			if ("rustle")
@@ -249,7 +249,7 @@ distance_multiplier - Can be used to multiply the distance at which the sound is
 				soundin = pick('sound/effects/clownstep1.ogg','sound/effects/clownstep2.ogg')
 			if ("suitstep")
 				soundin = pick('sound/effects/suitstep1.ogg','sound/effects/suitstep2.ogg')
-			/* SEPTIC EDIT REMOVAL
+			/* OWORLD EDIT REMOVAL
 			if ("swing_hit")
 				soundin = pick('sound/weapons/genhit1.ogg', 'sound/weapons/genhit2.ogg', 'sound/weapons/genhit3.ogg')
 			*/

@@ -1,4 +1,4 @@
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /////BURN FIXING SURGERIES//////
 
 //the step numbers of each of these two, we only currently use the first to switch back and forth due to advancing after finishing steps anyway

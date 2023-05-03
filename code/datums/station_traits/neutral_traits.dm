@@ -1,4 +1,4 @@
-//SEPTIC EDIT BEGIN
+//OWORLD EDIT BEGIN
 /*
 /datum/station_trait/bananium_shipment
 	name = "Bananium Shipment"
@@ -7,7 +7,7 @@
 	report_message = "Rumors has it that the clown planet has been sending support packages to clowns in this system"
 	trait_to_give = STATION_TRAIT_BANANIUM_SHIPMENTS
 */
-//SEPTIC EDIT END
+//OWORLD EDIT END
 
 /datum/station_trait/unnatural_atmosphere
 	name = "Unnatural atmospherical properties"
@@ -59,7 +59,7 @@
 	report_message = "Something seems to be wrong with the PDAs issued to you all this shift. Nothing too bad though."
 	trait_to_give = STATION_TRAIT_PDA_GLITCHED
 	
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /datum/station_trait/announcement_intern
 	name = "Announcement Intern"
 	trait_type = STATION_TRAIT_NEUTRAL

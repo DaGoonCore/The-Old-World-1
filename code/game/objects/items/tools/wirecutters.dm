@@ -45,7 +45,7 @@
 		set_greyscale(colors=list(wirecutter_colors[our_color]))
 	return ..()
 
-/* SEPTIC EDIT START - MOVED TO MODULAR
+/* OWORLD EDIT START - MOVED TO MODULAR
 /obj/item/wirecutters/attack(mob/living/carbon/attacked_carbon, mob/user)
 	if(istype(attacked_carbon) && attacked_carbon.handcuffed && istype(attacked_carbon.handcuffed, /obj/item/restraints/handcuffs/cable))
 		user.visible_message(span_notice("[user] cuts [attacked_carbon]'s restraints with [src]!"))

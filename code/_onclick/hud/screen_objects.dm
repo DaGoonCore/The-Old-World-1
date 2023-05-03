@@ -59,9 +59,9 @@
 	name = "swap hand"
 
 /atom/movable/screen/swap_hand/Click()
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	. = ..()
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	// At this point in client Click() code we have passed the 1/10 sec check and little else
 	// We don't even know if it's a middle click
 	if(world.time <= usr.next_move)
@@ -79,12 +79,12 @@
 	name = "skills"
 	icon = 'icons/hud/screen_midnight.dmi'
 	icon_state = "skills"
-	//screen_loc = ui_skill_menu //SEPTIC EDIT REMOVAL
-	//SEPTIC EDIT BEGIN
+	//screen_loc = ui_skill_menu //OWORLD EDIT REMOVAL
+	//OWORLD EDIT BEGIN
 	screen_loc = ui_skills
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /atom/movable/screen/skills/Click()
 	if(ishuman(usr))
 		var/mob/living/carbon/human/H = usr
@@ -102,7 +102,7 @@
 	icon = 'icons/hud/screen_midnight.dmi'
 	icon_state = "area_edit"
 	screen_loc = ui_building
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /atom/movable/screen/area_creator/Click()
 	if(usr.incapacitated() || (isobserver(usr) && !isAdminGhostAI(usr)))
 		return TRUE
@@ -117,7 +117,7 @@
 	icon = 'icons/hud/screen_midnight.dmi'
 	icon_state = "talk_wheel"
 	screen_loc = ui_language_menu
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /atom/movable/screen/language_menu/Click()
 	var/mob/M = usr
 	var/datum/language_holder/H = M.get_language_holder()
@@ -135,9 +135,9 @@
 	plane = HUD_PLANE
 
 /atom/movable/screen/inventory/Click(location, control, params)
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	. = ..()
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	// At this point in client Click() code we have passed the 1/10 sec check and little else
 	// We don't even know if it's a middle click
 	if(world.time <= usr.next_move)
@@ -221,15 +221,15 @@
 		if(held_index)
 			if(!C.has_hand_for_held_index(held_index))
 				. += blocked_overlay
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(held_index == hud.mymob.active_hand_index)
 		. += "hand_active"
 	*/
 
 /atom/movable/screen/inventory/hand/Click(location, control, params)
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	. = ..()
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	// At this point in client Click() code we have passed the 1/10 sec check and little else
 	// We don't even know if it's a middle click
 	var/mob/user = hud?.mymob
@@ -258,7 +258,7 @@
 /atom/movable/screen/close/Initialize(mapload, new_master)
 	. = ..()
 	master = new_master
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /atom/movable/screen/close/Click()
 	var/datum/component/storage/S = master
 	S.hide_from(usr)
@@ -271,9 +271,9 @@
 	plane = HUD_PLANE
 
 /atom/movable/screen/drop/Click()
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	. = ..()
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	if(usr.stat == CONSCIOUS)
 		usr.dropItemToGround(usr.get_active_held_item())
 
@@ -288,14 +288,14 @@
 	update_appearance()
 
 /atom/movable/screen/combattoggle/Click()
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	. = ..()
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	if(isliving(usr))
 		var/mob/living/owner = usr
 		owner.set_combat_mode(!owner.combat_mode, FALSE)
 		update_appearance()
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /atom/movable/screen/combattoggle/update_icon_state()
 	var/mob/living/user = hud?.mymob
 	if(!istype(user) || !user.client)
@@ -330,7 +330,7 @@
 	name = "toggle internals"
 	icon_state = "internal0"
 	screen_loc = ui_internal
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /atom/movable/screen/internals/Click()
 	if(!iscarbon(usr))
 		return
@@ -397,11 +397,11 @@
 	icon_state = "running"
 
 /atom/movable/screen/mov_intent/Click()
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	. = ..()
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	toggle(usr)
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /atom/movable/screen/mov_intent/update_icon_state()
 	switch(hud?.mymob?.m_intent)
 		if(MOVE_INTENT_WALK)
@@ -422,13 +422,13 @@
 	base_icon_state = "pull"
 
 /atom/movable/screen/pull/Click()
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	. = ..()
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	if(isobserver(usr))
 		return
 	usr.stop_pulling()
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /atom/movable/screen/pull/update_icon_state()
 	icon_state = "[base_icon_state][hud?.mymob?.pulling ? null : 0]"
 	return ..()
@@ -440,9 +440,9 @@
 	plane = HUD_PLANE
 
 /atom/movable/screen/resist/Click()
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	. = ..()
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	if(isliving(usr))
 		var/mob/living/L = usr
 		L.resist()
@@ -455,13 +455,13 @@
 	plane = HUD_PLANE
 
 /atom/movable/screen/rest/Click()
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	. = ..()
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	if(isliving(usr))
 		var/mob/living/L = usr
 		L.toggle_resting()
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /atom/movable/screen/rest/update_icon_state()
 	var/mob/living/user = hud?.mymob
 	if(!istype(user))
@@ -480,9 +480,9 @@
 	master = new_master
 
 /atom/movable/screen/storage/Click(location, control, params)
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	. = ..()
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	if(world.time <= usr.next_move)
 		return TRUE
 	if(usr.incapacitated())
@@ -492,13 +492,13 @@
 	if(master)
 		var/obj/item/I = usr.get_active_held_item()
 		if(I)
-			/* SEPTIC EDIT REMOVAL
+			/* OWORLD EDIT REMOVAL
 			master.attackby(null, I, usr, params)
 			*/
-			//SEPTIC EDIT BEGIN
+			//OWORLD EDIT BEGIN
 			var/datum/component/storage/storage_master = master
 			storage_master.attackby(storage_master.parent, I, usr, params, TRUE)
-			//SEPTIC EDIT END
+			//OWORLD EDIT END
 	return TRUE
 
 /atom/movable/screen/throw_catch
@@ -507,9 +507,9 @@
 	icon_state = "act_throw_off"
 
 /atom/movable/screen/throw_catch/Click()
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	. = ..()
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	if(iscarbon(usr))
 		var/mob/living/carbon/C = usr
 		C.toggle_throw_mode()
@@ -523,9 +523,9 @@
 	var/hovering
 
 /atom/movable/screen/zone_sel/Click(location, control,params)
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	. = ..()
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	if(isobserver(usr))
 		return
 
@@ -541,7 +541,7 @@
 /atom/movable/screen/zone_sel/MouseEntered(location, control, params)
 	. = ..()
 	MouseMove(location, control, params)
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /atom/movable/screen/zone_sel/MouseMove(location, control, params)
 	if(isobserver(usr))
 		return
@@ -550,12 +550,12 @@
 	var/icon_x = text2num(LAZYACCESS(modifiers, ICON_X))
 	var/icon_y = text2num(LAZYACCESS(modifiers, ICON_Y))
 	var/choice = get_zone_at(icon_x, icon_y)
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	if(!choice)
 		vis_contents -= hover_overlays_cache[hovering]
 		hovering = null
 		return
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	if(hovering == choice)
 		return
 	vis_contents -= hover_overlays_cache[hovering]
@@ -574,7 +574,7 @@
 	alpha = 128
 	anchored = TRUE
 	plane = ABOVE_HUD_PLANE
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /atom/movable/screen/zone_sel/MouseExited(location, control, params)
 	if(!isobserver(usr) && hovering)
 		vis_contents -= hover_overlays_cache[hovering]
@@ -610,7 +610,7 @@
 					if(23 to 24)
 						if(icon_x in 15 to 17)
 							return BODY_ZONE_PRECISE_MOUTH
-					/* SEPTIC EDIT REMOVAL
+					/* OWORLD EDIT REMOVAL
 					if(26) //Eyeline, eyes are on 15 and 17
 						if(icon_x in 14 to 18)
 							return BODY_ZONE_PRECISE_EYES
@@ -618,14 +618,14 @@
 						if(icon_x in 15 to 17)
 							return BODY_ZONE_PRECISE_EYES
 					*/
-					//SEPTIC EDIT BEGIN
+					//OWORLD EDIT BEGIN
 					if(26) //Eyeline, eyes are on 15 and 17
 						if(icon_x in 14 to 18)
 							return BODY_ZONE_PRECISE_L_EYE
 					if(25 to 27)
 						if(icon_x in 15 to 17)
 							return BODY_ZONE_PRECISE_R_EYE
-					//SEPTIC EDIT END
+					//OWORLD EDIT END
 				return BODY_ZONE_HEAD
 
 /atom/movable/screen/zone_sel/proc/set_selected_zone(choice, mob/user)
@@ -670,16 +670,16 @@
 	plane = FULLSCREEN_PLANE
 
 /atom/movable/screen/healths
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	name = "health"
 	icon_state = "health0"
 	screen_loc = ui_health
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	name = "pulse"
 	icon_state = "pulse0"
 	screen_loc = ui_pulse
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 
 /atom/movable/screen/healths/alien
 	icon = 'icons/hud/screen_alien.dmi'
@@ -718,9 +718,9 @@
 	screen_loc = ui_healthdoll
 
 /atom/movable/screen/healthdoll/Click()
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	. = ..()
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	if (iscarbon(usr))
 		var/mob/living/carbon/C = usr
 		C.check_self_for_injuries()
@@ -793,9 +793,9 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/splash)
 	src.parent = parent
 
 /atom/movable/screen/component_button/Click(params)
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	. = ..()
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	if(parent)
 		parent.component_click(src, params)
 

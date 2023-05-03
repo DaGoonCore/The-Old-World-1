@@ -716,13 +716,13 @@
 		if(1)
 			to_chat(user, span_danger("Your appearance morphs to that of a very small humanoid ash dragon! You get to look like a freak without the cool abilities."))
 			consumer.dna.features = list("mcolor" = "#A02720", "tail_lizard" = "Dark Tiger", "tail_human" = "None", "snout" = "Sharp", "horns" = "Curled", "ears" = "None", "wings" = "None", "frills" = "None", "spines" = "Long", "body_markings" = "Dark Tiger Body", "legs" = "Digitigrade Legs")
-			/* SEPTIC EDIT REMOVAL
+			/* OWORLD EDIT REMOVAL
 			consumer.eye_color = "#FEE5A3"
 			*/
-			//SEPTIC EDIT BEGIN
+			//OWORLD EDIT BEGIN
 			consumer.left_eye_color = "#FEE5A3"
 			consumer.right_eye_color = "#FEE5A3"
-			//SEPTIC EDIT END
+			//OWORLD EDIT END
 			consumer.set_species(/datum/species/lizard)
 		if(2)
 			to_chat(user, span_danger("Your flesh begins to melt! Miraculously, you seem fine otherwise."))

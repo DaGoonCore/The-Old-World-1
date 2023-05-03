@@ -129,26 +129,26 @@
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 		var/location = user.zone_selected
-		/* SEPTIC EDIT REMOVAL
+		/* OWORLD EDIT REMOVAL
 		if((location in list(BODY_ZONE_PRECISE_EYES, BODY_ZONE_PRECISE_MOUTH, BODY_ZONE_HEAD)) && !H.get_bodypart(BODY_ZONE_HEAD))
 			to_chat(user, span_warning("[H] doesn't have a head!"))
 			return
 		*/
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		if(location in list(BODY_ZONE_PRECISE_L_EYE, BODY_ZONE_PRECISE_R_EYE))
 			to_chat(user, "<span class='warning'>Spacemen don't have eyelashes.</span>")
 			return
 		else if(location == BODY_ZONE_HEAD && !H.get_bodypart(BODY_ZONE_HEAD))
 			to_chat(user, "<span class='warning'><b>[H]</b> doesn't have a head!</</span>")
 			return
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 		if(location == BODY_ZONE_PRECISE_MOUTH)
-			/* SEPTIC EDIT REMOVAL
+			/* OWORLD EDIT REMOVAL
 			if(!user.combat_mode)
 			*/
-			//SEPTIC EDIT BEGIN
+			//OWORLD EDIT BEGIN
 			if(!IS_HARM_INTENT(user, null))
-			//SEPTIC EDIT END
+			//OWORLD EDIT END
 				if(H.gender == MALE)
 					if (H == user)
 						to_chat(user, span_warning("You need a mirror to properly style your own facial hair!"))
@@ -195,12 +195,12 @@
 						shave(H, location)
 
 		else if(location == BODY_ZONE_HEAD)
-			/* SEPTIC EDIT REMOVAL
+			/* OWORLD EDIT REMOVAL
 			if(!user.combat_mode)
 			*/
-			//SEPTIC EDIT BEGIN
+			//OWORLD EDIT BEGIN
 			if(!IS_HARM_INTENT(user, null))
-			//SEPTIC EDIT END
+			//OWORLD EDIT END
 				if (H == user)
 					to_chat(user, span_warning("You need a mirror to properly style your own hair!"))
 					return

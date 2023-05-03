@@ -1,6 +1,6 @@
 /atom/movable/screen/combattoggle
 	name = "combat mode on"
-	icon = 'modular_septic/icons/hud/quake/screen_quake.dmi'
+	icon = 'oworld/icons/hud/quake/screen_quake.dmi'
 	icon_state = "combat_on"
 	base_icon_state = "combat"
 	screen_loc = ui_combat_toggle

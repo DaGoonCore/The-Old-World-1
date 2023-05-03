@@ -2,7 +2,7 @@
 /obj/effect/decal/cleanable/blood/hitsplatter
 	name = "blood splatter"
 	pass_flags = PASSTABLE
-	icon = 'modular_septic/icons/effects/blood.dmi'
+	icon = 'oworld/icons/effects/blood.dmi'
 	icon_state = "hitsplatter1"
 	random_icon_states = list("hitsplatter1", "hitsplatter2", "hitsplatter3")
 	var/loc_gets_bloody = TRUE

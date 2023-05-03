@@ -3,7 +3,7 @@
 	proper_name = "Secure Closet"
 	hacking_actions = "safe"
 	var/obvious = TRUE
-	var/loud_sound = 'modular_septic/sound/effects/obvious.wav'
+	var/loud_sound = 'oworld/sound/effects/obvious.wav'
 
 /datum/hacking/closet/generate_hacking_actions()
 	GLOB.hacking_actions_by_key[hacking_actions] = list(

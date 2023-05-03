@@ -329,12 +329,12 @@
 	return
 
 /atom/proc/ShiftClick(mob/user)
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	var/flags = SEND_SIGNAL(src, COMSIG_CLICK_SHIFT, user)
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	var/flags = SEND_SIGNAL(src, COMSIG_CLICK_SHIFT, user) | SEND_SIGNAL(user, COMSIG_MOB_CLICKED_SHIFT, src)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	if(user.client && (user.client.eye == user || user.client.eye == user.loc || flags & COMPONENT_ALLOW_EXAMINATE))
 		user.examinate(src)
 	return
@@ -361,11 +361,11 @@
 		return ..()
 
 	if(world.time < user.next_move)
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		//spam prevention
 		if(!(world.time % 3))
 			to_chat(user, click_fail_msg())
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 		return FALSE
 
 	var/mob/living/user_living = user
@@ -382,11 +382,11 @@
 		return ..()
 
 	if(world.time < user.next_move)
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		//spam prevention
 		if(!(world.time % 3))
 			to_chat(user, click_fail_msg())
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 		return FALSE
 
 	var/mob/living/carbon/human/human_user = user
@@ -527,7 +527,7 @@
 
 /atom/movable/screen/click_catcher/Click(location, control, params)
 	var/list/modifiers = params2list(params)
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(LAZYACCESS(modifiers, MIDDLE_CLICK) && iscarbon(usr))
 		var/mob/living/carbon/C = usr
 		C.swap_hand()
@@ -537,12 +537,12 @@
 		if(T)
 			T.Click(location, control, params)
 	*/
-	//SEPTIC EDIT ADDITION
+	//OWORLD EDIT ADDITION
 	var/turf/T = params_to_turf(LAZYACCESS(modifiers, SCREEN_LOC), get_turf(usr.client ? usr.client.eye : usr), usr.client)
 	params += "&catcher=1"
 	if(T)
 		T.Click(location, control, params)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	. = 1
 
 /// MouseWheelOn

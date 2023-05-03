@@ -48,13 +48,13 @@
 		return
 
 	if(body_parts_covered & HEAD)
-		/* SEPTIC EDIT REMOVAL
+		/* OWORLD EDIT REMOVAL
 		if(damaged_clothes)
 			. += mutable_appearance('icons/effects/item_damage.dmi', "damagedmask")
 		if(HAS_BLOOD_DNA(src))
 			. += mutable_appearance('icons/effects/blood.dmi', "maskblood")
 		*/
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		if(damaged_clothes)
 			var/mutable_appearance/damage_appearance = mutable_appearance('oworld/icons/effects/item_damage.dmi', "damagedmask")
 			damage_appearance.color = "#000000"
@@ -73,7 +73,7 @@
 			var/mutable_appearance/femcummy = mutable_appearance('oworld/icons/effects/femcum.dmi', "maskfemcum")
 			femcummy.color = COLOR_WHITE_FEMCUM
 			. += femcummy
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 
 /obj/item/clothing/mask/update_clothes_damaged_state(damaged_state = CLOTHING_DAMAGED)
 	..()

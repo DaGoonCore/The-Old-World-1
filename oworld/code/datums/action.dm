@@ -1,6 +1,6 @@
 /datum/action
 	transparent_when_unavailable = FALSE
-	button_icon = 'modular_septic/icons/hud/quake/actions.dmi'
+	button_icon = 'oworld/icons/hud/quake/actions.dmi'
 	background_icon_state = "default"
 	/// A character can have multiple action tabs in the peeper, this ensures we display on the correct one
 	var/action_tab = /datum/peeper_tab/actions

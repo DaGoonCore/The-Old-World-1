@@ -34,13 +34,13 @@
 		cell.emp_act(severity)
 
 /obj/item/inducer/attack_atom(obj/O, mob/living/carbon/user, params)
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(user.combat_mode)
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	var/list/modifiers = params2list(params)
 	if(!IS_HELP_INTENT(user, modifiers))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		return ..()
 
 	if(cantbeused(user))
@@ -142,12 +142,12 @@
 
 
 /obj/item/inducer/attack(mob/M, mob/living/user)
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(user.combat_mode)
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	if(!IS_HELP_INTENT(user, null))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		return ..()
 
 	if(cantbeused(user))

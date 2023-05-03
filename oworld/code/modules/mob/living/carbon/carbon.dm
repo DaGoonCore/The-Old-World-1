@@ -1,7 +1,7 @@
 /mob/living/carbon
-	var/vomitsound = 'modular_septic/sound/emotes/vomit.wav'
-	var/broken_cuffs = list('modular_septic/sound/effects/fucked_cuffs1.wav', 'modular_septic/sound/effects/fucked_cuffs2.wav')
-	var/broken_zipties = list('modular_septic/sound/effects/fucked_zipties1.wav', 'modular_septic/sound/effects/fucked_zipties2.wav')
+	var/vomitsound = 'oworld/sound/emotes/vomit.wav'
+	var/broken_cuffs = list('oworld/sound/effects/fucked_cuffs1.wav', 'oworld/sound/effects/fucked_cuffs2.wav')
+	var/broken_zipties = list('oworld/sound/effects/fucked_zipties1.wav', 'oworld/sound/effects/fucked_zipties2.wav')
 
 // Carbon mobs always have an organ storage component - it just becomes accessible when necessary.
 /mob/living/carbon/Initialize(mapload)

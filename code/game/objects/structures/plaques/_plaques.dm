@@ -59,10 +59,10 @@
 
 /obj/structure/plaque/welder_act(mob/living/user, obj/item/I)
 	. = ..()
-	//if(user.combat_mode) //SEPTIC EDIT REMOVAL
-	//SEPTIC EDIT
+	//if(user.combat_mode) //OWORLD EDIT REMOVAL
+	//OWORLD EDIT
 	if(!IS_HELP_INTENT(user, null))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		return FALSE
 	if(atom_integrity == max_integrity)
 		to_chat(user, span_warning("This plaque is already in perfect condition."))
@@ -80,10 +80,10 @@
 
 /obj/item/plaque/welder_act(mob/living/user, obj/item/I)
 	. = ..()
-	//if(user.combat_mode) //SEPTIC EDIT REMOVAL
-	//SEPTIC EDIT
+	//if(user.combat_mode) //OWORLD EDIT REMOVAL
+	//OWORLD EDIT
 	if(!IS_HELP_INTENT(user, null))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		return FALSE
 	if(atom_integrity == max_integrity)
 		to_chat(user, span_warning("This plaque is already in perfect condition."))

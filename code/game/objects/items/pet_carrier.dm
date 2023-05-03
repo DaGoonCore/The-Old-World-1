@@ -83,12 +83,12 @@
 	update_appearance()
 
 /obj/item/pet_carrier/attack(mob/living/target, mob/living/user)
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(user.combat_mode)
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	if(IS_HELP_INTENT(user, null))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		return ..()
 	if(!open)
 		to_chat(user, span_warning("You need to open [src]'s door!"))

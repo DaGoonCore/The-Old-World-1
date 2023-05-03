@@ -121,7 +121,7 @@
 	if(istype(user))
 		user.mind?.add_memory(MEMORY_BOMB_PRIMED, list(DETAIL_BOMB_TYPE = src), story_value = STORY_VALUE_OKAY)
 	active = TRUE
-	/*SEPTIC EDIT REMOVAL
+	/*OWORLD EDIT REMOVAL
 	icon_state = initial(icon_state) + "_active"*/
 	SEND_SIGNAL(src, COMSIG_GRENADE_ARMED, det_time, delayoverride)
 	addtimer(CALLBACK(src, .proc/detonate), isnull(delayoverride)? det_time : delayoverride)

@@ -272,23 +272,23 @@
 	return wielder.check_obscured_slots(TRUE) & ITEM_SLOT_FEET
 
 /datum/component/bloodysoles/feet/on_moved(datum/source, OldLoc, Dir, Forced)
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(wielder.num_legs < 2)
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	if((wielder.num_legs < wielder.default_num_legs) || wielder.body_position != STANDING_UP)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		return
 
 	..()
 
 /datum/component/bloodysoles/feet/on_step_blood(datum/source, obj/effect/decal/cleanable/pool)
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(wielder.num_legs < 2)
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	if((wielder.num_legs < wielder.default_num_legs) || wielder.body_position != STANDING_UP)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		return
 
 	..()

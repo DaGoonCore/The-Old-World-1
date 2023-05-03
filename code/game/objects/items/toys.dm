@@ -237,7 +237,7 @@
 	user.death(FALSE)
 	user.ghostize(FALSE)
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	if(CH.get_cavity_volume() + w_class * 10 > CH.max_cavity_volume) // if he's (un)bright enough to have a round and full belly...
 		user.visible_message("<span class='danger'>[user] regurgitates [src]!</span>") // I swear i dont have a fetish
 		user.vomit(100, TRUE, distance = 0)
@@ -250,7 +250,7 @@
 	user.adjustOxyLoss(200) // You know how most small toys in the EU have that 3+ onion head icon and a warning that says "Unsuitable for children under 3 years of age due to small parts - choking hazard"? This is why.
 	user.death(FALSE)
 	user.ghostize(FALSE)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 
 /*
  * Toy gun: Why isn't this an /obj/item/gun?

@@ -1,4 +1,4 @@
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /datum/surgery/gastrectomy
 	name = "Gastrectomy"
 	target_mobtypes = list(/mob/living/carbon/human)

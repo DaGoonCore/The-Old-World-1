@@ -1,9 +1,9 @@
 /obj/item/clothing/mask/gas/itobe
 	name = "\proper ITOBE Solider balaclava"
 	desc = "ITOBE Solddier's, or more enthusiastically, Soldat, as they are called due to their specialized techniques wore this balaclava in combat to highlight their augmenting eyepiece, wearing it without an eyepiece would just make you look like a fool."
-	icon = 'modular_septic/icons/obj/clothing/masks.dmi'
+	icon = 'oworld/icons/obj/clothing/masks.dmi'
 	icon_state = "soldat"
-	worn_icon = 'modular_septic/icons/mob/clothing/mask.dmi'
+	worn_icon = 'oworld/icons/mob/clothing/mask.dmi'
 	worn_icon_state = "soldat"
 	flags_inv = HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDESNOUT
 	visor_flags_inv = HIDEFACE|HIDEFACIALHAIR|HIDESNOUT

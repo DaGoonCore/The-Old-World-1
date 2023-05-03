@@ -20,7 +20,7 @@
 	. = ..()
 	if(can_be_tanked)
 		. += span_notice("Use a sheet of iron to convert this into a plumbing-compatible tank.")
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /obj/structure/reagent_dispensers/take_damage(damage_amount, damage_type = BRUTE, damage_flag = 0, sound_effect = 1, attack_dir)
 	. = ..()
 	if(. && atom_integrity > 0)
@@ -85,7 +85,7 @@
 	desc = "A tank full of industrial welding fuel. Do not consume."
 	icon_state = "fuel"
 	reagent_id = /datum/reagent/fuel
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /obj/structure/reagent_dispensers/fueltank/boom()
 	explosion(src, heavy_impact_range = 1, light_impact_range = 5, flame_range = 5)
 	qdel(src)
@@ -109,15 +109,15 @@
 	if(!QDELETED(src)) //wasn't deleted by the projectile's effects.
 		if(!P.nodamage && ((P.damage_type == BURN) || (P.damage_type == BRUTE)))
 			log_bomber(P.firer, "detonated a", src, "via projectile")
-			/* SEPTIC EDIT REMOVAL
+			/* OWORLD EDIT REMOVAL
 			boom()
 			*/
-			//SEPTIC EDIT BEGIN
+			//OWORLD EDIT BEGIN
 			if((P.damage_type == BURN) || (P.return_temperature() >= FIRE_MINIMUM_TEMPERATURE_TO_EXIST))
 				boom(P.damage_type)
 			else
 				boom(P.damage_type, violent = TRUE)
-			//SEPTIC EDIT END
+			//OWORLD EDIT END
 
 /obj/structure/reagent_dispensers/fueltank/attackby(obj/item/I, mob/living/user, params)
 	if(I.tool_behaviour == TOOL_WELDER)
@@ -134,11 +134,11 @@
 			playsound(src, 'sound/effects/refill.ogg', 50, TRUE)
 			W.update_appearance()
 		else
-			//SEPTIC EDIT BEGIN
+			//OWORLD EDIT BEGIN
 			if(GET_MOB_ATTRIBUTE_VALUE(user, STAT_INTELLIGENCE) >= 7)
 				to_chat(user, span_danger("No. Why would I do that?"))
 				return
-			//SEPTIC EDIT END
+			//OWORLD EDIT END
 			user.visible_message(span_danger("[user] catastrophically fails at refilling [user.p_their()] [I.name]!"), span_userdanger("That was stupid of you."))
 			log_bomber(user, "detonated a", src, "via welding tool")
 			boom()

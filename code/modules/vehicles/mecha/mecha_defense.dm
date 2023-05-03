@@ -302,10 +302,10 @@
 
 /obj/vehicle/sealed/mecha/welder_act(mob/living/user, obj/item/W)
 	. = ..()
-	//if(user.combat_mode) //SEPTIC EDIT REMOVAL
-	//SEPTIC EDIT BEGIN
+	//if(user.combat_mode) //OWORLD EDIT REMOVAL
+	//OWORLD EDIT BEGIN
 	if(!IS_HELP_INTENT(user, null))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		return
 	. = TRUE
 	if(internal_damage & MECHA_INT_TANK_BREACH)
@@ -338,10 +338,10 @@
 		return NONE
 	use_power(melee_energy_drain)
 	if(M.damtype == BRUTE || M.damtype == BURN)
-		//log_combat(user, src, "attacked", M, "(COMBAT MODE: [uppertext(user.combat_mode)] (DAMTYPE: [uppertext(M.damtype)])") //SEPTIC EDIT REMOVAL
-		//SEPTIC EDIT BEGIN
+		//log_combat(user, src, "attacked", M, "(COMBAT MODE: [uppertext(user.combat_mode)] (DAMTYPE: [uppertext(M.damtype)])") //OWORLD EDIT REMOVAL
+		//OWORLD EDIT BEGIN
 		log_combat(user, src, "attacked", M, "(COMBAT MODE: [uppertext(user.combat_mode)] INTENT: [uppertext(user.a_intent)] (DAMTYPE: [uppertext(M.damtype)])")
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 		. = ..()
 
 /obj/vehicle/sealed/mecha/proc/full_repair(charge_cell)

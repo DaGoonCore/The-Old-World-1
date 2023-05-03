@@ -305,11 +305,11 @@
 			to_chat(M, span_danger("You have been kicked from the server by [usr.client.holder.fakekey ? "an Administrator" : "[usr.client.key]"]."), confidential = TRUE)
 			log_admin("[key_name(usr)] kicked [key_name(M)].")
 			message_admins(span_adminnotice("[key_name_admin(usr)] kicked [key_name_admin(M)]."))
-			//SEPTIC EDIT BEGIN
+			//OWORLD EDIT BEGIN
 			var/funny = CONFIG_GET(string/bantroll)
 			if(funny)
 				DIRECT_OUTPUT(M.client, link(funny))
-			//SEPTIC EDIT END
+			//OWORLD EDIT END
 			qdel(M.client)
 
 	else if(href_list["addmessage"])
@@ -1225,7 +1225,7 @@
 			return
 		show_skill_panel(target_mind)
 
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	else if(href_list["attributes"])
 		if(!check_rights(R_ADMIN))
 			return
@@ -1245,7 +1245,7 @@
 			to_chat(usr, "This can only be used on instances of type /mob and /datum/attribute_holder", confidential = TRUE)
 			return
 		usr.client?.open_attribute_editor(attribute_holder)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	else if(href_list["borgpanel"])
 		if(!check_rights(R_ADMIN))
 			return

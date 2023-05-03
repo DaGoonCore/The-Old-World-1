@@ -198,10 +198,10 @@
 				SSblackbox.record_feedback("tally", "slime_babies_born", 1, M.colour)
 
 			var/mob/living/simple_animal/slime/new_slime = pick(babies)
-			//new_slime.set_combat_mode(TRUE) //SEPTIC EDIT REMOVAL
-			//SEPTIC EDIT BEGIN
+			//new_slime.set_combat_mode(TRUE) //OWORLD EDIT REMOVAL
+			//OWORLD EDIT BEGIN
 			SET_HARM_INTENT(new_slime)
-			//SEPTIC EDIT END
+			//OWORLD EDIT END
 			if(src.mind)
 				src.mind.transfer_to(new_slime)
 			else

@@ -1,4 +1,4 @@
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /datum/surgery/prosthetic_replacement
 	name = "Prosthetic replacement"
 	steps = list(

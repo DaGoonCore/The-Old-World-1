@@ -118,7 +118,7 @@
 				if("stamina")
 					L.adjustStaminaLoss(amount)
 					newamt = L.getStaminaLoss()
-				//SEPTIC EDIT BEGIN
+				//OWORLD EDIT BEGIN
 				if("fatigue")
 					L.adjustFatigueLoss(amount)
 					newamt = L.getFatigueLoss()
@@ -131,7 +131,7 @@
 				if("shock_stage")
 					L.adjustShockStage(amount)
 					newamt = L.getShockStage()
-				//SEPTIC EDIT END
+				//OWORLD EDIT END
 				else
 					to_chat(usr, "You caused an error. DEBUG: Text:[Text] Mob:[L]", confidential = TRUE)
 					return

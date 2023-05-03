@@ -127,13 +127,13 @@
 
 	if(panel_open && default_deconstruction_crowbar(user_item))
 		return
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(user.combat_mode) //so we can hit the machine
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	var/list/modifiers = params2list(params)
 	if(IS_HARM_INTENT(user, modifiers))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		return ..()
 
 /obj/machinery/limbgrower/ui_act(action, list/params)

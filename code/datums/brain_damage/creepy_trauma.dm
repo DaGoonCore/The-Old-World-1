@@ -44,12 +44,12 @@
 		viewing = FALSE //they are further than our viewrange they are not viewing us
 		out_of_view()
 		return//so we're not searching everything in view every tick
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(obsession in view(7, owner))
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	if(obsession in fov_view(world.view, owner))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		viewing = TRUE
 	else
 		viewing = FALSE

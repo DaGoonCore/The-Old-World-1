@@ -69,10 +69,10 @@
 			UNSETEMPTY(current_turf.atmos_adjacent_turfs)
 	UNSETEMPTY(atmos_adjacent_turfs)
 	src.atmos_adjacent_turfs = atmos_adjacent_turfs
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	//Atmos adjacency could unlock/block adjacent pollutants, this is dirty flags anyway so its fine having it here
 	update_adjacent_pollution()
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 
 /**
  * returns a list of adjacent turfs that can share air with this one.

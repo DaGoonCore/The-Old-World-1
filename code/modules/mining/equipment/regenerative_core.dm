@@ -25,12 +25,12 @@
 	desc = "All that remains of a hivelord. It can be used to help keep your body going, but it will rapidly decay into uselessness."
 	icon_state = "roro core 2"
 	item_flags = NOBLUDGEON
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	slot = ORGAN_SLOT_REGENERATIVE_CORE
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	organ_efficiency = list(ORGAN_SLOT_REGENERATIVE_CORE = 100)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	organ_flags = NONE
 	force = 0
 	actions_types = list(/datum/action/item_action/organ_action/use)
@@ -124,7 +124,7 @@
 /obj/item/organ/regenerative_core/legion/Initialize(mapload)
 	. = ..()
 	update_appearance()
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /obj/item/organ/regenerative_core/update_icon_state()
 	icon_state = inert ? "legion_soul_inert" : "legion_soul"
 	return ..()

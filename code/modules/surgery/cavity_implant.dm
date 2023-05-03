@@ -1,4 +1,4 @@
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /datum/surgery/cavity_implant
 	name = "Cavity implant"
 	steps = list(

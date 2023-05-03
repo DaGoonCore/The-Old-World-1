@@ -311,7 +311,7 @@
 
 /obj/item/clinging_grab
 	name = "clinging"
-	icon = 'modular_septic/icons/hud/quake/screen_quake_64x32.dmi'
+	icon = 'oworld/icons/hud/quake/screen_quake_64x32.dmi'
 	icon_state = "offhand"
 	base_icon_state = "offhand"
 	carry_weight = 0

@@ -250,9 +250,9 @@
 		/obj/item/clothing/gloves,
 		/obj/item/restraints/legcuffs/bola,
 		/obj/item/holosign_creator/security,
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		/obj/item/melee/truncheon,
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 		))
 
 /obj/item/storage/belt/security/full/PopulateContents()

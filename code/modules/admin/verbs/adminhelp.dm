@@ -565,10 +565,10 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 		current_ticket.MessageNoRecipient(msg)
 		current_ticket.TimeoutVerb()
 		return
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	to_chat(world, "<span class='ooc'><font color='[GLOB.OOC_COLOR]'><span class='prefix'>OOC:</span> <EM>[key]:</EM> <span class='message linkify'>My ANUS is <span class='flashingdanger'>BLEEDING</span>!</font></span>")
-	//SEPTIC EDIT END
-	/* SEPTIC EDIT REMOVAL
+	//OWORLD EDIT END
+	/* OWORLD EDIT REMOVAL
 	new /datum/admin_help(msg, src, FALSE)
 	*/
 

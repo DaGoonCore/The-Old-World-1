@@ -73,7 +73,7 @@ PROCESSING_SUBSYSTEM_DEF(quirks)
 	if(badquirk)
 		cli.prefs.save_character()
 
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	// Assign wayfinding pinpointer granting quirk if they're new
 	if(cli.get_exp_living(TRUE) < EXP_ASSIGN_WAYFINDER && !user.has_quirk(/datum/quirk/item_quirk/needswayfinder))
 		var/datum/quirk/wayfinder = /datum/quirk/item_quirk/needswayfinder

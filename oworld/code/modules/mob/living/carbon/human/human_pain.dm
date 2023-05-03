@@ -16,8 +16,8 @@
 			return_text += "\n<span class='artery'>I'm pale!</span>"
 		if(HAS_TRAIT(src, TRAIT_PARALYSIS_L_LEG) && HAS_TRAIT(src, TRAIT_PARALYSIS_R_LEG) && HAS_TRAIT(src, TRAIT_PARALYSIS_R_ARM) && HAS_TRAIT(src, TRAIT_PARALYSIS_L_ARM))
 			return_text += "\n<span class='flashingdanger'>I'm tetraplegic!</span>"
-		if(undergoing_septic_shock())
-			return_text += "\n<span class='necrosis'>I'm undergoing septic shock!</span>"
+		if(undergoing_oworld_shock())
+			return_text += "\n<span class='necrosis'>I'm undergoing oworld shock!</span>"
 		if(HAS_TRAIT(src, TRAIT_DEATHS_DOOR))
 			return_text += "\n<span class='flashingdanger'>I'm knocking on death's door!</span>"
 		if((stat >= UNCONSCIOUS) && (jitteriness >= 300))

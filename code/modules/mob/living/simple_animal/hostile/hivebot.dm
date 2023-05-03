@@ -44,20 +44,20 @@
 
 /mob/living/simple_animal/hostile/hivebot/Aggro()
 	. = ..()
-	//set_combat_mode(TRUE) //SEPTIC EDIT REMOVAL
-	//SEPTIC EDIT BEGIN
+	//set_combat_mode(TRUE) //OWORLD EDIT REMOVAL
+	//OWORLD EDIT BEGIN
 	SET_HARM_INTENT(src)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	update_icons()
 	if(prob(5))
 		say(pick("INTRUDER DETECTED!", "CODE 7-34.", "101010!!"), forced = type)
 
 /mob/living/simple_animal/hostile/hivebot/LoseAggro()
 	. = ..()
-	//set_combat_mode(FALSE) //SEPTIC EDIT REMOVAL
-	//SEPTIC EDIT BEGIN
+	//set_combat_mode(FALSE) //OWORLD EDIT REMOVAL
+	//OWORLD EDIT BEGIN
 	SET_HELP_INTENT(src)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	update_icons()
 
 /mob/living/simple_animal/hostile/hivebot/update_icons()

@@ -186,10 +186,10 @@
 
 	living_pawn.face_atom(target)
 
-	//living_pawn.set_combat_mode(TRUE) //SEPTIC EDIT REMOVAL
-	//SEPTIC EDIT BEGIN
+	//living_pawn.set_combat_mode(TRUE) //OWORLD EDIT REMOVAL
+	//OWORLD EDIT BEGIN
 	SET_HARM_INTENT(living_pawn)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 
 	if(isnull(controller.blackboard[BB_MONKEY_GUN_WORKED]))
 		controller.blackboard[BB_MONKEY_GUN_WORKED] = TRUE

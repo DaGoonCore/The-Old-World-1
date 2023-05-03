@@ -269,11 +269,11 @@ GLOBAL_LIST_EMPTY(crematoriums)
 				M.log_message("was cremated", LOG_ATTACK)
 
 			M.death(1)
-			//SEPTIC EDIT BEGIN
+			//OWORLD EDIT BEGIN
 			M.lay_to_rest(CREMATE_REST_TARGET_MSG, CREMATE_REST_OBSERVER_MSG(src))
-			//SEPTIC EDIT END
+			//OWORLD EDIT END
 			if(M) //some animals get automatically deleted on death.
-				/* SEPTIC EDIT REMOVAL
+				/* OWORLD EDIT REMOVAL
 				M.ghostize()
 				*/
 				qdel(M)

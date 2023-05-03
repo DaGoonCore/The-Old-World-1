@@ -5,10 +5,10 @@
 	// Avoid all randomness in tests
 	ADD_TRAIT(puncher, TRAIT_PERFECT_ATTACKER, INNATE_TRAIT)
 
-	//puncher.set_combat_mode(TRUE) //SEPTIC EDIT REMOVAL
-	//SEPTIC EDIT BEGIN
+	//puncher.set_combat_mode(TRUE) //OWORLD EDIT REMOVAL
+	//OWORLD EDIT BEGIN
 	SET_HARM_INTENT(puncher)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	victim.attack_hand(puncher, list(RIGHT_CLICK = FALSE))
 
 	TEST_ASSERT(victim.getBruteLoss() > 0, "Victim took no brute damage after being punched")
@@ -19,10 +19,10 @@
 	var/obj/item/storage/toolbox/toolbox = allocate(/obj/item/storage/toolbox)
 
 	tider.put_in_active_hand(toolbox, forced = TRUE)
-	//tider.set_combat_mode(TRUE) //SEPTIC EDIT REMOVAL
-	//SEPTIC EDIT BEGIN
+	//tider.set_combat_mode(TRUE) //OWORLD EDIT REMOVAL
+	//OWORLD EDIT BEGIN
 	SET_HARM_INTENT(tider)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	victim.attackby(toolbox, tider)
 
 	TEST_ASSERT(victim.getBruteLoss() > 0, "Victim took no brute damage after being hit by a toolbox")
@@ -33,10 +33,10 @@
 	var/obj/item/weldingtool/welding_tool = allocate(/obj/item/weldingtool)
 
 	attacker.put_in_active_hand(welding_tool, forced = TRUE)
-	//attacker.set_combat_mode(TRUE) //SEPTIC EDIT REMOVAL
-	//SEPTIC EDIT BEGIN
+	//attacker.set_combat_mode(TRUE) //OWORLD EDIT REMOVAL
+	//OWORLD EDIT BEGIN
 	SET_HARM_INTENT(attacker)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 
 	welding_tool.attack_self(attacker) // Turn it on
 	victim.attackby(welding_tool, attacker)
@@ -71,10 +71,10 @@
 	RegisterSignal(toolbox, COMSIG_ITEM_AFTERATTACK, .proc/post_attack_hit)
 
 	attacker.put_in_active_hand(toolbox, forced = TRUE)
-	//attacker.set_combat_mode(TRUE) //SEPTIC EDIT REMOVAL
-	//SEPTIC EDIT BEGIN
+	//attacker.set_combat_mode(TRUE) //OWORLD EDIT REMOVAL
+	//OWORLD EDIT BEGIN
 	SET_HARM_INTENT(attacker)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	toolbox.melee_attack_chain(attacker, victim)
 
 	TEST_ASSERT(pre_attack_hit, "Pre-attack signal was not fired")

@@ -128,8 +128,8 @@
 			else
 				to_chat(user, span_warning("I fail to collect anything!"))
 		return ..()
-	//SEPTIC EDIT END
-	/* SEPTIC EDIT REMOVAL
+	//OWORLD EDIT END
+	/* OWORLD EDIT REMOVAL
 	if(istype(I, /obj/item/ammo_box))
 		var/obj/item/ammo_box/box = I
 		if(isturf(loc))

@@ -435,10 +435,10 @@
 				A.icon_state = "4"
 				A.set_anchored(TRUE)
 				qdel(src)
-	//else if(!user.combat_mode && !(I.item_flags & NOBLUDGEON)) //SEPTIC EDIT REMOVAL
-	//SEPTIC EDIT BEGIN
+	//else if(!user.combat_mode && !(I.item_flags & NOBLUDGEON)) //OWORLD EDIT REMOVAL
+	//OWORLD EDIT BEGIN
 	else if(IS_HELP_INTENT(user, params2list(params)) && !(I.item_flags & NOBLUDGEON))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		attack_hand(user)
 	else
 		return ..()

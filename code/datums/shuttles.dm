@@ -193,9 +193,9 @@
 /datum/map_template/shuttle/emergency/airless/post_load()
 	. = ..()
 	//enable buying engines from cargo
-	// SEPTIC EDIT BEGIN
+	// OWORLD EDIT BEGIN
 	var/datum/supply_pack/P = SSshuttle.supply_packs[/datum/supply_pack/engine/tesla_coils]
-	// SEPTIC EDIT END
+	// OWORLD EDIT END
 	P.special_enabled = TRUE
 
 

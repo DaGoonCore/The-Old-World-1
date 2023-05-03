@@ -2,7 +2,7 @@
 	key = "tail"
 	generic = "Tail"
 	organ_type = /obj/item/organ/tail
-	icon = 'modular_septic/icons/mob/human/sprite_accessory/mutant_bodyparts.dmi'
+	icon = 'oworld/icons/mob/human/sprite_accessory/mutant_bodyparts.dmi'
 	special_render_case = TRUE
 	special_icon_case = TRUE
 	special_colorize = TRUE
@@ -43,7 +43,7 @@
 	if(passed_state == "[general_type]_hardsuit") //Guarantees we're wearing a hardsuit, skip checks
 		var/obj/item/clothing/suit/space/hardsuit/HS = H.wear_suit
 		if(HS.suit_tail_colors)
-			returned = 'modular_septic/icons/mob/human/sprite_accessory/tails_hardsuit.dmi'
+			returned = 'oworld/icons/mob/human/sprite_accessory/tails_hardsuit.dmi'
 	return returned
 
 /datum/sprite_accessory/tails/get_special_render_colour(mob/living/carbon/human/H, passed_state)
@@ -84,17 +84,17 @@
 
 /datum/sprite_accessory/tails/none
 	name = "None"
-	icon = 'modular_septic/icons/mob/human/sprite_accessory/mutant_bodyparts.dmi'
+	icon = 'oworld/icons/mob/human/sprite_accessory/mutant_bodyparts.dmi'
 	icon_state = "none"
 	recommended_species = list(SPECIES_SYNTHMAMMAL, SPECIES_MAMMAL, SPECIES_HUMAN, SPECIES_SYNTHHUMAN, SPECIES_HUMANOID)
 	color_src = null
 	factual = FALSE
 
 /datum/sprite_accessory/tails/mammal
-	icon = 'modular_septic/icons/mob/human/sprite_accessory/mutant_bodyparts.dmi'
+	icon = 'oworld/icons/mob/human/sprite_accessory/mutant_bodyparts.dmi'
 	icon_state = "none"
 	recommended_species = list(SPECIES_SYNTHMAMMAL, SPECIES_MAMMAL, SPECIES_HUMAN, SPECIES_SYNTHHUMAN, SPECIES_HUMANOID)
-	icon = 'modular_septic/icons/mob/human/sprite_accessory/tails.dmi'
+	icon = 'oworld/icons/mob/human/sprite_accessory/tails.dmi'
 	organ_type = /obj/item/organ/tail/fluffy/no_wag
 	color_src = USE_MATRIXED_COLORS
 

@@ -477,7 +477,7 @@
 		C.domutcheck()
 
 /datum/antagonist/changeling/proc/transform(mob/living/carbon/human/user, datum/changelingprofile/chosen_prof)
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	var/static/list/slot2slot = list(
 		"head" = ITEM_SLOT_HEAD,
 		"wear_mask" = ITEM_SLOT_MASK,
@@ -494,7 +494,7 @@
 		"s_store" = ITEM_SLOT_SUITSTORE,
 	)
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	var/static/list/slot2slot = list(
 		"head" = ITEM_SLOT_HEAD,
 		"wear_mask" = ITEM_SLOT_MASK,
@@ -511,7 +511,7 @@
 		"wear_id" = ITEM_SLOT_ID,
 		"s_store" = ITEM_SLOT_SUITSTORE,
 	)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 
 	var/datum/dna/chosen_dna = chosen_prof.dna
 	user.real_name = chosen_prof.name

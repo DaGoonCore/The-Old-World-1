@@ -1,6 +1,6 @@
 /atom/movable/screen/action_tooltip_background
 	name = "action tooltip"
-	icon = 'modular_septic/icons/hud/quake/peeper.dmi'
+	icon = 'oworld/icons/hud/quake/peeper.dmi'
 	icon_state = "action_tooltip"
 	plane = PEEPER_PLANE
 	layer = PEEPER_ACTION_TOOLTIP_BACKGROUND_LAYER

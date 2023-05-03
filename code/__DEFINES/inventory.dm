@@ -19,7 +19,7 @@
 #define INVENTORY_DEPTH 3
 #define STORAGE_VIEW_DEPTH 2
 
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 //ITEM INVENTORY SLOT BITMASKS
 /// Suit slot (armors, costumes, space suits, etc.)
 #define ITEM_SLOT_OCLOTHING (1<<0)
@@ -103,7 +103,7 @@
 #define HAND_LEFT (1<<9)
 #define HAND_RIGHT (1<<10)
 #define HANDS (HAND_LEFT | HAND_RIGHT)
-//SEPTIC EDIT BEGIN
+//OWORLD EDIT BEGIN
 #define VITALS (1<<11)
 #define NECK (1<<12)
 #define	JAW	(1<<13)
@@ -111,7 +111,7 @@
 #define EYE_LEFT (1<<15)
 #define EYE_RIGHT (1<<16)
 #define EYES (EYE_LEFT | EYE_RIGHT)
-//SEPTIC EDIT END
+//OWORLD EDIT END
 #define FULL_BODY (~0)
 
 //defines for the index of hands
@@ -170,9 +170,9 @@ GLOBAL_LIST_INIT(advanced_hardsuit_allowed, typecacheof(list(
 	/obj/item/reagent_containers/spray/pepper,
 	/obj/item/restraints/handcuffs,
 	/obj/item/tank/internals,
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	/obj/item/melee/truncheon,
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	)))
 
 GLOBAL_LIST_INIT(security_hardsuit_allowed, typecacheof(list(
@@ -185,9 +185,9 @@ GLOBAL_LIST_INIT(security_hardsuit_allowed, typecacheof(list(
 	/obj/item/reagent_containers/spray/pepper,
 	/obj/item/restraints/handcuffs,
 	/obj/item/tank/internals,
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	/obj/item/melee/truncheon,
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	)))
 
 GLOBAL_LIST_INIT(detective_vest_allowed, typecacheof(list(
@@ -207,15 +207,15 @@ GLOBAL_LIST_INIT(detective_vest_allowed, typecacheof(list(
 	/obj/item/tank/internals/plasmaman,
 	/obj/item/storage/belt/holster/detective,
 	/obj/item/storage/belt/holster/nukie,
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	/obj/item/melee/truncheon,
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	)))
 
 GLOBAL_LIST_INIT(security_vest_allowed, typecacheof(list(
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	/obj/item/melee/truncheon,
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	/obj/item/ammo_box,
 	/obj/item/ammo_casing,
 	/obj/item/flashlight,
@@ -232,9 +232,9 @@ GLOBAL_LIST_INIT(security_vest_allowed, typecacheof(list(
 	)))
 
 GLOBAL_LIST_INIT(security_wintercoat_allowed, typecacheof(list(
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	/obj/item/melee/truncheon,
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	/obj/item/ammo_box,
 	/obj/item/ammo_casing,
 	/obj/item/gun/ballistic,

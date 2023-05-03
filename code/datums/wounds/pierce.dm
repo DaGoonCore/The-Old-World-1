@@ -2,7 +2,7 @@
 /*
 	Piercing wounds
 */
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /datum/wound/pierce
 	name = "Piercing Wound"
 	sound_effect = 'sound/weapons/slice.ogg'

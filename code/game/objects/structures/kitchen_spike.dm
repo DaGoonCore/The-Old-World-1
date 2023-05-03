@@ -62,10 +62,10 @@
 
 //ATTACK HAND IGNORING PARENT RETURN VALUE
 /obj/structure/kitchenspike/attack_hand(mob/living/user, list/modifiers)
-	//if(VIABLE_MOB_CHECK(user.pulling) && user.combat_mode && !has_buckled_mobs()) //SEPTIC EDIT REMOVAL
-	//SEPTIC EDIT BEGIN
+	//if(VIABLE_MOB_CHECK(user.pulling) && user.combat_mode && !has_buckled_mobs()) //OWORLD EDIT REMOVAL
+	//OWORLD EDIT BEGIN
 	if(VIABLE_MOB_CHECK(user.pulling) && !IS_HELP_INTENT(user, modifiers) && !has_buckled_mobs())
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		var/mob/living/L = user.pulling
 		if(do_mob(user, src, 120))
 			if(has_buckled_mobs()) //to prevent spam/queing up attacks

@@ -297,12 +297,12 @@
 		LAZYSET(W.data,"vintage",wine_info)
 
 /obj/item/reagent_containers/food/drinks/bottle/wine/proc/generate_vintage()
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	return "[GLOB.year_integer + 540] Nanotrasen Light Red"
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	return "[SSstation_time.get_station_year()] ZoomTech Light Red"
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 
 /obj/item/reagent_containers/food/drinks/bottle/wine/unlabeled
 	name = "unlabeled wine bottle"

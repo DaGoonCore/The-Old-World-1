@@ -52,13 +52,13 @@
 		return
 
 	//Harm intent will bypass inserting for injecting food with syringes and such
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(user.combat_mode)
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	var/list/modifiers = params2list(params)
 	if(!IS_GRAB_INTENT(user, modifiers))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		return
 
 	if(inserted_item.w_class > minimum_weight_class)

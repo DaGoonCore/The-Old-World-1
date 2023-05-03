@@ -1,4 +1,4 @@
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /obj/item/bodypart
 	name = "limb"
 	desc = "Why is it detached..."

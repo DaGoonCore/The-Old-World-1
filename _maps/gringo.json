@@ -1,7 +1,7 @@
 {
 	"version": 1,
 	"map_name": "Paodeacucar",
-	"map_path": "_septic/map_files/Gringo",
+	"map_path": "_oworld/map_files/Gringo",
 	"map_file": [
 		"GringoZ0.dmm",
 		"GringoZ1.dmm",

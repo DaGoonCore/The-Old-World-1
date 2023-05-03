@@ -1,14 +1,14 @@
 /obj/item/grenade
-	drop_sound = 'modular_septic/sound/weapons/grenade.wav'
-	pickup_sound = 'modular_septic/sound/weapons/grenade_draw.wav'
+	drop_sound = 'oworld/sound/weapons/grenade.wav'
+	pickup_sound = 'oworld/sound/weapons/grenade_draw.wav'
 	item_flags = NO_PIXEL_RANDOM_DROP | NO_ANGLE_RANDOM_DROP
 	tetris_width = 32
 	tetris_height = 32
 	det_time = 1.2 SECONDS
 	/// Sound of the pin/activation sound
-	var/pin_sound = 'modular_septic/sound/weapons/grenade_pin.wav'
+	var/pin_sound = 'oworld/sound/weapons/grenade_pin.wav'
 	/// Sound for when the grenade is deployed
-	var/spoon_sound = 'modular_septic/sound/weapons/grenade_spoon.wav'
+	var/spoon_sound = 'oworld/sound/weapons/grenade_spoon.wav'
 	/// The pin contained inside of the grenade
 	var/obj/item/pin/pin = /obj/item/pin
 	/// Grenade type, checks If It's activated through pin, button, or fuse.
@@ -115,7 +115,7 @@
 		spoon_grenade()
 
 	if(grenade_flags & GRENADE_BUTTONED)
-		playsound(user, 'modular_septic/sound/weapons/bomb_press.wav', 35, FALSE)
+		playsound(user, 'oworld/sound/weapons/bomb_press.wav', 35, FALSE)
 		pressing_button()
 		update_appearance(UPDATE_ICON)
 		addtimer(CALLBACK(src, .proc/pressing_button), button_press_time)
@@ -127,7 +127,7 @@
 		var/message = pick(GLOB.whoopsie)
 		to_chat(user, span_danger("[message]"))
 		if(grenade_flags & GRENADE_BUTTONED)
-			playsound(user, 'modular_septic/sound/weapons/bomb_toolate.wav', 25, FALSE)
+			playsound(user, 'oworld/sound/weapons/bomb_toolate.wav', 25, FALSE)
 			sound_hint()
 
 /obj/item/grenade/proc/pressing_button(mob/user)
@@ -157,7 +157,7 @@
 				active = FALSE
 				user.visible_message(span_warning("[user] puts the pin back into the [src]!"), \
 							span_warning("I put the pin back into the [src]."))
-				playsound(I, 'modular_septic/sound/weapons/grenade_safety.wav', 65, FALSE)
+				playsound(I, 'oworld/sound/weapons/grenade_safety.wav', 65, FALSE)
 				update_appearance(UPDATE_ICON)
 	else if((grenade_flags & GRENADE_FUSED) && I.get_temperature() && !active && !botch_check(user))
 		arm_grenade(user)
@@ -195,7 +195,7 @@
 	update_appearance(UPDATE_ICON)
 
 /obj/item/grenade/proc/disarm(loud = FALSE, visible = FALSE) //This is liminal magic, don't use this for any stupid nerd scientific settings
-	var/grenade_disarm_sound = list('modular_septic/sound/efn/grenade_disarm1.ogg', 'modular_septic/sound/efn/grenade_disarm2.ogg', 'modular_septic/sound/efn/grenade_disarm3.ogg')
+	var/grenade_disarm_sound = list('oworld/sound/efn/grenade_disarm1.ogg', 'oworld/sound/efn/grenade_disarm2.ogg', 'oworld/sound/efn/grenade_disarm3.ogg')
 	var/copy_of_pin = initial(pin)
 	active = FALSE
 	grenade_spooned = FALSE
@@ -212,7 +212,7 @@
 			qdel(initial_pin)
 			sleep(1 SECONDS) //OMG. IT'S INITIAL_PIN <3 <3 <3
 			if(loud)
-				playsound(src, 'modular_septic/sound/weapons/grenade_safety.wav', 65, FALSE)
+				playsound(src, 'oworld/sound/weapons/grenade_safety.wav', 65, FALSE)
 				sound_hint()
 			for(var/mob/living/carbon/inborn in range(7, src))
 				if(inborn.dna?.species?.id == SPECIES_INBORN)
@@ -229,7 +229,7 @@
 /obj/item/pin
 	name = "grenade pin"
 	desc = "The detonation pin of a grenade, usually found on a grenade before It's armed."
-	icon = 'modular_septic/icons/obj/items/grenade.dmi'
+	icon = 'oworld/icons/obj/items/grenade.dmi'
 	icon_state = "pin"
-	drop_sound = 'modular_septic/sound/items/coin_drop.wav'
+	drop_sound = 'oworld/sound/items/coin_drop.wav'
 	w_class = WEIGHT_CLASS_TINY

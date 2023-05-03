@@ -170,12 +170,12 @@
 /obj/machinery/defibrillator_mount/wrench_act_secondary(mob/living/user, obj/item/tool)
 	if(!wallframe_type)
 		return ..()
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(user.combat_mode)
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	if(IS_HARM_INTENT(user, null))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		return ..()
 	if(defib)
 		to_chat(user, span_warning("The mount can't be deconstructed while a defibrillator unit is loaded!"))

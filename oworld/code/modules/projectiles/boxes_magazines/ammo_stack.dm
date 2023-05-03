@@ -2,7 +2,7 @@
 /obj/item/ammo_box/magazine/ammo_stack
 	name = "ammo stack"
 	desc = "A stack of ammo."
-	icon = 'modular_septic/icons/obj/items/ammo/ammo_stacks.dmi'
+	icon = 'oworld/icons/obj/items/ammo/ammo_stacks.dmi'
 	icon_state = "c9mm"
 	base_icon_state = "c9mm"
 	item_flags = NO_PIXEL_RANDOM_DROP | NO_ANGLE_RANDOM_DROP
@@ -12,7 +12,7 @@
 	max_ammo = 12
 	carry_weight = 0
 	/// World icon for this stack
-	var/world_icon = 'modular_septic/icons/obj/items/ammo/casings_world.dmi'
+	var/world_icon = 'oworld/icons/obj/items/ammo/casings_world.dmi'
 	/// World icon state
 	var/world_icon_state = "s-casing"
 

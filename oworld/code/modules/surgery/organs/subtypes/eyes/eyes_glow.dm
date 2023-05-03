@@ -23,9 +23,9 @@
 /obj/item/organ/eyes/robotic/glow/Initialize()
 	. = ..()
 	if(side == RIGHT_SIDE)
-		mob_overlay = image('modular_septic/icons/mob/human/sprite_accessory/human_face.dmi', "glow_gs_eye-right")
+		mob_overlay = image('oworld/icons/mob/human/sprite_accessory/human_face.dmi', "glow_gs_eye-right")
 	else
-		mob_overlay = image('modular_septic/icons/mob/human/sprite_accessory/human_face.dmi', "glow_gs_eye-left")
+		mob_overlay = image('oworld/icons/mob/human/sprite_accessory/human_face.dmi', "glow_gs_eye-left")
 
 /obj/item/organ/eyes/robotic/glow/Destroy()
 	terminate_effects()

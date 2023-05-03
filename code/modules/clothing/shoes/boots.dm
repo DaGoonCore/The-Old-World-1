@@ -19,7 +19,7 @@
 	inhand_icon_state = "sneakboots"
 	w_class = WEIGHT_CLASS_SMALL
 	resistance_flags = FIRE_PROOF | ACID_PROOF
-	/*SEPTIC EDIT START
+	/*OWORLD EDIT START
 	clothing_traits = list(TRAIT_SILENT_FOOTSTEPS)
 	*/
 

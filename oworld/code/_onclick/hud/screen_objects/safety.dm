@@ -1,6 +1,6 @@
 /atom/movable/screen/safety
 	name = "safety"
-	icon = 'modular_septic/icons/hud/quake/screen_quake.dmi'
+	icon = 'oworld/icons/hud/quake/screen_quake.dmi'
 	icon_state = "safety"
 	base_icon_state = "safety"
 	screen_loc = ui_safety

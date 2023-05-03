@@ -3,7 +3,7 @@
 	Blunt/Bone wounds
 */
 // TODO: well, a lot really, but i'd kill to get overlays and a bonebreaking effect like Blitz: The League, similar to electric shock skeletons
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /datum/wound/blunt
 	name = "Blunt (Bone) Wound"
 	sound_effect = 'sound/effects/wounds/crack1.ogg'

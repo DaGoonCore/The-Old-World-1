@@ -1,4 +1,4 @@
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /datum/surgery/advanced/bioware
 	name = "Enhancement surgery"
 	var/bioware_target = BIOWARE_GENERIC

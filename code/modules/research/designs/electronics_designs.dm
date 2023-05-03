@@ -3,7 +3,7 @@
 /////Non-Board Computer Stuff//////
 ///////////////////////////////////
 
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /datum/design/intellicard
 	name = "Intellicard AI Transportation System"
 	desc = "Allows for the construction of an intellicard."
@@ -25,7 +25,7 @@
 	category = list("Electronics")
 
 
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /datum/design/ai_cam_upgrade
 	name = "AI Surveillance Software Update"
 	desc = "A software package that will allow an artificial intelligence to 'hear' from its cameras via lip reading."

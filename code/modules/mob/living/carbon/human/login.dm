@@ -1,4 +1,4 @@
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /mob/living/carbon/human/Login()
 	. = ..()
 	if(!LAZYLEN(afk_thefts))

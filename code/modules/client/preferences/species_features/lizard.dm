@@ -1,4 +1,4 @@
-/* SEPTIC EDiT REMOVAL
+/* OWORLD EDiT REMOVAL
 /proc/generate_lizard_side_shots(list/sprite_accessories, key, include_snout = TRUE)
 	var/list/values = list()
 

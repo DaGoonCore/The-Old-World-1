@@ -32,12 +32,12 @@
 
 	if(!proximity)
 		return
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(!source.combat_mode || LAZYACCESS(modifiers, RIGHT_CLICK))
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	if(!IS_HARM_INTENT(source, modifiers))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		return
 	if(target.attack_hulk(owner))
 		if(world.time > (last_scream + scream_delay))

@@ -7,13 +7,13 @@
 
 /datum/greyscale_config/airlocks
 	name = "Solid Airlock"
-	icon_file = 'modular_septic/icons/obj/machinery/tall/doors/airlocks/greyscale_template.dmi'
-	json_config = 'modular_septic/code/datums/greyscale/json_configs/airlock_plain.json'
+	icon_file = 'oworld/icons/obj/machinery/tall/doors/airlocks/greyscale_template.dmi'
+	json_config = 'oworld/code/datums/greyscale/json_configs/airlock_plain.json'
 
 /datum/greyscale_config/airlocks/custom
 	name = "Airlock with Decorations"
-	json_config = 'modular_septic/code/datums/greyscale/json_configs/airlock_custom.json'
+	json_config = 'oworld/code/datums/greyscale/json_configs/airlock_custom.json'
 
 /datum/greyscale_config/airlocks/window
 	name = "Airlock with Window"
-	json_config = 'modular_septic/code/datums/greyscale/json_configs/airlock_window.json'
+	json_config = 'oworld/code/datums/greyscale/json_configs/airlock_window.json'

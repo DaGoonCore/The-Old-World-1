@@ -43,7 +43,7 @@
 	disliked_food = NUTS | CLOTH
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_MAGIC | MIRROR_PRIDE | RACE_SWAP
 	limbs_id = "homie"
-	examine_icon = 'modular_septic/icons/obj/items/deviouslick.dmi'
+	examine_icon = 'oworld/icons/obj/items/deviouslick.dmi'
 	examine_icon_state = "caucasian_homie"
 	var/static/list/homie_types = list("caucasian", "asian", "african")
 	var/homie_type = "caucasian"
@@ -70,7 +70,7 @@
 	if(!homie_images)
 		homie_images = list()
 		for(var/homie_type in homie_types)
-			var/image/homie_image = image('modular_septic/icons/obj/items/deviouslick.dmi', "[homie_type]_homie")
+			var/image/homie_image = image('oworld/icons/obj/items/deviouslick.dmi', "[homie_type]_homie")
 			homie_images[homie_type] = homie_image
 	H.overlays_standing[BODYPARTS_LAYER] = homie_images[homie_type]
 	H.apply_overlay(BODYPARTS_LAYER)

@@ -1,4 +1,4 @@
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /datum/wound/loss
 	name = "Dismemberment Wound"
 	desc = "oof ouch!!"

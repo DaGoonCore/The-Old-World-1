@@ -27,7 +27,7 @@
 	var/facial_hairstyle = "Shaved"
 
 	//Eye colour
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	var/eye_color = "#000000"
 	*/
 

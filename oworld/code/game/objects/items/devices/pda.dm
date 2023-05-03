@@ -8,7 +8,7 @@
 
 //add whatsapp
 /obj/item/pda
-	icon = 'modular_septic/icons/obj/items/pda.dmi'
+	icon = 'oworld/icons/obj/items/pda.dmi'
 	desc = "A portable microcomputer by MOKIA Systems, LTD. Functionality determined by a preprogrammed ROM cartridge."
 	carry_weight = 500 GRAMS
 	ttone = "zap"
@@ -82,7 +82,7 @@
 	user.log_talk(message, LOG_PDA, tag="PDA: [initial(name)] to [target_text]")
 	to_chat(user, span_info("PDA message sent to [target_text]: \"[message]\""))
 	if(!silent)
-		playsound(src, 'modular_septic/sound/effects/Mobile_sms_send.wav', 15, TRUE)
+		playsound(src, 'oworld/sound/effects/Mobile_sms_send.wav', 15, TRUE)
 	// Reset the photo
 	picture = null
 	last_text = world.time
@@ -99,7 +99,7 @@
 		else if(ttone != "zap")
 			playsound(src, 'sound/machines/twobeep_high.ogg', 50, TRUE)
 		else
-			playsound(src, 'modular_septic/sound/effects/Mobile_sms.ogg', 15, FALSE)
+			playsound(src, 'oworld/sound/effects/Mobile_sms.ogg', 15, FALSE)
 		audible_message(span_infoplain("[icon2html(src, hearers(src))] *[ttone]*"), null, 3)
 	//Search for holder of the PDA.
 	var/mob/living/L = null
@@ -146,7 +146,7 @@
 
 			if("Refresh")//Refresh, goes to the end of the proc.
 				if(!silent)
-					playsound(src, 'modular_septic/sound/effects/phone_press.ogg', 15, TRUE)
+					playsound(src, 'oworld/sound/effects/phone_press.ogg', 15, TRUE)
 
 			if ("Toggle_Font")
 				//CODE REVISION 2
@@ -162,7 +162,7 @@
 					if (MODE_VT)
 						font_mode = FONT_VT
 				if(!silent)
-					playsound(src, 'modular_septic/sound/effects/phone_press.ogg', 15, TRUE)
+					playsound(src, 'oworld/sound/effects/phone_press.ogg', 15, TRUE)
 			if ("Change_Color")
 				var/new_color = input("Please enter a color name or hex value (Default is \'#808000\').",background_color)as color
 				background_color = new_color
@@ -170,7 +170,7 @@
 			if ("Toggle_Underline")
 				underline_flag = !underline_flag
 				if(!silent)
-					playsound(src, 'modular_septic/sound/effects/phone_press.ogg', 15, TRUE)
+					playsound(src, 'oworld/sound/effects/phone_press.ogg', 15, TRUE)
 
 			if("Return")//Return
 				if(mode<=9)
@@ -180,7 +180,7 @@
 					if(mode==4 || mode == 5)//Fix for cartridges. Redirects to hub.
 						mode = 0
 				if(!silent)
-					playsound(src, 'modular_septic/sound/effects/phone_press.ogg', 15, TRUE)
+					playsound(src, 'oworld/sound/effects/phone_press.ogg', 15, TRUE)
 			if ("Authenticate")//Checks for ID
 				id_check(U)
 			if("UpdateInfo")
@@ -199,27 +199,27 @@
 			if("0")//Hub
 				mode = 0
 				if(!silent)
-					playsound(src, 'modular_septic/sound/effects/phone_press.ogg', 15, TRUE)
+					playsound(src, 'oworld/sound/effects/phone_press.ogg', 15, TRUE)
 			if("1")//Notes
 				mode = 1
 				if(!silent)
-					playsound(src, 'modular_septic/sound/effects/phone_press.ogg', 15, TRUE)
+					playsound(src, 'oworld/sound/effects/phone_press.ogg', 15, TRUE)
 			if("2")//Messenger
 				mode = 2
 				if(!silent)
-					playsound(src, 'modular_septic/sound/effects/phone_press.ogg', 15, TRUE)
+					playsound(src, 'oworld/sound/effects/phone_press.ogg', 15, TRUE)
 			if("21")//Read messeges
 				mode = 21
 				if(!silent)
-					playsound(src, 'modular_septic/sound/effects/phone_press.ogg', 15, TRUE)
+					playsound(src, 'oworld/sound/effects/phone_press.ogg', 15, TRUE)
 			if("3")//Atmos scan
 				mode = 3
 				if(!silent)
-					playsound(src, 'modular_septic/sound/effects/phone_press.ogg', 15, TRUE)
+					playsound(src, 'oworld/sound/effects/phone_press.ogg', 15, TRUE)
 			if("4")//Redirects to hub
 				mode = 0
 				if(!silent)
-					playsound(src, 'modular_septic/sound/effects/phone_press.ogg', 15, TRUE)
+					playsound(src, 'oworld/sound/effects/phone_press.ogg', 15, TRUE)
 
 
 //MAIN FUNCTIONS===================================
@@ -227,14 +227,14 @@
 			if("Light")
 				toggle_light(U)
 				if(!silent)
-					playsound(src, 'modular_septic/sound/effects/phone_press.ogg', 15, TRUE)
+					playsound(src, 'oworld/sound/effects/phone_press.ogg', 15, TRUE)
 			if("Medical Scan")
 				if(scanmode == PDA_SCANNER_MEDICAL)
 					scanmode = PDA_SCANNER_NONE
 				else if((!isnull(cartridge)) && (cartridge.access & CART_MEDICAL))
 					scanmode = PDA_SCANNER_MEDICAL
 				if(!silent)
-					playsound(src, 'modular_septic/sound/effects/phone_press.ogg', 15, TRUE)
+					playsound(src, 'oworld/sound/effects/phone_press.ogg', 15, TRUE)
 			if("Reagent Scan")
 				if(scanmode == PDA_SCANNER_REAGENT)
 					scanmode = PDA_SCANNER_NONE
@@ -254,7 +254,7 @@
 				else if((!isnull(cartridge)) && (cartridge.access & CART_ATMOS))
 					scanmode = PDA_SCANNER_GAS
 				if(!silent)
-					playsound(src, 'modular_septic/sound/effects/phone_press.ogg', 15, TRUE)
+					playsound(src, 'oworld/sound/effects/phone_press.ogg', 15, TRUE)
 			if("Drone Phone")
 				var/alert_s = input(U,"Alert severity level","Ping Drones",null) as null|anything in list("Low","Medium","High","Critical")
 				var/area/A = get_area(U)
@@ -272,7 +272,7 @@
 				var/new_state = text2num(href_list["drone_blacklist"])
 				GLOB.drone_machine_blacklist_enabled = new_state
 				if(!silent)
-					playsound(src, 'modular_septic/sound/effects/phone_press.ogg', 15, TRUE)
+					playsound(src, 'oworld/sound/effects/phone_press.ogg', 15, TRUE)
 
 
 //NOTEKEEPER FUNCTIONS===================================

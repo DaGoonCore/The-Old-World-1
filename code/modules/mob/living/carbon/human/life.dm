@@ -34,7 +34,7 @@
 
 			for(var/datum/mutation/human/HM in dna.mutations) // Handle active genes
 				HM.on_life(delta_time, times_fired)
-		/* SEPTIC EDIT REMOVAL - Handled by organ process datums
+		/* OWORLD EDIT REMOVAL - Handled by organ process datums
 		if(stat != DEAD)
 			//heart attack stuff
 			handle_heart(delta_time, times_fired)
@@ -77,7 +77,7 @@
 	else
 		SEND_SIGNAL(src, COMSIG_CLEAR_MOOD_EVENT, "brain_damage")
 	return ..()
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /mob/living/carbon/human/breathe()
 	if(!HAS_TRAIT(src, TRAIT_NOBREATH))
 		return ..()

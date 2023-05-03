@@ -82,7 +82,7 @@
 	category = list("Exosuit Modules")
 	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE
 
-/*SEPTIC EDIT REMOVAL
+/*OWORLD EDIT REMOVAL
 /datum/design/board/honker_main
 	name = "\"H.O.N.K\" Central Control module"
 	desc = "Allows for the construction of a \"H.O.N.K\" Central Control module."

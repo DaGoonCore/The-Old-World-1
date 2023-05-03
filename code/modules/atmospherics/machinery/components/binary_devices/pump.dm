@@ -37,9 +37,9 @@
 /obj/machinery/atmospherics/components/binary/pump/CtrlClick(mob/user)
 	if(can_interact(user))
 		set_on(!on)
-		//SEPTIC EDIT START
+		//OWORLD EDIT START
 		warning_plasmafloyder(user, "turned [on ? "on" : "off"]")
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 		investigate_log("was turned [on ? "on" : "off"] by [key_name(user)]", INVESTIGATE_ATMOS)
 		update_appearance()
 	return ..()
@@ -48,9 +48,9 @@
 	if(can_interact(user))
 		target_pressure = MAX_OUTPUT_PRESSURE
 		investigate_log("was set to [target_pressure] kPa by [key_name(user)]", INVESTIGATE_ATMOS)
-		//SEPTIC EDIT START
+		//OWORLD EDIT START
 		warning_plasmafloyder(user, "maximized")
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 		balloon_alert(user, "pressure output set to [target_pressure] kPa")
 		update_appearance()
 	return ..()
@@ -126,9 +126,9 @@
 	switch(action)
 		if("power")
 			set_on(!on)
-			//SEPTIC EDIT START
+			//OWORLD EDIT START
 			warning_plasmafloyder(usr, "turned [on ? "on" : "off"]")
-			//SEPTIC EDIT END
+			//OWORLD EDIT END
 			investigate_log("was turned [on ? "on" : "off"] by [key_name(usr)]", INVESTIGATE_ATMOS)
 			. = TRUE
 		if("pressure")
@@ -141,9 +141,9 @@
 				. = TRUE
 			if(.)
 				target_pressure = clamp(pressure, 0, MAX_OUTPUT_PRESSURE)
-				//SEPTIC EDIT START
+				//OWORLD EDIT START
 				warning_plasmafloyder(usr, "set to [target_pressure]")
-				//SEPTIC EDIT END
+				//OWORLD EDIT END
 				investigate_log("was set to [target_pressure] kPa by [key_name(usr)]", INVESTIGATE_ATMOS)
 	update_appearance()
 

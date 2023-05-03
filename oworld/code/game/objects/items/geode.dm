@@ -1,7 +1,7 @@
 /obj/item/geode
 	name = "geod"
 	desc = "A geode. What could be inside?"
-	icon = 'modular_septic/icons/obj/items/deviouslick.dmi'
+	icon = 'oworld/icons/obj/items/deviouslick.dmi'
 	icon_state = "geod"
 	base_icon_state = "geod"
 	var/cracked = FALSE
@@ -39,7 +39,7 @@
 	if(!do_after(user, 3 SECONDS, src))
 		to_chat(user, span_warning(fail_msg()))
 		return
-	playsound(src, 'modular_septic/sound/effects/homiereveal.ogg', 80, FALSE)
+	playsound(src, 'oworld/sound/effects/homiereveal.ogg', 80, FALSE)
 	if(homie_in_geod)
 		if(!istype(homie_in_geod))
 			homie_in_geod = new homie_in_geod(src)
@@ -59,7 +59,7 @@
 	var/turf/open/homie_release = get_turf(user)
 	if(!(istype(homie_release) && user.Adjacent(homie_release) && Adjacent(homie_release)))
 		return
-	playsound(src, 'modular_septic/sound/effects/homierip.ogg', 80, FALSE)
+	playsound(src, 'oworld/sound/effects/homierip.ogg', 80, FALSE)
 	to_chat(user, span_notice("I have freed <b>[homie_in_geod]</b> from [homie_in_geod.p_their()] crystal prison!\n\
 							It might take a while until [homie_in_geod.p_they()] regain consciousness..."))
 	homie_in_geod.Unconscious(40 SECONDS)
@@ -76,7 +76,7 @@
 		homie.ghostize(FALSE)
 		homie.mind_initialize()
 		homie.key = picked.key
-		playsound(homie, 'modular_septic/sound/effects/homielife.wav', 100, FALSE)
+		playsound(homie, 'oworld/sound/effects/homielife.wav', 100, FALSE)
 		notify_ghosts("A homie has gained sentience in \the [get_area(homie)]!", source = homie, action = NOTIFY_ORBIT, flashwindow = FALSE, header = "Homie Out of a Geod")
 
 /obj/item/geode/homie

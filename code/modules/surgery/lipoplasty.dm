@@ -1,4 +1,4 @@
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /datum/surgery/lipoplasty
 	name = "Lipoplasty"
 	steps = list(

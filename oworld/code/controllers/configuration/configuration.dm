@@ -37,10 +37,10 @@
 
 /datum/controller/configuration/proc/LoadPunctuationFilter()
 	var/list/filter = list()
-	if(!fexists("[directory]/septic/punctuation_filter.txt"))
+	if(!fexists("[directory]/oworld/punctuation_filter.txt"))
 		return
 	log_config("Loading config file punctuation_filter.txt...")
-	for(var/line in world.file2list("[directory]/septic/punctuation_filter.txt"))
+	for(var/line in world.file2list("[directory]/oworld/punctuation_filter.txt"))
 		if(!line)
 			continue
 		if(findtextEx(line,"#",1,2))
@@ -50,10 +50,10 @@
 
 /datum/controller/configuration/proc/LoadPunctuationFilterBypass()
 	var/list/filter = list()
-	if(!fexists("[directory]/septic/punctuation_filter_bypass.txt"))
+	if(!fexists("[directory]/oworld/punctuation_filter_bypass.txt"))
 		return
 	log_config("Loading config file punctuation_filter_bypass.txt...")
-	for(var/line in world.file2list("[directory]/septic/punctuation_filter_bypass.txt"))
+	for(var/line in world.file2list("[directory]/oworld/punctuation_filter_bypass.txt"))
 		if(!line)
 			continue
 		if(findtextEx(line,"#",1,2))
@@ -63,10 +63,10 @@
 
 /datum/controller/configuration/proc/LoadNameFilter()
 	var/list/filter = list()
-	if(!fexists("[directory]/septic/name_filter.txt"))
+	if(!fexists("[directory]/oworld/name_filter.txt"))
 		return
 	log_config("Loading config file name_filter.txt...")
-	for(var/line in world.file2list("[directory]/septic/name_filter.txt"))
+	for(var/line in world.file2list("[directory]/oworld/name_filter.txt"))
 		if(!line)
 			continue
 		if(findtextEx(line,"#",1,2))
@@ -76,10 +76,10 @@
 
 /datum/controller/configuration/proc/LoadCkeyFilter()
 	var/list/filter = list()
-	if(!fexists("[directory]/septic/ckey_filter.txt"))
+	if(!fexists("[directory]/oworld/ckey_filter.txt"))
 		return
 	log_config("Loading config file ckey_filter.txt...")
-	for(var/line in world.file2list("[directory]/septic/ckey_filter.txt"))
+	for(var/line in world.file2list("[directory]/oworld/ckey_filter.txt"))
 		if(!line)
 			continue
 		if(findtextEx(line,"#",1,2))

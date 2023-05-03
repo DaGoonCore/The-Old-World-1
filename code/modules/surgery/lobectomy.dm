@@ -1,4 +1,4 @@
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /datum/surgery/lobectomy
 	name = "Lobectomy" //not to be confused with lobotomy
 	steps = list(

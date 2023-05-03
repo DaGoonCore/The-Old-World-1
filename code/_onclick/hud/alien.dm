@@ -50,10 +50,10 @@
 	using.hud = src
 	static_inventory += using
 
-	//action_intent = new /atom/movable/screen/combattoggle/flashy() //SEPTIC EDIT REMOVAL
-	//SEPTIC EDIT BEGIN
+	//action_intent = new /atom/movable/screen/combattoggle/flashy() //OWORLD EDIT REMOVAL
+	//OWORLD EDIT BEGIN
 	action_intent = new /atom/movable/screen/combattoggle()
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	action_intent.hud = src
 	action_intent.icon = ui_style
 	action_intent.screen_loc = ui_combat_toggle
@@ -72,38 +72,38 @@
 
 	using = new /atom/movable/screen/drop()
 	using.icon = ui_style
-	//using.screen_loc = ui_drop_throw //SEPTIC EDIT REMOVAL
-	//SEPTIC EDIT BEGIN
+	//using.screen_loc = ui_drop_throw //OWORLD EDIT REMOVAL
+	//OWORLD EDIT BEGIN
 	using.screen_loc = ui_drop
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	using.hud = src
 	static_inventory += using
 
 	using = new /atom/movable/screen/resist()
 	using.icon = ui_style
-	//using.screen_loc = ui_above_movement //SEPTIC EDIT REMOVAL
-	//SEPTIC EDIT BEGIN
+	//using.screen_loc = ui_above_movement //OWORLD EDIT REMOVAL
+	//OWORLD EDIT BEGIN
 	using.screen_loc = ui_resist
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	using.hud = src
 	hotkeybuttons += using
 
 	throw_icon = new /atom/movable/screen/throw_catch()
 	throw_icon.icon = ui_style
-	//throw_icon.screen_loc = ui_drop_throw //SEPTIC EDIT REMOVAL
-	//SEPTIC EDIT BEGIN
+	//throw_icon.screen_loc = ui_drop_throw //OWORLD EDIT REMOVAL
+	//OWORLD EDIT BEGIN
 	throw_icon.screen_loc = ui_throw
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	throw_icon.hud = src
 	hotkeybuttons += throw_icon
 
 	pull_icon = new /atom/movable/screen/pull()
 	pull_icon.icon = ui_style
 	pull_icon.update_appearance()
-	//pull_icon.screen_loc = ui_above_movement  //SEPTIC EDIT REMOVAL
-	//SEPTIC EDIT BEGIN
+	//pull_icon.screen_loc = ui_above_movement  //OWORLD EDIT REMOVAL
+	//OWORLD EDIT BEGIN
 	pull_icon.screen_loc = ui_pull
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	pull_icon.hud = src
 	static_inventory += pull_icon
 

@@ -1,4 +1,4 @@
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /datum/surgery/blood_filter
 	name = "Filter blood"
 	steps = list(/datum/surgery_step/incise,

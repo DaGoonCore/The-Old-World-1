@@ -1,5 +1,5 @@
 /proc/possible_values_for_sprite_accessory_list(list/sprite_accessories, direction = SOUTH)
-	var/static/none_icon = icon('modular_septic/icons/mob/human/sprite_accessory/mutant_bodyparts.dmi', "none")
+	var/static/none_icon = icon('oworld/icons/mob/human/sprite_accessory/mutant_bodyparts.dmi', "none")
 	var/list/possible_values = list()
 	for(var/key in sprite_accessories)
 		var/datum/sprite_accessory/sprite_accessory = sprite_accessories[key]
@@ -44,7 +44,7 @@
 	return possible_values
 
 /proc/generate_possible_values_for_sprite_accessories_on_head(accessories, direction = SOUTH)
-	var/static/none_icon = icon('modular_septic/icons/mob/human/sprite_accessory/mutant_bodyparts.dmi', "none")
+	var/static/none_icon = icon('oworld/icons/mob/human/sprite_accessory/mutant_bodyparts.dmi', "none")
 
 	var/list/values = possible_values_for_sprite_accessory_list(accessories, direction)
 
@@ -83,11 +83,11 @@
 	return values
 
 /proc/generate_possible_values_for_sprite_accessories_on_moth_head(accessories, direction = SOUTH)
-	var/static/none_icon = icon('modular_septic/icons/mob/human/sprite_accessory/mutant_bodyparts.dmi', "none")
+	var/static/none_icon = icon('oworld/icons/mob/human/sprite_accessory/mutant_bodyparts.dmi', "none")
 
 	var/list/values = possible_values_for_sprite_accessory_list(accessories, direction)
 
-	var/icon/head_icon = icon('modular_septic/icons/mob/human/species/insect/moth_parts.dmi', "moth_head_m", direction)
+	var/icon/head_icon = icon('oworld/icons/mob/human/species/insect/moth_parts.dmi', "moth_head_m", direction)
 
 	for(var/key in values)
 		var/datum/sprite_accessory/accessory = accessories[key]
@@ -121,7 +121,7 @@
 	return values
 
 /proc/generate_possible_values_for_sprite_accessories_on_chest(accessories, direction = SOUTH)
-	var/static/none_icon = icon('modular_septic/icons/mob/human/sprite_accessory/mutant_bodyparts.dmi', "none")
+	var/static/none_icon = icon('oworld/icons/mob/human/sprite_accessory/mutant_bodyparts.dmi', "none")
 
 	var/list/values = possible_values_for_sprite_accessory_list(accessories, direction)
 
@@ -159,11 +159,11 @@
 	return values
 
 /proc/generate_possible_values_for_sprite_accessories_on_moth_chest(accessories, direction = SOUTH)
-	var/static/none_icon = icon('modular_septic/icons/mob/human/sprite_accessory/mutant_bodyparts.dmi', "none")
+	var/static/none_icon = icon('oworld/icons/mob/human/sprite_accessory/mutant_bodyparts.dmi', "none")
 
 	var/list/values = possible_values_for_sprite_accessory_list(accessories, direction)
 
-	var/icon/chest_icon = icon('modular_septic/icons/mob/human/species/insect/moth_parts.dmi', "moth_chest_m", direction)
+	var/icon/chest_icon = icon('oworld/icons/mob/human/species/insect/moth_parts.dmi', "moth_chest_m", direction)
 
 	for(var/key in values)
 		var/datum/sprite_accessory/accessory = accessories[key]
@@ -197,7 +197,7 @@
 	return values
 
 /proc/generate_possible_values_for_sprite_accessories_on_groin(accessories, direction = SOUTH)
-	var/static/none_icon = icon('modular_septic/icons/mob/human/sprite_accessory/mutant_bodyparts.dmi', "none")
+	var/static/none_icon = icon('oworld/icons/mob/human/sprite_accessory/mutant_bodyparts.dmi', "none")
 
 	var/list/values = possible_values_for_sprite_accessory_list(accessories, direction)
 
@@ -238,7 +238,7 @@
 	return values
 
 /proc/generate_possible_values_for_sprite_accessories_on_groin_with_tail(accessories, direction = SOUTH)
-	var/static/none_icon = icon('modular_septic/icons/mob/human/sprite_accessory/mutant_bodyparts.dmi', "none")
+	var/static/none_icon = icon('oworld/icons/mob/human/sprite_accessory/mutant_bodyparts.dmi', "none")
 
 	var/list/values = possible_values_for_sprite_accessory_list(accessories, direction)
 

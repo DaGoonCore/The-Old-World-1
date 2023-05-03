@@ -59,15 +59,15 @@ There are several things that need to be remembered:
 
 
 /mob/living/carbon/human/update_body()
-	/*SEPTIC EDIT REMOVAL
+	/*OWORLD EDIT REMOVAL
 	dna.species.handle_body(src)
 	..()
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	if(!(status_flags & BUILDING_ORGANS))
 		dna.species.handle_body(src)
 		return ..()
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 
 /mob/living/carbon/human/update_fire()
 	..((fire_stacks > HUMAN_FIRE_STACK_ICON_NUM) ? dna.species.fire_overlay : "Generic_mob_burning")
@@ -75,7 +75,7 @@ There are several things that need to be remembered:
 
 /* --------------------------------------- */
 //For legacy support.
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /mob/living/carbon/human/regenerate_icons()
 	if(!..())
 		icon_render_key = null //invalidate bodyparts cache
@@ -595,7 +595,7 @@ generate/load female uniform sprites matching all previously decided variables
 	for(var/X in bodyparts)
 		var/obj/item/bodypart/BP = X
 		. += "-[BP.body_zone]"
-		/* SEPTIC EDIT REMOVAL
+		/* OWORLD EDIT REMOVAL
 		if(!HAS_TRAIT(src, TRAIT_INVISIBLE_MAN))
 			for(var/obj/item/organ/external/organ as anything in BP.external_organs)
 				if(organ.can_draw_on_bodypart(src)) //make sure we're drawn before generating a key
@@ -668,7 +668,7 @@ generate/load female uniform sprites matching all previously decided variables
 
 		// eyes
 		if(!(NOEYESPRITES in dna.species.species_traits))
-			/* SEPTIC EDIT REMOVAL
+			/* OWORLD EDIT REMOVAL
 			var/obj/item/organ/eyes/E = getorganslot(ORGAN_SLOT_EYES)
 			var/mutable_appearance/eye_overlay
 			if(!E)
@@ -682,7 +682,7 @@ generate/load female uniform sprites matching all previously decided variables
 				eye_overlay.pixel_y += dna.species.offset_features[OFFSET_FACE][2]
 			add_overlay(eye_overlay)
 			*/
-			//SEPTIC EDIT BEGIN
+			//OWORLD EDIT BEGIN
 			var/obj/item/bodypart/left_eyelid = LAZYACCESS(eye_organs, 1)
 			var/obj/item/bodypart/right_eyelid = LAZYACCESS(eye_organs, 2)
 			var/obj/item/organ/eyes/LE
@@ -721,7 +721,7 @@ generate/load female uniform sprites matching all previously decided variables
 				eye_overlay.pixel_x += dna.species.offset_features[OFFSET_FACE][1]
 				eye_overlay.pixel_y += dna.species.offset_features[OFFSET_FACE][2]
 			add_overlay(eye_overlay)
-			//SEPTIC EDIT END
+			//OWORLD EDIT END
 
 	dna.species.handle_hair(src)
 

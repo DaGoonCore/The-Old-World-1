@@ -24,7 +24,7 @@
 	inverse_chem_val = 0.3
 	inverse_chem = /datum/reagent/inverse/helgrasp
 	failed_chem = null
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 	var/helbent = FALSE
 	var/reaping = FALSE
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
@@ -100,7 +100,7 @@
 	reagent_state = SOLID
 	impure_chem = /datum/reagent/impurity/libitoil
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /datum/reagent/medicine/c2/libital/on_mob_life(mob/living/carbon/M, delta_time, times_fired)
 	M.adjustOrganLoss(ORGAN_SLOT_LIVER, 0.3 * REM * delta_time)
 	M.adjustBruteLoss(-3 * REM * normalise_creation_purity() * delta_time)
@@ -118,7 +118,7 @@
 	inverse_chem = /datum/reagent/medicine/metafactor //Seems thematically intact
 	failed_chem = /datum/reagent/impurity/probital_failed
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /datum/reagent/medicine/c2/probital/on_mob_life(mob/living/carbon/M, delta_time, times_fired)
 	M.adjustBruteLoss(-2.25 * REM * normalise_creation_purity() * delta_time, FALSE)
 	var/ooo_youaregettingsleepy = 3.5
@@ -163,7 +163,7 @@
 	ph = 4.7
 	impure_chem = /datum/reagent/impurity/lentslurri
 	failed_chem = /datum/reagent/inverse/ichiyuri //I do hope cobby won't take this personally
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 	var/resetting_probability = 0 //What are these for?? Can I remove them?
 	var/spammer = 0
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
@@ -180,7 +180,7 @@
 	reagent_state = LIQUID
 	color = "#8C93FF"
 	ph = 4
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 	impure_chem = /datum/reagent/impurity/aiuri //blurriness
 	var/resetting_probability = 0 //same with this? Old legacy vars that should be removed?
 	var/message_cd = 0
@@ -249,7 +249,7 @@
 	inverse_chem_val = 0.5
 	inverse_chem = /datum/reagent/inverse/healing/convermol
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /datum/reagent/medicine/c2/convermol/on_mob_life(mob/living/carbon/human/M, delta_time, times_fired)
 	var/oxycalc = 2.5 * REM * current_cycle
 	if(!overdosed)
@@ -278,7 +278,7 @@
 	/// A cooldown for spacing bursts of stamina damage
 	COOLDOWN_DECLARE(drowsycd)
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /datum/reagent/medicine/c2/tirimol/on_mob_life(mob/living/carbon/human/M, delta_time, times_fired)
 	M.adjustOxyLoss(-3 * REM * delta_time * normalise_creation_purity())
 	M.adjustStaminaLoss(2 * REM * delta_time)
@@ -308,7 +308,7 @@
 	inverse_chem_val = 0.45
 	failed_chem = null
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /datum/reagent/medicine/c2/seiver/on_mob_metabolize(mob/living/carbon/human/M)
 	. = ..()
 	radbonustemp = rand(radbonustemp - 50, radbonustemp + 50) // Basically this means 50K and below will always give the percent heal, and upto 150K could. Calculated once.
@@ -349,7 +349,7 @@
 	failed_chem = null //Reaction uses a special method - so we don't want this for now.
 	ph = 9.2
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /datum/reagent/medicine/c2/multiver/on_mob_life(mob/living/carbon/human/M, delta_time, times_fired)
 	var/medibonus = 0 //it will always have itself which makes it REALLY start @ 1
 	for(var/r in M.reagents.reagent_list)
@@ -387,7 +387,7 @@
 	overdose_threshold = 6
 	impure_chem = /datum/reagent/inverse/healing/syriniver
 	ph = 8.6
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 	var/conversion_amount
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
@@ -470,7 +470,7 @@
 	color = "#FFEBEB"
 	ph = 7.2
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /datum/reagent/medicine/c2/synthflesh/expose_mob(mob/living/exposed_mob, methods=TOUCH, reac_volume, show_message = TRUE)
 	. = ..()
 	if(!iscarbon(exposed_mob))
@@ -515,7 +515,7 @@
 	inverse_chem_val = 0.25
 	failed_chem = null //We don't want to accidentally crash it out (see reaction)
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /datum/reagent/medicine/c2/penthrite/on_mob_metabolize(mob/living/user)
 	. = ..()
 	user.balloon_alert(user, "your heart beats with a great force")

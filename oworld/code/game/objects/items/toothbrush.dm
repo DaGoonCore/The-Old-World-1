@@ -1,7 +1,7 @@
 /obj/item/toothbrush
 	name = "toothbrush"
 	desc = "A brush used to clean your teeth."
-	icon = 'modular_septic/icons/obj/items/toothbrush.dmi'
+	icon = 'oworld/icons/obj/items/toothbrush.dmi'
 	icon_state = "toothbrush"
 	base_icon_state = "toothbrush"
 	w_class = WEIGHT_CLASS_SMALL

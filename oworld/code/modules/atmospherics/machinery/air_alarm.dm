@@ -1,5 +1,5 @@
 /obj/machinery/airalarm
-	icon = 'modular_septic/icons/obj/machinery/air_alarm.dmi'
+	icon = 'oworld/icons/obj/machinery/air_alarm.dmi'
 	icon_state = "alarm"
 	base_icon_state = "alarm"
 	/// Our internal radio

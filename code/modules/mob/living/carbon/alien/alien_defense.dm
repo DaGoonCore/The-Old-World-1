@@ -18,10 +18,10 @@ In all, this is a lot like the monkey code. /N
 		to_chat(user, "No attacking people at spawn, you jackass.")
 		return
 
-	//if(user.combat_mode) //SEPTIC EDIT REMOVAL
-	//SEPTIC EDIT BEGIN
+	//if(user.combat_mode) //OWORLD EDIT REMOVAL
+	//OWORLD EDIT BEGIN
 	if(IS_HELP_INTENT(user, modifiers))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		if(user == src && check_self_for_injuries())
 			return
 		set_resting(FALSE)
@@ -59,14 +59,14 @@ In all, this is a lot like the monkey code. /N
 	if (martial_result != MARTIAL_ATTACK_INVALID)
 		return martial_result
 
-	//if(user.combat_mode) //SEPTIC EDIT REMOVAL
-	//SEPTIC EDIT BEGIN
+	//if(user.combat_mode) //OWORLD EDIT REMOVAL
+	//OWORLD EDIT BEGIN
 	if(!IS_HELP_INTENT(user, modifiers))
-	//SEPTIC EDIT END
-		//if(LAZYACCESS(modifiers, RIGHT_CLICK)) //SEPTIC EDIT REMOVAL
-		//SEPTIC EDIT BEGIN
+	//OWORLD EDIT END
+		//if(LAZYACCESS(modifiers, RIGHT_CLICK)) //OWORLD EDIT REMOVAL
+		//OWORLD EDIT BEGIN
 		if(IS_DISARM_INTENT(user, modifiers))
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 			user.do_attack_animation(src, ATTACK_EFFECT_DISARM)
 			return TRUE
 		user.do_attack_animation(src, ATTACK_EFFECT_PUNCH)

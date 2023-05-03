@@ -142,12 +142,12 @@
 			ApplyIcon(button, force)
 
 		if(!IsAvailable())
-			/* SEPTIC EDIT REMOVAL
+			/* OWORLD EDIT REMOVAL
 			button.color = transparent_when_unavailable ? rgb(128,0,0,128) : rgb(128,0,0)
 			*/
-			//SEPTIC EDIT BEGIN
+			//OWORLD EDIT BEGIN
 			button.color = transparent_when_unavailable ? rgb(205,92,92,128) : rgb(205,92,92)
-			//SEPTIC EDIT END
+			//OWORLD EDIT END
 		else
 			button.color = rgb(255,255,255,255)
 			return 1

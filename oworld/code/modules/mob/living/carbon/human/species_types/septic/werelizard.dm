@@ -36,6 +36,6 @@
 	attack_effect = ATTACK_EFFECT_PUNCH
 	attack_sharpness = SHARP_EDGED
 	bite_sharpness = SHARP_POINTY
-	limbs_icon = 'modular_septic/icons/mob/human/species/lizard/lizard_parts_greyscale.dmi'
+	limbs_icon = 'oworld/icons/mob/human/species/lizard/lizard_parts_greyscale.dmi'
 	limbs_id = "lizard"
 	examine_icon_state = "werelizard"

@@ -2,9 +2,9 @@
 /obj/item/clothing/suit/cargo
 	name = "\improper freighter coat"
 	desc = "I like trains."
-	icon = 'modular_septic/icons/obj/clothing/suits.dmi'
+	icon = 'oworld/icons/obj/clothing/suits.dmi'
 	icon_state = "freighter_coat"
-	worn_icon = 'modular_septic/icons/mob/clothing/suit.dmi'
+	worn_icon = 'oworld/icons/mob/clothing/suit.dmi'
 	worn_icon_state = "freighter_coat"
 	inhand_icon_state = "lawyer_blue"
 	blood_overlay_type = "coat"
@@ -57,9 +57,9 @@
 /obj/item/clothing/suit/cargo/merchant
 	name = "\proper merchant's coat"
 	desc = "What are ya buying? Hehehe! Thank you."
-	icon = 'modular_septic/icons/obj/clothing/suits.dmi'
+	icon = 'oworld/icons/obj/clothing/suits.dmi'
 	icon_state = "merchant_coat"
-	worn_icon = 'modular_septic/icons/mob/clothing/suit.dmi'
+	worn_icon = 'oworld/icons/mob/clothing/suit.dmi'
 	worn_icon_state = "merchant_coat"
 	inhand_icon_state = "brownjsuit"
 	subarmor = list(SUBARMOR_FLAGS = SUBARMOR_FLEXIBLE, \

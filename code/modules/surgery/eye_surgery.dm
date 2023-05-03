@@ -1,4 +1,4 @@
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /datum/surgery/eye_surgery
 	name = "Eye surgery"
 	steps = list(

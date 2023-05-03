@@ -102,13 +102,13 @@
 		update_appearance()
 		return
 
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(!user.combat_mode && !(W.item_flags & NOBLUDGEON))
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	var/list/modifiers = params2list(params)
 	if(!IS_HARM_INTENT(user, modifiers) && !(W.item_flags & NOBLUDGEON))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		return attack_hand(user)
 	else
 		return ..()

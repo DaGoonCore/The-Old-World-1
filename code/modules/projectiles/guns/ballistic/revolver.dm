@@ -60,7 +60,7 @@
 		boolets += magazine.ammo_count(countempties)
 	return boolets
 
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /obj/item/gun/ballistic/revolver/examine(mob/user)
 	. = ..()
 	var/live_ammo = get_ammo(FALSE, FALSE)
@@ -157,13 +157,13 @@
 
 	if(flag)
 		if(!(target in user.contents) && ismob(target))
-			/* SEPTIC EDIT REMOVAL
+			/* OWORLD EDIT REMOVAL
 			if(user.combat_mode) // Flogging action
 			*/
-			//SEPTIC EDIT BEGIN
+			//OWORLD EDIT BEGIN
 			var/list/modifiers = params2list(params)
 			if(IS_HARM_INTENT(user, modifiers)) // Flogging action
-			//SEPTIC EDIT END
+			//OWORLD EDIT END
 				return
 
 	if(isliving(user))
@@ -188,24 +188,24 @@
 				playsound(user, fire_sound, fire_sound_volume, vary_fire_sound)
 				var/zone = check_zone(user.zone_selected)
 				var/obj/item/bodypart/affecting = H.get_bodypart(zone)
-				/* SEPTIC EDIT REMOVAL
+				/* OWORLD EDIT REMOVAL
 				if(zone == BODY_ZONE_HEAD || zone == BODY_ZONE_PRECISE_EYES || zone == BODY_ZONE_PRECISE_MOUTH)
 				*/
-				//SEPTIC EDIT BEGIN
+				//OWORLD EDIT BEGIN
 				var/static/list/suicidal_zones = list(BODY_ZONE_HEAD, BODY_ZONE_PRECISE_FACE, BODY_ZONE_PRECISE_R_EYE, BODY_ZONE_PRECISE_L_EYE, BODY_ZONE_PRECISE_MOUTH)
 				if(zone in suicidal_zones)
-				//SEPTIC EDIT END
+				//OWORLD EDIT END
 					shoot_self(user, affecting)
 				else
 					user.visible_message(span_danger("[user.name] cowardly fires [src] at [user.p_their()] [affecting.name]!"), span_userdanger("You cowardly fire [src] at your [affecting.name]!"), span_hear("You hear a gunshot!"))
 				chambered = null
 				return
-		/* SEPTIC EDIT REMOVAL
+		/* OWORLD EDIT REMOVAL
 		user.visible_message(span_danger("*click*"))
 		*/
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		user.visible_message(dry_fire_message)
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 		playsound(src, dry_fire_sound, 30, TRUE)
 
 /obj/item/gun/ballistic/revolver/russian/process_fire(atom/target, mob/living/user, message = TRUE, params = null, zone_override = "", bonus_spread = 0)

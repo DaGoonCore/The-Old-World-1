@@ -1,5 +1,5 @@
 /obj/item/clothing/under
-	worn_icon_digi = 'modular_septic/icons/mob/clothing/under/uniform_digi.dmi'
+	worn_icon_digi = 'oworld/icons/mob/clothing/under/uniform_digi.dmi'
 	armor_broken_sound = "light"
 	armor_damaged_sound = "light"
 	mutant_variants = NONE
@@ -54,7 +54,7 @@
 				return
 			to_chat(user, span_notice("I rip [prefix_a_or_an(sleeve_wording)] [sleeve_wording] from [src]."))
 			disable_zone(rippable_zone, BRUTE)
-			playsound(src, 'modular_septic/sound/effects/clothripping.ogg', 40, 0, -2)
+			playsound(src, 'oworld/sound/effects/clothripping.ogg', 40, 0, -2)
 			var/obj/item/repairable_by_result = new repairable_by(loc)
 			if(istype(repairable_by_result, /obj/item/stack))
 				var/obj/item/stack/stackable_result = repairable_by_result

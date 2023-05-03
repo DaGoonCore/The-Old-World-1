@@ -161,10 +161,10 @@
 	blobpwrdisplay = new /atom/movable/screen()
 	blobpwrdisplay.name = "blob power"
 	blobpwrdisplay.icon_state = "block"
-	//blobpwrdisplay.screen_loc = ui_health //SEPTIC EDIT REMOVAL
-	//SEPTIC EDIT BEGIN
+	//blobpwrdisplay.screen_loc = ui_health //OWORLD EDIT REMOVAL
+	//OWORLD EDIT BEGIN
 	blobpwrdisplay.screen_loc = ui_pulse
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	blobpwrdisplay.mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 	blobpwrdisplay.plane = ABOVE_HUD_PLANE
 	blobpwrdisplay.hud = src

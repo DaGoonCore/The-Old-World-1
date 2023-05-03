@@ -2,12 +2,12 @@
 	name = "40mm HE shell"
 	desc = "A cased high explosive grenade that can only be activated once fired out of a grenade launcher."
 	caliber = CALIBER_40MM
-	icon = 'modular_septic/icons/obj/items/ammo/casings.dmi'
-	world_icon = 'modular_septic/icons/obj/items/ammo/casings.dmi'
+	icon = 'oworld/icons/obj/items/ammo/casings.dmi'
+	world_icon = 'oworld/icons/obj/items/ammo/casings.dmi'
 	world_icon_state = "40mmHE"
 	icon_state = "40mmHE"
 	base_icon_state = "40mmHE"
-	bounce_sound = list('modular_septic/sound/weapons/guns/launcher/heavy_shell1.wav', 'modular_septic/sound/weapons/guns/launcher/heavy_shell2.wav', 'modular_septic/sound/weapons/guns/launcher/heavy_shell3.wav')
+	bounce_sound = list('oworld/sound/weapons/guns/launcher/heavy_shell1.wav', 'oworld/sound/weapons/guns/launcher/heavy_shell2.wav', 'oworld/sound/weapons/guns/launcher/heavy_shell3.wav')
 	bounce_volume = 65
 	projectile_type = /obj/projectile/bullet/l40mm
 	stack_type = null

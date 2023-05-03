@@ -148,14 +148,14 @@
 			return "Your account is not old enough for [jobtitle]."
 		if(JOB_UNAVAILABLE_SLOTFULL)
 			return "[jobtitle] is already filled to capacity."
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		if(JOB_UNAVAILABLE_QUIRK)
 			return "[jobtitle] is restricted from your quirks."
 		if(JOB_UNAVAILABLE_SPECIES)
 			return "[jobtitle] is restricted from your species."
 		if(JOB_UNAVAILABLE_LANGUAGE)
 			return "You don't have the required languages for [jobtitle]."
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 	return "Error: Unknown job availability."
 
 /mob/dead/new_player/proc/IsJobUnavailable(rank, latejoin = FALSE)

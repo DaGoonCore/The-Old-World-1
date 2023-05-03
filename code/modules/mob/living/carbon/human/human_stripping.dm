@@ -8,9 +8,9 @@ GLOBAL_LIST_INIT(strippable_human_items, create_strippable_list(list(
 	/datum/strippable_item/mob_item_slot/neck,
 	/datum/strippable_item/mob_item_slot/eyes,
 	/datum/strippable_item/mob_item_slot/ears,
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	/datum/strippable_item/mob_item_slot/ears_extra,
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	/datum/strippable_item/mob_item_slot/jumpsuit,
 	/datum/strippable_item/mob_item_slot/suit,
 	/datum/strippable_item/mob_item_slot/gloves,

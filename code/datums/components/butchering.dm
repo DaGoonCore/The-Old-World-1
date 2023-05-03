@@ -34,10 +34,10 @@
 
 /datum/component/butchering/proc/onItemAttack(obj/item/source, mob/living/M, mob/living/user)
 	SIGNAL_HANDLER
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	if(IS_NOT_HARM_INTENT(user, null))
 		return
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	if(M.stat == DEAD && (M.butcher_results || M.guaranteed_butcher_results)) //can we butcher it?
 		if(butchering_enabled && (can_be_blunt || source.get_sharpness()))
 			INVOKE_ASYNC(src, .proc/startButcher, source, M, user)
@@ -45,15 +45,15 @@
 
 	if(ishuman(M) && source.force && source.get_sharpness())
 		var/mob/living/carbon/human/H = M
-		/* SEPTIC EDIT REMOVAL
+		/* OWORLD EDIT REMOVAL
 		if((user.pulling == H && user.grab_state >= GRAB_AGGRESSIVE) && user.zone_selected == BODY_ZONE_HEAD) // Only aggressive grabbed can be sliced.
 			if(H.has_status_effect(/datum/status_effect/neck_slice))
 		*/
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		if((user.pulling == H && user.grab_state >= GRAB_AGGRESSIVE) && (user.zone_selected == BODY_ZONE_PRECISE_NECK))
 			var/obj/item/bodypart/throat = H.get_bodypart(BODY_ZONE_PRECISE_NECK)
 			if(throat.is_artery_torn())
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 				user.show_message(span_warning("[H]'s neck has already been already cut, you can't make the bleeding any worse!"), MSG_VISUAL, \
 								span_warning("Their neck has already been already cut, you can't make the bleeding any worse!"))
 				return COMPONENT_CANCEL_ATTACK_CHAIN
@@ -89,20 +89,20 @@
 					span_userdanger("[user] slits your throat..."))
 		log_combat(user, H, "wounded via throat slitting", source)
 		H.apply_damage(source.force, BRUTE, BODY_ZONE_HEAD, wound_bonus=CANT_WOUND) // easy tiger, we'll get to that in a sec
-		/* SEPTIC EDIT REMOVAL
+		/* OWORLD EDIT REMOVAL
 		var/obj/item/bodypart/slit_throat = H.get_bodypart(BODY_ZONE_HEAD)
 		if(slit_throat)
 			var/datum/wound/slash/critical/screaming_through_a_slit_throat = new
 			screaming_through_a_slit_throat.apply_wound(slit_throat)
 		H.apply_status_effect(/datum/status_effect/neck_slice)
 		*/
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		var/obj/item/bodypart/slit_throat = H.get_bodypart(BODY_ZONE_PRECISE_NECK)
 		if(slit_throat)
 			slit_throat.force_wound_upwards(/datum/wound/artery/dissect)
 			slit_throat.force_wound_upwards(/datum/wound/tendon/dissect)
 			SEND_SIGNAL(H, COMSIG_CARBON_CLEAR_WOUND_MESSAGE)
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 
 /**
  * Handles a user butchering a target

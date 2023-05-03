@@ -91,7 +91,7 @@
 	reagents_list = list(/datum/reagent/medicine/c2/synthflesh = 5) //why would you need this
 	build_path = /obj/item/organ/appendix
 	category = list(SPECIES_HUMAN,"initial")
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /datum/design/eyes
 	name = "Eyes"
 	id = "eyes"

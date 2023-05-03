@@ -1,4 +1,4 @@
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /datum/surgery/brain_surgery
 	name = "Brain surgery"
 	steps = list(

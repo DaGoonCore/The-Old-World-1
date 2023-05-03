@@ -2,12 +2,12 @@
 	. = ..()
 	create_reagents(1000, REAGENT_HOLDER_ALIVE)
 	assign_bodypart_ownership()
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	update_organ_requirements()
 	update_limb_efficiencies()
 	update_body()
-	//SEPTIC EDIT END
-	/* SEPTIC EDIT REMOVAL
+	//OWORLD EDIT END
+	/* OWORLD EDIT REMOVAL
 	update_body_parts() //to update the carbon's new bodyparts appearance
 	*/
 	// Carbons cannot taste anything without a tongue; the tongue organ removes this on Insert
@@ -70,7 +70,7 @@
 		mode() // Activate held item
 
 /mob/living/carbon/attackby(obj/item/I, mob/living/user, params)
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	for(var/datum/surgery/S in surgeries)
 		if(body_position == LYING_DOWN || !S.lying_required)
 			var/list/modifiers = params2list(params)
@@ -79,7 +79,7 @@
 					return 1
 	if(!all_wounds || !(!user.combat_mode || user == src))
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	//attempt surgery if on help or disarm intent
 	var/list/modifiers = params2list(params)
 	if(IS_HELP_INTENT(user, modifiers) || IS_DISARM_INTENT(user, modifiers))
@@ -89,13 +89,13 @@
 			if(step.try_op(user, src, user.zone_selected, user.get_active_held_item(), IS_DISARM_INTENT(user, modifiers)))
 				return TRUE
 	if(!LAZYLEN(all_wounds) || !IS_HELP_INTENT(user, modifiers) || (user == src))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		return ..()
 
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	for(var/i in shuffle(all_wounds))
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	var/list/nonpriority_wounds = list()
 	var/list/priority_wounds = list()
 	for(var/datum/wound/ouch as anything in all_wounds)
@@ -108,7 +108,7 @@
 	if(nonpriority_wounds.len)
 		nonpriority_wounds = shuffle(nonpriority_wounds)
 	for(var/i in (priority_wounds|nonpriority_wounds))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		var/datum/wound/W = i
 		if(W.try_treating(I, user))
 			return 1
@@ -173,7 +173,7 @@
 	SEND_SIGNAL(src, COMSIG_MOB_THROW, target)
 	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_CARBON_THROW_THING, src, target)
 	return
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /mob/living/carbon/throw_item(atom/target)
 	. = ..()
 	throw_mode_off(THROW_MODE_TOGGLE)
@@ -232,12 +232,12 @@
 		var/obj/item/I = locate(href_list["embedded_object"]) in L.embedded_objects
 		if(!I || I.loc != src) //no item, no limb, or item is not in limb or in the person anymore
 			return
-		/* SEPTIC EDIT REMOVAL
+		/* OWORLD EDIT REMOVAL
 		SEND_SIGNAL(src, COMSIG_CARBON_EMBED_RIP, I, L)
 		*/
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		SEND_SIGNAL(src, COMSIG_CARBON_EMBED_RIP, I, L, usr)
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 		return
 
 /mob/living/carbon/on_fall()
@@ -554,16 +554,16 @@
 	if(((maxHealth - total_burn) < HEALTH_THRESHOLD_DEAD*2) && stat == DEAD )
 		become_husk(BURN)
 	med_hud_set_health()
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(stat == SOFT_CRIT)
 		add_movespeed_modifier(/datum/movespeed_modifier/carbon_softcrit)
 	else
 		remove_movespeed_modifier(/datum/movespeed_modifier/carbon_softcrit)
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	update_pain()
 	update_shock()
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	SEND_SIGNAL(src, COMSIG_CARBON_HEALTH_UPDATE)
 
 /mob/living/carbon/update_stamina()
@@ -578,7 +578,7 @@
 	else
 		return
 	update_health_hud()
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /mob/living/carbon/update_sight()
 	if(!client)
 		return
@@ -921,7 +921,7 @@
 		if (BR.organ_flags & ORGAN_FAILING)
 			return DEFIB_FAIL_FAILING_BRAIN
 
-		/* SEPTIC EDIT REMOVAL
+		/* OWORLD EDIT REMOVAL
 		if (BR.suicided || BR.brainmob?.suiciding)
 			return DEFIB_FAIL_NO_INTELLIGENCE
 		*/

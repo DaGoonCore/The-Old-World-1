@@ -127,12 +127,12 @@
 		return
 
 	for(var/mob/yeet_mob in user.buckled_mobs)
-		/* SEPTIC EDIT REMOVAL
+		/* OWORLD EDIT REMOVAL
 		force_dismount(yeet_mob, (!user.combat_mode)) // gentle on help, byeeee if not
 		*/
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		force_dismount(yeet_mob, IS_NOT_HARM_INTENT(user, null)) // gentle out of harm, byeeee if not
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 
 /// If the ridden creature has abilities, and some var yet to be made is set to TRUE, the rider will be able to control those abilities
 /datum/component/riding/creature/proc/setup_abilities(mob/living/rider)

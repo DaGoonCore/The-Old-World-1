@@ -171,7 +171,7 @@
 	can_be_sawn_off = TRUE
 	pb_knockback = 3 // it's a super shotgun! //SHUT UP RETARD
 
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /obj/item/gun/ballistic/shotgun/doublebarrel/AltClick(mob/user)
 	. = ..()
 	if(unique_reskin && !current_skin && user.canUseTopic(src, BE_CLOSE, NO_DEXTERITY))

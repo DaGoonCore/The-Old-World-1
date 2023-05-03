@@ -76,12 +76,12 @@
 	return TRUE
 
 /datum/keybinding/living/toggle_combat_mode
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	hotkey_keys = list("F", "4")
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	hotkey_keys = list("C")
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	name = "toggle_combat_mode"
 	full_name = "Toggle Combat Mode"
 	description = "Toggles combat mode. Like Help/Harm but cooler."

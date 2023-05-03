@@ -1,6 +1,6 @@
 /atom/movable/screen/lookdown
 	name = "look down"
-	icon = 'modular_septic/icons/hud/quake/screen_quake.dmi'
+	icon = 'oworld/icons/hud/quake/screen_quake.dmi'
 	icon_state = "act_lookdown"
 	screen_loc = ui_lookdown
 

@@ -1,12 +1,12 @@
 /obj/item/grenade/syndieminibomb
 	desc = "A CMIA manufactured explosive for destruction and demolition. Comes compacted and expands when the button on the top is pressed."
 	name = "CMIA minibomb"
-	icon = 'modular_septic/icons/obj/items/grenade.dmi'
+	icon = 'oworld/icons/obj/items/grenade.dmi'
 	icon_state = "syndicate"
 	base_icon_state = "syndicate"
 	inhand_icon_state = "flashbang"
 	worn_icon_state = "minibomb"
-	pin_sound = 'modular_septic/sound/weapons/bomb_pin.wav'
+	pin_sound = 'oworld/sound/weapons/bomb_pin.wav'
 	spoon_loud = FALSE
 	spoon_sound = null
 	pickup_sound = null
@@ -47,7 +47,7 @@
 	annoying_fucking_beeping()
 
 /obj/item/grenade/frag
-	icon = 'modular_septic/icons/obj/items/grenade.dmi'
+	icon = 'oworld/icons/obj/items/grenade.dmi'
 	icon_state = "frag"
 	base_icon_state = "frag"
 	shrapnel_type = /obj/projectile/bullet/shrapnel
@@ -58,7 +58,7 @@
 /obj/item/grenade/frag/impact
 	name = "impact grenade"
 	desc = "A low yield grenade that is designed to detonate on thrown impact. Will not explode when dropped, or placed."
-	icon = 'modular_septic/icons/obj/items/grenade.dmi'
+	icon = 'oworld/icons/obj/items/grenade.dmi'
 	icon_state = "impactgrenade"
 	base_icon_state = "impactgrenade"
 	shrapnel_type = null
@@ -121,10 +121,10 @@
 /obj/item/grenade/frag/pipebomb
 	name = "pipebomb"
 	desc = "An improvised explosive device."
-	icon = 'modular_septic/icons/obj/items/grenade.dmi'
+	icon = 'oworld/icons/obj/items/grenade.dmi'
 	icon_state = "ted"
 	base_icon_state = "ted"
-	pin_sound = 'modular_septic/sound/effects/flare_start.wav'
+	pin_sound = 'oworld/sound/effects/flare_start.wav'
 	spoon_loud = FALSE
 	pickup_sound = null
 	grenade_flags = GRENADE_FUSED

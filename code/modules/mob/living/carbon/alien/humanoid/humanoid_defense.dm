@@ -15,15 +15,15 @@
 	to_chat(user, span_danger("You [hitverb] [src]!"))
 
 /mob/living/carbon/alien/humanoid/attack_hand(mob/living/carbon/human/user, list/modifiers)
-	//if(!..() || !user.combat_mode) //SEPTIC EDIT REMOVAL
-	//SEPTIC EDIT BEGIN
+	//if(!..() || !user.combat_mode) //OWORLD EDIT REMOVAL
+	//OWORLD EDIT BEGIN
 	if(!..())
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		return
-	//if(LAZYACCESS(modifiers, RIGHT_CLICK)) //SEPTIC EDIT REMOVAL
-	//SEPTIC EDIT BEGIN
+	//if(LAZYACCESS(modifiers, RIGHT_CLICK)) //OWORLD EDIT REMOVAL
+	//OWORLD EDIT BEGIN
 	if(IS_DISARM_INTENT(user, modifiers))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		if (body_position == STANDING_UP)
 			if (prob(5))
 				Unconscious(40)

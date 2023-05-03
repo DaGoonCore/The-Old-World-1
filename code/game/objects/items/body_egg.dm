@@ -3,12 +3,12 @@
 	desc = "All slimy and yuck."
 	icon_state = "innards"
 	zone = BODY_ZONE_CHEST
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	slot = ORGAN_SLOT_PARASITE_EGG
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	organ_efficiency = list(ORGAN_SLOT_PARASITE_EGG = 100)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 
 /obj/item/organ/body_egg/on_find(mob/living/finder)
 	..()

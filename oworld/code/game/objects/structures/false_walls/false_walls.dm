@@ -1,12 +1,12 @@
 /obj/structure/falsewall
-	icon = 'modular_septic/icons/turf/tall/walls/victorian.dmi'
-	frill_icon = 'modular_septic/icons/turf/tall/walls/frills/victorian_frill.dmi'
+	icon = 'oworld/icons/turf/tall/walls/victorian.dmi'
+	frill_icon = 'oworld/icons/turf/tall/walls/frills/victorian_frill.dmi'
 	icon_state = "wall-0"
 	base_icon_state = "wall"
 	/// Should this falsewall get the clingable element?
 	var/clingable = FALSE
 	/// If we are clingable, this var stores which sound we make when clung to
-	var/clinging_sound = 'modular_septic/sound/effects/clung.wav'
+	var/clinging_sound = 'oworld/sound/effects/clung.wav'
 	/// Can this false wall be opened with your hand?
 	var/can_open = TRUE
 
@@ -43,7 +43,7 @@
 	return FALSE
 
 /obj/structure/falsewall/reinforced
-	icon = 'modular_septic/icons/turf/tall/walls/reinforced_victorian.dmi'
-	frill_icon = 'modular_septic/icons/turf/tall/walls/frills/reinforced_victorian_frill.dmi'
+	icon = 'oworld/icons/turf/tall/walls/reinforced_victorian.dmi'
+	frill_icon = 'oworld/icons/turf/tall/walls/frills/reinforced_victorian_frill.dmi'
 	icon_state = "reinforced_wall-0"
 	base_icon_state = "reinforced_wall"

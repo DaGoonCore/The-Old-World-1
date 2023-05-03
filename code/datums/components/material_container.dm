@@ -112,14 +112,14 @@
 	SIGNAL_HANDLER
 
 	var/list/tc = allowed_item_typecache
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(!(mat_container_flags & MATCONTAINER_ANY_INTENT) && user.combat_mode)
 		return
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	if(!(mat_container_flags & MATCONTAINER_ANY_INTENT) && (user.a_intent == INTENT_HARM))
 		return
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	if(I.item_flags & ABSTRACT)
 		return
 	if((I.flags_1 & HOLOGRAM_1) || (I.item_flags & NO_MAT_REDEMPTION) || (tc && !is_type_in_typecache(I, tc)))

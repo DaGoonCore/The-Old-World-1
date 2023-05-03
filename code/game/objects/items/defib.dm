@@ -483,12 +483,12 @@
 		to_chat(user, span_warning("You need to target your patient's chest with [src]!"))
 		return
 
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(user.combat_mode)
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	if(!IS_HELP_INTENT(user, modifiers))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		do_harm(H, user)
 		return
 

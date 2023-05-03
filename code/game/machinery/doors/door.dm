@@ -43,7 +43,7 @@
 	var/unres_sides = 0 //Unrestricted sides. A bitflag for which direction (if any) can open the door with no access
 	var/can_crush = TRUE /// Whether or not the door can crush mobs.
 
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /obj/machinery/door/examine(mob/user)
 	. = ..()
 	if(red_alert_access)
@@ -75,7 +75,7 @@
 	//doors only block while dense though so we have to use the proc
 	real_explosion_block = explosion_block
 	explosion_block = EXPLOSION_BLOCK_PROC
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	RegisterSignal(SSsecurity_level, COMSIG_SECURITY_LEVEL_CHANGED, .proc/check_security_level)
 	*/
 
@@ -102,7 +102,7 @@
  * * new_level The new security level that is in effect
  */
 
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /obj/machinery/door/proc/check_security_level(datum/source, new_level)
 	SIGNAL_HANDLER
 
@@ -141,7 +141,7 @@
 			if(world.time - M.last_bumped <= 10)
 				return //Can bump-open one airlock per second. This is to prevent shock spam.
 			M.last_bumped = world.time
-			/* SEPTIC EDIT REMOVAL
+			/* OWORLD EDIT REMOVAL
 			if(HAS_TRAIT(M, TRAIT_HANDS_BLOCKED) && !check_access(null))
 				return
 			if(try_safety_unlock(M))
@@ -183,34 +183,34 @@
 		user = null
 
 	if(density && !(obj_flags & EMAGGED))
-		/* SEPTIC EDIT REMOVAL
+		/* OWORLD EDIT REMOVAL
 		if(allowed(user))
 			open()
 		else
 			do_animate("deny")
 		*/
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		return attack_hand(user, null)
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 
 /obj/machinery/door/attack_hand(mob/user, list/modifiers)
 	. = ..()
 	if(.)
 		return
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(try_remove_seal(user))
 		return
 	if(try_safety_unlock(user))
 		return
 	return try_to_activate_door(user)
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	if(try_remove_seal(user))
 		return
 	if(try_safety_unlock(user))
 		return
 	return try_to_activate_door(user)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 
 /obj/machinery/door/attack_tk(mob/user)
 	if(requiresID() && !allowed(null))
@@ -222,7 +222,7 @@
 	add_fingerprint(user)
 	if(operating || (obj_flags & EMAGGED))
 		return
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	access_bypass |= !requiresID()
 	if(access_bypass || allowed(user))
 		if(density)
@@ -233,13 +233,13 @@
 	if(density)
 		do_animate("deny")
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	. = TRUE
 	if(density)
 		open()
 	else
 		close()
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 
 /obj/machinery/door/allowed(mob/M)
 	if(emergency)
@@ -267,13 +267,13 @@
 	return
 
 /obj/machinery/door/attackby(obj/item/I, mob/living/user, params)
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(!user.combat_mode && (I.tool_behaviour == TOOL_CROWBAR || istype(I, /obj/item/fireaxe)))
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	var/list/modifiers = params2list(params)
 	if(!IS_HARM_INTENT(user, modifiers) && (I.tool_behaviour == TOOL_CROWBAR || istype(I, /obj/item/fireaxe)))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		var/forced_open = FALSE
 		if(istype(I, /obj/item/crowbar))
 			var/obj/item/crowbar/C = I
@@ -283,12 +283,12 @@
 	else if(I.tool_behaviour == TOOL_WELDER)
 		try_to_weld(I, user, params)
 		return TRUE
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	else if(!(I.item_flags & NOBLUDGEON) && !user.combat_mode)
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	else if(!(I.item_flags & NOBLUDGEON) && IS_HELP_INTENT(user, modifiers))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		try_to_activate_door(user)
 		return TRUE
 	return ..()

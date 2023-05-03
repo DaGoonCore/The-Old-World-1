@@ -291,13 +291,13 @@
 						return TRUE
 				to_chat(user, span_warning("You cannot add that to the machine!"))
 				return FALSE
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(user.combat_mode)
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	var/list/modifiers = params2list(params)
 	if(IS_HARM_INTENT(user, modifiers))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		return ..()
 
 /obj/structure/frame/machine/deconstruct(disassembled = TRUE)

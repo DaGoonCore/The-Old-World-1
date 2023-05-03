@@ -64,7 +64,7 @@ GLOBAL_LIST_EMPTY(dummy_mob_list)
 		GLOB.human_dummy_list[slotkey] = D
 		GLOB.dummy_mob_list += D
 	else
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		D.regenerate_limbs()
 		D.regenerate_organs()
 		for(var/obj/item/bodypart/bodypart in D.bodyparts)
@@ -73,7 +73,7 @@ GLOBAL_LIST_EMPTY(dummy_mob_list)
 			bodypart.markings_alpha = initial(bodypart.markings_alpha)
 		for(var/obj/item/organ/organ in D.internal_organs)
 			organ.organ_flags |= ORGAN_NOINFECTION
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 		D.regenerate_icons() //they were cut in wipe_state()
 	D.in_use = TRUE
 	return D

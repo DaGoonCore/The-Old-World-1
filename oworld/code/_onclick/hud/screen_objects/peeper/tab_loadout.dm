@@ -1,6 +1,6 @@
 /atom/movable/screen/tab_loadout
 	name = "tab loadout"
-	icon = 'modular_septic/icons/hud/quake/peeper.dmi'
+	icon = 'oworld/icons/hud/quake/peeper.dmi'
 	icon_state = "close"
 	plane = PEEPER_PLANE
 	layer = PEEPER_TAB_LOADOUT_LAYER

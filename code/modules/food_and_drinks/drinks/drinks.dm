@@ -372,12 +372,12 @@
 	return ..()
 
 /obj/item/reagent_containers/food/drinks/waterbottle/afterattack(obj/target, mob/living/user, proximity)
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(cap_on && (target.is_refillable() || target.is_drainable() || (reagents.total_volume && !user.combat_mode)))
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	if(cap_on && (target.is_refillable() || target.is_drainable() || (reagents.total_volume && IS_HELP_INTENT(user, null))))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		to_chat(user, span_warning("You must remove the cap before you can do that!"))
 		return
 
@@ -678,10 +678,10 @@
 	return TOXLOSS
 
 /obj/item/reagent_containers/food/drinks/soda_cans/attack(mob/M, mob/living/user)
-	//if(istype(M, /mob/living/carbon) && !reagents.total_volume && user.combat_mode && user.zone_selected == BODY_ZONE_HEAD) //SEPTIC EDIT REMOVAL
-	//SEPTIC EDIT BEGIN
+	//if(istype(M, /mob/living/carbon) && !reagents.total_volume && user.combat_mode && user.zone_selected == BODY_ZONE_HEAD) //OWORLD EDIT REMOVAL
+	//OWORLD EDIT BEGIN
 	if(istype(M, /mob/living/carbon) && !reagents.total_volume && !IS_HELP_INTENT(user, null) && user.zone_selected == BODY_ZONE_HEAD)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		if(M == user)
 			user.visible_message(span_warning("[user] crushes the can of [src] on [user.p_their()] forehead!"), span_notice("You crush the can of [src] on your forehead."))
 		else

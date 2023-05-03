@@ -46,12 +46,12 @@
 
 	//the time a key was pressed isn't actually used anywhere (as of 2019-9-10) but this allows easier access usage/checking
 	keys_held[_key] = world.time
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(!movement_locked)
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	if(!movement_locked && !mob.movement_locked) /// We use a mob variable for the sake of performance
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		var/movement = movement_keys[_key]
 		if(!(next_move_dir_sub & movement))
 			next_move_dir_add |= movement
@@ -96,12 +96,12 @@
 		return
 
 	keys_held -= _key
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(!movement_locked)
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	if(!movement_locked && !mob.movement_locked) /// We use a mob variable for the sake of performance
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		var/movement = movement_keys[_key]
 		if(!(next_move_dir_add & movement))
 			next_move_dir_sub |= movement

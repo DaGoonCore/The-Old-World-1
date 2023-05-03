@@ -315,7 +315,7 @@ GLOBAL_DATUM_INIT(fire_overlay, /mutable_appearance, mutable_appearance('icons/e
 
 /obj/item/examine(mob/user) //This might be spammy. Remove?
 	. = ..()
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	. += "[gender == PLURAL ? "They are" : "It is"] a [weight_class_to_text(w_class)] item."
 
 	if(resistance_flags & INDESTRUCTIBLE)
@@ -478,10 +478,10 @@ GLOBAL_DATUM_INIT(fire_overlay, /mutable_appearance, mutable_appearance('icons/e
 
 
 	//If the item is in a storage item, take it out
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	SEND_SIGNAL(loc, COMSIG_TRY_STORAGE_TAKE, src, user.loc, TRUE)
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	if(stored_in)
 		if(SEND_SIGNAL(stored_in, COMSIG_STORAGE_BLOCK_USER_TAKE, src, user, TRUE))
 			return
@@ -490,7 +490,7 @@ GLOBAL_DATUM_INIT(fire_overlay, /mutable_appearance, mutable_appearance('icons/e
 		if(SEND_SIGNAL(loc, COMSIG_STORAGE_BLOCK_USER_TAKE, src, user, TRUE))
 			return
 		SEND_SIGNAL(loc, COMSIG_TRY_STORAGE_TAKE, src, user.loc, FALSE)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	if(QDELETED(src)) //moving it out of the storage to the floor destroyed it.
 		return
 
@@ -732,7 +732,7 @@ GLOBAL_DATUM_INIT(fire_overlay, /mutable_appearance, mutable_appearance('icons/e
 	if (callback) //call the original callback
 		. = callback.Invoke()
 	item_flags &= ~IN_INVENTORY
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(!pixel_y && !pixel_x && !(item_flags & NO_PIXEL_RANDOM_DROP))
 		pixel_x = rand(-8,8)
 		pixel_y = rand(-8,8)
@@ -921,12 +921,12 @@ attack_basic_mob
 	var/theme = lowertext(usr.client?.prefs?.read_preference(/datum/preference/choiced/ui_style))
 	if(!outline_color) //if we weren't provided with a color, take the theme's color
 		switch(theme) //yeah it kinda has to be this way
-			//SEPTIC EDIT BEGIN
+			//OWORLD EDIT BEGIN
 			if("codec")
 				outline_color = COLOR_THEME_CODEC_GREEN
 			if("quake")
 				outline_color = COLOR_THEME_QUAKE_GREEN
-			//SEPTIC EDIT END
+			//OWORLD EDIT END
 			if("midnight")
 				outline_color = COLOR_THEME_MIDNIGHT
 			if("plasmafire")
@@ -1201,7 +1201,7 @@ attack_basic_mob
 	else if(w_class == WEIGHT_CLASS_TINY) //small items like soap or toys that don't have mat datums
 		/// victim's chest (for cavity implanting the item)
 		var/obj/item/bodypart/chest/victim_cavity = victim.get_bodypart(BODY_ZONE_CHEST)
-		/* SEPTIC EDIT REMOVAL
+		/* OWORLD EDIT REMOVAL
 		if(victim_cavity.cavity_item)
 			victim.vomit(5, FALSE, FALSE, distance = 0)
 			forceMove(drop_location())
@@ -1212,7 +1212,7 @@ attack_basic_mob
 			victim_cavity.cavity_item = src
 			to_chat(victim, span_warning("You swallow hard. [source_item? "Something small was in \the [source_item]..." : ""]"))
 		*/
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		if(victim_cavity.get_cavity_volume() + w_class * 10 > victim_cavity.max_cavity_volume)
 			victim.vomit(5, FALSE, FALSE, distance = 0)
 			forceMove(drop_location())
@@ -1222,7 +1222,7 @@ attack_basic_mob
 			victim.transferItemToLoc(src, victim_cavity, TRUE)
 			victim_cavity.cavity_items += src
 			to_chat(victim, "<span class='warning'>You swallow hard. [source_item? "Something small was in \the [source_item]..." : ""]</span>")
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 		discover_after = FALSE
 
 	else

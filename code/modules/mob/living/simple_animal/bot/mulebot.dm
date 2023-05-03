@@ -145,9 +145,9 @@
 	reached_target = FALSE
 
 /mob/living/simple_animal/bot/mulebot/attackby(obj/item/I, mob/living/user, params)
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	var/list/modifiers = params2list(params)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	if(I.tool_behaviour == TOOL_SCREWDRIVER)
 		. = ..()
 		update_appearance()
@@ -161,12 +161,12 @@
 		diag_hud_set_mulebotcell()
 		visible_message(span_notice("[user] inserts \a [cell] into [src]."),
 						span_notice("You insert [cell] into [src]."))
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	else if(I.tool_behaviour == TOOL_CROWBAR && open && !user.combat_mode)
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	else if(I.tool_behaviour == TOOL_CROWBAR && open && IS_HELP_INTENT(user, modifiers))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		if(!cell)
 			to_chat(user, span_warning("[src] doesn't have a power cell!"))
 			return

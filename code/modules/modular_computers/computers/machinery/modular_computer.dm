@@ -136,12 +136,12 @@
 		return cpu.screwdriver_act(user, tool)
 
 /obj/machinery/modular_computer/attackby(obj/item/W as obj, mob/living/user)
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if (!user.combat_mode && cpu && !(flags_1 & NODECONSTRUCT_1))
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	if (IS_HELP_INTENT(user, null) && cpu && !(flags_1 & NODECONSTRUCT_1))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		return cpu.attackby(W, user)
 	return ..()
 

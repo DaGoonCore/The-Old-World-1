@@ -41,19 +41,19 @@
 		return
 
 	if(world.time <= next_move)
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		//spam prevention
 		if(!(world.time % 3))
 			to_chat(src, click_fail_msg())
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 		return
 	// You are responsible for checking config.ghost_interaction when you override this function
 	// Not all of them require checking, see below
-	/* SEPTIC EDIT BEGIN
+	/* OWORLD EDIT BEGIN
 	A.attack_ghost(src)
 	*/
 	A.attack_ghost(src, params)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 
 // Oh by the way this didn't work with old click code which is why clicking shit didn't spam you
 /atom/proc/attack_ghost(mob/dead/observer/user)

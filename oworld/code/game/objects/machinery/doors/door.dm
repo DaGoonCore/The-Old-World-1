@@ -34,10 +34,10 @@
 			else
 				locked = FALSE
 			to_chat(user, span_notice("I [lock_status] the [src] with the [I]."))
-			playsound(src, 'modular_septic/sound/effects/keys_use.wav', 75, FALSE)
+			playsound(src, 'oworld/sound/effects/keys_use.wav', 75, FALSE)
 		else
 			to_chat(user, span_warning("Wrong key."))
-			playsound(src, 'modular_septic/sound/effects/keys_remove.ogg', 75, FALSE)
+			playsound(src, 'oworld/sound/effects/keys_remove.ogg', 75, FALSE)
 		add_fingerprint(user)
 		sound_hint()
 		COOLDOWN_START(src, key_cooldown, key_cooldown_duration)

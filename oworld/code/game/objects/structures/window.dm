@@ -1,5 +1,5 @@
 /obj/structure/window
-	icon = 'modular_septic/icons/obj/structures/tall/structures_tall.dmi'
+	icon = 'oworld/icons/obj/structures/tall/structures_tall.dmi'
 	icon_state = "window"
 	base_icon_state = "window"
 	plane = GAME_PLANE_ABOVE_WINDOW
@@ -38,9 +38,9 @@
 	var/damage_state = ""
 	if(damage_percentage >= 25)
 		damage_state = "[damage_percentage]"
-	crack_overlay = mutable_appearance('modular_septic/icons/obj/structures/smooth_structures/tall/window_damage.dmi', "damage[damage_state]-[smoothing_junction]")
+	crack_overlay = mutable_appearance('oworld/icons/obj/structures/smooth_structures/tall/window_damage.dmi', "damage[damage_state]-[smoothing_junction]")
 	crack_overlay.layer = layer+0.001
-	crack_overlay_frill = mutable_appearance('modular_septic/icons/obj/structures/smooth_structures/tall/window_damage_frill.dmi', "damage[damage_state]-[smoothing_junction]")
+	crack_overlay_frill = mutable_appearance('oworld/icons/obj/structures/smooth_structures/tall/window_damage_frill.dmi', "damage[damage_state]-[smoothing_junction]")
 	crack_overlay_frill.pixel_y = 32
 	if(smoothing_junction & NORTH)
 		crack_overlay_frill.plane = FRILL_PLANE_LOW
@@ -64,8 +64,8 @@
 	update_icon()
 
 /obj/structure/window/fulltile
-	icon = 'modular_septic/icons/obj/structures/smooth_structures/tall/window.dmi'
-	frill_icon = 'modular_septic/icons/obj/structures/smooth_structures/tall/window_frill.dmi'
+	icon = 'oworld/icons/obj/structures/smooth_structures/tall/window.dmi'
+	frill_icon = 'oworld/icons/obj/structures/smooth_structures/tall/window_frill.dmi'
 	icon_state = "window-0"
 	base_icon_state = "window"
 	plane = GAME_PLANE_WINDOW

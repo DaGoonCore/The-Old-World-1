@@ -59,10 +59,10 @@
 					var/obj/item/organ/organ = item_to_retrieve
 					if(organ.owner)
 						// If this code ever runs I will be happy
-						//log_combat(L, organ.owner, "magically removed [organ.name] from", addition="COMBAT MODE: [uppertext(L.combat_mode)]") //SEPTIC EDIT REMOVAL
-						//SEPTIC EDIT BEGIN
+						//log_combat(L, organ.owner, "magically removed [organ.name] from", addition="COMBAT MODE: [uppertext(L.combat_mode)]") //OWORLD EDIT REMOVAL
+						//OWORLD EDIT BEGIN
 						log_combat(L, organ.owner, "magically removed [organ.name] from", addition="COMBAT MODE: [uppertext(L.combat_mode)] INTENT: [uppertext(L.a_intent)]")
-						//SEPTIC EDIT END
+						//OWORLD EDIT END
 						organ.Remove(organ.owner)
 			else
 				while(!isturf(item_to_retrieve.loc) && infinite_recursion < 10) //if it's in something you get the whole thing.

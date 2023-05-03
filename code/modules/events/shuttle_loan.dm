@@ -120,7 +120,7 @@
 		var/list/shuttle_spawns = list()
 		switch(dispatch_type)
 			if(HIJACK_SYNDIE)
-				/*SEPTIC EDTI REMOVAL
+				/*OWORLD EDTI REMOVAL
 				var/datum/supply_pack/pack = SSshuttle.supply_packs[/datum/supply_pack/emergency/specialops]
 				pack.generate(pick_n_take(empty_shuttle_turfs))*/
 
@@ -132,7 +132,7 @@
 					shuttle_spawns.Add(/mob/living/simple_animal/hostile/syndicate/ranged/infiltrator)
 
 			if(RUSKY_PARTY)
-				/*SEPTIC EDIT REMOVAL
+				/*OWORLD EDIT REMOVAL
 				var/datum/supply_pack/pack = SSshuttle.supply_packs[/datum/supply_pack/service/party]
 				pack.generate(pick_n_take(empty_shuttle_turfs))*/
 
@@ -145,7 +145,7 @@
 					shuttle_spawns.Add(/mob/living/simple_animal/hostile/bear/russian)
 
 			if(SPIDER_GIFT)
-				/*SEPTIC EDIT REMOVAL
+				/*OWORLD EDIT REMOVAL
 				var/datum/supply_pack/pack = SSshuttle.supply_packs[/datum/supply_pack/emergency/specialops]
 				pack.generate(pick_n_take(empty_shuttle_turfs))*/
 
@@ -184,13 +184,13 @@
 			if(DEPARTMENT_RESUPPLY)
 				var/list/crate_types = list(
 					/datum/supply_pack/emergency/equipment,
-/*					/datum/supply_pack/security/supplies, SEPTIC EDIT REMOVAL*/
+/*					/datum/supply_pack/security/supplies, OWORLD EDIT REMOVAL*/
 					/datum/supply_pack/organic/food,
 					/datum/supply_pack/emergency/weedcontrol,
 					/datum/supply_pack/engineering/tools,
 					/datum/supply_pack/engineering/engiequipment,
 					/datum/supply_pack/science/robotics,
-					/* SEPTIC EDIT REMOVAL
+					/* OWORLD EDIT REMOVAL
 					/datum/supply_pack/science/plasma,*/
 					/datum/supply_pack/medical/supplies
 					)

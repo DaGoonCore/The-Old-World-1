@@ -52,12 +52,12 @@
 
 /obj/item/flashlight/attack(mob/living/carbon/M, mob/living/carbon/human/user)
 	add_fingerprint(user)
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(istype(M) && on && (user.zone_selected in list(BODY_ZONE_PRECISE_EYES, BODY_ZONE_PRECISE_MOUTH)))
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	if(istype(M) && on && (user.zone_selected in list(BODY_ZONE_PRECISE_L_EYE, BODY_ZONE_PRECISE_R_EYE, BODY_ZONE_PRECISE_MOUTH)))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		if((HAS_TRAIT(user, TRAIT_CLUMSY) || HAS_TRAIT(user, TRAIT_DUMB)) && prob(50)) //too dumb to use flashlight properly
 			return ..() //just hit them in the head
 
@@ -74,12 +74,12 @@
 			return
 
 		switch(user.zone_selected)
-			/* SEPTIC EDIT REMOVAL
+			/* OWORLD EDIT REMOVAL
 			if(BODY_ZONE_PRECISE_EYES)
 			*/
-			//SEPTIC EDIT BEGIN
+			//OWORLD EDIT BEGIN
 			if(BODY_ZONE_PRECISE_L_EYE, BODY_ZONE_PRECISE_R_EYE)
-			//SEPTIC EDIT END
+			//OWORLD EDIT END
 				if((M.head && M.head.flags_cover & HEADCOVERSEYES) || (M.wear_mask && M.wear_mask.flags_cover & MASKCOVERSEYES) || (M.glasses && M.glasses.flags_cover & GLASSESCOVERSEYES))
 					to_chat(user, span_warning("You're going to need to remove that [(M.head && M.head.flags_cover & HEADCOVERSEYES) ? "helmet" : (M.wear_mask && M.wear_mask.flags_cover & MASKCOVERSEYES) ? "mask": "glasses"] first!"))
 					return
@@ -114,12 +114,12 @@
 
 				var/list/mouth_organs = new
 				for(var/obj/item/organ/O in M.internal_organs)
-					/* SEPTIC EDIT REMOVAL
+					/* OWORLD EDIT REMOVAL
 					if(O.zone == BODY_ZONE_PRECISE_MOUTH)
 					*/
-					//SEPTIC EDIT BEGIN
+					//OWORLD EDIT BEGIN
 					if(O.current_zone == BODY_ZONE_PRECISE_MOUTH)
-					//SEPTIC EDIT END
+					//OWORLD EDIT END
 						mouth_organs.Add(O)
 				var/organ_list = ""
 				var/organ_count = LAZYLEN(mouth_organs)
@@ -429,15 +429,15 @@
 	return TRUE
 
 /obj/item/flashlight/emp/attack(mob/living/M, mob/living/user)
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(on && (user.zone_selected in list(BODY_ZONE_PRECISE_EYES, BODY_ZONE_PRECISE_MOUTH))) // call original attack when examining organs
 		..()
 	return
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	if(on && (user.zone_selected in list(BODY_ZONE_PRECISE_R_EYE, BODY_ZONE_PRECISE_L_EYE, BODY_ZONE_PRECISE_MOUTH)))
 		return ..()
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 
 /obj/item/flashlight/emp/afterattack(atom/movable/A, mob/user, proximity)
 	. = ..()

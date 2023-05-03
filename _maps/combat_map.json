@@ -1,7 +1,7 @@
 {
     "version": 1,
     "map_name": "Combat",
-    "map_path": "_septic/map_files/Combat",
+    "map_path": "_oworld/map_files/Combat",
     "map_file": [
 		"CombatZ7.dmm",
 		"CombatZ6.dmm",

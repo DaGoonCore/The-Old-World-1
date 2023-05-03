@@ -164,20 +164,20 @@
 	. = ..()
 	if (message1 || message2)
 		. += "The display says:"
-		/* SEPTIC EDIT REMOVAL
+		/* OWORLD EDIT REMOVAL
 		if (message1)
 			. += "<br>\t<tt>[html_encode(message1)]</tt>"
 		if (message2)
 			. += "<br>\t<tt>[html_encode(message2)]</tt>"
 		*/
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		if(message1 && message2)
 			. += div_infobox("[message1]<br>[message2]")
 		else if(message1)
 			. += div_infobox("[message1]")
 		else
 			. += div_infobox("[message2]")
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 
 // Helper procs for child display types.
 /obj/machinery/status_display/proc/display_shuttle_status(obj/docking_port/mobile/shuttle)

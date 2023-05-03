@@ -5,11 +5,11 @@
 	icon_state = "" //Remove the inherent human icon that is visible on the map editor. We're rendering ourselves limb by limb, having it still be there results in a bug where the basic human icon appears below as south in all directions and generally looks nasty.
 
 	//initialize limbs first
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	add_verb(src, /mob/living/carbon/proc/defecate)
 	add_verb(src, /mob/living/carbon/proc/urinate)
 	status_flags |= BUILDING_ORGANS
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	create_bodyparts()
 
 	setup_human_dna()
@@ -20,9 +20,9 @@
 	//initialise organs
 	create_internal_organs() //most of it is done in set_species now, this is only for parent call
 	physiology = new()
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	status_flags &= ~BUILDING_ORGANS
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	. = ..()
 
 	RegisterSignal(src, COMSIG_COMPONENT_CLEAN_FACE_ACT, .proc/clean_face)
@@ -53,7 +53,7 @@
 	QDEL_LIST(bioware)
 	GLOB.human_list -= src
 	return ..()
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /mob/living/carbon/human/ZImpactDamage(turf/T, levels)
 	if(!HAS_TRAIT(src, TRAIT_FREERUNNING) || levels > 1) // falling off one level
 		return ..()
@@ -75,13 +75,13 @@
 
 /mob/living/carbon/human/get_status_tab_items()
 	. = ..()
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	. += "Combat mode: [combat_mode ? "On" : "Off"]"
 	. += "Move Mode: [m_intent]"
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	. |= get_middle_status_tab()
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	if (internal)
 		var/datum/gas_mixture/internal_air = internal.return_air()
 		if (!internal_air)
@@ -364,12 +364,12 @@
 				var/counter = 1
 				while(R.fields[text("com_[]", counter)])
 					counter++
-				/* SEPTIC EDIT REMOVAL
+				/* OWORLD EDIT REMOVAL
 				R.fields[text("com_[]", counter)] = text("Made by [] on [] [], []<BR>[]", allowed_access, station_time_timestamp(), time2text(world.realtime, "MMM DD"), GLOB.year_integer+540, t1)
 				*/
-				//SEPTIC EDIT BEGIN
+				//OWORLD EDIT BEGIN
 				R.fields[text("com_[]", counter)] = text("Made by [] on [] [], []<BR>[]", allowed_access, station_time_timestamp(), time2text(world.realtime, "MMM DD"), SSstation_time.get_station_year(), t1)
-				//SEPTIC EDIT END
+				//OWORLD EDIT END
 				to_chat(usr, span_notice("Successfully added comment."))
 				return
 
@@ -592,7 +592,7 @@
 	lip_style = new_style
 	lip_color = new_colour
 	update_body()
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	var/obj/item/bodypart/head/hopefully_a_head = get_bodypart(BODY_ZONE_HEAD)
 	REMOVE_TRAITS_IN(src, LIPSTICK_TRAIT)
 	hopefully_a_head?.stored_lipstick_trait = null
@@ -718,7 +718,7 @@
 			var/health_amount = min(health, maxHealth - getStaminaLoss())
 			if(..(health_amount)) //not dead
 				switch(hal_screwyhud)
-					/* SEPTIC EDIT REMOVAL
+					/* OWORLD EDIT REMOVAL
 					if(SCREWYHUD_CRIT)
 						hud_used.healths.icon_state = "health6"
 					if(SCREWYHUD_DEAD)
@@ -726,14 +726,14 @@
 					if(SCREWYHUD_HEALTHY)
 						hud_used.healths.icon_state = "health0"
 					*/
-					//SEPTIC EDIT BEGIN
+					//OWORLD EDIT BEGIN
 					if(SCREWYHUD_CRIT)
 						hud_used.healths.icon_state = "pulse6"
 					if(SCREWYHUD_DEAD)
 						hud_used.healths.icon_state = "pulse7"
 					if(SCREWYHUD_HEALTHY)
 						hud_used.healths.icon_state = "pulse0"
-					//SEPTIC EDIT END
+					//OWORLD EDIT END
 		if(hud_used.healthdoll)
 			hud_used.healthdoll.cut_overlays()
 			if(stat != DEAD)

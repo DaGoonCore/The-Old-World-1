@@ -84,7 +84,7 @@ GLOBAL_VAR(station_nuke_source)
 			return CINEMATIC_NUKE_FAR
 	return CINEMATIC_NUKE_FAR
 
-//SEPTIC EDIT BEGIN - MOVED TO MODULAR
+//OWORLD EDIT BEGIN - MOVED TO MODULAR
 /*
 /obj/machinery/nuclearbomb/proc/disk_check(obj/item/disk/nuclear/D)
 	if(D.fake)
@@ -93,7 +93,7 @@ GLOBAL_VAR(station_nuke_source)
 	else
 		return TRUE
 */
-//SEPTIC EDIT END
+//OWORLD EDIT END
 
 /obj/machinery/nuclearbomb/attackby(obj/item/I, mob/user, params)
 	if (istype(I, /obj/item/disk/nuclear))

@@ -145,13 +145,13 @@
 	desc = "Still it beats furiously, emanating an aura of utter hate."
 	icon = 'icons/obj/surgery.dmi'
 	icon_state = "demon_heart-on"
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	decay_factor = 0
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	min_decay_factor = 0
 	max_decay_factor = 0
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 
 /obj/item/organ/heart/demon/ComponentInitialize()
 	. = ..()

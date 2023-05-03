@@ -175,10 +175,10 @@
 		return TRUE
 
 	if(!I.grind_results && !I.juice_results)
-		//if(user.combat_mode) //SEPTIC EDIT REMOVAL
-		//SEPTIC EDIT BEGIN
+		//if(user.combat_mode) //OWORLD EDIT REMOVAL
+		//OWORLD EDIT BEGIN
 		if(!IS_HELP_INTENT(user, params2list(params)))
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 			return ..()
 		else
 			to_chat(user, span_warning("You cannot grind [I] into reagents!"))

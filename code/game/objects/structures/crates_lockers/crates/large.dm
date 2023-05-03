@@ -42,11 +42,11 @@
 		qdel(src)
 
 	else
-		//if(user.combat_mode) //Only return  ..() if intent is harm, otherwise return 0 or just end it. //SEPTIC EDIT REMOVAL
-		//SEPTIC EDIT
+		//if(user.combat_mode) //Only return  ..() if intent is harm, otherwise return 0 or just end it. //OWORLD EDIT REMOVAL
+		//OWORLD EDIT
 		var/list/modifiers = params2list(params)
 		if(IS_DISARM_INTENT(user, modifiers))
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 			return ..() //Stops it from opening and turning invisible when items are used on it.
 
 		else

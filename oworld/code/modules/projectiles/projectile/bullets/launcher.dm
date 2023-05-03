@@ -1,7 +1,7 @@
 /obj/projectile/bullet/l40mm
 	name ="40mm fragmentation grenade"
 	desc = "MEU DEUS"
-	icon = 'modular_septic/icons/obj/items/guns/projectiles/projectiles.dmi'
+	icon = 'oworld/icons/obj/items/guns/projectiles/projectiles.dmi'
 	icon_state= "bolter"
 	damage = 60
 	embedding = null
@@ -20,7 +20,7 @@
 /obj/projectile/bullet/gas40mm
 	name ="40mm gassy grenade"
 	desc = "OH MY GOODNESS GRACIOUS"
-	icon = 'modular_septic/icons/obj/items/guns/projectiles/projectiles.dmi'
+	icon = 'oworld/icons/obj/items/guns/projectiles/projectiles.dmi'
 	icon_state= "bolter"
 	damage = 30
 	embedding = null
@@ -29,7 +29,7 @@
 
 /obj/projectile/bullet/gas40mm/on_hit(atom/target, blocked = FALSE)
 	. = ..()
-	playsound(src, 'modular_septic/sound/effects/gassy.ogg', 95, TRUE, 1)
+	playsound(src, 'oworld/sound/effects/gassy.ogg', 95, TRUE, 1)
 	var/turf/gassyturf = get_turf(src)
 	if(istype(gassyturf))
 		gassyturf.pollute_turf(/datum/pollutant/incredible_gas, 1000)
@@ -38,7 +38,7 @@
 /obj/projectile/bullet/smoke40mm
 	name ="40mm smoke grenade"
 	desc = "MHM"
-	icon = 'modular_septic/icons/obj/items/guns/projectiles/projectiles.dmi'
+	icon = 'oworld/icons/obj/items/guns/projectiles/projectiles.dmi'
 	icon_state= "bolter"
 	damage = 30
 	embedding = null
@@ -47,7 +47,7 @@
 
 /obj/projectile/bullet/smoke40mm/on_hit(atom/target, blocked = FALSE)
 	. = ..()
-	playsound(src, 'modular_septic/sound/effects/gas.ogg', 50, TRUE, 1)
+	playsound(src, 'oworld/sound/effects/gas.ogg', 50, TRUE, 1)
 	var/datum/effect_system/smoke_spread/bad/smoke = new
 	smoke.set_up(4, src)
 	smoke.start()
@@ -56,7 +56,7 @@
 /obj/projectile/bullet/inc40mm
 	name ="40mm incindiary grenade"
 	desc = "MHM"
-	icon = 'modular_septic/icons/obj/items/guns/projectiles/projectiles.dmi'
+	icon = 'oworld/icons/obj/items/guns/projectiles/projectiles.dmi'
 	icon_state= "bolter"
 	damage = 30
 	embedding = null

@@ -33,10 +33,10 @@
 			return FALSE
 		else
 			check = TRUE
-	//if(user.combat_mode || check) //SEPTIC EDIT REMOVAL
-	//SEPTIC EDIT
+	//if(user.combat_mode || check) //OWORLD EDIT REMOVAL
+	//OWORLD EDIT
 	if(!IS_HELP_INTENT(user, params2list(click_parameters)) || check)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		target.rust_heretic_act()
 		return TRUE
 

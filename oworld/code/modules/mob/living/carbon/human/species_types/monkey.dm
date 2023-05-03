@@ -28,6 +28,6 @@
 					ITEM_SLOT_SUITSTORE)
 	mutant_organs = list()
 	mutant_bodyparts = list()
-	limbs_icon = 'modular_septic/icons/mob/human/species/monkey/monkey_parts.dmi'
+	limbs_icon = 'oworld/icons/mob/human/species/monkey/monkey_parts.dmi'
 	limbs_id = "monkey"
 	examine_icon_state = "monkey"

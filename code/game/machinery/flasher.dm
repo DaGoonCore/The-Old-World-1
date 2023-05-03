@@ -129,12 +129,12 @@
 	use_power(1000)
 
 	var/flashed = FALSE
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	for (var/mob/living/L in viewers(src, null))
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	for (var/mob/living/L in fov_viewers(world.view, src))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		if (get_dist(src, L) > range)
 			continue
 

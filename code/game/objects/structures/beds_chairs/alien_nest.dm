@@ -86,10 +86,10 @@
 			playsound(loc, 'sound/items/welder.ogg', 100, TRUE)
 
 /obj/structure/bed/nest/attack_alien(mob/living/carbon/alien/user, list/modifiers)
-	//if(!user.combat_mode) //SEPTIC EDIT REMOVAL
-	//SEPTIC EDIT
+	//if(!user.combat_mode) //OWORLD EDIT REMOVAL
+	//OWORLD EDIT
 	if(IS_HELP_INTENT(user, modifiers))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		return attack_hand(user, modifiers)
 	else
 		return ..()

@@ -1,4 +1,4 @@
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /proc/get_location_modifier(mob/located_mob)
 	var/turf/mob_turf = get_turf(located_mob)
 	if(locate(/obj/structure/table/optable, mob_turf))

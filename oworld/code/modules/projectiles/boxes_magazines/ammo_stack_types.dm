@@ -146,7 +146,7 @@
 
 /obj/item/ammo_box/magazine/ammo_stack/a556steyr
 	name = "5.56x45mm SCF rounds"
-	world_icon = 'modular_septic/icons/obj/items/ammo/casings.dmi'
+	world_icon = 'oworld/icons/obj/items/ammo/casings.dmi'
 	icon_state = "flechette-1"
 	base_icon_state = "flechette"
 	world_icon_state = "flechette"
@@ -243,8 +243,8 @@
 
 /obj/item/ammo_box/magazine/ammo_stack/batteries
 	name = "batteries"
-	icon = 'modular_septic/icons/obj/items/ammo/batteries.dmi'
-	world_icon = 'modular_septic/icons/obj/items/ammo/batteries.dmi'
+	icon = 'oworld/icons/obj/items/ammo/batteries.dmi'
+	world_icon = 'oworld/icons/obj/items/ammo/batteries.dmi'
 	icon_state = "BB-1"
 	base_icon_state = "BB"
 	world_icon_state = "BB"

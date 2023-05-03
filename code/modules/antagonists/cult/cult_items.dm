@@ -299,12 +299,12 @@
 	if(IS_CULTIST(user) || !iscarbon(user))
 		return
 	var/mob/living/carbon/carbon_user = user
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(user.num_legs < 2 || carbon_user.legcuffed) //if they can't be ensnared, stun for the same time as it takes to breakout of bola
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	if((user.num_legs < user.default_num_legs) || carbon_user.legcuffed)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		to_chat(user, span_cultlarge("\"I wouldn't advise that.\""))
 		user.dropItemToGround(src, TRUE)
 		user.Paralyze(CULT_BOLA_PICKUP_STUN)

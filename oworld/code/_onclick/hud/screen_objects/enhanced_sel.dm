@@ -1,16 +1,16 @@
 /atom/movable/screen/enhanced_sel
 	name = "enhanced zone"
-	icon = 'modular_septic/icons/hud/quake/screen_quake_enhance.dmi'
+	icon = 'oworld/icons/hud/quake/screen_quake_enhance.dmi'
 	icon_state = "enhanced"
 	base_icon_state = "enhanced"
 	screen_loc = ui_enhancesel
 	screentip_flags = SCREENTIP_HOVERER_CLICKER
-	var/overlay_icon = 'modular_septic/icons/hud/quake/screen_quake_enhance.dmi'
+	var/overlay_icon = 'oworld/icons/hud/quake/screen_quake_enhance.dmi'
 	var/static/list/hover_overlays_cache = list()
 	var/hovering
 
 /obj/effect/overlay/enhanced_sel
-	icon = 'modular_septic/icons/hud/quake/screen_quake_enhance.dmi'
+	icon = 'oworld/icons/hud/quake/screen_quake_enhance.dmi'
 	plane = ABOVE_HUD_PLANE
 	alpha = 128
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT

@@ -33,9 +33,9 @@
 /obj/machinery/atmospherics/components/binary/volume_pump/CtrlClick(mob/user)
 	if(can_interact(user))
 		on = !on
-		//SEPTIC EDIT START
+		//OWORLD EDIT START
 		warning_plasmafloyder(user, "turned [on ? "on" : "off"]")
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 		investigate_log("was turned [on ? "on" : "off"] by [key_name(user)]", INVESTIGATE_ATMOS)
 		update_appearance()
 	return ..()
@@ -44,9 +44,9 @@
 	if(can_interact(user))
 		transfer_rate = MAX_TRANSFER_RATE
 		investigate_log("was set to [transfer_rate] L/s by [key_name(user)]", INVESTIGATE_ATMOS)
-		//SEPTIC EDIT START
+		//OWORLD EDIT START
 		warning_plasmafloyder(user, "maximized")
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 		balloon_alert(user, "volume output set to [transfer_rate] L/s")
 		update_appearance()
 	return ..()
@@ -151,9 +151,9 @@
 	switch(action)
 		if("power")
 			on = !on
-			//SEPTIC EDIT START
+			//OWORLD EDIT START
 			warning_plasmafloyder(usr, "turned [on ? "on" : "off"]")
-			//SEPTIC EDIT END
+			//OWORLD EDIT END
 			investigate_log("was turned [on ? "on" : "off"] by [key_name(usr)]", INVESTIGATE_ATMOS)
 			. = TRUE
 		if("rate")
@@ -166,9 +166,9 @@
 				. = TRUE
 			if(.)
 				transfer_rate = clamp(rate, 0, MAX_TRANSFER_RATE)
-				//SEPTIC EDIT START
+				//OWORLD EDIT START
 				warning_plasmafloyder(usr, "set to [transfer_rate] L/s")
-				//SEPTIC EDIT END
+				//OWORLD EDIT END
 				investigate_log("was set to [transfer_rate] L/s by [key_name(usr)]", INVESTIGATE_ATMOS)
 	update_appearance()
 

@@ -17,31 +17,31 @@
 /datum/sprite_accessory/frills/divinity
 	name = "Divinity"
 	icon_state = "divinity"
-	icon = 'modular_septic/icons/mob/human/sprite_accessory/frills.dmi'
+	icon = 'oworld/icons/mob/human/sprite_accessory/frills.dmi'
 
 /datum/sprite_accessory/frills/horns
 	name = "Horns"
 	icon_state = "horns"
-	icon = 'modular_septic/icons/mob/human/sprite_accessory/frills.dmi'
+	icon = 'oworld/icons/mob/human/sprite_accessory/frills.dmi'
 
 /datum/sprite_accessory/frills/hornsdouble
 	name = "Horns Double"
 	icon_state = "hornsdouble"
-	icon = 'modular_septic/icons/mob/human/sprite_accessory/frills.dmi'
+	icon = 'oworld/icons/mob/human/sprite_accessory/frills.dmi'
 
 /datum/sprite_accessory/frills/big
 	name = "Big"
 	icon_state = "big"
-	icon = 'modular_septic/icons/mob/human/sprite_accessory/frills.dmi'
+	icon = 'oworld/icons/mob/human/sprite_accessory/frills.dmi'
 
 /datum/sprite_accessory/frills/cobrahood
 	name = "Cobra Hood"
 	icon_state = "cobrahood"
-	icon = 'modular_septic/icons/mob/human/sprite_accessory/frills.dmi'
+	icon = 'oworld/icons/mob/human/sprite_accessory/frills.dmi'
 	color_src = USE_MATRIXED_COLORS
 
 /datum/sprite_accessory/frills/cobrahoodears
 	name = "Cobra Hood (Ears)"
 	icon_state = "cobraears"
-	icon = 'modular_septic/icons/mob/human/sprite_accessory/frills.dmi'
+	icon = 'oworld/icons/mob/human/sprite_accessory/frills.dmi'
 	color_src = USE_MATRIXED_COLORS

@@ -2,7 +2,7 @@
 /obj/item/ammo_box/magazine/abyss_shotgun_drum
 	name = "\improper Abyss Shotgun magazine"
 	desc = "A 20-shell capacity magazine for the AN-12 shotgun."
-	icon = 'modular_septic/icons/obj/items/ammo/shotgun.dmi'
+	icon = 'oworld/icons/obj/items/ammo/shotgun.dmi'
 	icon_state = "saiga_drum"
 	base_icon_state = "saiga_drum"
 	ammo_type = /obj/item/ammo_casing/shotgun/buckshot
@@ -18,7 +18,7 @@
 
 // BULLDOG
 /obj/item/ammo_box/magazine/m12g
-	icon = 'modular_septic/icons/obj/items/ammo/shotgun.dmi'
+	icon = 'oworld/icons/obj/items/ammo/shotgun.dmi'
 	icon_state = "m12"
 	base_icon_state = "m12"
 	tetris_width = 64

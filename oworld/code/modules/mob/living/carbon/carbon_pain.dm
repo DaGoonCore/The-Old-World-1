@@ -484,7 +484,7 @@
 	reagents?.add_reagent(/datum/reagent/medicine/endorphin, endorphin_amount)
 	TIMER_COOLDOWN_START(src, COOLDOWN_CARBON_ENDORPHINATION, ENDORPHINATION_COOLDOWN_DURATION)
 	if(!silent)
-		var/final_sound = special_sound || 'modular_septic/sound/heart/combatcocktail.ogg'
+		var/final_sound = special_sound || 'oworld/sound/heart/combatcocktail.ogg'
 		if(local_sound)
 			playsound_local(src, final_sound, 80, FALSE)
 		else
@@ -497,8 +497,8 @@
 /mob/living/carbon/proc/neural_entanglement()
 	var/obj/item/bodypart/head/head = get_bodypart(BODY_ZONE_HEAD)
 	var/exploodie_sounds = list(
-		'modular_septic/sound/gore/hacker_head1.ogg',
-		'modular_septic/sound/gore/hacker_head2.ogg',
+		'oworld/sound/gore/hacker_head1.ogg',
+		'oworld/sound/gore/hacker_head2.ogg',
 	)
 	playsound(src, exploodie_sounds, 100, FALSE, 2)
 	head.dismember(destroy = TRUE, wounding_type = WOUND_PIERCE)

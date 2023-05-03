@@ -10,7 +10,7 @@
 /atom/movable/screen/screentip/Initialize(mapload, _hud)
 	. = ..()
 	hud = _hud
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	update_view()
 	*/
 

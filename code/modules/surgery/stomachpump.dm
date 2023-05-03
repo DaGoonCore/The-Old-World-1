@@ -1,4 +1,4 @@
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /datum/surgery/stomach_pump
 	name = "Stomach Pump"
 	steps = list(

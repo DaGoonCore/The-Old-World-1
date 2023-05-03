@@ -32,10 +32,10 @@
 	using.hud = src
 	static_inventory += using
 
-	//action_intent = new /atom/movable/screen/combattoggle/flashy() //SEPTIC EDIT REMOVAL
-	//SEPTIC EDIT BEGIN
+	//action_intent = new /atom/movable/screen/combattoggle/flashy() //OWORLD EDIT REMOVAL
+	//OWORLD EDIT BEGIN
 	action_intent = new /atom/movable/screen/combattoggle()
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	action_intent.hud = src
 	action_intent.icon = ui_style
 	action_intent.screen_loc = ui_combat_toggle

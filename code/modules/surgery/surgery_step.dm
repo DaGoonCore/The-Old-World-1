@@ -1,4 +1,4 @@
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /datum/surgery_step
 	var/name
 	var/list/implements = list() //format is path = probability of success. alternatively

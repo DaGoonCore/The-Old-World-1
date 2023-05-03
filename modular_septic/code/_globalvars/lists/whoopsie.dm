@@ -1,5 +1,0 @@
-GLOBAL_LIST_INIT(whoopsie, world.file2list('oworld/strings/whoopsie.txt'))
-GLOBAL_LIST_INIT(xbox_rage, world.file2list('oworld/strings/xbox.txt'))
-GLOBAL_LIST_INIT(eww, world.file2list('oworld/strings/ew.txt'))
-GLOBAL_LIST_INIT(godforsaken_success, world.file2list('oworld/strings/xbox.txt'))
-GLOBAL_LIST_INIT(godforsaken_failure, world.file2list('oworld/strings/ew.txt'))

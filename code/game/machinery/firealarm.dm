@@ -200,13 +200,13 @@
 		return
 
 	if(panel_open)
-		/* SEPTIC EDIT REMOVAL
+		/* OWORLD EDIT REMOVAL
 		if(tool.tool_behaviour == TOOL_WELDER && !user.combat_mode)
 		*/
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		var/list/modifiers = params2list(params)
 		if((tool.tool_behaviour == TOOL_WELDER) && IS_HELP_INTENT(user, modifiers))
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 			if(atom_integrity < max_integrity)
 				if(!tool.tool_start_check(user, amount=0))
 					return

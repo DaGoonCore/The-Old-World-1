@@ -11,7 +11,7 @@
 	barefootstep = FOOTSTEP_HARD_BAREFOOT
 	clawfootstep = FOOTSTEP_HARD_CLAW
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
-	//flags_1 = NO_SCREENTIPS_1 //SEPTIC EDIT REMOVAL
+	//flags_1 = NO_SCREENTIPS_1 //OWORLD EDIT REMOVAL
 	turf_flags = CAN_BE_DIRTY_1
 	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN, SMOOTH_GROUP_OPEN_FLOOR)
 	canSmoothWith = list(SMOOTH_GROUP_OPEN_FLOOR, SMOOTH_GROUP_TURF_OPEN)
@@ -172,13 +172,13 @@
 	if(overfloor_placed && istype(object, /obj/item/stack/tile))
 		try_replace_tile(object, user, params)
 		return TRUE
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(user.combat_mode && istype(object, /obj/item/stack/sheet))
 	*/
-	//SEPTIC EDIT
+	//OWORLD EDIT
 	var/list/modifiers = params2list(params)
 	if(!IS_HELP_INTENT(user, modifiers) && istype(object, /obj/item/stack/sheet))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		var/obj/item/stack/sheet/sheets = object
 		return sheets.on_attack_floor(user, params)
 	return FALSE

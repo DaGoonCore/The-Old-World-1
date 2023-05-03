@@ -39,17 +39,17 @@
 	return ..()
 
 /obj/structure/fireaxecabinet/attackby(obj/item/I, mob/living/user, params)
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	var/list/modifiers = params2list(params)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	if(iscyborg(user) || I.tool_behaviour == TOOL_MULTITOOL)
 		toggle_lock(user)
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	else if(I.tool_behaviour == TOOL_WELDER && !user.combat_mode && !broken)
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	else if(I.tool_behaviour == TOOL_WELDER && IS_HELP_INTENT(user, modifiers) && !broken)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		if(atom_integrity < max_integrity)
 			if(!I.tool_start_check(user, amount=2))
 				return

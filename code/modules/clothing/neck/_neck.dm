@@ -12,13 +12,13 @@
 		return
 
 	if(body_parts_covered & HEAD)
-		/* SEPTIC EDIT BEGIN
+		/* OWORLD EDIT BEGIN
 		if(damaged_clothes)
 			. += mutable_appearance('icons/effects/item_damage.dmi', "damagedmask")
 		if(HAS_BLOOD_DNA(src))
 			. += mutable_appearance('icons/effects/blood.dmi', "maskblood")
 		*/
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		if(damaged_clothes)
 			var/mutable_appearance/damage_appearance = mutable_appearance('oworld/icons/effects/item_damage.dmi', "damagedmask")
 			damage_appearance.color = "#000000"
@@ -37,7 +37,7 @@
 			var/mutable_appearance/femcummy = mutable_appearance('oworld/icons/effects/cum.dmi', "maskfemcum")
 			femcummy.color = COLOR_WHITE_FEMCUM
 			. += femcummy
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 
 /obj/item/clothing/neck/tie
 	name = "tie"
@@ -82,10 +82,10 @@
 /obj/item/clothing/neck/stethoscope/attack(mob/living/M, mob/living/user)
 	if(!ishuman(M) || !isliving(user))
 		return ..()
-	//if(user.combat_mode) //SEPTIC EDIT REMOVAL
-	//SEPTIC EDIT BEGIN
+	//if(user.combat_mode) //OWORLD EDIT REMOVAL
+	//OWORLD EDIT BEGIN
 	if(IS_HARM_INTENT(user, null))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		return
 
 	var/mob/living/carbon/carbon_patient = M

@@ -101,13 +101,13 @@
 				return TRUE
 			to_chat(user, span_notice("\The [RG] is full."))
 			return FALSE
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(!user.combat_mode)
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	var/list/modifiers = params2list(params)
 	if(IS_HELP_INTENT(user, modifiers))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		to_chat(user, span_notice("You won't have any luck getting \the [O] out if you drop it in the oil."))
 		return 1
 	else
@@ -170,10 +170,10 @@
 		to_chat(user, span_notice("The grave has already been dug up."))
 
 /obj/structure/closet/crate/grave/tool_interact(obj/item/S, mob/living/carbon/user)
-	//if(!user.combat_mode) //checks to attempt to dig the grave, must be done with combat mode off only. //SEPTIC EDIT REMOVAL
-	//SEPTIC EDIT BEGIN
+	//if(!user.combat_mode) //checks to attempt to dig the grave, must be done with combat mode off only. //OWORLD EDIT REMOVAL
+	//OWORLD EDIT BEGIN
 	if(IS_HELP_INTENT(user, null))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		if(!opened)
 			if(istype(S,cutting_tool) && S.tool_behaviour == TOOL_SHOVEL)
 				to_chat(user, span_notice("You start start to dig open \the [src]  with \the [S]..."))
@@ -196,10 +196,10 @@
 			to_chat(user, span_notice("The grave has already been dug up."))
 			return 1
 
-	//else if((user.combat_mode) && opened) //checks to attempt to remove the grave entirely. //SEPTIC EDIT REMOVAL
-	//SEPTIC EDIT BEGIN
+	//else if((user.combat_mode) && opened) //checks to attempt to remove the grave entirely. //OWORLD EDIT REMOVAL
+	//OWORLD EDIT BEGIN
 	else if((!IS_HELP_INTENT(user, null)) && opened)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		if(istype(S,cutting_tool) && S.tool_behaviour == TOOL_SHOVEL)
 			to_chat(user, span_notice("You start to remove \the [src]  with \the [S]."))
 			if (do_after(user,15, target = src))

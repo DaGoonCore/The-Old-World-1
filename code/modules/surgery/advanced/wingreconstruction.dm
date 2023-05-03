@@ -1,4 +1,4 @@
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /datum/surgery/advanced/wing_reconstruction
 	name = "Wing Reconstruction"
 	desc = "An experimental surgical procedure that reconstructs the damaged wings of moth people. Requires Synthflesh."

@@ -27,7 +27,7 @@
 			if(TERTIARY_ATTACK_CONTINUE_CHAIN)
 				// Normal behavior
 			else
-				CRASH("pre_attack_tertiary must return an TERTIARY_ATTACK_* define, please consult code/__DEFINES/zseptic_defines/combat.dm")
+				CRASH("pre_attack_tertiary must return an TERTIARY_ATTACK_* define, please consult code/__DEFINES/zoworld_defines/combat.dm")
 	else if(is_right_clicking)
 		switch(pre_attack_secondary(target, user, params))
 			if(SECONDARY_ATTACK_CALL_NORMAL)
@@ -54,7 +54,7 @@
 			if(TERTIARY_ATTACK_CONTINUE_CHAIN)
 				// Normal behavior
 			else
-				CRASH("attackby_tertiary must return an TERTIARY_ATTACK_* define, please consult code/__DEFINES/zseptic_defines/combat.dm")
+				CRASH("attackby_tertiary must return an TERTIARY_ATTACK_* define, please consult code/__DEFINES/zoworld_defines/combat.dm")
 	else if(is_right_clicking)
 		switch(target.attackby_secondary(src, user, params))
 			if(SECONDARY_ATTACK_CALL_NORMAL)

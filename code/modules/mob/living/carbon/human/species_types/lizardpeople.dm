@@ -12,7 +12,7 @@
 	)
 	inherent_biotypes = MOB_ORGANIC|MOB_HUMANOID|MOB_REPTILE
 	mutant_bodyparts = list("tail_lizard" = "Smooth", "spines" = "None", "body_markings" = "None", "legs" = "Normal Legs")
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	external_organs = list(/obj/item/organ/external/horns = "None",
 		/obj/item/organ/external/frills = "None",
 		/obj/item/organ/external/snout = "Round")
@@ -58,7 +58,7 @@
 	return randname
 
 //I wag in death
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /datum/species/lizard/spec_death(gibbed, mob/living/carbon/human/H)
 	if(H)
 		stop_wagging_tail(H)
@@ -162,45 +162,45 @@ Lizard subspecies: SILVER SCALED
 	changesource_flags = MIRROR_BADMIN | MIRROR_MAGIC | RACE_SWAP | ERT_SPAWN
 	///stored mutcolor for when we turn back off of a silverscale.
 	var/old_mutcolor
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	///stored eye color for when we turn back off of a silverscale.
 	var/old_eyecolor
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	///stored eye color for when we turn back off of a silverscale.
 	var/old_left_eyecolor
 	///stored eye color for when we turn back off of a silverscale.
 	var/old_right_eyecolor
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 
 /datum/species/lizard/silverscale/on_species_gain(mob/living/carbon/C, datum/species/old_species)
 	var/mob/living/carbon/human/new_silverscale = C
 	old_mutcolor = C.dna.features["mcolor"]
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	old_eyecolor = new_silverscale.eye_color
 	*/
 	new_silverscale.dna.features["mcolor"] = "#eeeeee"
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	new_silverscale.eye_color = "#0000a0"
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	old_left_eyecolor = new_silverscale.left_eye_color
 	old_right_eyecolor = new_silverscale.right_eye_color
 	new_silverscale.left_eye_color = "#0000a0"
 	new_silverscale.right_eye_color = "#0000a0"
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	..()
 	new_silverscale.add_filter("silver_glint", 2, list("type" = "outline", "color" = "#ffffff63", "size" = 2))
 
 /datum/species/lizard/silverscale/on_species_loss(mob/living/carbon/C)
 	var/mob/living/carbon/human/was_silverscale = C
 	was_silverscale.dna.features["mcolor"] = old_mutcolor
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	was_silverscale.eye_color = old_eyecolor
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	was_silverscale.left_eye_color = old_left_eyecolor
 	was_silverscale.right_eye_color = old_right_eyecolor
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	was_silverscale.remove_filter("silver_glint")
 	..()

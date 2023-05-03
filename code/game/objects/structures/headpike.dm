@@ -27,14 +27,14 @@
 /obj/structure/headpike/CheckParts(list/parts_list)
 	victim = locate() in parts_list
 	if(!victim) //likely a mapspawned one
-		/* SEPTIC EDIT REMOVAL
+		/* OWORLD EDIT REMOVAL
 		victim = new(src)
 		victim.real_name = random_unique_name(prob(50))
 		*/
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		victim = new /obj/item/bodypart/head/children(src)
 		victim.face.real_name = random_unique_name(prob(50))
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 	spear = locate(bonespear ? /obj/item/spear/bonespear : /obj/item/spear) in parts_list
 	if(!spear)
 		spear = bonespear ? new/obj/item/spear/bonespear(src) : new/obj/item/spear(src)
@@ -42,12 +42,12 @@
 	return ..()
 
 /obj/structure/headpike/update_name()
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	name = "[victim.real_name] on a [spear]"
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	name = "[victim.face.real_name] on a [spear]"
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	return ..()
 
 /obj/structure/headpike/update_overlays()

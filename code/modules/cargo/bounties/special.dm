@@ -3,12 +3,12 @@
 	description = "Nanotrasen is interested in studying Xenomorph biology. Ship a set of organs to be thoroughly compensated."
 	reward = CARGO_CRATE_VALUE * 50
 	required_count = 3
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	wanted_types = list(/obj/item/organ/brain/alien, /obj/item/organ/alien, /obj/item/organ/body_egg/alien_embryo, /obj/item/organ/liver/alien, /obj/item/organ/tongue/alien, /obj/item/organ/eyes/night_vision/alien)
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	wanted_types = list(/obj/item/organ/brain/alien, /obj/item/organ/alien, /obj/item/organ/body_egg/alien_embryo, /obj/item/organ/liver/alien, /obj/item/organ/tongue/alien)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 
 /datum/bounty/item/syndicate_documents
 	name = "Syndicate Documents"

@@ -1,5 +1,5 @@
 //Cyborg
-/*SEPTIC EDIT REMOVAL
+/*OWORLD EDIT REMOVAL
 /datum/design/borg_suit
 	name = "Cyborg Endoskeleton"
 	id = "borg_suit"
@@ -330,7 +330,7 @@
 	category = list("Durand")
 
 //H.O.N.K
-/* SEPTIC EDIT START
+/* OWORLD EDIT START
 /datum/design/honk_chassis
 	name = "Exosuit Chassis (\"H.O.N.K\")"
 	id = "honk_chassis"
@@ -688,7 +688,7 @@
 	construction_time = 100
 	category = list("Exosuit Equipment")
 
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /datum/design/mech_mousetrap_mortar
 	name = "H.O.N.K Weapon (Mousetrap Mortar)"
 	id = "mech_mousetrap_mortar"
@@ -957,7 +957,7 @@
 	construction_time = 50
 	category = list("Exosuit Equipment")
 
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /datum/design/mecha_tracking_ai_control
 	name = "AI Control Beacon"
 	id = "mecha_tracking_ai_control"

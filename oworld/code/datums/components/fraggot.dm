@@ -41,7 +41,7 @@
 /datum/component/fraggot/proc/fraggot_examine(mob/living/our_fraggot, mob/user, list/examine_text)
 	examine_text += span_flashingdanger("[uppertext(our_fraggot.name)] IS A FRAGGOT! [uppertext(our_fraggot.p_they())] MUST BE KILLED!")
 	if(user.client)
-		SEND_SOUND(user.client, sound('modular_septic/sound/effects/yomai.ogg', FALSE, CHANNEL_LOBBYMUSIC, 100))
+		SEND_SOUND(user.client, sound('oworld/sound/effects/yomai.ogg', FALSE, CHANNEL_LOBBYMUSIC, 100))
 
 /datum/component/fraggot/process(delta_time)
 	var/mob/living/our_fraggot = parent
@@ -62,15 +62,15 @@
 		var/message = pick(fraggot_lines)
 		to_chat(our_fraggot, span_horny(span_big(message)))
 		var/static/list/fraggot_sounds = list(
-			'modular_septic/sound/memeshit/pigdeath.ogg',
-			'modular_septic/sound/memeshit/naggers.ogg',
-			'modular_septic/sound/memeshit/nigger.ogg',
-			'modular_septic/sound/memeshit/niggers.ogg',
-			'modular_septic/sound/memeshit/nigger_alarm.ogg',
-			'modular_septic/sound/memeshit/augh.ogg',
-			'modular_septic/sound/memeshit/loudnigra.ogg',
-			'modular_septic/sound/memeshit/socialcreditsdeducted.ogg',
-			'modular_septic/sound/memeshit/youstupid.ogg',
+			'oworld/sound/memeshit/pigdeath.ogg',
+			'oworld/sound/memeshit/naggers.ogg',
+			'oworld/sound/memeshit/nigger.ogg',
+			'oworld/sound/memeshit/niggers.ogg',
+			'oworld/sound/memeshit/nigger_alarm.ogg',
+			'oworld/sound/memeshit/augh.ogg',
+			'oworld/sound/memeshit/loudnigra.ogg',
+			'oworld/sound/memeshit/socialcreditsdeducted.ogg',
+			'oworld/sound/memeshit/youstupid.ogg',
 		)
 		if(DT_PROB(10, delta_time))
 			var/sound/annoying = sound(pick(fraggot_sounds), FALSE, 0, CHANNEL_LOBBYMUSIC, 200)

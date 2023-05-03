@@ -120,9 +120,9 @@ Maintenance panel panel is [open ? "opened" : "closed"]"},
 
 /mob/living/simple_animal/bot/honkbot/attack_hand(mob/living/carbon/human/user, list/modifiers)
 	//if(user.combat_mode) //BL REMOAL
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	if(!IS_HELP_INTENT(user, modifiers))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		retaliate(user)
 		addtimer(CALLBACK(src, .proc/react_buzz), 5)
 	return ..()

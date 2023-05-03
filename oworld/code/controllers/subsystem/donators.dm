@@ -16,12 +16,12 @@ SUBSYSTEM_DEF(donators)
 	connected_donators[ckey] = rank
 
 /datum/controller/subsystem/donators/proc/load_donator_flags()
-	var/list/flags = icon_states('modular_septic/icons/ui_icons/chat/donator.dmi')
+	var/list/flags = icon_states('oworld/icons/ui_icons/chat/donator.dmi')
 	for(var/flag in flags)
 		donator_to_ooc_flag[flag] = flag
 
 /datum/controller/subsystem/donators/proc/load_donator_colors()
-	var/list/unsanitized_donators = world.file2list('config/septic/donator_colors.txt')
+	var/list/unsanitized_donators = world.file2list('config/oworld/donator_colors.txt')
 	for(var/unsanitized_donator in unsanitized_donators)
 		if(findtext(unsanitized_donator, "#", 1, 2))
 			continue

@@ -202,7 +202,7 @@
 	else if(href_list["hptech"])
 		var/oldheal_amount = heal_amount
 		var/tech_boosters
-		/* SEPTIC EDIT REMOVAL
+		/* OWORLD EDIT REMOVAL
 		for(var/i in linked_techweb.researched_designs)
 			var/datum/design/surgery/healing/D = SSresearch.techweb_design_by_id(i)
 			if(!istype(D))

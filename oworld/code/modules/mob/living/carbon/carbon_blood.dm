@@ -125,8 +125,8 @@
 	to_chat(src, span_userdanger("[bleeding_severity][rate_of_change]</span>"))
 	COOLDOWN_START(src, bleeding_message_cd, next_cooldown)
 
-/// This is basically a meme, but having multiple infected and failing organs = you are in septic shock
-/mob/living/carbon/proc/undergoing_septic_shock()
+/// This is basically a meme, but having multiple infected and failing organs = you are in oworld shock
+/mob/living/carbon/proc/undergoing_oworld_shock()
 	var/fuckeduporgans = 0
 	for(var/obj/item/organ/organ as anything in internal_organs)
 		if((organ.germ_level >= INFECTION_LEVEL_TWO) && organ.is_failing())

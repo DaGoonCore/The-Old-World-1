@@ -216,7 +216,7 @@ GLOBAL_LIST_INIT(modulo_angle_to_dir, list(NORTH,NORTHEAST,EAST,SOUTHEAST,SOUTH,
 	if(3*hue < 2)
 		return (a+(b-a)*((2/3)-hue)*6)
 	return a
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /// For finding out what body parts a body zone covers, the inverse of the below basically
 /proc/zone2body_parts_covered(def_zone)
 	switch(def_zone)

@@ -1,4 +1,4 @@
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 //make incision
 /datum/surgery_step/incise
 	name = "make incision"

@@ -1,12 +1,12 @@
 /obj/item/clothing/suit/armor/kelzad
 	name = "Type IV armored suit"
 	desc = "A type IV armored suit for usage against entire rooms full of armored operatives. Manufactured by ITOBE."
-	icon = 'modular_septic/icons/obj/clothing/itobe.dmi'
+	icon = 'oworld/icons/obj/clothing/itobe.dmi'
 	icon_state = "karmor"
-	worn_icon = 'modular_septic/icons/mob/clothing/suit.dmi'
+	worn_icon = 'oworld/icons/mob/clothing/suit.dmi'
 	worn_icon_state = "karmor"
-	lefthand_file = 'modular_septic/icons/mob/inhands/clothing/clothing_lefthand.dmi'
-	righthand_file = 'modular_septic/icons/mob/inhands/clothing/clothing_righthand.dmi'
+	lefthand_file = 'oworld/icons/mob/inhands/clothing/clothing_lefthand.dmi'
+	righthand_file = 'oworld/icons/mob/inhands/clothing/clothing_righthand.dmi'
 	inhand_icon_state = "karmor"
 	armor_broken_sound = "heavy"
 	armor_damaged_sound = "heavy"

@@ -129,7 +129,7 @@
 	desc = "Making any sudden moves would probably be a bad idea!"
 	icon_state = "aimed"
 
-/* SEPTIC EDTI REMOVAL
+/* OWORLD EDTI REMOVAL
 /datum/status_effect/grouped/heldup/on_apply()
 	owner.apply_status_effect(STATUS_EFFECT_SURRENDER, src)
 	return ..()
@@ -243,7 +243,7 @@
 	duration = -1
 	tick_interval = -1
 	status_type = STATUS_EFFECT_UNIQUE
-	//alert_type = /atom/movable/screen/alert/status_effect/surrender //SEPTIC EDIT REMOVAL
+	//alert_type = /atom/movable/screen/alert/status_effect/surrender //OWORLD EDIT REMOVAL
 
 /atom/movable/screen/alert/status_effect/surrender
 	name = "Surrender"

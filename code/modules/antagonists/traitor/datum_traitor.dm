@@ -57,22 +57,22 @@
 	if(give_objectives)
 		forge_traitor_objectives()
 		forge_ending_objective()
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	var/faction = prob(75) ? FACTION_SYNDICATE : FACTION_NANOTRASEN
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	var/faction = FACTION_SYNDICATE
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 
 	pick_employer(faction)
 
 	traitor_flavor = strings(TRAITOR_FLAVOR_FILE, employer)
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	owner.current.playsound_local(get_turf(owner.current), 'sound/ambience/antag/tatoralert.ogg', 100, FALSE, pressure_affected = FALSE, use_reverb = FALSE)
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	owner.current.playsound_local(get_turf(owner.current), greeting_sound, 100, FALSE, pressure_affected = FALSE, use_reverb = FALSE)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	return ..()
 
 /datum/antagonist/traitor/on_removal()

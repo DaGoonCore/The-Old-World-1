@@ -30,10 +30,10 @@
 
 	playsound(loc, 'sound/weapons/egloves.ogg', 50, TRUE, -1)
 
-	//log_combat(user, M, "stunned", src, "(Combat mode: [user.combat_mode ? "On" : "Off"])") //SEPTIC EDIT REMOVAL
-	//SEPTIC EDIT BEGIN
+	//log_combat(user, M, "stunned", src, "(Combat mode: [user.combat_mode ? "On" : "Off"])") //OWORLD EDIT REMOVAL
+	//OWORLD EDIT BEGIN
 	log_combat(user, M, "stunned", src, "(Combat mode: [user.combat_mode ? "On" : "Off"] Intent: [user.a_intent])")
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 
 /obj/item/borg/cyborghug
 	name = "hugging module"

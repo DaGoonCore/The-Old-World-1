@@ -72,12 +72,12 @@
 
 /datum/species/zombie/infectious/spec_life(mob/living/carbon/C, delta_time, times_fired)
 	. = ..()
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	C.set_combat_mode(TRUE) // THE SUFFERING MUST FLOW
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	SET_HARM_INTENT(C)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 
 	//Zombies never actually die, they just fall down until they regenerate enough to rise back up.
 	//They must be restrained, beheaded or gibbed to stop being a threat.

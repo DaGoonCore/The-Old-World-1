@@ -21,7 +21,7 @@
 
 	if(..())
 		return TRUE
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /mob/living/carbon/Move(NewLoc, direct)
 	. = ..()
 	if(. && !(movement_type & FLOATING)) //floating is easy

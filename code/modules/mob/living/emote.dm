@@ -111,7 +111,7 @@
 		var/mob/living/L = user
 		L.SetSleeping(200)
 
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /datum/emote/living/flap
 	key = "flap"
 	key_third_person = "flaps"

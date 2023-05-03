@@ -267,12 +267,12 @@ GLOBAL_LIST_EMPTY(PDAs)
 				dat += text("<br><a href='?src=[REF(src)];choice=UpdateInfo'>[id ? "Update PDA Info" : ""]</A><br><br>")
 
 				dat += "[station_time_timestamp()]<br>" //:[world.time / 100 % 6][world.time / 100 % 10]"
-				/* SEPTIC EDIT REMOVAL
+				/* OWORLD EDIT REMOVAL
 				dat += "[time2text(world.realtime, "MMM DD")] [GLOB.year_integer+540]<br>"
 				*/
-				//SEPTIC EDIT BEGIN
+				//OWORLD EDIT BEGIN
 				dat += "[time2text(world.realtime, "MMM DD")] [SSstation_time.get_station_year()]<br>"
-				//SEPTIC EDIT END
+				//OWORLD EDIT END
 				dat += "It has been [ROUND_TIME] since the emergency shuttle was last called."
 
 
@@ -360,12 +360,12 @@ GLOBAL_LIST_EMPTY(PDAs)
 				dat += "<HR><font face=\"[PEN_FONT]\">[(!notehtml ? note : notehtml)]</font>"
 
 			if (2)
-				/* SEPTIC EDIT REMOVAL
+				/* OWORLD EDIT REMOVAL
 				dat += "<h4>[PDAIMG(mail)] SpaceMessenger V3.9.6</h4>"
 				*/
-				//SEPTIC EDIT BEGIN
+				//OWORLD EDIT BEGIN
 				dat += "<h4>[PDAIMG(mail)] WhatsApp Silver V1.2</h4>"
-				//SEPTIC EDIT END
+				//OWORLD EDIT END
 				dat += "<a href='byond://?src=[REF(src)];choice=Toggle Ringer'>[PDAIMG(bell)]Ringer: [silent == 1 ? "Off" : "On"]</a> | "
 				dat += "<a href='byond://?src=[REF(src)];choice=Toggle Messenger'>[PDAIMG(mail)]Send / Receive: [toff == 1 ? "Off" : "On"]</a> | "
 				dat += "<a href='byond://?src=[REF(src)];choice=Ringtone'>[PDAIMG(bell)]Set Ringtone</a> | "
@@ -426,12 +426,12 @@ GLOBAL_LIST_EMPTY(PDAs)
 				if(icon_alert && !istext(icon_alert))
 					cut_overlay(icon_alert)
 					icon_alert = initial(icon_alert)
-				/* SEPTIC EDIT REMOVAL
+				/* OWORLD EDIT REMOVAL
 				dat += "<h4>[PDAIMG(mail)] SpaceMessenger V3.9.6</h4>"
 				*/
-				//SEPTIC EDIT BEGIN
+				//OWORLD EDIT BEGIN
 				dat += "<h4>[PDAIMG(mail)] WhatsApp Silver V1.2</h4>"
-				//SEPTIC EDIT END
+				//OWORLD EDIT END
 				dat += "<a href='byond://?src=[REF(src)];choice=Clear'>[PDAIMG(blank)]Clear Messages</a>"
 
 				dat += "<h4>[PDAIMG(mail)] Messages</h4>"
@@ -475,7 +475,7 @@ GLOBAL_LIST_EMPTY(PDAs)
 	user << browse(dat, "window=pda;size=400x450;border=1;can_resize=1;can_minimize=0")
 	onclose(user, "pda", src)
 
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /obj/item/pda/Topic(href, href_list)
 	..()
 	var/mob/living/U = usr

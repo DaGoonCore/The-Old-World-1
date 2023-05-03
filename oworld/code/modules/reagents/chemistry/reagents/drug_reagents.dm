@@ -26,7 +26,7 @@
 	to_chat(lean_monster, span_warning("I feel myself stronger, so nice!"))
 	SEND_SIGNAL(lean_monster, COMSIG_ADD_MOOD_EVENT, "forbidden_sizzup", /datum/mood_event/lean, lean_monster)
 	SSdroning.area_entered(get_area(lean_monster), lean_monster?.client)
-	lean_monster.playsound_local(lean_monster, 'modular_septic/sound/insanity/leanlaugh.wav', 50)
+	lean_monster.playsound_local(lean_monster, 'oworld/sound/insanity/leanlaugh.wav', 50)
 
 	if(!lean_monster.hud_used)
 		return
@@ -65,7 +65,7 @@
 		return
 
 	var/atom/movable/screen/plane_master/rendering_plate/filter_plate = lean_monster.hud_used.plane_masters["[RENDER_PLANE_GAME]"]
-	lean_monster.playsound_local(lean_monster, 'modular_septic/sound/insanity/leanend.wav', 50)
+	lean_monster.playsound_local(lean_monster, 'oworld/sound/insanity/leanend.wav', 50)
 	lean_monster.flash_pain(30)
 
 	filter_plate.remove_filter("lean_filter")
@@ -85,14 +85,14 @@
 		turfie = pick(turfies)
 	if(!turfie)
 		return
-	var/image/purple_guy = image('modular_septic/icons/mob/lean.dmi', turfie, "ILOVELEAN", FLOAT_LAYER, get_dir(turfie, lean_monster))
+	var/image/purple_guy = image('oworld/icons/mob/lean.dmi', turfie, "ILOVELEAN", FLOAT_LAYER, get_dir(turfie, lean_monster))
 	purple_guy.plane = GAME_PLANE_FOV_HIDDEN
 	purple_guy.layer = lean_monster.layer + 10
 	lean_monster.client?.images += purple_guy
 	to_chat(lean_monster, span_purple(span_big("[purple_msg]")))
 	sleep(0.5 SECONDS)
-	var/hallsound = 'modular_septic/sound/insanity/purpleappear.ogg'
-	var/catchsound = 'modular_septic/sound/insanity/purplecatch.ogg'
+	var/hallsound = 'oworld/sound/insanity/purpleappear.ogg'
+	var/catchsound = 'oworld/sound/insanity/purplecatch.ogg'
 	lean_monster.playsound_local(get_turf(lean_monster), hallsound, 100, 0)
 	var/chase_tiles = 7
 	var/chase_wait_per_tile = rand(4,6)
@@ -131,7 +131,7 @@
 	. = ..()
 	crack_addict.crack_addict()
 	crack_addict.attributes?.add_attribute_modifier(/datum/attribute_modifier/crack_addict, TRUE)
-	crack_addict.playsound_local(crack_addict, 'modular_septic/sound/insanity/bass.wav', 100)
+	crack_addict.playsound_local(crack_addict, 'oworld/sound/insanity/bass.wav', 100)
 	to_chat(crack_addict, span_achievementrare("My brain swells and my muscles become faster."))
 	crack_addict.flash_pain_manic(100)
 	var/client/C = crack_addict.client

@@ -25,7 +25,7 @@
 	color_src = USE_ONE_COLOR
 
 /datum/sprite_accessory/ears/mutant
-	icon = 'modular_septic/icons/mob/human/sprite_accessory/ears.dmi'
+	icon = 'oworld/icons/mob/human/sprite_accessory/ears.dmi'
 	organ_type = /obj/item/organ/ears/fluffy
 	color_src = USE_MATRIXED_COLORS
 	recommended_species = list(SPECIES_SYNTHMAMMAL, SPECIES_MAMMAL, SPECIES_HUMAN, SPECIES_SYNTHHUMAN, SPECIES_FELINE, SPECIES_HUMANOID)

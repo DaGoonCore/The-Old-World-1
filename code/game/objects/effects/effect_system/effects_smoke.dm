@@ -191,10 +191,10 @@
 			L.extinguish_mob()
 		for(var/obj/item/Item in T)
 			Item.extinguish()
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		if(T.turf_fire)
 			qdel(T.turf_fire)
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 
 /datum/effect_system/smoke_spread/freezing/set_up(radius = 5, loca, blast_radius = 0)
 	..()

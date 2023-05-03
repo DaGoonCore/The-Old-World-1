@@ -210,12 +210,12 @@
 	return ..()
 
 /turf/closed/wall/proc/try_clean(obj/item/W, mob/living/user, turf/T)
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if((user.combat_mode) || !LAZYLEN(dent_decals))
 	*/
-	//SEPTIC EDIT
+	//OWORLD EDIT
 	if(!IS_HELP_INTENT(user, null) || !LAZYLEN(dent_decals))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		return FALSE
 
 	if(W.tool_behaviour == TOOL_WELDER)

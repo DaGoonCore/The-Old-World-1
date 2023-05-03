@@ -215,10 +215,10 @@
 		. += span_warning("They're dripping with fuel and smells terrible.")
 
 /obj/item/food/deadmouse/attackby(obj/item/I, mob/living/user, params)
-	//if(I.get_sharpness() && user.combat_mode) //SEPTIC EDIT REMOVAL
-	//SEPTIC EDIT BEGIN
+	//if(I.get_sharpness() && user.combat_mode) //OWORLD EDIT REMOVAL
+	//OWORLD EDIT BEGIN
 	if(I.get_sharpness() && !IS_HELP_INTENT(user, params2list(params)))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		if(isturf(loc))
 			new /obj/item/food/meat/slab/mouse(loc)
 			to_chat(user, span_notice("You butcher [src]."))

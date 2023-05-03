@@ -162,7 +162,7 @@
 /atom/movable/screen/movable/action_button/hide_toggle/update_overlays()
 	. = ..()
 	. += hidden ? show_appearance : hide_appearance
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /atom/movable/screen/movable/action_button/MouseEntered(location,control,params)
 	. = ..()
 	if(!QDELETED(src))

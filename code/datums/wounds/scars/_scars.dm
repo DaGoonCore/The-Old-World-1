@@ -6,7 +6,7 @@
  * Arguments:
  * *
  */
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /datum/scar
 	var/obj/item/bodypart/limb
 	var/mob/living/carbon/victim

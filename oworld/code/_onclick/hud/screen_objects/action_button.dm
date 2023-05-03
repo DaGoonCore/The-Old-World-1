@@ -2,7 +2,7 @@
 #define AB_MAX_COLUMNS 6
 
 /atom/movable/screen/movable/action_button
-	icon = 'modular_septic/icons/hud/quake/actions.dmi'
+	icon = 'oworld/icons/hud/quake/actions.dmi'
 	icon_state = "blank"
 	plane = PEEPER_PLANE
 	layer = PEEPER_ACTION_LAYER
@@ -23,8 +23,8 @@
 	mytab?.update_action_tooltip(null)
 
 /atom/movable/screen/movable/action_button/hide_toggle
-	icon = 'modular_septic/icons/hud/quake/actions.dmi'
-	hide_icon = 'modular_septic/icons/hud/quake/actions.dmi'
+	icon = 'oworld/icons/hud/quake/actions.dmi'
+	hide_icon = 'oworld/icons/hud/quake/actions.dmi'
 	icon_state = "blank"
 
 /atom/movable/screen/movable/action_button/hide_toggle/InitialiseIcon(datum/hud/owner_hud)

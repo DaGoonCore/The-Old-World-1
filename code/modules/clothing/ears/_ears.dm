@@ -21,9 +21,9 @@
 /obj/item/clothing/ears/earmuffs/ComponentInitialize()
 	. = ..()
 	AddElement(/datum/element/earhealing)
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	AddComponent(/datum/component/wearertargeting/earprotection, list(ITEM_SLOT_EARS))
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	AddComponent(/datum/component/wearertargeting/earprotection, list(ITEM_SLOT_LEAR,ITEM_SLOT_REAR))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END

@@ -724,12 +724,12 @@ structure_check() searches for nearby cultist structures required for the invoca
 	visible_message(span_warning("[src] turns a bright, glowing orange!"))
 	color = "#FC9B54"
 	set_light(6, 1, color)
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	for(var/mob/living/L in viewers(T))
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	for(var/mob/living/L in fov_viewers(world.view, T))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		if(!IS_CULTIST(L) && L.blood_volume)
 			var/atom/I = L.anti_magic_check(chargecost = 0)
 			if(I)
@@ -757,12 +757,12 @@ structure_check() searches for nearby cultist structures required for the invoca
 
 /obj/effect/rune/blood_boil/proc/do_area_burn(turf/T, multiplier)
 	set_light(6, 1, color)
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	for(var/mob/living/L in viewers(T))
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	for(var/mob/living/L in fov_viewers(world.view, T))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		if(!IS_CULTIST(L) && L.blood_volume)
 			if(L.anti_magic_check(chargecost = 0))
 				continue

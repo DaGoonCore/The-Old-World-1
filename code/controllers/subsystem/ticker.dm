@@ -171,7 +171,7 @@ SUBSYSTEM_DEF(ticker)
 			timeLeft -= wait
 
 			if(timeLeft <= 300 && !tipped)
-				/* SEPTIC EDIT REMOVAL
+				/* OWORLD EDIT REMOVAL
 				send_tip_of_the_round(world, selected_tip)
 				*/
 				tipped = TRUE
@@ -412,7 +412,7 @@ SUBSYSTEM_DEF(ticker)
 
 	if(captainless)
 		for(var/mob/dead/new_player/new_player_mob as anything in GLOB.new_player_list)
-			/* SEPTIC EDIT REMOVAL
+			/* OWORLD EDIT REMOVAL
 			var/mob/living/carbon/human/new_player_human = new_player_mob.new_character
 			if(new_player_human)
 				to_chat(new_player_mob, span_notice("Captainship not forced on anyone."))
@@ -670,10 +670,10 @@ SUBSYSTEM_DEF(ticker)
 		round_end_sound = choose_round_end_song()
 	///The reference to the end of round sound that we have chosen.
 	var/sound/end_of_round_sound_ref = sound(round_end_sound)
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	//holy fucking shit why does this blast my eardrums
 	end_of_round_sound_ref.volume = 70
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	for(var/mob/M in GLOB.player_list)
 		if(M.client.prefs?.toggles & SOUND_ENDOFROUND)
 			SEND_SOUND(M.client, end_of_round_sound_ref)

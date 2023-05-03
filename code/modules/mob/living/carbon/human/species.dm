@@ -70,7 +70,7 @@ GLOBAL_LIST_EMPTY(features_by_species)
 	  * They also allow for faster '[]' list access versus 'in'. Other than that, they are useless right now.
 	  * Layer hiding is handled by [/datum/species/proc/handle_mutant_bodyparts] below.
 	  */
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	var/list/mutant_bodyparts = list()
 	*/
 	///Internal organs that are unique to this race, like a tail.
@@ -247,7 +247,7 @@ GLOBAL_LIST_EMPTY(features_by_species)
  * This proc generates which species are available to pick from in character setup.
  * If there are no available roundstart species, defaults to human.
  */
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /proc/generate_selectable_species()
 	var/list/selectable_species = list()
 
@@ -432,7 +432,7 @@ GLOBAL_LIST_EMPTY(features_by_species)
 				C.dropItemToGround(I)
 			else //Entries in the list should only ever be items or null, so if it's not an item, we can assume it's an empty hand
 				INVOKE_ASYNC(C, /mob/proc/put_in_hands, new mutanthands)
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(ishuman(C))
 		var/mob/living/carbon/human/human = C
 		for(var/obj/item/organ/external/organ_path as anything in external_organs)
@@ -722,7 +722,7 @@ GLOBAL_LIST_EMPTY(features_by_species)
 			standing += lip_overlay
 
 		// eyes
-		/* SEPTIC EDIT REMOVAL
+		/* OWORLD EDIT REMOVAL
 		if(!(NOEYESPRITES in species_traits))
 			var/obj/item/organ/eyes/eye_organ = species_human.getorganslot(ORGAN_SLOT_EYES)
 			var/mutable_appearance/no_eyeslay
@@ -977,12 +977,12 @@ GLOBAL_LIST_EMPTY(features_by_species)
 						if(FACEHAIR)
 							accessory_overlay.color = source.facial_hair_color
 						if(EYECOLOR)
-							/* SEPTIC EDIT REMOVAL
+							/* OWORLD EDIT REMOVAL
 							accessory_overlay.color = source.eye_color
 							*/
-							//SEPTIC EDIT BEGIN
+							//OWORLD EDIT BEGIN
 							accessory_overlay.color = sanitize_hexcolor(source.left_eye_color, 6, TRUE)
-							//SEPTIC EDIT END
+							//OWORLD EDIT END
 				else
 					accessory_overlay.color = forced_colour
 			standing += accessory_overlay
@@ -1409,7 +1409,7 @@ GLOBAL_LIST_EMPTY(features_by_species)
 		return
 	if(M.mind)
 		attacker_style = M.mind.martial_art
-	if((M != H) && M.combat_mode && H.check_shields(M, 0, M.name, attack_type = UNARMED_ATTACK)) //SEPTIC EDIT REMOVAL
+	if((M != H) && M.combat_mode && H.check_shields(M, 0, M.name, attack_type = UNARMED_ATTACK)) //OWORLD EDIT REMOVAL
 		log_combat(M, H, "attempted to touch")
 		H.visible_message(span_warning("[M] attempts to touch [H]!"), \
 						span_danger("[M] attempts to touch you!"), span_hear("You hear a swoosh!"), COMBAT_MESSAGE_RANGE, M)
@@ -1822,7 +1822,7 @@ GLOBAL_LIST_EMPTY(features_by_species)
 
 	// Lets pick a random body part and check for an existing burn
 	var/obj/item/bodypart/bodypart = pick(humi.bodyparts)
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	var/datum/wound/burn/existing_burn = locate(/datum/wound/burn) in bodypart.wounds
 
 	// If we have an existing burn try to upgrade it
@@ -1969,7 +1969,7 @@ GLOBAL_LIST_EMPTY(features_by_species)
 ////////////
 
 /datum/species/proc/spec_stun(mob/living/carbon/human/H,amount)
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(H.movement_type & FLYING)
 		var/obj/item/organ/external/wings/functional/wings = H.getorganslot(ORGAN_SLOT_EXTERNAL_WINGS)
 		if(wings)
@@ -2130,7 +2130,7 @@ GLOBAL_LIST_EMPTY(features_by_species)
 			|| (preference.relevant_species_trait in species_traits) \
 		)
 			features += preference.savefile_key
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	for (var/obj/item/organ/external/organ_type as anything in external_organs)
 		var/preference = initial(organ_type.preference)
 		if (!isnull(preference))

@@ -256,10 +256,10 @@
 	if(targets_hit[target]["hits"] == 1)
 		RegisterSignal(target, COMSIG_PARENT_QDELETING, .proc/on_target_qdel, override=TRUE)
 	UnregisterSignal(P, list(COMSIG_PARENT_QDELETING, COMSIG_PROJECTILE_RANGE_OUT, COMSIG_PROJECTILE_SELF_ON_HIT))
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	UnregisterSignal(P, COMSIG_PELLET_CLOUD_EMBEDDED)
 	UnregisterSignal(P, COMSIG_PELLET_CLOUD_WENT_THROUGH)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	if(terminated == num_pellets)
 		finalize()
 
@@ -269,10 +269,10 @@
 	pellets -= P
 	terminated++
 	UnregisterSignal(P, list(COMSIG_PARENT_QDELETING, COMSIG_PROJECTILE_RANGE_OUT, COMSIG_PROJECTILE_SELF_ON_HIT))
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	UnregisterSignal(P, COMSIG_PELLET_CLOUD_EMBEDDED)
 	UnregisterSignal(P, COMSIG_PELLET_CLOUD_WENT_THROUGH)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	if(terminated == num_pellets)
 		finalize()
 
@@ -288,11 +288,11 @@
 	P.impacted = list(parent = TRUE) // don't hit the target we hit already with the flak
 	P.suppressed = SUPPRESSED_VERY // set the projectiles to make no message so we can do our own aggregate message
 	P.preparePixelProjectile(target, parent)
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	RegisterSignal(P, COMSIG_PELLET_CLOUD_EMBEDDED, .proc/projectile_embedded)
 	RegisterSignal(P, COMSIG_PELLET_CLOUD_STOPPED_BY_ARMOR, .proc/projectile_stopped_by_armor)
 	RegisterSignal(P, COMSIG_PELLET_CLOUD_WENT_THROUGH, .proc/projectile_went_through)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	RegisterSignal(P, COMSIG_PROJECTILE_SELF_ON_HIT, .proc/pellet_hit)
 	RegisterSignal(P, list(COMSIG_PROJECTILE_RANGE_OUT, COMSIG_PARENT_QDELETING), .proc/pellet_range)
 	pellets += P

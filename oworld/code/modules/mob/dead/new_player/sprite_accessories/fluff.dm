@@ -15,7 +15,7 @@
 		return TRUE
 
 /datum/sprite_accessory/fluff/moth
-	icon = 'modular_septic/icons/mob/human/sprite_accessory/moth_fluff.dmi'
+	icon = 'oworld/icons/mob/human/sprite_accessory/moth_fluff.dmi'
 
 /datum/sprite_accessory/fluff/moth/none
 	name = "None"

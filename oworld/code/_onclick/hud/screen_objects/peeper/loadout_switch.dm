@@ -1,6 +1,6 @@
 /atom/movable/screen/peeper_loadout
 	name = "peeper loadout"
-	icon = 'modular_septic/icons/hud/quake/peeper.dmi'
+	icon = 'oworld/icons/hud/quake/peeper.dmi'
 	icon_state = "close"
 	plane = PEEPER_PLANE
 	layer = PEEPER_LOADOUT_LAYER

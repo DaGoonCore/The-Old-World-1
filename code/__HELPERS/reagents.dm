@@ -87,12 +87,12 @@
 	clear_reagents()
 	if(!notification)
 		return
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	for(var/mob/M in viewers(5, location))
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	for(var/mob/M in fov_viewers(5, location))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		to_chat(M, notification)
 
 ///Converts the pH into a tgui readable color - i.e. white and black text is readable over it. This is NOT the colourwheel for pHes however.

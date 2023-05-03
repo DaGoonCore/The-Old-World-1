@@ -1,5 +1,5 @@
 /datum/centcom_announcer/default
-	welcome_sounds = list('modular_septic/sound/efn/efn_start.ogg', 'modular_septic/sound/efn/efn_start2.ogg', 'modular_septic/sound/efn/efn_start3.ogg')
+	welcome_sounds = list('oworld/sound/efn/efn_start.ogg', 'oworld/sound/efn/efn_start2.ogg', 'oworld/sound/efn/efn_start3.ogg')
 	goodbye_sounds = null
 	alert_sounds = list('sound/ai/default/attention.ogg')
 	command_report_sounds = list('sound/ai/default/commandreport.ogg')
@@ -15,7 +15,7 @@
 		ANNOUNCER_POWEROFF = 'sound/ai/default/poweroff.ogg',
 		ANNOUNCER_POWERON = 'sound/ai/default/poweron.ogg',
 		ANNOUNCER_RADIATION = 'sound/ai/default/radiation.ogg',
-		ANNOUNCER_SHUTTLECALLED = 'modular_septic/sound/misc/podcalled.wav',
-		ANNOUNCER_SHUTTLEDOCK = 'modular_septic/sound/misc/podbeep.wav',
-		ANNOUNCER_SHUTTLERECALLED = 'modular_septic/sound/misc/podrecalled.wav',
+		ANNOUNCER_SHUTTLECALLED = 'oworld/sound/misc/podcalled.wav',
+		ANNOUNCER_SHUTTLEDOCK = 'oworld/sound/misc/podbeep.wav',
+		ANNOUNCER_SHUTTLERECALLED = 'oworld/sound/misc/podrecalled.wav',
 		ANNOUNCER_SPANOMALIES = 'sound/ai/default/spanomalies.ogg')

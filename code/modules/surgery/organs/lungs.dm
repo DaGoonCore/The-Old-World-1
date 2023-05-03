@@ -1,4 +1,4 @@
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /obj/item/organ/lungs
 	var/failed = FALSE
 	var/operated = FALSE //whether we can still have our damages fixed through surgery

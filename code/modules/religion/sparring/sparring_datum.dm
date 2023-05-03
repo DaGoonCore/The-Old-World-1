@@ -216,12 +216,12 @@
 				var/mob/living/carbon/human/branded = interfering
 				to_chat(interfering, span_warning("[GLOB.deity] brands your flesh for interfering with [chaplain]'s sparring match!!"))
 				var/obj/item/bodypart/branded_limb = pick(branded.bodyparts)
-				/* SEPTIC EDIT REMOVAL
+				/* OWORLD EDIT REMOVAL
 				branded_limb.force_wound_upwards(/datum/wound/burn/severe/brand)
 				*/
-				//SEPTIC EDIT BEGIN
+				//OWORLD EDIT BEGIN
 				branded_limb.receive_damage(burn = 40)
-				//SEPTIC EDIT END
+				//OWORLD EDIT END
 				branded.emote("scream")
 
 	flubs--

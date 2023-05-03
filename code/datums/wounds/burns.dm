@@ -2,7 +2,7 @@
 /*
 	Burn wounds
 */
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 // TODO: well, a lot really, but specifically I want to add potential fusing of clothing/equipment on the affected area, and limb infections, though those may go in body part code
 /datum/wound/burn
 	name = "Burn Wound"
@@ -96,7 +96,7 @@
 			if(DT_PROB(10, delta_time))
 				victim.adjustToxLoss(0.5)
 
-		if(WOUND_INFECTION_CRITICAL to WOUND_INFECTION_SEPTIC)
+		if(WOUND_INFECTION_CRITICAL to WOUND_INFECTION_OWORLD)
 			if(!disabling)
 				if(DT_PROB(1.5, delta_time))
 					to_chat(victim, span_warning("<b>You suddenly lose all sensation of the festering infection in your [limb.name]!</b>"))
@@ -114,7 +114,7 @@
 				else
 					victim.adjustToxLoss(1)
 
-		if(WOUND_INFECTION_SEPTIC to INFINITY)
+		if(WOUND_INFECTION_OWORLD to INFINITY)
 			if(DT_PROB(0.5 * infestation, delta_time))
 				switch(strikes_to_lose_limb)
 					if(3 to INFINITY)
@@ -154,9 +154,9 @@
 				condition += ", [span_deadsay("with early signs of infection.")]"
 			if(WOUND_INFECTION_SEVERE to WOUND_INFECTION_CRITICAL)
 				condition += ", [span_deadsay("with growing clouds of infection.")]"
-			if(WOUND_INFECTION_CRITICAL to WOUND_INFECTION_SEPTIC)
+			if(WOUND_INFECTION_CRITICAL to WOUND_INFECTION_OWORLD)
 				condition += ", [span_deadsay("with streaks of rotten infection!")]"
-			if(WOUND_INFECTION_SEPTIC to INFINITY)
+			if(WOUND_INFECTION_OWORLD to INFINITY)
 				return span_deadsay("<B>[victim.p_their(TRUE)] [limb.name] is a mess of charred skin and infected rot!</B>")
 			else
 				condition += "!"
@@ -180,9 +180,9 @@
 				. += "Infection Level: Moderate\n"
 			if(WOUND_INFECTION_SEVERE to WOUND_INFECTION_CRITICAL)
 				. += "Infection Level: Severe\n"
-			if(WOUND_INFECTION_CRITICAL to WOUND_INFECTION_SEPTIC)
+			if(WOUND_INFECTION_CRITICAL to WOUND_INFECTION_OWORLD)
 				. += "Infection Level: [span_deadsay("CRITICAL")]\n"
-			if(WOUND_INFECTION_SEPTIC to INFINITY)
+			if(WOUND_INFECTION_OWORLD to INFINITY)
 				. += "Infection Level: [span_deadsay("LOSS IMMINENT")]\n"
 		if(infestation > sanitization)
 			. += "\tSurgical debridement, antibiotics/sterilizers, or regenerative mesh will rid infection. Paramedic UV penlights are also effective.\n"

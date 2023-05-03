@@ -99,9 +99,9 @@
 		if(loaded)
 			to_chat(user, span_notice("You insert [loaded] items into [src]."))
 		return
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	var/list/modifiers = params2list(params)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	var/datum/food_processor_process/P = PROCESSOR_SELECT_RECIPE(O)
 	if(P)
 		user.visible_message(span_notice("[user] put [O] into [src]."), \
@@ -109,12 +109,12 @@
 		user.transferItemToLoc(O, src, TRUE)
 		LAZYADD(processor_contents, O)
 		return 1
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	else if(!user.combat_mode)
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	else if(IS_HELP_INTENT(user, modifiers))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		to_chat(user, span_warning("That probably won't blend!"))
 		return 1
 	else

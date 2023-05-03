@@ -59,7 +59,7 @@
 
 	if(is_organic_limb())
 		if(HAS_TRAIT(src, TRAIT_ROTTEN))
-			render_icon = 'modular_septic/icons/mob/human/species/dead/rot_parts.dmi'
+			render_icon = 'oworld/icons/mob/human/species/dead/rot_parts.dmi'
 			species_id = "rot"
 			dmg_overlay_type = ""
 			should_draw_gender = FALSE
@@ -67,7 +67,7 @@
 			no_update = TRUE
 			return
 		if(HAS_TRAIT(src, TRAIT_PLASMABURNT))
-			render_icon = 'modular_septic/icons/mob/human/species/skeleton/plasmaman_parts.dmi'
+			render_icon = 'oworld/icons/mob/human/species/skeleton/plasmaman_parts.dmi'
 			species_id = "plasmaman"
 			dmg_overlay_type = ""
 			should_draw_gender = FALSE
@@ -75,7 +75,7 @@
 			no_update = TRUE
 			return
 		if(HAS_TRAIT(src, TRAIT_HUSK) || (updater && HAS_TRAIT(updater, TRAIT_HUSK)))
-			render_icon = 'modular_septic/icons/mob/human/species/dead/husk_parts.dmi'
+			render_icon = 'oworld/icons/mob/human/species/dead/husk_parts.dmi'
 			species_id = "husk" //overrides species_id
 			dmg_overlay_type = "" //no damage overlay shown when husked
 			should_draw_gender = FALSE
@@ -195,14 +195,14 @@
 		if(dmg_overlay_type)
 			if(body_zone in list(BODY_ZONE_PRECISE_R_HAND, BODY_ZONE_PRECISE_L_HAND))
 				if(brutestate)
-					. += image('modular_septic/icons/mob/human/overlays/damage.dmi', "[dmg_overlay_type]_[body_zone]_[brutestate]0", -UPPER_DAMAGE_LAYER, image_dir)
+					. += image('oworld/icons/mob/human/overlays/damage.dmi', "[dmg_overlay_type]_[body_zone]_[brutestate]0", -UPPER_DAMAGE_LAYER, image_dir)
 				if(burnstate)
-					. += image('modular_septic/icons/mob/human/overlays/damage.dmi', "[dmg_overlay_type]_[body_zone]_0[burnstate]", -UPPER_DAMAGE_LAYER, image_dir)
+					. += image('oworld/icons/mob/human/overlays/damage.dmi', "[dmg_overlay_type]_[body_zone]_0[burnstate]", -UPPER_DAMAGE_LAYER, image_dir)
 			else
 				if(brutestate)
-					. += image('modular_septic/icons/mob/human/overlays/damage.dmi', "[dmg_overlay_type]_[body_zone]_[brutestate]0", -DAMAGE_LAYER, image_dir)
+					. += image('oworld/icons/mob/human/overlays/damage.dmi', "[dmg_overlay_type]_[body_zone]_[brutestate]0", -DAMAGE_LAYER, image_dir)
 				if(burnstate)
-					. += image('modular_septic/icons/mob/human/overlays/damage.dmi', "[dmg_overlay_type]_[body_zone]_0[burnstate]", -DAMAGE_LAYER, image_dir)
+					. += image('oworld/icons/mob/human/overlays/damage.dmi', "[dmg_overlay_type]_[body_zone]_0[burnstate]", -DAMAGE_LAYER, image_dir)
 
 	var/image/limb = image(layer = -render_layer, dir = image_dir)
 	var/image/aux

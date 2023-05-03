@@ -31,12 +31,12 @@
 	icon_state = "plasma"
 	w_class = WEIGHT_CLASS_NORMAL
 	zone = BODY_ZONE_CHEST
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	slot = ORGAN_SLOT_XENO_PLASMAVESSEL
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	organ_efficiency = list(ORGAN_SLOT_XENO_PLASMAVESSEL = 100)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	alien_powers = list(/obj/effect/proc_holder/alien/plant, /obj/effect/proc_holder/alien/transfer)
 	food_reagents = list(/datum/reagent/consumable/nutriment = 5, /datum/reagent/toxin/plasma = 10)
 
@@ -76,9 +76,9 @@
 	alien_powers = list(/obj/effect/proc_holder/alien/transfer)
 
 /obj/item/organ/alien/plasmavessel/on_life(delta_time, times_fired)
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	. = ..()
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	//If there are alien weeds on the ground then heal if needed or give some plasma
 	if(locate(/obj/structure/alien/weeds) in owner.loc)
 		if(owner.health >= owner.maxHealth)
@@ -113,12 +113,12 @@
 	name = "hive node"
 	icon_state = "hivenode"
 	zone = BODY_ZONE_HEAD
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	slot = ORGAN_SLOT_XENO_HIVENODE
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	organ_efficiency = list(ORGAN_SLOT_XENO_HIVENODE = 100)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	w_class = WEIGHT_CLASS_TINY
 	///Indicates if the queen died recently, aliens are heavily weakened while this is active.
 	var/recent_queen_death = FALSE
@@ -173,12 +173,12 @@
 	name = "resin spinner"
 	icon_state = "stomach-x"
 	zone = BODY_ZONE_PRECISE_MOUTH
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	slot = ORGAN_SLOT_XENO_RESINSPINNER
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	organ_efficiency = list(ORGAN_SLOT_XENO_RESINSPINNER = 100)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	alien_powers = list(/obj/effect/proc_holder/alien/resin)
 
 
@@ -186,12 +186,12 @@
 	name = "acid gland"
 	icon_state = "acid"
 	zone = BODY_ZONE_PRECISE_MOUTH
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	slot = ORGAN_SLOT_XENO_ACIDGLAND
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	organ_efficiency = list(ORGAN_SLOT_XENO_ACIDGLAND = 100)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	alien_powers = list(/obj/effect/proc_holder/alien/acid)
 
 
@@ -199,12 +199,12 @@
 	name = "neurotoxin gland"
 	icon_state = "neurotox"
 	zone = BODY_ZONE_PRECISE_MOUTH
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	slot = ORGAN_SLOT_XENO_NEUROTOXINGLAND
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	organ_efficiency = list(ORGAN_SLOT_XENO_NEUROTOXINGLAND = 100)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	alien_powers = list(/obj/effect/proc_holder/alien/neurotoxin)
 
 
@@ -212,11 +212,11 @@
 	name = "egg sac"
 	icon_state = "eggsac"
 	zone = BODY_ZONE_PRECISE_GROIN
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	slot = ORGAN_SLOT_XENO_EGGSAC
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	organ_efficiency = list(ORGAN_SLOT_XENO_EGGSAC = 100)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	w_class = WEIGHT_CLASS_BULKY
 	alien_powers = list(/obj/effect/proc_holder/alien/lay_egg)

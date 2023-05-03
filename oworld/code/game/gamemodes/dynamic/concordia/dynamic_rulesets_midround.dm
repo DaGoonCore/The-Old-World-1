@@ -238,7 +238,7 @@
 //          NUCLEAR OPERATIVES (MIDROUND)   //
 //                                          //
 //////////////////////////////////////////////
-/* SEPTIC EDIT POSTPONE
+/* OWORLD EDIT POSTPONE
 /datum/dynamic_ruleset/midround/concordia/from_ghosts/nuclear
 	name = "Nuclear Assault"
 	antag_flag = ROLE_OPERATIVE_MIDROUND

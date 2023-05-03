@@ -1,4 +1,4 @@
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 GLOBAL_LIST_INIT(generic_ambience,list(
 	'sound/ambience/ambigen1.ogg', 'sound/ambience/ambigen3.ogg',
 	'sound/ambience/ambigen4.ogg', 'sound/ambience/ambigen5.ogg',

@@ -84,7 +84,7 @@
 			for(var/limb in oofzones)
 				apply_damage(ouch, damagetype = BRUTE, def_zone = pick(BODY_ZONE_PRECISE_L_FOOT, BODY_ZONE_PRECISE_R_FOOT))
 			CombatKnockdown(levels * 50, levels * 4 SECONDS, levels * 2 SECONDS, TRUE)
-	playsound(src, 'modular_septic/sound/effects/bodyfall.ogg', 70, FALSE)
+	playsound(src, 'oworld/sound/effects/bodyfall.ogg', 70, FALSE)
 
 /mob/living/get_temperature(datum/gas_mixture/environment)
 	var/loc_temp = environment ? environment.temperature : T0C
@@ -147,11 +147,11 @@
 	if(silent)
 		return
 	if(combat_mode)
-		playsound_local(src, 'modular_septic/sound/interface/ui_toggle.ogg', 30, FALSE, pressure_affected = FALSE) //Sound from interbay!
+		playsound_local(src, 'oworld/sound/interface/ui_toggle.ogg', 30, FALSE, pressure_affected = FALSE) //Sound from interbay!
 		if(mind?.combat_music)
 			SSdroning.play_combat_music(mind.combat_music, client)
 	else
-		playsound_local(src, 'modular_septic/sound/interface/ui_toggleoff.ogg', 30, FALSE, pressure_affected = FALSE) //Slightly modified version of the above
+		playsound_local(src, 'oworld/sound/interface/ui_toggleoff.ogg', 30, FALSE, pressure_affected = FALSE) //Slightly modified version of the above
 		if(mind?.combat_music)
 			SSdroning.play_area_sound(get_area(src), client)
 

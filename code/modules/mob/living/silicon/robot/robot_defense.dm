@@ -5,10 +5,10 @@ GLOBAL_LIST_INIT(blacklisted_borg_hats, typecacheof(list( //Hats that don't real
 	)))
 
 /mob/living/silicon/robot/attackby(obj/item/W, mob/living/user, params)
-	//if(W.tool_behaviour == TOOL_WELDER && (!user.combat_mode || user == src)) //SEPTIC EDIT REMOVAL
-	//SEPTIC EDIT BEGIN
+	//if(W.tool_behaviour == TOOL_WELDER && (!user.combat_mode || user == src)) //OWORLD EDIT REMOVAL
+	//OWORLD EDIT BEGIN
 	if(W.tool_behaviour == TOOL_WELDER && (IS_HELP_INTENT(user, params2list(params)) || user == src))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		user.changeNext_move(CLICK_CD_MELEE)
 		if (!getBruteLoss())
 			to_chat(user, span_warning("[src] is already in good condition!"))
@@ -102,10 +102,10 @@ GLOBAL_LIST_INIT(blacklisted_borg_hats, typecacheof(list( //Hats that don't real
 			deconstruct()
 		return
 
-	//if(W.slot_flags & ITEM_SLOT_HEAD && hat_offset != INFINITY && !user.combat_mode && !is_type_in_typecache(W, GLOB.blacklisted_borg_hats)) //SEPTIC EDIT REMOVAL
-	//SEPTIC EDIT BEGIN
+	//if(W.slot_flags & ITEM_SLOT_HEAD && hat_offset != INFINITY && !user.combat_mode && !is_type_in_typecache(W, GLOB.blacklisted_borg_hats)) //OWORLD EDIT REMOVAL
+	//OWORLD EDIT BEGIN
 	if(W.slot_flags & ITEM_SLOT_HEAD && hat_offset != INFINITY && IS_HELP_INTENT(user, params2list(params)) && !is_type_in_typecache(W, GLOB.blacklisted_borg_hats))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		if(user == src)
 			to_chat(user,  span_notice("You can't seem to manage to place [W] on your head by yourself!") )
 			return
@@ -118,10 +118,10 @@ GLOBAL_LIST_INIT(blacklisted_borg_hats, typecacheof(list( //Hats that don't real
 			if (user.temporarilyRemoveItemFromInventory(W, TRUE))
 				place_on_head(W)
 		return
-	//if(istype(W, /obj/item/defibrillator) && !user.combat_mode) //SEPTIC EDIT REMOVAL
-	//SEPTIC EDIT BEGIN
+	//if(istype(W, /obj/item/defibrillator) && !user.combat_mode) //OWORLD EDIT REMOVAL
+	//OWORLD EDIT BEGIN
 	if(istype(W, /obj/item/defibrillator) && IS_HELP_INTENT(user, params2list(params)))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		if(!opened)
 			to_chat(user, span_warning("You must access the cyborg's internals!"))
 			return

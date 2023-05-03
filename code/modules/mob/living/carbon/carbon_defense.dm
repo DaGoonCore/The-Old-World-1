@@ -4,14 +4,14 @@
 	. = ..()
 	if(HAS_TRAIT_NOT_FROM(src, TRAIT_BLIND, list(UNCONSCIOUS_TRAIT, HYPNOCHAIR_TRAIT)))
 		return INFINITY //For all my homies that can not see in the world
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	var/obj/item/organ/eyes/E = getorganslot(ORGAN_SLOT_EYES)
 	if(!E)
 		return INFINITY //Can't get flashed without eyes
 	else
 		. += E.flash_protect
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	var/obj/item/organ/eyes/LE = LAZYACCESS(eye_organs, 1)
 	var/obj/item/organ/eyes/RE = LAZYACCESS(eye_organs, 2)
 	if(RE || LE)
@@ -19,7 +19,7 @@
 		. += LE?.flash_protect
 	else
 		return INFINITY
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	if(isclothing(head)) //Adds head protection
 		. += head.flash_protect
 	if(isclothing(glasses)) //Glasses
@@ -168,14 +168,14 @@
 		var/datum/disease/D = thing
 		if(D.spread_flags & DISEASE_SPREAD_CONTACT_SKIN)
 			ContactContractDisease(D)
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	for(var/datum/surgery/S in surgeries)
 		if(body_position == LYING_DOWN || !S.lying_required)
 			if(!user.combat_mode)
 				if(S.next_step(user, modifiers))
 					return TRUE
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	//surgeries have higher priority than wounds due to incision wounds.
 	if(LAZYACCESS(modifiers, MIDDLE_CLICK) && (IS_HELP_INTENT(user, modifiers) || IS_DISARM_INTENT(user, modifiers)))
 		for(var/datum/surgery_step/step as anything in GLOB.middleclick_surgery_steps)
@@ -183,7 +183,7 @@
 				continue
 			if(step.try_op(user, src, user.zone_selected, user.get_active_held_item(), IS_DISARM_INTENT(user, modifiers)))
 				return TRUE
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	for(var/i in all_wounds)
 		var/datum/wound/W = i
 		if(W.try_handling(user))
@@ -205,10 +205,10 @@
 		if(D.spread_flags & DISEASE_SPREAD_CONTACT_SKIN)
 			ContactContractDisease(D)
 
-	//if(!user.combat_mode) //SEPTIC EDIT REMOVAL
-	//SEPTIC EDIT BEGIN
+	//if(!user.combat_mode) //OWORLD EDIT REMOVAL
+	//OWORLD EDIT BEGIN
 	if(IS_HELP_INTENT(user, modifiers))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		help_shake_act(user)
 		return FALSE
 
@@ -664,7 +664,7 @@
 		var/obj/item/bodypart/limb = _limb
 		if (limb.status != BODYPART_ORGANIC)
 			. += (limb.brute_dam * limb.body_damage_coeff) + (limb.burn_dam * limb.body_damage_coeff)
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /mob/living/carbon/grabbedby(mob/living/carbon/user, supress_message = FALSE)
 	if(user != src)
 		return ..()

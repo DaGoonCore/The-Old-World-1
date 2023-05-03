@@ -1,4 +1,4 @@
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /datum/unit_test/amputation/Run()
 	var/mob/living/carbon/human/patient = allocate(/mob/living/carbon/human)
 	var/mob/living/carbon/human/user = allocate(/mob/living/carbon/human)

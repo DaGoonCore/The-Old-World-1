@@ -1,6 +1,6 @@
 /obj/item/ammo_box/magazine/ppsh9mm
 	name = "Mamasha magazine (9mm)"
-	icon = 'modular_septic/icons/obj/items/ammo/smg.dmi'
+	icon = 'oworld/icons/obj/items/ammo/smg.dmi'
 	icon_state = "550"
 	base_icon_state = "550"
 	ammo_type = /obj/item/ammo_casing/c9mm
@@ -14,7 +14,7 @@
 
 /obj/item/ammo_box/magazine/hksmg22lr
 	name = "R5 Submachine Gun mini-drum magazine (.22lr)"
-	icon = 'modular_septic/icons/obj/items/ammo/smg.dmi'
+	icon = 'oworld/icons/obj/items/ammo/smg.dmi'
 	icon_state = "hksmg"
 	base_icon_state = "hksmg"
 	ammo_type = /obj/item/ammo_casing/c22lr
@@ -30,7 +30,7 @@
 
 /obj/item/ammo_box/magazine/hksmg380
 	name = "R8 Submachine Gun magazine (.380 ACP)"
-	icon = 'modular_septic/icons/obj/items/ammo/smg.dmi'
+	icon = 'oworld/icons/obj/items/ammo/smg.dmi'
 	icon_state = "vityaz"
 	base_icon_state = "vityaz"
 	ammo_type = /obj/item/ammo_casing/c380
@@ -46,7 +46,7 @@
 
 /obj/item/ammo_box/magazine/bastardo9mm
 	name = "R1 Submachine Gun magazine (9mm)"
-	icon = 'modular_septic/icons/obj/items/ammo/smg.dmi'
+	icon = 'oworld/icons/obj/items/ammo/smg.dmi'
 	icon_state = "vityaz"
 	base_icon_state = "vityaz"
 	ammo_type = /obj/item/ammo_casing/c9mm
@@ -62,7 +62,7 @@
 
 /obj/item/ammo_box/magazine/uzi9mm
 	name = "R6 Submachine Gun magazine (9mm)"
-	icon = 'modular_septic/icons/obj/items/ammo/smg.dmi'
+	icon = 'oworld/icons/obj/items/ammo/smg.dmi'
 	icon_state = "uzi"
 	base_icon_state = "uzi"
 	ammo_type = /obj/item/ammo_casing/c9mm
@@ -78,7 +78,7 @@
 
 /obj/item/ammo_box/magazine/thump45
 	name = "R2 Submachine Gun magazine (.45 ACP)"
-	icon = 'modular_septic/icons/obj/items/ammo/smg.dmi'
+	icon = 'oworld/icons/obj/items/ammo/smg.dmi'
 	icon_state = "ump"
 	base_icon_state = "ump"
 	ammo_type = /obj/item/ammo_casing/c45

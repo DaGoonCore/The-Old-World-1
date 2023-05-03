@@ -1,6 +1,6 @@
 // Body type accessories (dixel, tits)
 /datum/sprite_accessory/body_type
-	icon = 'modular_septic/icons/mob/human/sprite_accessory/body_type.dmi'
+	icon = 'oworld/icons/mob/human/sprite_accessory/body_type.dmi'
 	relevant_layers = list(BODYPARTS_EXTENSION_BEHIND_LAYER, BODYPARTS_EXTENSION_LAYER)
 	default_color = DEFAULT_SKIN_OR_PRIMARY
 	special_colorize = TRUE

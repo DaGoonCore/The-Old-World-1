@@ -127,7 +127,7 @@
 	category = list("Equipment")
 	departmental_flags = DEPARTMENTAL_FLAG_SERVICE
 
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /datum/design/air_horn
 	name = "Air Horn"
 	desc = "Damn son, where'd you find this?"

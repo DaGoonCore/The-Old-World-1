@@ -69,12 +69,12 @@
 	STOP_PROCESSING(SSobj, src)
 	var/mob/living/carbon/human/human = user
 	if(istype(human))
-		/* SEPTIC EDIT REMOVAL
+		/* OWORLD EDIT REMOVAL
 		human.update_spacesuit_hud_icon("0")
 		*/
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		human.update_spacesuit_hud_icon("empty")
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 
 // Space Suit temperature regulation and power usage
 /obj/item/clothing/suit/space/process(delta_time)
@@ -111,12 +111,12 @@
 		QDEL_NULL(cell)
 	var/mob/living/carbon/human/human = src.loc
 	if(istype(human))
-		/* SEPTIC EDIT REMOVAL
+		/* OWORLD EDIT REMOVAL
 		human.update_spacesuit_hud_icon("0")
 		*/
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		human.update_spacesuit_hud_icon("empty")
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 	STOP_PROCESSING(SSobj, src)
 	return ..()
 

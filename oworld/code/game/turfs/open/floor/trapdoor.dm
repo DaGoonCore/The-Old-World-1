@@ -1,7 +1,7 @@
 /turf/open/floor/trapdoor
 	name = "trapdoor"
 	desc = "Watch the FUCK out!"
-	icon = 'modular_septic/icons/turf/floors.dmi'
+	icon = 'oworld/icons/turf/floors.dmi'
 	icon_state = "trapdoor"
 	base_icon_state = "trapdoor"
 	baseturfs = /turf/open/openspace

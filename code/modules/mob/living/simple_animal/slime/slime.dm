@@ -342,22 +342,22 @@
 
 				discipline_slime(user)
 	else
-		/* SEPTIC EDIT REMOVAL
+		/* OWORLD EDIT REMOVAL
 		if(stat == DEAD && surgeries.len)
-			//if(!user.combat_mode || LAZYACCESS(modifiers, RIGHT_CLICK)) //SEPTIC EDIT REMOVAL
-			//SEPTIC EDIT BEGIN
+			//if(!user.combat_mode || LAZYACCESS(modifiers, RIGHT_CLICK)) //OWORLD EDIT REMOVAL
+			//OWORLD EDIT BEGIN
 			if(IS_HELP_INTENT(user, modifiers))
-			//SEPTIC EDIT END
+			//OWORLD EDIT END
 				for(var/datum/surgery/S in surgeries)
 					if(S.next_step(user, modifiers))
 						return 1
 		*/
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		if(stat == DEAD && (IS_HELP_INTENT(user, modifiers) || IS_DISARM_INTENT(user, modifiers)))
 			for(var/datum/surgery_step/step as anything in GLOB.surgery_steps)
 				if(step.try_op(user, src, user.zone_selected, user.get_active_held_item(), IS_DISARM_INTENT(user, modifiers)))
 					return TRUE
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 		if(..()) //successful attack
 			attacked += 10
 
@@ -370,18 +370,18 @@
 /mob/living/simple_animal/slime/attackby(obj/item/W, mob/living/user, params)
 	if(stat == DEAD)
 		var/list/modifiers = params2list(params)
-		/* SEPTIC EDIT REMOVAL
+		/* OWORLD EDIT REMOVAL
 		if(!user.combat_mode || (LAZYACCESS(modifiers, RIGHT_CLICK)))
 			for(var/datum/surgery/S in surgeries)
 				if(S.next_step(user, modifiers))
 					return 1
 		*/
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		if(IS_HELP_INTENT(user, modifiers) || IS_DISARM_INTENT(user, modifiers))
 			for(var/datum/surgery_step/step as anything in GLOB.surgery_steps)
 				if(step.try_op(user, src, user.zone_selected, user.get_active_held_item(), IS_DISARM_INTENT(user, modifiers)))
 					return TRUE
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 	if(istype(W, /obj/item/stack/sheet/mineral/plasma) && !stat) //Let's you feed slimes plasma.
 		add_friendship(user, 1)
 		to_chat(user, span_notice("You feed the slime the plasma. It chirps happily."))

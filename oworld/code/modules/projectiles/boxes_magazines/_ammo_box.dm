@@ -3,8 +3,8 @@
 	carry_weight = 2 KILOGRAMS
 	/// Time we must spend between each casing load
 	var/loading_cooldown_duration = 3
-	var/bullet_spill = list('modular_septic/sound/weapons/guns/bullet_spill1.wav', 'modular_septic/sound/weapons/guns/bullet_spill2.wav', 'modular_septic/sound/weapons/guns/bullet_spill3.wav')
-	var/bullet_load = list('modular_septic/sound/weapons/guns/bullet_load1.wav', 'modular_septic/sound/weapons/guns/bullet_load2.wav', 'modular_septic/sound/weapons/guns/bullet_load3.wav')
+	var/bullet_spill = list('oworld/sound/weapons/guns/bullet_spill1.wav', 'oworld/sound/weapons/guns/bullet_spill2.wav', 'oworld/sound/weapons/guns/bullet_spill3.wav')
+	var/bullet_load = list('oworld/sound/weapons/guns/bullet_load1.wav', 'oworld/sound/weapons/guns/bullet_load2.wav', 'oworld/sound/weapons/guns/bullet_load3.wav')
 
 /obj/item/ammo_box/attack_self(mob/user)
 	var/obj/item/ammo_casing/casing = get_round(FALSE)
@@ -75,42 +75,42 @@
 
 /obj/item/ammo_box/a762svd
 	name = "ammo box (7.62x54R)"
-	icon = 'modular_septic/icons/obj/items/ammo/boxes.dmi'
+	icon = 'oworld/icons/obj/items/ammo/boxes.dmi'
 	icon_state = "riflebox"
 	ammo_type = /obj/item/ammo_casing/a762svd
 	max_ammo = 120
 
 /obj/item/ammo_box/a762svd/ap
 	name = "armor-piercing ammo box (7.62x54R)"
-	icon = 'modular_septic/icons/obj/items/ammo/boxes.dmi'
+	icon = 'oworld/icons/obj/items/ammo/boxes.dmi'
 	icon_state = "riflebox-AP"
 	ammo_type = /obj/item/ammo_casing/a762svd/ap
 	max_ammo = 120
 
 /obj/item/ammo_box/a54539abyss
 	name = "ammo box (5.45x39)"
-	icon = 'modular_septic/icons/obj/items/ammo/boxes.dmi'
+	icon = 'oworld/icons/obj/items/ammo/boxes.dmi'
 	icon_state = "riflebox"
 	ammo_type = /obj/item/ammo_casing/a545
 	max_ammo = 120
 
 /obj/item/ammo_box/a54539abyss/ap
 	name = "armor-piercing ammo box (5.45x39)"
-	icon = 'modular_septic/icons/obj/items/ammo/boxes.dmi'
+	icon = 'oworld/icons/obj/items/ammo/boxes.dmi'
 	icon_state = "riflebox-AP"
 	ammo_type = /obj/item/ammo_casing/a545/ap
 	max_ammo = 120
 
 /obj/item/ammo_box/a556winter
 	name = "ammo box (5.56x39)"
-	icon = 'modular_septic/icons/obj/items/ammo/boxes.dmi'
+	icon = 'oworld/icons/obj/items/ammo/boxes.dmi'
 	icon_state = "riflebox"
 	ammo_type = /obj/item/ammo_casing/a556
 	max_ammo = 120
 
 /obj/item/ammo_box/a556winter/ap
 	name = "armor-piercing ammo box (5.556x39)"
-	icon = 'modular_septic/icons/obj/items/ammo/boxes.dmi'
+	icon = 'oworld/icons/obj/items/ammo/boxes.dmi'
 	icon_state = "riflebox-AP"
 	ammo_type = /obj/item/ammo_casing/a556 //no ap for now, It's fine.
 	max_ammo = 120

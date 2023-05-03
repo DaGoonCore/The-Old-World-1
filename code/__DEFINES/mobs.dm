@@ -22,7 +22,7 @@
 #define BLOOD_VOLUME_SURVIVE 122
 
 /// How efficiently humans regenerate blood.
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 #define BLOOD_REGEN_FACTOR 0.25
 */
 
@@ -52,7 +52,7 @@
 #define MOB_PLANT (1 << 10)
 
 //Organ defines for carbon mobs
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 #define ORGAN_ORGANIC   1
 #define ORGAN_ROBOTIC   2
 
@@ -82,7 +82,7 @@
 #define HUMAN_CRIT_MAX_OXYLOSS (SSMOBS_DT/3)
 
 #define STAMINA_REGEN_BLOCK_TIME (10 SECONDS)
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 #define HEAT_DAMAGE_LEVEL_1 1 //Amount of damage applied when your body temperature just passes the 360.15k safety point
 #define HEAT_DAMAGE_LEVEL_2 1.5 //Amount of damage applied when your body temperature passes the 400K point
 #define HEAT_DAMAGE_LEVEL_3 4 //Amount of damage applied when your body temperature passes the 460K point and you are on fire

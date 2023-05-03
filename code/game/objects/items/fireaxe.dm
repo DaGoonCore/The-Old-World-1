@@ -22,7 +22,7 @@
 	wound_bonus = -15
 	bare_wound_bonus = 20
 	var/wielded = FALSE // track wielded status on item
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 /obj/item/fireaxe/Initialize(mapload)
 	. = ..()
 	RegisterSignal(src, COMSIG_TWOHANDED_WIELD, .proc/on_wield)
@@ -53,7 +53,7 @@
 	user.visible_message(span_suicide("[user] axes [user.p_them()]self from head to toe! It looks like [user.p_theyre()] trying to commit suicide!"))
 	return (BRUTELOSS)
 
-/* SEPTIC EDIT BEGIN - MOVED TO MODULAR
+/* OWORLD EDIT BEGIN - MOVED TO MODULAR
 /obj/item/fireaxe/afterattack(atom/A, mob/user, proximity)
 	. = ..()
 	if(!proximity)

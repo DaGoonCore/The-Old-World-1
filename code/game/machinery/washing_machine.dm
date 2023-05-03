@@ -324,12 +324,12 @@ GLOBAL_LIST_INIT(dye_registry, list(
 	if(default_deconstruction_screwdriver(user, null, null, W))
 		update_appearance()
 		return
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	else if(!user.combat_mode)
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	else if(!IS_HELP_INTENT(user, params2list(params)))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		if (!state_open)
 			to_chat(user, span_warning("Open the door first!"))
 			return TRUE

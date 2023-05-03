@@ -97,9 +97,9 @@
 	update_gland_hud()
 
 /obj/item/organ/heart/gland/on_life(delta_time, times_fired)
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	. = ..()
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	if(!beating)
 		// alien glands are immune to stopping.
 		beating = TRUE

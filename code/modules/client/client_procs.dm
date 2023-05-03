@@ -204,7 +204,7 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 	// Instantiate tgui panel
 	tgui_panel = new(src)
 
-	//set_right_click_menu_mode(TRUE) //SEPTIC EDIT REMOVAL
+	//set_right_click_menu_mode(TRUE) //OWORLD EDIT REMOVAL
 
 	GLOB.ahelp_tickets.ClientLogin(src)
 	GLOB.interviews.client_login(src)
@@ -331,9 +331,9 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 	if(SSinput.initialized)
 		set_macros()
 
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	src << browse_rsc(file('html/assets/statbg.png'))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	// Initialize tgui panel
 	src << browse(file('html/statbrowser.html'), "window=statbrowser")
 	addtimer(CALLBACK(src, .proc/check_panel_loaded), 30 SECONDS)
@@ -615,14 +615,14 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 					to_chat(src, span_notice("Sending you to [panic_name ? panic_name : panic_addr]."))
 					winset(src, null, "command=.options")
 					src << link("[panic_addr]?redirect=1")
-				//SEPTIC EDIT BEGIN
+				//OWORLD EDIT BEGIN
 				broadcast_epicbunkerfail()
 				to_chat_immediate(src, span_danger("You are not invited!"))
 				to_chat_immediate(src, span_warning("Go get whitelisted, worm."))
 				var/funny = CONFIG_GET(string/bunkertroll)
 				if(funny)
 					DIRECT_OUTPUT(src, link(funny))
-				//SEPTIC EDIT END
+				//OWORLD EDIT END
 				qdel(query_client_in_db)
 				qdel(src)
 				return
@@ -968,10 +968,10 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 		if (CONFIG_GET(flag/asset_simple_preload))
 			addtimer(CALLBACK(SSassets.transport, /datum/asset_transport.proc/send_assets_slow, src, SSassets.transport.preload), 5 SECONDS)
 
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		var/datum/asset/music = get_asset_datum(/datum/asset/simple/music)
 		music.send(src)
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 
 		#if (PRELOAD_RSC == 0)
 		for (var/name in GLOB.vox_sounds)
@@ -1033,19 +1033,19 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 					winset(src, "default-[REF(key)]", "parent=default;name=[key];command=ooc")
 				if("Me")
 					winset(src, "default-[REF(key)]", "parent=default;name=[key];command=me")
-				//SEPTIC EDIT BEGIN
+				//OWORLD EDIT BEGIN
 				if("Whisper")
 					winset(src, "default-[REF(key)]", "parent=default;name=[key];command=whisper")
-				//SEPTIC EDIT END
+				//OWORLD EDIT END
 
 /client/proc/change_view(new_size)
 	if (isnull(new_size))
 		CRASH("change_view called without argument.")
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	var/old_view = view
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	view = new_size
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	mob.hud_used.screentip_text.update_view()
 	*/
 	apply_clickcatcher()
@@ -1055,9 +1055,9 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 		M.update_damage_hud()
 	if (prefs.read_preference(/datum/preference/toggle/auto_fit_viewport))
 		addtimer(CALLBACK(src,.verb/fit_viewport,10)) //Delayed to avoid wingets from Login calls.
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	SEND_SIGNAL(mob, COMSIG_MOB_CLIENT_CHANGE_VIEW, src, getviewsize(old_view), getviewsize(view))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 
 /client/proc/generate_clickcatcher()
 	if(!void)

@@ -4,10 +4,10 @@ SUBSYSTEM_DEF(language)
 	flags = SS_NO_FIRE
 
 /datum/controller/subsystem/language/Initialize(timeofday)
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	if(LAZYLEN(GLOB.all_languages))
 		return ..()
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	for(var/L in subtypesof(/datum/language))
 		var/datum/language/language = L
 		if(!initial(language.key))

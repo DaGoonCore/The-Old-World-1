@@ -1,6 +1,6 @@
 /atom/movable/screen/bodytemperature
 	name = "body temperature"
-	icon = 'modular_septic/icons/hud/quake/screen_quake.dmi'
+	icon = 'oworld/icons/hud/quake/screen_quake.dmi'
 	icon_state = "bodytemp2"
 	base_icon_state = "bodytemp"
 	screen_loc = ui_bodytemperature

@@ -1,6 +1,6 @@
 /atom/movable/screen/stats
 	name = "stats"
-	icon = 'modular_septic/icons/hud/quake/screen_quake_32x64.dmi'
+	icon = 'oworld/icons/hud/quake/screen_quake_32x64.dmi'
 	icon_state = "stats"
 	base_icon_state = "stats"
 	screen_loc = ui_stats

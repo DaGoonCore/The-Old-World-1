@@ -1,5 +1,5 @@
 // When adding or making new wing sprites, try to use matrixed colours!
-// You can find a color palette to work with in modular_septic\icons\mob\human\sprite_accessory\wings.dmi as 'colorpalette matrixcolors'
+// You can find a color palette to work with in oworld\icons\mob\human\sprite_accessory\wings.dmi as 'colorpalette matrixcolors'
 // Check some of the wings that make use of them for examples on how to make it look decent
 /datum/sprite_accessory/wings
 	icon = 'icons/mob/clothing/wings.dmi'
@@ -36,7 +36,7 @@
 	color_src = USE_ONE_COLOR
 
 /datum/sprite_accessory/wings/moth
-	icon = 'modular_septic/icons/mob/human/sprite_accessory/moth_wings.dmi' //Needs new icon to suit new naming convention
+	icon = 'oworld/icons/mob/human/sprite_accessory/moth_wings.dmi' //Needs new icon to suit new naming convention
 	default_color = "FFFFFF"
 	recommended_species = list(SPECIES_MOTH, SPECIES_SYNTHMAMMAL, SPECIES_INSECT)
 	organ_type = /obj/item/organ/external/wings/functional/moth
@@ -156,7 +156,7 @@
 	icon_state = "aspen"
 
 /datum/sprite_accessory/wings/mammal
-	icon = 'modular_septic/icons/mob/human/sprite_accessory/wings.dmi'
+	icon = 'oworld/icons/mob/human/sprite_accessory/wings.dmi'
 	default_color = DEFAULT_PRIMARY
 	recommended_species = list(SPECIES_SYNTHMAMMAL, SPECIES_MAMMAL, "lizard", SPECIES_INSECT, "synthliz")
 	relevant_layers = list(BODY_BEHIND_LAYER, BODY_FRONT_LAYER)

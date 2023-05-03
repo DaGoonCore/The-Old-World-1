@@ -31,7 +31,7 @@
 			if(INFECTION_LEVEL_TWO + (2 * (INFECTION_LEVEL_THREE - INFECTION_LEVEL_TWO) / 3) to INFECTION_LEVEL_THREE)
 				. += do_span ? span_infection("<b>Acute Infection++</b>") : "Acute Infection++"
 			if(INFECTION_LEVEL_THREE to INFINITY)
-				. += do_span ? span_necrosis("<b>Septic</b>") : "Septic"
+				. += do_span ? span_necrosis("<b>Oworld</b>") : "Oworld"
 
 /// Advanced examine stuff
 /obj/item/organ/examine_more(mob/user)

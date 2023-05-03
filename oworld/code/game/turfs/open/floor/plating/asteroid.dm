@@ -59,7 +59,7 @@
 /turf/open/floor/plating/asteroid/nevado_caves
 	name = "cave floor"
 	baseturfs = /turf/open/floor/plating/asteroid/nevado_caves
-	icon = 'modular_septic/icons/turf/floors/coolrock.dmi'
+	icon = 'oworld/icons/turf/floors/coolrock.dmi'
 	icon_state = "coolrock"
 	base_icon_state = "coolrock"
 	floor_variance = 50
@@ -79,8 +79,8 @@
 
 /turf/closed/mineral/random/nevado_caves
 	name = "cave wall"
-	icon = 'modular_septic/icons/turf/mining.dmi'
-	smooth_icon = 'modular_septic/icons/turf/walls/redrock.dmi'
+	icon = 'oworld/icons/turf/mining.dmi'
+	smooth_icon = 'oworld/icons/turf/walls/redrock.dmi'
 	icon_state = "redrock"
 	base_icon_state = "redrock"
 	environment_type = "redrock"

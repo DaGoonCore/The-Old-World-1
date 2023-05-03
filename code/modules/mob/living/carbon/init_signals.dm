@@ -23,9 +23,9 @@
 	clear_alert("not_enough_nitro")
 	clear_alert("too_much_co2")
 	clear_alert("not_enough_co2")
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	clear_alert("cant_breathe")
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	SEND_SIGNAL(src, COMSIG_CLEAR_MOOD_EVENT, "chemical_euphoria")
 	SEND_SIGNAL(src, COMSIG_CLEAR_MOOD_EVENT, "smell")
 	SEND_SIGNAL(src, COMSIG_CLEAR_MOOD_EVENT, "suffocation")

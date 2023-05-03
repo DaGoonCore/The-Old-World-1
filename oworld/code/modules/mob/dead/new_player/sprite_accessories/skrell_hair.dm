@@ -1,5 +1,5 @@
 /datum/sprite_accessory/skrell_hair
-	icon = 'modular_septic/icons/mob/human/sprite_accessory/skrell_hair.dmi'
+	icon = 'oworld/icons/mob/human/sprite_accessory/skrell_hair.dmi'
 	generic = "Skrell Headtails"
 	key = "skrell_hair"
 	color_src = USE_ONE_COLOR

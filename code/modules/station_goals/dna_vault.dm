@@ -43,7 +43,7 @@
 		Base vault parts are available for shipping via cargo."}
 
 
-/*SEPTIC EDIT REMOVAL
+/*OWORLD EDIT REMOVAL
 /datum/station_goal/dna_vault/on_report()
 	var/datum/supply_pack/P = SSshuttle.supply_packs[/datum/supply_pack/engineering/dna_vault]
 	P.special_enabled = TRUE

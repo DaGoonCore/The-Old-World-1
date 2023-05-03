@@ -2,7 +2,7 @@
 //////////AI Module Disks//////////
 ///////////////////////////////////
 
-/* SEPTIC EDIT START
+/* OWORLD EDIT START
 /datum/design/board/aicore
 	name = "AI Design (AI Core)"
 	desc = "Allows for the construction of circuit boards used to build new AI cores."

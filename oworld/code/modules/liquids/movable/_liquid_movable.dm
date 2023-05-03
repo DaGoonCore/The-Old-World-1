@@ -1,7 +1,7 @@
 /atom/movable/liquid
 	name = "liquid"
 	desc = "It's a liquid, how incredibly observant you are."
-	icon = 'modular_septic/icons/effects/liquids/liquid.dmi'
+	icon = 'oworld/icons/effects/liquids/liquid.dmi'
 	icon_state = "liquid-0"
 	base_icon_state = "liquid"
 	color = "#DDDDFF"
@@ -278,10 +278,10 @@
 	cut_overlays()
 	if(no_effects)
 		return
-	var/image/stage_overlay = image('modular_septic/icons/effects/liquids/liquid_overlays.dmi', src, "stage[liquid_state-1]_bottom")
+	var/image/stage_overlay = image('oworld/icons/effects/liquids/liquid_overlays.dmi', src, "stage[liquid_state-1]_bottom")
 	stage_overlay.plane = GAME_PLANE_UPPER
 	stage_overlay.layer = ABOVE_MOB_LAYER
-	var/image/stage_underlay = image('modular_septic/icons/effects/liquids/liquid_overlays.dmi', src, "stage[liquid_state-1]_top")
+	var/image/stage_underlay = image('oworld/icons/effects/liquids/liquid_overlays.dmi', src, "stage[liquid_state-1]_top")
 	stage_underlay.plane = GAME_PLANE
 	stage_underlay.layer = BELOW_MOB_LAYER
 	add_overlay(stage_overlay)
@@ -291,15 +291,15 @@
 	if(no_effects)
 		return
 	SSvis_overlays.remove_vis_overlay(src, managed_vis_overlays)
-	SSvis_overlays.add_vis_overlay(src, 'modular_septic/icons/effects/liquids/liquid_overlays.dmi', "shine", layer+0.01, plane, add_appearance_flags = RESET_COLOR|RESET_ALPHA)
+	SSvis_overlays.add_vis_overlay(src, 'oworld/icons/effects/liquids/liquid_overlays.dmi', "shine", layer+0.01, plane, add_appearance_flags = RESET_COLOR|RESET_ALPHA)
 	//Add a fire overlay too
 	switch(fire_state)
 		if(LIQUID_FIRE_STATE_SMALL, LIQUID_FIRE_STATE_MILD)
-			SSvis_overlays.add_vis_overlay(src, 'modular_septic/icons/effects/liquids/liquid_overlays.dmi', "fire_small", LIQUID_FIRE_LAYER, GAME_PLANE_BLOOM)
+			SSvis_overlays.add_vis_overlay(src, 'oworld/icons/effects/liquids/liquid_overlays.dmi', "fire_small", LIQUID_FIRE_LAYER, GAME_PLANE_BLOOM)
 		if(LIQUID_FIRE_STATE_MEDIUM)
-			SSvis_overlays.add_vis_overlay(src, 'modular_septic/icons/effects/liquids/liquid_overlays.dmi', "fire_medium", LARGE_LIQUID_FIRE_LAYER, GAME_PLANE_UPPER_BLOOM)
+			SSvis_overlays.add_vis_overlay(src, 'oworld/icons/effects/liquids/liquid_overlays.dmi', "fire_medium", LARGE_LIQUID_FIRE_LAYER, GAME_PLANE_UPPER_BLOOM)
 		if(LIQUID_FIRE_STATE_HUGE, LIQUID_FIRE_STATE_INFERNO)
-			SSvis_overlays.add_vis_overlay(src, 'modular_septic/icons/effects/liquids/liquid_overlays.dmi', "fire_big", LARGEST_LIQUID_FIRE_LAYER, GAME_PLANE_UPPER_BLOOM)
+			SSvis_overlays.add_vis_overlay(src, 'oworld/icons/effects/liquids/liquid_overlays.dmi', "fire_big", LARGEST_LIQUID_FIRE_LAYER, GAME_PLANE_UPPER_BLOOM)
 
 //Deletes reagents without doing any sort of interaction
 /atom/movable/liquid/proc/delete_reagents_flat(flat_amount)
@@ -396,7 +396,7 @@
 	if(abs(liquid_height - prev_height) >= WATER_HEIGHT_DIFFERENCE_SPLASH)
 		//Splash
 		if(prob(WATER_HEIGHT_DIFFERENCE_SPLASH))
-			var/sound_to_play = "modular_septic/sound/liquids/wade[rand(1,4)].ogg"
+			var/sound_to_play = "oworld/sound/liquids/wade[rand(1,4)].ogg"
 			playsound(my_turf, sound_to_play, 60, 0)
 		var/obj/splashy = new /obj/effect/temp_visual/liquid_splash(my_turf)
 		splashy.color = color
@@ -449,7 +449,7 @@
 		return //ghosts, camera eyes, etc - don't make water splashy splashy
 	if(liquid_state >= LIQUID_STATE_ANKLES)
 		if(prob(30))
-			var/sound_to_play = "modular_septic/sound/liquids/wade[rand(1,4)].ogg"
+			var/sound_to_play = "oworld/sound/liquids/wade[rand(1,4)].ogg"
 			playsound(source_turf, sound_to_play, 50, 0)
 		var/mob/living/living_movable = movable
 		if(istype(living_movable))
@@ -464,7 +464,7 @@
 /atom/movable/liquid/proc/mob_fall(datum/source, mob/fell)
 	var/turf/source_turf = source
 	if(liquid_state >= LIQUID_STATE_ANKLES && source_turf.has_gravity(source_turf))
-		playsound(source_turf, "modular_septic/sound/liquids/splash[rand(1, 2)].ogg", 50, 0)
+		playsound(source_turf, "oworld/sound/liquids/splash[rand(1, 2)].ogg", 50, 0)
 		if(iscarbon(fell))
 			var/mob/living/carbon/carbon = fell
 			if(carbon.wear_mask && carbon.wear_mask.flags_cover & MASKCOVERSMOUTH)

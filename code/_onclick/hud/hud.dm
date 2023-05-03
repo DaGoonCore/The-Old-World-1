@@ -5,7 +5,7 @@
 */
 
 // The default UI style is the first one in the list
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 GLOBAL_LIST_INIT(available_ui_styles, list(
 	"Midnight" = 'icons/hud/screen_midnight.dmi',
 	"Retro" = 'icons/hud/screen_retro.dmi',
@@ -16,11 +16,11 @@ GLOBAL_LIST_INIT(available_ui_styles, list(
 	"Glass" = 'icons/hud/screen_glass.dmi'
 ))
 */
-//SEPTIC EDIT BEGIN
+//OWORLD EDIT BEGIN
 GLOBAL_LIST_INIT(available_ui_styles, list(
 	"Quake" = 'oworld/icons/hud/quake/screen_quake.dmi',
 ))
-//SEPTIC EDIT END
+//OWORLD EDIT END
 
 /proc/ui_style2icon(ui_style)
 	return GLOB.available_ui_styles[ui_style] || GLOB.available_ui_styles[GLOB.available_ui_styles[1]]
@@ -127,7 +127,7 @@ GLOBAL_LIST_INIT(available_ui_styles, list(
 	QDEL_NULL(hide_actions_toggle)
 	QDEL_NULL(module_store_icon)
 	QDEL_LIST(static_inventory)
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	inv_slots.Cut()
 	action_intent = null
 	zone_select = null
@@ -135,11 +135,11 @@ GLOBAL_LIST_INIT(available_ui_styles, list(
 	*/
 	QDEL_LIST(toggleable_inventory)
 	QDEL_LIST(hotkeybuttons)
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	throw_icon = null
 	*/
 	QDEL_LIST(infodisplay)
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	healths = null
 	healthdoll = null
 	wanted_lvl = null
@@ -155,9 +155,9 @@ GLOBAL_LIST_INIT(available_ui_styles, list(
 	QDEL_LIST_ASSOC_VAL(plane_masters)
 	QDEL_LIST_ASSOC_VAL(plane_master_controllers)
 	QDEL_LIST(screenoverlays)
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	destroy_remaining_hud()
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	mymob = null
 
 	QDEL_NULL(screentip_text)
@@ -191,10 +191,10 @@ GLOBAL_LIST_INIT(available_ui_styles, list(
 	switch(display_hud_version)
 		if(HUD_STYLE_STANDARD) //Default HUD
 			hud_shown = TRUE //Governs behavior of other procs
-			//SEPTIC EDIT BEGIN
+			//OWORLD EDIT BEGIN
 			if(upper_inventory.len && screenmob.hud_used && screenmob.hud_used.upper_inventory_shown)
 				screenmob.client.screen += upper_inventory
-			//SEPTIC EDIT END
+			//OWORLD EDIT END
 			if(static_inventory.len)
 				screenmob.client.screen += static_inventory
 			if(toggleable_inventory.len && screenmob.hud_used && screenmob.hud_used.inventory_shown)
@@ -211,10 +211,10 @@ GLOBAL_LIST_INIT(available_ui_styles, list(
 
 		if(HUD_STYLE_REDUCED) //Reduced HUD
 			hud_shown = FALSE //Governs behavior of other procs
-			//SEPTIC EDIT BEGIN
+			//OWORLD EDIT BEGIN
 			if(upper_inventory.len)
 				screenmob.client.screen -= upper_inventory
-			//SEPTIC EDIT END
+			//OWORLD EDIT END
 			if(static_inventory.len)
 				screenmob.client.screen -= static_inventory
 			if(toggleable_inventory.len)
@@ -235,10 +235,10 @@ GLOBAL_LIST_INIT(available_ui_styles, list(
 
 		if(HUD_STYLE_NOHUD) //No HUD
 			hud_shown = FALSE //Governs behavior of other procs
-			//SEPTIC EDIT BEGIN
+			//OWORLD EDIT BEGIN
 			if(upper_inventory.len)
 				screenmob.client.screen -= upper_inventory
-			//SEPTIC EDIT END
+			//OWORLD EDIT END
 			if(static_inventory.len)
 				screenmob.client.screen -= static_inventory
 			if(toggleable_inventory.len)
@@ -297,12 +297,12 @@ GLOBAL_LIST_INIT(available_ui_styles, list(
 	if (initial(ui_style) || ui_style == new_ui_style)
 		return
 
-	/* SEPTIC EDIT REMOVAL
-	for(var/atom/item in static_inventory + toggleable_inventory + hotkeybuttons + infodisplay + screenoverlays + inv_slots) //SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
+	for(var/atom/item in static_inventory + toggleable_inventory + hotkeybuttons + infodisplay + screenoverlays + inv_slots) //OWORLD EDIT REMOVAL
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	for(var/atom/item in (static_inventory + toggleable_inventory + upper_inventory + hotkeybuttons + infodisplay + screenoverlays + inv_slots))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		if (item.icon == ui_style)
 			item.icon = new_ui_style
 

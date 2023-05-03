@@ -15,12 +15,12 @@
 
 ///Called on COMSIG_HUMAN_MELEE_UNARMED_ATTACK. Yells the warcry and and reduces punch cooldown.
 /datum/component/wearertargeting/punchcooldown/proc/reducecooldown(mob/living/carbon/M, atom/target)
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(M.combat_mode && isliving(target))
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	if((M.a_intent == INTENT_HARM) && isliving(target))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		M.changeNext_move(CLICK_CD_RAPID)
 		if(warcry)
 			M.say(warcry, ignore_spam = TRUE, forced = "north star warcry")

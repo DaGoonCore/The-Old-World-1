@@ -78,11 +78,11 @@ GLOBAL_LIST_INIT(blacklisted_automated_baseturfs, typecacheof(list(
 	var/old_directional_opacity = directional_opacity
 	var/old_dynamic_lumcount = dynamic_lumcount
 	var/old_rcd_memory = rcd_memory
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	var/atom/movable/liquid/old_liquids = liquids
 	if(liquids_group)
 		liquids_group.remove_from_group(src)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 
 	var/old_bp = blueprint_data
 	blueprint_data = null
@@ -145,7 +145,7 @@ GLOBAL_LIST_INIT(blacklisted_automated_baseturfs, typecacheof(list(
 
 		for(var/turf/open/space/space_tile in RANGE_TURFS(1, src))
 			space_tile.update_starlight()
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	if(old_liquids)
 		if(W.liquids)
 			//Need to cache and re-set some vars due to the cleaning on Destroy(), and turf references
@@ -169,7 +169,7 @@ GLOBAL_LIST_INIT(blacklisted_automated_baseturfs, typecacheof(list(
 					old_liquids.remove_turf(src)
 				else
 					qdel(old_liquids, TRUE)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	var/area/thisarea = get_area(W)
 	if(thisarea.lighting_effect)
 		W.add_overlay(thisarea.lighting_effect)
@@ -181,7 +181,7 @@ GLOBAL_LIST_INIT(blacklisted_automated_baseturfs, typecacheof(list(
 
 /turf/open/ChangeTurf(path, list/new_baseturfs, flags) //Resist the temptation to make this default to keeping air.
 	if ((flags & CHANGETURF_INHERIT_AIR) && ispath(path, /turf/open))
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		var/atom/movable/fire/turf_fire_ref
 		if(turf_fire)
 			if(ispath(path, /turf/open/openspace) || ispath(path, /turf/open/space))
@@ -189,7 +189,7 @@ GLOBAL_LIST_INIT(blacklisted_automated_baseturfs, typecacheof(list(
 			else
 				turf_fire_ref = turf_fire
 		var/datum/pollution/stashed_pollution = pollution
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 		var/datum/gas_mixture/stashed_air = new()
 		stashed_air.copy_from(air)
 		var/stashed_state = excited
@@ -198,13 +198,13 @@ GLOBAL_LIST_INIT(blacklisted_automated_baseturfs, typecacheof(list(
 		if (!.) // changeturf failed or didn't do anything
 			return
 		var/turf/open/newTurf = .
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		if(turf_fire_ref)
 			newTurf.turf_fire = turf_fire_ref
 		if(stashed_pollution)
 			newTurf.pollution = stashed_pollution
 			stashed_pollution.handle_overlay()
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 		newTurf.air.copy_from(stashed_air)
 		newTurf.excited = stashed_state
 		newTurf.excited_group = stashed_group
@@ -216,12 +216,12 @@ GLOBAL_LIST_INIT(blacklisted_automated_baseturfs, typecacheof(list(
 			if(stashed_group.should_display || SSair.display_all_groups)
 				stashed_group.display_turf(newTurf)
 	else
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		if(pollution)
 			QDEL_NULL(pollution)
 		if(turf_fire)
 			QDEL_NULL(turf_fire)
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 		SSair.remove_from_active(src) //Clean up wall excitement, and refresh excited groups
 		if(ispath(path,/turf/closed) || ispath(path,/turf/cordon))
 			flags |= CHANGETURF_RECALC_ADJACENT

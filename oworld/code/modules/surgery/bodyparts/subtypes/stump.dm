@@ -4,10 +4,10 @@
 	limb_flags = BODYPART_NO_STUMP
 	limb_efficiency = 0
 	max_damage = 25 //placeholder to avoid runtimes, actually set on inherit_from_limb()
-	render_icon = 'modular_septic/icons/mob/human/overlays/stump.dmi'
+	render_icon = 'oworld/icons/mob/human/overlays/stump.dmi'
 	no_update = TRUE
 	gender_rendering = FALSE
-	dismemberment_sounds = list('modular_septic/sound/gore/severed.ogg') // A stump Isn't that big, It's smaller then a regular limb so I give it a smaller sounding.
+	dismemberment_sounds = list('oworld/sound/gore/severed.ogg') // A stump Isn't that big, It's smaller then a regular limb so I give it a smaller sounding.
 
 /obj/item/bodypart/stump/transfer_to_limb(obj/item/bodypart/new_limb, mob/living/carbon/was_owner)
 	qdel(src)

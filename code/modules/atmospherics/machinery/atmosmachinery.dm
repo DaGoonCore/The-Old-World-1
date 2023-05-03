@@ -359,9 +359,9 @@
 
 	to_chat(user, span_notice("You begin to unfasten \the [src]..."))
 
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	warning_plasmafloyder(user, "unfastened")
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	if (internal_pressure > 2*ONE_ATMOSPHERE)
 		to_chat(user, span_warning("As you begin unwrenching \the [src] a gush of air blows in your face... maybe you should reconsider?"))
 		unsafe_wrenching = TRUE //Oh dear oh dear

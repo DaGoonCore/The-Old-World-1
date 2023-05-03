@@ -4,7 +4,7 @@
 	layer = TURF_PLATING_DECAL_LAYER
 	alpha = 110
 
-/* SEPTIC EDIT REMOVAL
+/* OWORLD EDIT REMOVAL
 #define PRIDE_ALPHA 60
 
 /obj/effect/turf_decal/tile/Initialize(mapload)

@@ -1,5 +1,5 @@
 /datum/body_marking/secondary/synthliz
-	icon = 'modular_septic/icons/mob/human/body_markings/secondary/synthliz.dmi'
+	icon = 'oworld/icons/mob/human/body_markings/secondary/synthliz.dmi'
 	recommended_species = list("synthliz")
 
 /datum/body_marking/secondary/synthliz/scutes
@@ -18,7 +18,7 @@
 	affected_bodyparts = CHEST|GROIN
 
 /datum/body_marking/tertiary/synthliz
-	icon = 'modular_septic/icons/mob/human/body_markings/tertiary/synthliz.dmi'
+	icon = 'oworld/icons/mob/human/body_markings/tertiary/synthliz.dmi'
 	recommended_species = list("synthliz")
 
 /datum/body_marking/tertiary/synthliz/plates

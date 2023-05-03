@@ -73,19 +73,19 @@
 	using.hud = src
 	static_inventory += using
 
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	action_intent = new /atom/movable/screen/combattoggle/flashy()
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	action_intent = new /atom/movable/screen/combattoggle()
 	action_intent.icon_state = owner?.combat_mode ? "combat_on" : "combat"
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	action_intent.hud = src
 	action_intent.icon = ui_style
 	action_intent.screen_loc = ui_combat_toggle
 	static_inventory += action_intent
 
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	intent_select = new /atom/movable/screen/intent_select/segmented
 	intent_select.icon_state = owner?.a_intent
 	intent_select.hud = src
@@ -99,8 +99,8 @@
 	mov_intent.screen_loc = ui_movi
 	mov_intent.hud = src
 	static_inventory += mov_intent
-	//SEPTIC EDIT END
-	/* SEPTIC EDIT REMOVAL
+	//OWORLD EDIT END
+	/* OWORLD EDIT REMOVAL
 	using = new /atom/movable/screen/mov_intent
 	using.icon = ui_style
 	using.icon_state = (mymob.m_intent == MOVE_INTENT_RUN ? "running" : "walking")
@@ -108,7 +108,7 @@
 	using.hud = src
 	static_inventory += using
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	sprint = new /atom/movable/screen/sprint()
 	sprint.icon = ui_style
 	sprint.icon_state = ((owner.combat_flags & COMBAT_FLAG_SPRINT_ACTIVE) ? "act_sprint_on" : "act_sprint")
@@ -169,26 +169,26 @@
 	teach.screen_loc = ui_teach
 	teach.hud = src
 	static_inventory += teach
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 
 	using = new /atom/movable/screen/drop()
 	using.icon = ui_style
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	using.screen_loc = ui_drop_throw
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	using.screen_loc = ui_drop
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	using.hud = src
 	static_inventory += using
 
 	inv_box = new /atom/movable/screen/inventory()
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	inv_box.name = "i_clothing"
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	inv_box.name = "uniform"
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	inv_box.icon = ui_style
 	inv_box.slot_id = ITEM_SLOT_ICLOTHING
 	inv_box.icon_state = "uniform"
@@ -197,12 +197,12 @@
 	toggleable_inventory += inv_box
 
 	inv_box = new /atom/movable/screen/inventory()
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	inv_box.name = "o_clothing"
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	inv_box.name = "suit"
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	inv_box.icon = ui_style
 	inv_box.slot_id = ITEM_SLOT_OCLOTHING
 	inv_box.icon_state = "suit"
@@ -211,7 +211,7 @@
 	toggleable_inventory += inv_box
 
 	build_hand_slots()
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	using = new /atom/movable/screen/swap_hand()
 	using.icon = ui_style
 	using.icon_state = "swap_1"
@@ -251,14 +251,14 @@
 	inv_box.screen_loc = ui_neck
 	inv_box.slot_id = ITEM_SLOT_NECK
 	inv_box.hud = src
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	toggleable_inventory += inv_box
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	upper_inventory += inv_box
 	if(owner?.client?.prefs && !owner.client.prefs.read_preference(/datum/preference/toggle/widescreen))
 		inv_box.screen_loc = ui_boxneck
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 
 	inv_box = new /atom/movable/screen/inventory()
 	inv_box.name = "back"
@@ -270,78 +270,78 @@
 	static_inventory += inv_box
 
 	inv_box = new /atom/movable/screen/inventory()
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	inv_box.name = "storage1"
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	inv_box.name = "left pocket"
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	inv_box.icon = ui_style
 	inv_box.icon_state = "pocket"
 	inv_box.screen_loc = ui_storage1
 	inv_box.slot_id = ITEM_SLOT_LPOCKET
 	inv_box.hud = src
 	static_inventory += inv_box
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	if(owner?.client?.prefs && !owner.client.prefs.read_preference(/datum/preference/toggle/widescreen))
 		static_inventory -= inv_box
 		upper_inventory += inv_box
 		inv_box.screen_loc = ui_boxstorage1
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 
 	inv_box = new /atom/movable/screen/inventory()
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	inv_box.name = "storage2"
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	inv_box.name = "right pocket"
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	inv_box.icon = ui_style
 	inv_box.icon_state = "pocket"
 	inv_box.screen_loc = ui_storage2
 	inv_box.slot_id = ITEM_SLOT_RPOCKET
 	inv_box.hud = src
 	static_inventory += inv_box
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	if(owner?.client?.prefs && !owner.client.prefs.read_preference(/datum/preference/toggle/widescreen))
 		static_inventory -= inv_box
 		upper_inventory += inv_box
 		inv_box.screen_loc = ui_boxstorage2
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 
 	inv_box = new /atom/movable/screen/inventory()
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	inv_box.name = "suit storage"
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	inv_box.name = "back 2"
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	inv_box.icon = ui_style
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	inv_box.icon_state = "suit_storage"
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	inv_box.icon_state = "back2"
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	inv_box.screen_loc = ui_sstore1
 	inv_box.slot_id = ITEM_SLOT_SUITSTORE
 	inv_box.hud = src
-	//static_inventory += inv_box SEPTIC EDIT REMOVAL
-	//SEPTIC EDIT BEGIN
+	//static_inventory += inv_box OWORLD EDIT REMOVAL
+	//OWORLD EDIT BEGIN
 	toggleable_inventory += inv_box
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 
 	using = new /atom/movable/screen/resist()
 	using.icon = ui_style
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	using.screen_loc = ui_above_intent
 	*/
-	//SEPTIC EDIT
+	//OWORLD EDIT
 	using.screen_loc = ui_resist
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	using.hud = src
 	hotkeybuttons += using
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	using = new /atom/movable/screen/human/toggle()
 	using.icon = ui_style
 	using.screen_loc = ui_inventory
@@ -362,12 +362,12 @@
 	inv_box.slot_id = ITEM_SLOT_GLOVES
 	inv_box.hud = src
 	toggleable_inventory += inv_box
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	if(owner?.client?.prefs && !owner.client.prefs.read_preference(/datum/preference/toggle/widescreen))
 		toggleable_inventory -= inv_box
 		upper_inventory += inv_box
 		inv_box.screen_loc = ui_boxgloves
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 
 	inv_box = new /atom/movable/screen/inventory()
 	inv_box.name = "eyes"
@@ -376,18 +376,18 @@
 	inv_box.screen_loc = ui_glasses
 	inv_box.slot_id = ITEM_SLOT_EYES
 	inv_box.hud = src
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	toggleable_inventory += inv_box
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	upper_inventory += inv_box
 	if(owner?.client?.prefs && !owner.client.prefs.read_preference(/datum/preference/toggle/widescreen))
 		upper_inventory -= inv_box
 		upper_inventory += inv_box
 		inv_box.screen_loc = ui_boxglasses
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	inv_box = new /atom/movable/screen/inventory()
 	inv_box.name = "ears"
 	inv_box.icon = ui_style
@@ -398,7 +398,7 @@
 	toggleable_inventory += inv_box
 	*/
 
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	inv_box = new /atom/movable/screen/inventory()
 	inv_box.name = "left ear"
 	inv_box.icon = ui_style
@@ -416,7 +416,7 @@
 	inv_box.slot_id = ITEM_SLOT_REAR
 	inv_box.hud = src
 	upper_inventory += inv_box
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 
 	inv_box = new /atom/movable/screen/inventory()
 	inv_box.name = "head"
@@ -448,23 +448,23 @@
 
 	throw_icon = new /atom/movable/screen/throw_catch()
 	throw_icon.icon = ui_style
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	throw_icon.screen_loc = ui_drop_throw
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	throw_icon.screen_loc = ui_throw
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	throw_icon.hud = src
 	hotkeybuttons += throw_icon
 
 	rest_icon = new /atom/movable/screen/rest()
 	rest_icon.icon = ui_style
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	rest_icon.screen_loc = ui_above_movement
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	rest_icon.screen_loc = ui_rest
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	rest_icon.hud = src
 	static_inventory += rest_icon
 
@@ -472,18 +472,18 @@
 	internals.hud = src
 	infodisplay += internals
 
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	pressure = new /atom/movable/screen/pressure
 	pressure.hud = src
 	pressure.screen_loc = ui_pressure
 	infodisplay += pressure
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 
 	spacesuit = new /atom/movable/screen/spacesuit
 	spacesuit.hud = src
 	infodisplay += spacesuit
 
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	stat_viewer = new /atom/movable/screen/stats
 	stat_viewer.screen_loc = ui_stats
 	stat_viewer.hud = src
@@ -548,12 +548,12 @@
 	breath.screen_loc = ui_breath
 	breath.hud = src
 	infodisplay += breath
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 
 	healths = new /atom/movable/screen/healths()
 	healths.hud = src
 	infodisplay += healths
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	healthdoll = new /atom/movable/screen/healthdoll()
 	healthdoll.hud = src
 	infodisplay += healthdoll
@@ -561,22 +561,22 @@
 	pull_icon = new /atom/movable/screen/pull()
 	pull_icon.icon = ui_style
 	pull_icon.update_appearance()
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	pull_icon.screen_loc = ui_above_intent
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	pull_icon.screen_loc = ui_pull
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	pull_icon.hud = src
 	static_inventory += pull_icon
 
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	bookmark = new /atom/movable/screen/bookmark()
 	bookmark.icon = ui_style
 	bookmark.screen_loc = ui_bookmark_off
 	bookmark.hud = src
 	static_inventory += bookmark
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 
 	lingchemdisplay = new /atom/movable/screen/ling/chems()
 	lingchemdisplay.hud = src
@@ -585,44 +585,44 @@
 	lingstingdisplay = new /atom/movable/screen/ling/sting()
 	lingstingdisplay.hud = src
 	infodisplay += lingstingdisplay
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	zone_select = new /atom/movable/screen/zone_sel()
 	zone_select.icon = ui_style
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	zone_select = new /atom/movable/screen/zone_sel/big()
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	zone_select.hud = src
 	zone_select.update_appearance()
 	static_inventory += zone_select
 
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	enhanced_sel = new /atom/movable/screen/enhanced_sel()
 	enhanced_sel.hud = src
 	enhanced_sel.update_appearance()
 	static_inventory += enhanced_sel
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 
 	combo_display = new /atom/movable/screen/combo()
 	infodisplay += combo_display
 
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	for(var/atom/movable/screen/inventory/inv in (static_inventory + toggleable_inventory))
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	for(var/atom/movable/screen/inventory/inv in (static_inventory + toggleable_inventory + upper_inventory))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		if(inv.slot_id)
 			inv.hud = src
 			inv_slots[TOBITSHIFT(inv.slot_id) + 1] = inv
 			inv.update_appearance()
 
 	update_locked_slots()
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	inventory_shown = TRUE
 	if(mymob)
 		hidden_inventory_update(mymob)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 
 /datum/hud/human/update_locked_slots()
 	if(!mymob)
@@ -631,7 +631,7 @@
 	if(!istype(H) || !H.dna.species)
 		return
 	var/datum/species/S = H.dna.species
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	for(var/atom/movable/screen/inventory/inv in (static_inventory + toggleable_inventory))
 		if(inv.slot_id)
 			if(inv.slot_id in S.no_equip)
@@ -639,7 +639,7 @@
 			else
 				inv.alpha = initial(inv.alpha)
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	for(var/atom/movable/screen/inventory/inv in (static_inventory + toggleable_inventory + upper_inventory))
 		if(inv.slot_id)
 			if(inv.slot_id in S.no_equip)
@@ -647,7 +647,7 @@
 				inv.color = list(1,0.5,0,0, 0,0,0,0, 0,0,0.5,0, 0,0,0,1, 0,0,0,0)
 			else
 				inv.alpha = initial(inv.alpha)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 
 /datum/hud/human/hidden_inventory_update(mob/viewer)
 	if(!mymob)
@@ -656,15 +656,15 @@
 
 	var/mob/screenmob = viewer || H
 
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	screenmob = viewer
 	if(!istype(screenmob))
 		screenmob = H
 	if(!screenmob.hud_used)
 		return
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 	if(screenmob.hud_used.inventory_shown && screenmob.hud_used.hud_shown)
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		if(screenmob.hud_used.upper_inventory_shown)
 			if(H.wear_neck)
 				H.wear_neck.screen_loc = ui_neck
@@ -687,14 +687,14 @@
 				screenmob.client.screen -= H.ears
 			if(H.ears_extra)
 				screenmob.client.screen -= H.ears_extra
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 		if(H.shoes)
 			H.shoes.screen_loc = ui_shoes
 			screenmob.client.screen += H.shoes
 		if(H.gloves)
 			H.gloves.screen_loc = ui_gloves
 			screenmob.client.screen += H.gloves
-		/* SEPTIC EDIT REMOVAL
+		/* OWORLD EDIT REMOVAL
 		if(H.ears)
 			H.ears.screen_loc = ui_ears
 			screenmob.client.screen += H.ears
@@ -708,7 +708,7 @@
 		if(H.wear_suit)
 			H.wear_suit.screen_loc = ui_oclothing
 			screenmob.client.screen += H.wear_suit
-		/* SEPTIC EDIT REMOVAL
+		/* OWORLD EDIT REMOVAL
 		if(H.wear_mask)
 			H.wear_mask.screen_loc = ui_mask
 			screenmob.client.screen += H.wear_mask
@@ -720,7 +720,7 @@
 			H.head.screen_loc = ui_head
 			screenmob.client.screen += H.head
 	else
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		if(H.wear_neck)
 			screenmob.client.screen -= H.wear_neck
 		if(H.glasses)
@@ -729,16 +729,16 @@
 			screenmob.client.screen -= H.ears
 		if(H.ears_extra)
 			screenmob.client.screen -= H.ears_extra
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 		if(H.shoes) screenmob.client.screen -= H.shoes
 		if(H.gloves) screenmob.client.screen -= H.gloves
-		/* SEPTIC EDIT REMOVAL
+		/* OWORLD EDIT REMOVAL
 		if(H.ears) screenmob.client.screen -= H.ears
 		if(H.glasses) screenmob.client.screen -= H.glasses
 		*/
 		if(H.w_uniform) screenmob.client.screen -= H.w_uniform
 		if(H.wear_suit) screenmob.client.screen -= H.wear_suit
-		/* SEPTIC EDIT REMOVAL
+		/* OWORLD EDIT REMOVAL
 		if(H.wear_mask) screenmob.client.screen -= H.wear_mask
 		if(H.wear_neck) screenmob.client.screen -= H.wear_neck
 		*/

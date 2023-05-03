@@ -107,10 +107,10 @@
 
 /obj/structure/mirror/welder_act(mob/living/user, obj/item/I)
 	..()
-	//if(user.combat_mode) //SEPTIC EDIT REMOVAL
-	//SEPTIC EDIT BEGIN
+	//if(user.combat_mode) //OWORLD EDIT REMOVAL
+	//OWORLD EDIT BEGIN
 	if(!IS_HELP_INTENT(user, null))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		return FALSE
 
 	if(!broken)
@@ -272,7 +272,7 @@
 						H.facial_hair_color = sanitize_hexcolor(new_face_color)
 						H.dna.update_ui_block(DNA_FACIAL_HAIR_COLOR_BLOCK)
 				H.update_hair()
-		/* SEPTIC EDIT REMOVAL
+		/* OWORLD EDIT REMOVAL
 		if(BODY_ZONE_PRECISE_EYES)
 			var/new_eye_color = input(H, "Choose your eye color", "Eye Color",H.eye_color) as color|null
 			if(!user.canUseTopic(src, BE_CLOSE, FALSE, NO_TK))
@@ -282,7 +282,7 @@
 				H.dna.update_ui_block(DNA_EYE_COLOR_BLOCK)
 				H.update_body()
 		*/
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		if(BODY_ZONE_PRECISE_L_EYE)
 			var/new_eye_color = input(H, "Choose your left eye color", "Eye Color","#"+H.left_eye_color) as color|null
 			if(!user.canUseTopic(src, BE_CLOSE, FALSE, NO_TK))
@@ -299,7 +299,7 @@
 				H.right_eye_color = sanitize_hexcolor(new_eye_color, 6, FALSE)
 				H.dna.update_ui_block(DNA_RIGHT_EYE_COLOR_BLOCK)
 				H.update_body()
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 	if(choice)
 		curse(user)
 

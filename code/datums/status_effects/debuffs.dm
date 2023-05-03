@@ -419,12 +419,12 @@
 	if(ishuman(owner))
 		var/mob/living/carbon/human/H = owner
 		var/obj/item/bodypart/bodypart = pick(H.bodyparts)
-		/* SEPTIC EDIT REMOVAL
+		/* OWORLD EDIT REMOVAL
 		var/datum/wound/slash/severe/crit_wound = new
 		*/
-		//SEPTIC EDIT BEGIN
+		//OWORLD EDIT BEGIN
 		var/datum/wound/artery/dissect/crit_wound = new
-		//SEPTIC EDIT END
+		//OWORLD EDIT END
 		crit_wound.apply_wound(bodypart)
 	return ..()
 
@@ -731,12 +731,12 @@
 					owner.log_message("used [I] due to a Muscle Spasm", LOG_ATTACK)
 					I.attack_self(owner)
 			if(3)
-				/* SEPTIC EDIT REMOVAL
+				/* OWORLD EDIT REMOVAL
 				owner.set_combat_mode(TRUE)
 				*/
-				//SEPTIC EDIT BEGIN
+				//OWORLD EDIT BEGIN
 				SET_HARM_INTENT(owner)
-				//SEPTIC EDIT END
+				//OWORLD EDIT END
 
 				var/range = 1
 				if(istype(owner.get_active_held_item(), /obj/item/gun)) //get targets to shoot at
@@ -750,28 +750,28 @@
 					to_chat(owner, span_warning("Your arm spasms!"))
 					owner.log_message(" attacked someone due to a Muscle Spasm", LOG_ATTACK) //the following attack will log itself
 					owner.ClickOn(pick(targets))
-				/* SEPTIC EDIT REMOVAL
+				/* OWORLD EDIT REMOVAL
 				owner.set_combat_mode(FALSE)
 				*/
-				//SEPTIC EDIT BEGIN
+				//OWORLD EDIT BEGIN
 				SET_HELP_INTENT(owner)
-				//SEPTIC EDIT END
+				//OWORLD EDIT END
 			if(4)
-				/* SEPTIC EDIT REMOVAL
+				/* OWORLD EDIT REMOVAL
 				owner.set_combat_mode(TRUE)
 				*/
-				//SEPTIC EDIT BEGIN
+				//OWORLD EDIT BEGIN
 				SET_HARM_INTENT(owner)
-				//SEPTIC EDIT END
+				//OWORLD EDIT END
 				to_chat(owner, span_warning("Your arm spasms!"))
 				owner.log_message("attacked [owner.p_them()]self to a Muscle Spasm", LOG_ATTACK)
 				owner.ClickOn(owner)
-				/* SEPTIC EDIT REMOVAL
+				/* OWORLD EDIT REMOVAL
 				owner.set_combat_mode(FALSE)
 				*/
-				//SEPTIC EDIT BEGIN
+				//OWORLD EDIT BEGIN
 				SET_HELP_INTENT(owner)
-				//SEPTIC EDIT END
+				//OWORLD EDIT END
 			if(5)
 				if(owner.incapacitated())
 					return
@@ -947,13 +947,13 @@
 
 /datum/status_effect/amok/tick()
 	. = ..()
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	var/prev_combat_mode = owner.combat_mode
 	owner.set_combat_mode(TRUE)
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	SET_HARM_INTENT(owner)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 
 	var/list/mob/living/targets = list()
 	for(var/mob/living/potential_target in oview(owner, 1))
@@ -963,7 +963,7 @@
 	if(LAZYLEN(targets))
 		owner.log_message(" attacked someone due to the amok debuff.", LOG_ATTACK) //the following attack will log itself
 		owner.ClickOn(pick(targets))
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	owner.set_combat_mode(prev_combat_mode);
 	*/
 

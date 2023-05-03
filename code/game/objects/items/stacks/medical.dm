@@ -145,7 +145,7 @@
 		to_chat(user, span_notice("There's no wounds that require bandaging on [user==M ? "your" : "[M]'s"] [limb.name]!")) // good problem to have imo
 		return
 	var/gauzeable_wound = FALSE
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	for(var/i in limb.wounds)
 		var/datum/wound/woundies = i
 		if(woundies.wound_flags & ACCEPTS_GAUZE)

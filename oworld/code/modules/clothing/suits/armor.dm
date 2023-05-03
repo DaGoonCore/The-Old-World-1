@@ -4,24 +4,24 @@
 /obj/item/clothing/suit/armor/Initialize(mapload)
 	. = ..()
 	LoadComponent(/datum/component/shuffling, list(
-				'modular_septic/sound/armor/gear_stereo1.wav'=1,
-				'modular_septic/sound/armor/gear_stereo2.wav'=1,
-				'modular_septic/sound/armor/gear_stereo3.wav'=1), 70, falloff_exponent = 20)
+				'oworld/sound/armor/gear_stereo1.wav'=1,
+				'oworld/sound/armor/gear_stereo2.wav'=1,
+				'oworld/sound/armor/gear_stereo3.wav'=1), 70, falloff_exponent = 20)
 
 /obj/item/clothing/suit/armor/vest
 	name = "slim type II armor vest"
 	desc = "A slim version of the type I armored vest that provides decent protection against most types of damage."
-	icon = 'modular_septic/icons/obj/clothing/suits.dmi'
+	icon = 'oworld/icons/obj/clothing/suits.dmi'
 	icon_state = "armorvest_slim"
-	worn_icon = 'modular_septic/icons/mob/clothing/suit.dmi'
+	worn_icon = 'oworld/icons/mob/clothing/suit.dmi'
 	worn_icon_state = "armorvest_slim"
 	//A decent kevlar vest weighs almost 3kg
 	//But does not cover the groin
 	carry_weight = 2.5 KILOGRAMS
 	body_parts_covered = CHEST|VITALS
-	equip_sound = 'modular_septic/sound/armor/equip/armor_use.wav'
-	pickup_sound = 'modular_septic/sound/armor/equip/armor_pickup.wav'
-	drop_sound = 'modular_septic/sound/armor/equip/armor_drop.wav'
+	equip_sound = 'oworld/sound/armor/equip/armor_use.wav'
+	pickup_sound = 'oworld/sound/armor/equip/armor_pickup.wav'
+	drop_sound = 'oworld/sound/armor/equip/armor_drop.wav'
 	armor_broken_sound = "light"
 	armor_damaged_sound = "light"
 	max_integrity = 200
@@ -56,9 +56,9 @@
 /obj/item/clothing/suit/armor/vest/alt
 	name = "type II armor vest"
 	desc = "A type II armored vest that provides decent protection against most types of damage."
-	icon = 'modular_septic/icons/obj/clothing/suits.dmi'
+	icon = 'oworld/icons/obj/clothing/suits.dmi'
 	icon_state = "armorvest"
-	worn_icon = 'modular_septic/icons/mob/clothing/suit.dmi'
+	worn_icon = 'oworld/icons/mob/clothing/suit.dmi'
 	worn_icon_state = "armorvest"
 	//Bulkier vest
 	carry_weight = 6 KILOGRAMS
@@ -67,9 +67,9 @@
 /obj/item/clothing/suit/armor/vest/alt/medium
 	name = "\"Escapador\" type III+ armor vest"
 	desc = "A type III+ armored vest that provides intermediate ballistic protection against most types of damage."
-	icon = 'modular_septic/icons/obj/clothing/suits.dmi'
+	icon = 'oworld/icons/obj/clothing/suits.dmi'
 	icon_state = "armorvest_medium"
-	worn_icon = 'modular_septic/icons/mob/clothing/suit.dmi'
+	worn_icon = 'oworld/icons/mob/clothing/suit.dmi'
 	worn_icon_state = "armorvest_medium"
 	max_integrity = 300
 	integrity_failure = 0.05
@@ -105,9 +105,9 @@
 /obj/item/clothing/suit/armor/vest/alt/heavy
 	name = "\"Defesa Total\" type IV armor vest"
 	desc = "A type IV armored plate carrier that provides intermediate ballistic protection against most types of damage."
-	icon = 'modular_septic/icons/obj/clothing/suits.dmi'
+	icon = 'oworld/icons/obj/clothing/suits.dmi'
 	icon_state = "armorvest_heavy"
-	worn_icon = 'modular_septic/icons/mob/clothing/suit.dmi'
+	worn_icon = 'oworld/icons/mob/clothing/suit.dmi'
 	worn_icon_state = "armorvest_heavy"
 	armor_broken_sound = "heavy"
 	armor_damaged_sound = "heavy"
@@ -137,9 +137,9 @@
 /obj/item/clothing/suit/armor/vest/alt/ultraheavy
 	name = "\"Princess\" type V armor vest"
 	desc = "A type V armored plate carrier with pads that cover more then what a regular vest would allow."
-	icon = 'modular_septic/icons/obj/clothing/suits.dmi'
+	icon = 'oworld/icons/obj/clothing/suits.dmi'
 	icon_state = "armorvest_ultraheavy"
-	worn_icon = 'modular_septic/icons/mob/clothing/suit.dmi'
+	worn_icon = 'oworld/icons/mob/clothing/suit.dmi'
 	worn_icon_state = "armorvest_ultraheavy"
 	armor_broken_sound = "heavy"
 	armor_damaged_sound = "heavy"
@@ -170,16 +170,16 @@
 	. = ..()
 	var/datum/component/shuffling/shuffling = GetComponent(/datum/component/shuffling)
 	if(shuffling)
-		shuffling.override_squeak_sounds = list('modular_septic/sound/armor/heavygear_stereo1.ogg'=1,
-												'modular_septic/sound/armor/heavygear_stereo2.ogg'=1)
+		shuffling.override_squeak_sounds = list('oworld/sound/armor/heavygear_stereo1.ogg'=1,
+												'oworld/sound/armor/heavygear_stereo2.ogg'=1)
 		shuffling.volume = 20
 		shuffling.sound_falloff_exponent = 20
 
 /obj/item/clothing/suit/armor/vest/infiltrator
 	name = "infiltrator vest"
 	desc = "This vest appears to be made of of highly flexible materials that absorb impacts with ease, comes with both impact padding and ballistic padding."
-	lefthand_file = 'modular_septic/icons/mob/inhands/clothing/clothing_lefthand.dmi'
-	righthand_file = 'modular_septic/icons/mob/inhands/clothing/clothing_righthand.dmi'
+	lefthand_file = 'oworld/icons/mob/inhands/clothing/clothing_lefthand.dmi'
+	righthand_file = 'oworld/icons/mob/inhands/clothing/clothing_righthand.dmi'
 	icon_state = "infiltrator"
 	worn_icon_state = "infiltrator"
 	inhand_icon_state = "infiltrator"

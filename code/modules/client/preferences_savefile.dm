@@ -313,9 +313,9 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	//Quirks
 	READ_FILE(S["all_quirks"], all_quirks)
 
-	//SEPTIC EDIT BEGIN
-	load_character_septic(S)
-	//SEPTIC EDIT END
+	//OWORLD EDIT BEGIN
+	load_character_oworld(S)
+	//OWORLD EDIT END
 
 	//try to fix any outdated data if necessary
 	//preference updating will handle saving the updated data for us.
@@ -377,9 +377,9 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	//Quirks
 	WRITE_FILE(S["all_quirks"] , all_quirks)
 
-	//SEPTIC EDIT BEGIN
-	save_character_septic(S)
-	//SEPTIC EDIT END
+	//OWORLD EDIT BEGIN
+	save_character_oworld(S)
+	//OWORLD EDIT END
 
 	return TRUE
 

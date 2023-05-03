@@ -17,12 +17,12 @@
 
 	if(user && movement_dir) //If we're not moving, don't compensate, as byond will auto-fill dir otherwise
 		movement_dir = turn(movement_dir, -dir2angle(user.dir)) //By doing this we ensure that our input direction is offset by the client (camera) direction
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(user?.movement_locked)
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	if(user && (user.movement_locked || user.mob?.movement_locked))
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		keybind_face_direction(movement_dir)
 	else
 		user?.Move(get_step(src, movement_dir), movement_dir)

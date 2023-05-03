@@ -850,13 +850,13 @@
 	update_appearance()
 
 /obj/item/food/pancakes/attack(mob/M, mob/living/user, params, stacked = TRUE)
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	if(user.combat_mode || !contents.len || !stacked)
 	*/
-	//SEPTIC EDIT BEGIN
+	//OWORLD EDIT BEGIN
 	var/list/modifiers = params2list(params)
 	if(IS_HARM_INTENT(user, modifiers) || !contents.len || !stacked)
-	//SEPTIC EDIT END
+	//OWORLD EDIT END
 		return ..()
 	var/obj/item/O = contents[contents.len]
 	. = O.attack(M, user, params, FALSE)

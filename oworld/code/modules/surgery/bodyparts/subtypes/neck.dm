@@ -1,7 +1,7 @@
 /obj/item/bodypart/neck
 	name = "throat"
 	desc = "Whoever did this was a real cutthroat."
-	icon = 'modular_septic/icons/obj/items/surgery.dmi'
+	icon = 'oworld/icons/obj/items/surgery.dmi'
 	icon_state = "neck"
 	base_icon_state = "neck"
 	attack_verb_continuous = list("snaps")
@@ -28,8 +28,8 @@
 	px_x = 0
 	px_y = -8
 	dismemberment_sounds = list(
-		'modular_septic/sound/gore/neck_explodie1.wav',
-		'modular_septic/sound/gore/neck_explodie2.wav',
+		'oworld/sound/gore/neck_explodie1.wav',
+		'oworld/sound/gore/neck_explodie2.wav',
 	)
 	dismemberment_volume = 125
 

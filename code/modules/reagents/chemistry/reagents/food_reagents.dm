@@ -636,7 +636,7 @@
 	. = ..()
 	if(!iscarbon(exposed_mob) || !(methods & (TOUCH|VAPOR|PATCH)))
 		return
-	/* SEPTIC EDIT REMOVAL
+	/* OWORLD EDIT REMOVAL
 	var/mob/living/carbon/exposed_carbon = exposed_mob
 	for(var/s in exposed_carbon.surgeries)
 		var/datum/surgery/surgery = s
